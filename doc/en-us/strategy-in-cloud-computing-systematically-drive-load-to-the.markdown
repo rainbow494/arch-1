@@ -1,0 +1,24 @@
+## [Strategy: In Cloud Computing Systematically Drive Load to the CPU](/blog/2009/3/6/strategy-in-cloud-computing-systematically-drive-load-to-the.html)
+
+<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, March 5, 2009 at 11:39PM</span></div>
+
+<div class="body">**Update 2:** [Linear Bloom Filters](http://comonad.com/reader/2008/linear-bloom-filters/#) by Edward Kmett. A Bloom filter is a novel data structure for approximating membership in a set. A Bloom join conserves network bandwith by exchanging cheaper, more plentiful local CPU utilization and disk IO.  
+**Update:** [What are Amazon EC2 Compute Units?](http://gevaperry.typepad.com/main/2009/03/figuring-out-the-roi-of-infrastructureasaservice.html). Cloud providers charge for CPU time in voodoo units like "compute units" and "core hours." Geva Perry takes on the quest of figuring out what these mean in real life.  
+
+I attended Sebastian Stadil's [AWS Training Camp](http://web.meetup.com/66/calendar/7478988/?a=cr1c_grp) Saturday and during the class Sebastian brought up a wonderfully counter-intuitive idea: **CPU (EC2) costs a lot less than storage (S3, SDB) so you should systematically move as much work as you can to the CPU**. This is said to be the _Client-Cloud Paradigm_. It leverages the well pummeled trend that CPU power follows Moore's Law while storage follows [The Great Plains' Law](http://www.manishin.com/photos/best_photos/Images/great_plains.jpg) (flat). And what sane computing professional would do battle with Sir Moore and his [trusty battle sword](http://heim.ifi.uio.no/~thomas/lists/images/xena01.jpg) of a law?  
+
+Embedded systems often make similar environmental optimizations. CPU rich and memory poor means operate on compressed serialized data structures. Deserialized data structures use a lot of memory, so why use them? It's easy enough to create an object wrapper around a buffer. Programmers shouldn't care how their objects are represented anyway. Yet we waste ginormous amounts of time and memory uselessly transforming XML in and out of different representations. Just transport compressed binary objects around and use them in place. Serialization and deserialization happen only on access ([Pimpl Idiom](http://en.wikipedia.org/wiki/Opaque_pointer)).  
+
+It never occurred to me that in the land of AWS plenty similar "tricks" would make sense. But EC2 is a loss leader in AWS. CPU is plentiful and cheap. It's IO and storage that costs you...  
+
+The implication is that in your system design you should try and use EC2 as much as possible:  
+*   **Compress data**. Saves on bandwidth and storage (the expensive bits) and uses cheaper CPU to compress/decompress.  
+    *   **Slurp data**. Latency cost is higher than performing operations locally. SDB can take up to 400 msecs between data centers and 200 msecs inside the same data center. This is very slow. It's usually faster, but it can take that long. Following the more traditional serial processing path of "get a record do a record" will take forever and cost more. Slurp up all your records from SDB and farm them out to your CPU nodes to be worked on in parallel.  
+    *   **Think parallel**. Do multiple operations at once on your cheap CPUs rather than serially performing high latency operations on expensive storage. With enough nodes, total execution time approaches max latency.  
+    *   **Client side joins**. Pull all data from the relatively expensive SDB and perform client side joins on relatively cheap EC2 nodes.  
+    *   **Leverage SQS**. It's a relatively cheap part of the ecosystem. Keeping a work queue in SDB would be far more expensive.  
+
+    When all the implications are fully explored it's a little different take on designing a system.  
+
+    I found some interesting numbers in a Slashdot thread comparing values: [No persistent storage; not great value](http://developers.slashdot.org/comments.pl?sid=501678&cid=22883640):  
+    _And it's still not a great value. It seems cheap. $72/mo for a 1.7GB RAM server. Well, look at Slicehost and you can get a 2GB RAM Xen instance (same virtualization software as EC2) for $140 WITH persistent storage and 800GB of bandwidth. That doesn't sound like a great deal UNTIL you calculate what EC2 bandwidth costs. 800GB would cost you $144 at $0.18 per GB bringing the total cost to $216 ($76 more than Slicehost). That 18 cents doesn't sound like much, but it adds up. The same situation happens with Joyent. For $250 you get a 2GB RAM server from them (running under Solaris' Zones) with 10TB of bandwidth. That would cost you $1,872 with EC2\. Even if you assume that you'll only use 10% of what Joyent is giving you, EC2 still comes in at a cost of $252 - and without persistent storage!_</div>

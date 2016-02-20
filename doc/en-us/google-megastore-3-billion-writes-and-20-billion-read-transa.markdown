@@ -1,0 +1,52 @@
+## [Google Megastore - 3 Billion Writes and 20 Billion Read Transactions Daily](/blog/2011/1/11/google-megastore-3-billion-writes-and-20-billion-read-transa.html)
+
+<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, January 11, 2011 at 11:39PM</span></div>
+
+<div class="body">
+
+![](http://farm2.static.flickr.com/1278/5179816576_2b186d41b3_m.jpg)
+
+A giant step into the fully distributed future has been taken by the Google App Engine team with the release of their [High Replication Datastore](http://googleappengine.blogspot.com/2011/01/announcing-high-replication-datastore.html). The HRD is targeted at mission critical applications that require data replicated to at least three datacenters, full ACID semantics for [entity groups](http://code.google.com/appengine/docs/python/datastore/entities.html), and lower consistency guarantees across entity groups.
+
+This is a major accomplishment. Few organizations can implement a true multi-datacenter datastore. Other than SimpleDB, how many other publicly accessible database services can operate out of multiple datacenters? Now that capability can be had by anyone. But there is a price, literally and otherwise. Because the HRD uses three times the resources as Google App Engine's Master/Slave datastatore, it will cost three times as much. And because it is a distributed database, with all that implies in the CAP sense, developers will have to be very careful in how they architect their applications because as costs increased, reliability increased, complexity has increased, and performance has decreased. This is why HRD is targeted ay mission critical applications, you gotta want it, otherwise the Master/Slave datastore makes a lot more sense.
+
+The technical details behind the HRD are described in this paper, [Megastore: Providing Scalable, Highly Available Storage for Interactive Services](http://www.cidrdb.org/cidr2011/Papers/CIDR11_Paper32.pdf). This is a wonderfully written and accessible paper, chocked full of useful and interesting details. James Hamilton wrote an excellent summary of the paper in [Google Megastore: The Data Engine Behind GAE](http://perspectives.mvdirona.com/2011/01/09/GoogleMegastoreTheDataEngineBehindGAE.aspx). There are also a few useful threads in Google Groups that go into some more details about how it works, costs, and performance (the [original announcement](http://groups.google.com/group/google-appengine/browse_thread/thread/dbebe4482008eb3e), [performance comparison](http://groups.google.com/group/google-appengine/browse_thread/thread/5fc3b6a4366de62f/4b4d23e924b7b136?lnk=gst&q=High+Replication+Datastore+for+App+Engine#)).
+
+Some Megastorehighlights:
+
+*   Megastore _blends the scalability of a NoSQL datastore with the convenience of a traditional RDBMS_. It has been used internally by Google for several years, on more than 100 production applications, to handle more than three billion write and 20 billion read transactions daily, and store a petabyte of data across many global datacenters.
+*   _Megastore is a storage system developed to meet the storage requirements of today's interactive online services. It is novel in that it blends the scalability of a NoSQL datastore with the convenience of a traditional RDBMS. It uses synchronous replication to achieve high availability and a consistent view of the data. In brief, it provides fully serializable ACID semantics over distant replicas with low enough latencies to support interactive applications. We accomplish this by taking a middle ground in the RDBMS vs. NoSQL design space: we partition the datastore and replicate each partition separately, providing full ACID semantics within partitions, but only limited consistency guarantees across them. We provide traditional database features, such as secondary indexes, but only those features that can scale within user-tolerable latency limits, and only with the semantics that our partitioning scheme can support. We contend that the data for most Internet services can be suitably partitioned (e.g., by user) to make this approach viable, and that a small, but not spartan, set of features can substantially ease the burden of developing cloud applications._
+*   [Paxos](http://labs.google.com/papers/paxos_made_live.html) is used to manage synchronous replication between datacenters. This provides the highest level of availability for reads and writes at the cost of higher-latency writes. Typically Paxos is used only for coordination, Megastore also uses it to perform write operations. 
+*   Supports 3 levels of read consistency: current, snapshot, and inconsistent reads.
+*   [Entity groups](http://code.google.com/appengine/docs/python/datastore/entities.html) are now a unit of consistency as well as a unit of transactionality. Entity groups seem to be like little separate databases. Each is _independently and synchronously replicated over a wide area. The underlying data is stored in a scalable NoSQL datastore in each datacenter._
+*   The App Engine Datastore doesn't support transactions across multiple entity groups because it will greatly limit the write throughput when not operating on an entity group, though Megastore does support these operations.
+*   Entity groups are an apriori grouping of data for fast operations. Their size and composition must be balanced. Examples of entity groups are: an email account for a user; a blog would have a profile entity group and more groups to hold posts and meta data for each blog. Each application will have to find natural ways to draw entity group boundaries. Fine-grained entity groups will force expensive cross-group operations. Groups with too much unrelated data will cause unrelated writes to be serialized which degrades throughput. This a process that ironically seems a little like normalizing and will probably prove just as frustrating.
+*   Queries that require strongly consistent results must be restricted to a single entity group. Queries across entity groups may return stale results  This is a major change for programmers. The Master/Slave datastore defaulted to strongly consistent results for all queries, because reads and writes were from the master replica by default. With multiple datacenters the world is a lot ore complicated. This is clear from some the Google group comments too. Performance will vary quite a bit where entities are located and how they are grouped.
+*   Applications will remain fully available during planned maintenance periods, as well as during most unplanned infrastructure issues. The Master/Slave datastore was subject to periodic maintenance windows. If availability is job one for your application the HRD is a big win.
+*   Backups and redundancy are achieved via synchronous replication, snapshots, and incremental log backups.
+*   The datastore API does not change at all.
+*   Writes to a single entity group are strongly consistent.
+*   Writes are limited to an estimated 1 per second per entity group, so HRD is not a good match when high usage is expected. This number is not a strict limit, but a good rule of thumb for write performance.
+*   With eventual consistency, more than 99.9% of your writes are available for queries within a few seconds.
+*   Only new applications can choose the HRD option. An existing application must be moved to a new application.
+*   <div id="_mcePaste">Performance can be improved at the expense of consistency by setting the read_policy to eventually consistent. This will be bring performance similar to that of Master/Slave datastore. Writes are not affected by this flag,  it only works for read performance, which are already fast in the 99% case, so it doesn't have a very big impact. Applications doing batch gets will notice impressive speed ups from using this flag.</div>
+
+*   One application can't mix Master/Slave with HRD. The reasoning is HRD can serve out of multiple datacenters and Master/Slave can not, so there's no way to ensure in failure cases that apps are running in the right place. So if you planned to use an expensive HRD for critical data and the less expensive Master/Slave for less critical data, you can't do that. You might be thinking to delegate Master/Slave operations to another application, but splitting up applications that way is against the TOS. 
+*   Once HRD is selected your choice can't be changed. So if you would like to start with the cheeper Master/Slave for customers who want to pay less and use HRD who would like to pay for a premium service, you can't do that.
+*   There's no automated migration of Master/Slave data, the HRD data. The application must write that code. The reasoning is the migration will require a read-only period and the application is in the best position to know how to minimize that downtime. There are some tools and code provided to make migration easier.
+*   Moving to a caching based architecture will be even more important to hide some of the performance limitations of HRD. Cache can include memcache, cookies, or state put in a URL. 
+*   Though HRD is based on the Megastore, they do not seem to be the same thing, not every feature of the Megastore may be made available in HRD. To what extent this is true I'm not sure.
+
+## Related Articles
+
+*   [May 25th Datastore Outage Post-mortem](https://groups.google.com/group/google-appengine-downtime-notify/msg/e9414ee6493da6fb?pli=1)
+*   [Paxos Made Live – An Engineering Perspective](http://labs.google.com/papers/paxos_made_live.html)
+*   [Choosing a Datastore](http://code.google.com/appengine/docs/python/datastore/hr/)
+*   [Using the High Replication Datastore](http://code.google.com/appengine/docs/python/datastore/hr/overview.html)
+*   [Bigtable: A Distributed Storage System for Structured Data](http://labs.google.com/papers/bigtable.html)
+*   [How Google Serves Data From Multiple Datacenters](http://highscalability.com/blog/2009/8/24/how-google-serves-data-from-multiple-datacenters.html)
+*   [ZooKeeper - A Reliable, Scalable Distributed Coordination System](http://highscalability.com/blog/2008/7/15/zookeeper-a-reliable-scalable-distributed-coordination-syste.html) 
+*   [Consensus Protocols: Paxos](http://highscalability.com/blog/2009/3/10/paper-consensus-protocols-paxos.html)
+*   [Yahoo!'S PNUTS Database: Too Hot, Too Cold Or Just Right?](http://highscalability.com/blog/2009/8/8/yahoos-pnuts-database-too-hot-too-cold-or-just-right.html)
+
+</div>
