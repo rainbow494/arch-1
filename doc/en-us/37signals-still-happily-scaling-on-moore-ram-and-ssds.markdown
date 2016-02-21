@@ -1,8 +1,8 @@
 ## [37signals Still Happily Scaling on Moore RAM and SSDs](/blog/2012/1/30/37signals-still-happily-scaling-on-moore-ram-and-ssds.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, January 30, 2012 at 8:28AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://s3.amazonaws.com/37assets/svn/755-840gb-of-ram-1.png)
 
@@ -33,4 +33,4 @@ Some of the key takeways are: 
 *   Google Groups Thread: [In-memory database (inspired by 864GB of RAM for $12,000)](https://groups.google.com/forum/#!topic/nodejs/aqVYp5ABX_4)
 *   [Three years later, Mr. Moore is still letting us punt on database sharding ](http://37signals.com/svn/posts/3089-three-years-later-mr-moore-is-still-letting-us-punt-on-database-sharding)
 
-</div>
+    

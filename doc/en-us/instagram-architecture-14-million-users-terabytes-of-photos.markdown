@@ -1,8 +1,8 @@
 ## [Instagram Architecture: 14 Million users, Terabytes of Photos, 100s of Instances, Dozens of Technologies](/blog/2011/12/6/instagram-architecture-14-million-users-terabytes-of-photos.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, December 6, 2011 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7011/6464246201_bddb8c499e_o.jpg)
 
@@ -56,4 +56,4 @@ We'll just tl;dr the article here, it's very well written and to the point. De
 *   [Sharding & IDs at Instagram](http://instagram-engineering.tumblr.com/post/10853187575/sharding-ids-at-instagram) 
 *   [Membase Cluster on EC2 or Amazon ElastiCache?](http://nosql.mypopescu.com/post/13820225002/membase-cluster-on-ec2-or-amazon-elasticache) by Alex Popescu   
 
-</div>
+    

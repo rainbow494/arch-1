@@ -1,8 +1,8 @@
 ## [Netflix: Harden Systems Using a Barrel of Problem Causing Monkeys - Latency, Conformity, Doctor, Janitor, Security, Internationalization, Chaos](/blog/2011/7/20/netflix-harden-systems-using-a-barrel-of-problem-causing-mon.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, July 20, 2011 at 9:21AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.static.flickr.com/6144/5956126692_1a76dd54ef_m.jpg)
 
@@ -14,7 +14,7 @@ I know what you are thinking, if monkeys are so great then why has Netflix been 
 
 To continuously test the resilience of Netflix's system to failures, they've added a number of new monkeys, and even a gorilla:
 
-<div id="_mcePaste">
+    
 
 *   **Latency Monkey** induces artificial delays in our RESTful client-server communication layer to simulate service degradation and measures if upstream services respond appropriately. 
 *   **Conformity Monkey** finds instances that don’t comply with best-practices and shuts them down. 
@@ -23,7 +23,7 @@ To continuously test the resilience of Netflix's system to failures, they've add
 *   **10-18 Monkey (short for Localization-Internationalization, or l10n-i18n)** detects configuration problems in instances serving customers in multiple geographic regions, using different languages and character sets. 
 *   **Chaos Gorilla** is similar to Chaos Monkey, but simulates an outage of an entire Amazon availability zone. 
 
-</div>
+    
 
 Just as important as the test tools is that they've gone to the trouble to identify failure scenarios, implement code to deal with them, and then implement code that can verify that the problems have been dealt with. That's just as important a process as the tools. Rarely do things just fail. They become intermittent, they become slow, they don't failover cleanly, the don't recover cleanly, they lie about what is really happening, they don't collect the data you need to figure out what is going, they corrupt messages, they drop work randomly, they do crazy things that are failures but don't fit in clean crisp failure definition boundaries. Figuring out what can be done in response to a complex set of interacting problems is the real magic here.
 
@@ -39,4 +39,4 @@ The obvious downside of letting monkeys into your system is that you can easily 
 
 More details in the [original post](http://techblog.netflix.com/2011/07/netflix-simian-army.html).
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [10 Things Bitly Should Have Monitored](/blog/2014/1/29/10-things-bitly-should-have-monitored.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, January 29, 2014 at 9:10AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7429/12207770764_298a873fb2_o.png)
 
@@ -25,4 +25,4 @@ An interesting revelation from the article is that:
 9.  **Connection Limits**. Do you know how close you are to your connection limits?
 10.  **Load Balancer Status**. It's important to have visibility into your load balancer status by making the health stats visible.  
 
-</div>
+    

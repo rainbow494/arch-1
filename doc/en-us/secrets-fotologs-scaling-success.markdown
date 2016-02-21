@@ -1,8 +1,8 @@
 ## [Secrets to Fotolog's Scaling Success](/blog/2007/10/2/secrets-to-fotologs-scaling-success.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, October 2, 2007 at 12:08AM</span></div>
+    
 
-<div class="body">
+    
 
 Fotolog, a social blogging site centered around photos, grew from about 300 thousand users in 2004 to over 11 million users in 2007\. Though they initially experienced the inevitable pains of rapid growth, they overcame their problems and now manage over 300 million photos and 800,000 new photos are added each day. Generating all that fabulous content are 20 million unique monthly visitors and a volunteer army of 30,000 new users each day. They did so well a very impressed suitor bought them out for a cool $90 million. That's scale meets success by anyone standards. How did they do it?
 
@@ -85,4 +85,4 @@ Site: http://www.fotolog.com
 
     ## Related Articles
 
-    *   [Flickr Architecture](http://highscalability.com/flickr-architecture)*   [An Unorthodox Approach to Database Design : The Coming of the Shard](http://highscalability.com/unorthodox-approach-database-design-coming-shard)</div>
+    *   [Flickr Architecture](http://highscalability.com/flickr-architecture)*   [An Unorthodox Approach to Database Design : The Coming of the Shard](http://highscalability.com/unorthodox-approach-database-design-coming-shard)    

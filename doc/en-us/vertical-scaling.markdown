@@ -1,8 +1,8 @@
 ## [Intuitively Showing How To Scale a Web Application Using a Coffee Shop as an Example](/blog/2014/3/17/intuitively-showing-how-to-scale-a-web-application-using-a-c.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, March 17, 2014 at 9:13AM</span></div>
+    
 
-<div class="body">
+    
 
 _This is a [guest repost](http://www.sgdevs.com/2014/03/scaling-coffee-shop-web-application.html) by [Sriram Devadas](http://www.sgdevs.com/), Engineer at Vistaprint, Web platform group. A fun and well written analogy of how to scale web applications using a familiar coffee shop as an example. No coffee was harmed during the making of this post._
 
@@ -17,7 +17,7 @@ Serves 1 customer at a time, takes 3 minutes to brew a cup of coffee, a total of
 Since my barista works without breaks and the German made coffee maker never breaks down,  
 my shop's maximum throughput = 12 customers per hour.
 
-<div class="separator" style="clear: both; text-align: center;">[![](http://farm3.staticflickr.com/2815/13221217823_9c718efa70_o.jpg)](http://farm3.staticflickr.com/2815/13221217823_9c718efa70_o.jpg)</div>
+    [![](http://farm3.staticflickr.com/2815/13221217823_9c718efa70_o.jpg)](http://farm3.staticflickr.com/2815/13221217823_9c718efa70_o.jpg)    
 
 ### Web server
 
@@ -33,7 +33,7 @@ Capacity
 
 Concurrent customers = 3, Customer capacity = 5
 
-<div class="separator" style="clear: both; text-align: center;">[![](http://farm8.staticflickr.com/7429/13221217523_7446de710d_o.jpg)](http://farm8.staticflickr.com/7429/13221217523_7446de710d_o.jpg)</div>
+    [![](http://farm8.staticflickr.com/7429/13221217523_7446de710d_o.jpg)](http://farm8.staticflickr.com/7429/13221217523_7446de710d_o.jpg)    
 
 ### Scaling vertically
 
@@ -41,4 +41,4 @@ Business is booming. Time to upgrade again. Bigger is better!...
 
 [Click to read more ...](/blog/2014/3/17/intuitively-showing-how-to-scale-a-web-application-using-a-c.html)
 
-</div>
+    

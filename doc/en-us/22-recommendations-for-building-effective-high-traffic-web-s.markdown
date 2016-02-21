@@ -1,8 +1,8 @@
 ## [22 Recommendations for Building Effective High Traffic Web Software](/blog/2013/12/16/22-recommendations-for-building-effective-high-traffic-web-s.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, December 16, 2013 at 8:54AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7308/11359657305_60cbab5826_m.jpg)
 
@@ -124,11 +124,11 @@ dig www.amazon.com 
 
 ;; QUESTION SECTION:
 
-;www.amazon.com. <span></span> <span></span><span></span>IN <span></span> A
+;www.amazon.com.                          IN          A
 
 ;; ANSWER SECTION:
 
-www.amazon.com. <span></span> <span></span>28 <span></span> IN <span></span> A <span></span> 205.251.242.54
+www.amazon.com.                  28          IN          A          205.251.242.54
 
 **Embrace all things "reactor"**
 
@@ -188,4 +188,4 @@ Note. Do not do this in pre-prod environments, one would require the ability to 
 
 What are the recommendations that you have? Please share your valuable insights.
 
-</div>
+    

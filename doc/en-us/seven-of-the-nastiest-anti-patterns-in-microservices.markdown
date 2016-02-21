@@ -1,8 +1,8 @@
 ## [Seven of the Nastiest Anti-patterns in Microservices](/blog/2015/8/3/seven-of-the-nastiest-anti-patterns-in-microservices.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 3, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm1.staticflickr.com/422/19635212354_b1caec8235_m.jpg)
 
@@ -25,4 +25,4 @@ If you don't want to risk your immortal API then be sure to avoid:
 *   [Developing Products In The Style Of Etsy](http://highscalability.com/blog/2015/6/1/developing-products-in-the-style-of-etsy.html) 
 *   [The 10 Deadly Sins Against Scalability](http://highscalability.com/blog/2013/6/10/the-10-deadly-sins-against-scalability.html)
 
-</div>
+    

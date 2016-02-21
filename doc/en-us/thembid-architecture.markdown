@@ -1,8 +1,8 @@
 ## [ThemBid Architecture](/blog/2007/7/26/thembid-architecture.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, July 26, 2007 at 5:27AM</span></div>
+    
 
-<div class="body">
+    
 
 ThemBid provides a market where people needing work done broadcast their request and accept bids from people competing for the job. Unlike many of the sites profiled at HighScalability, ThemBid is not in the popular press as often as Paris Hilton. It's not a media darling or a giant of the industry. But what I like is they have a strategy, a point-of-view for building websites and were gracious enough to share very detailed instructions on how to go about building a website. They even delve into actual installation details of the various software packages they use. Anyone can benefit by taking a look at their work.
 
@@ -45,4 +45,4 @@ Site: http://www.thembid.com/
 
     *   **Stick with the familiar**. It may not be optimal, it may not be the best, but it's more important that you get started and make progress. You don't want to delay releasing your site so you can learn a completely different tool chain that may make your life somewhat easier and in some projected future. The future is now.  
 
-    *   **Use what works for other people**. The fact that Yahoo and Digg use PHP is a good recommendation. Certainly PHP is not the only way to build a site, but it does cut your risk level and help you sleep at night. It also means there's an active community that can help you when you have problems.</div>
+    *   **Use what works for other people**. The fact that Yahoo and Digg use PHP is a good recommendation. Certainly PHP is not the only way to build a site, but it does cut your risk level and help you sleep at night. It also means there's an active community that can help you when you have problems.    

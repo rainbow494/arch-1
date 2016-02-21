@@ -1,8 +1,8 @@
 ## [Salesforce Architecture - How they Handle 1.3 Billion Transactions a Day](/blog/2013/9/23/salesforce-architecture-how-they-handle-13-billion-transacti.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, September 23, 2013 at 8:44AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.staticflickr.com/5538/9820942366_e15b7a5937_m.jpg)
 
@@ -109,4 +109,4 @@ I hope this overview of the salesforce.com technology architecture and stack has
 *   [Salesforce.com Architecture](http://www.scribd.com/doc/145879736/Salesforce-com-Architecture)
 *   [Cell Architectures](http://highscalability.com/blog/2012/5/9/cell-architectures.html)
 
-</div>
+    

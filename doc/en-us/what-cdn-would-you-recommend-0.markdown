@@ -1,8 +1,8 @@
 ## [What CDN would you recommend?](/blog/2009/4/21/what-cdn-would-you-recommend.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, April 21, 2009 at 3:31PM</span></div>
+    
 
-<div class="body">**Update 10:** [The Value of CDNs](http://www.afnog.org/afnog2008/conference/talks/Google-AFNOG-presentation-public.pdf) by Mike Axelrod of Google. Google implements a distributed content cache from within [large ISPs](http://www.lacnic.net/documentos/lacnicxi/presentaciones/Google-LACNIC-final-short.pdf). This allows them to serve content from the edge of the network and save bandwidth on the ISPs backbone.  
+    **Update 10:** [The Value of CDNs](http://www.afnog.org/afnog2008/conference/talks/Google-AFNOG-presentation-public.pdf) by Mike Axelrod of Google. Google implements a distributed content cache from within [large ISPs](http://www.lacnic.net/documentos/lacnicxi/presentaciones/Google-LACNIC-final-short.pdf). This allows them to serve content from the edge of the network and save bandwidth on the ISPs backbone.  
 **Update 9:** [Just Jump: Start using Clouds and CDNs](http://www.rockstarapps.com/wordpress/?p=138#). Bob Buffone gives a really nice and practical tutorial of how to use CloudFront as your CDN.  
 
 **Update 8:** [Akamai’s Services Become Affordable for Anyone! Blazing Web Site Performance by Distribution Cloud](http://www.thebitsource.com/2009/02/07/akamai%E2%80%99s-services-become-affordable-for-anyone-blazing-fast-web-site-performance-with-distribution-cloud/#). _Distribution Cloud starts at $150 per month for access to the best content distribution network in the world and the leader of Content Distribution Networks._  
@@ -74,4 +74,4 @@ A question was raised on the forum asking for a CDN recommendation. As usual the
     *   [Content Delivery Network Pricing, Costs for Outsourced Video Delivery](http://www.scribemedia.org/2007/12/12/cdn-pricing-video/)  
     *   [CDN Pricing Data: Average Cost Per GB Declines In Q4 Due To Startups](http://blog.streamingmedia.com/the_business_of_online_vi/2007/11/cdn-pricing-dat.html)  
     *   [A Taxonomy and Survey of Content Delivery Networks](http://www.gridbus.org/cdn/reports/CDN-Taxonomy.pdf)  
-    *   [Content Delivery Networks (CDN) Research Directory](http://www.cs.mu.oz.au/~apathan/CDNs.html)</div>
+    *   [Content Delivery Networks (CDN) Research Directory](http://www.cs.mu.oz.au/~apathan/CDNs.html)    

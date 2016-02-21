@@ -1,12 +1,12 @@
 ## [The Instagram Architecture Facebook Bought for a Cool Billion Dollars](/blog/2012/4/9/the-instagram-architecture-facebook-bought-for-a-cool-billio.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, April 9, 2012 at 12:49PM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7011/6464246201_bddb8c499e_o.jpg)
 
-It's been a well kept secret, but you may have heard [Facebook will Buy Photo-Sharing Service Instagram for $1 Billion](http://bits.blogs.nytimes.com/2012/04/09/facebook-acquires-photo-sharing-service-instagram/). Just what is Facebook buying? Here's a quick gloss I did a little over a year ago on a presentation Instagram gave on their architecture. In that article I called Instagram's architecture the "<span>canonical description of an early stage startup in this era." Little did we know how true that would turn out to be. If you want to learn how they did it then don't take a picture, just keep on reading... </span>
+It's been a well kept secret, but you may have heard [Facebook will Buy Photo-Sharing Service Instagram for $1 Billion](http://bits.blogs.nytimes.com/2012/04/09/facebook-acquires-photo-sharing-service-instagram/). Just what is Facebook buying? Here's a quick gloss I did a little over a year ago on a presentation Instagram gave on their architecture. In that article I called Instagram's architecture the "    canonical description of an early stage startup in this era." Little did we know how true that would turn out to be. If you want to learn how they did it then don't take a picture, just keep on reading...     
 
 [Instagram](http://instagr.am/) is a free photo sharing and social networking service for your iPhone that has been an [instant success](http://techcrunch.com/2011/08/03/instagram-150-million/). Growing to [14 million users](http://instagram-engineering.tumblr.com/post/13649370142/what-powers-instagram-hundreds-of-instances-dozens-of) in just over a year (now 30 million users), they reached 150 million photos in August while amassing several terabytes of photos, and they did this with just 3 Instaneers, all on the Amazon stack.
 
@@ -55,11 +55,11 @@ And now you know the secret to getting bought for a billion dollars...getting yo
 
 ## Related Articles
 
-*   <div class="ff2"><span class="a">[Scaling Instagram](http://www.scribd.com/doc/89025069/Mike-Krieger-Instagram-at-the-Airbnb-tech-talk-on-Scaling-Instagram)</span><span class="a"> -  AirBnB T<span class="l">ech T<span class="l">alk 2012 by </span></span></span><span class="a">Mike Krieger of </span><span class="a">Instagram</span></div>
+*           [Scaling Instagram](http://www.scribd.com/doc/89025069/Mike-Krieger-Instagram-at-the-Airbnb-tech-talk-on-Scaling-Instagram)         -  AirBnB T    ech T    alk 2012 by                 Mike Krieger of         Instagram        
 
 *   [Storing hundreds of millions of simple key-value pairs in Redis](http://instagram-engineering.tumblr.com/post/12651721845/instagram-engineering-challenge-the-unshredder)
 *   [Simplifying EC2 SSH Connections](http://instagram-engineering.tumblr.com/post/11399488246/simplifying-ec2-ssh-connections)
 *   [Sharding & IDs at Instagram](http://instagram-engineering.tumblr.com/post/10853187575/sharding-ids-at-instagram) 
 *   [Membase Cluster on EC2 or Amazon ElastiCache?](http://nosql.mypopescu.com/post/13820225002/membase-cluster-on-ec2-or-amazon-elasticache) by Alex Popescu   
 
-</div>
+    

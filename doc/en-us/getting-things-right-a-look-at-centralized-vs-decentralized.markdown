@@ -1,12 +1,12 @@
 ## [Getting Things Right: A Look at Centralized vs Decentralized Systems Through the Eyes of Instant Replay](/blog/2014/9/15/getting-things-right-a-look-at-centralized-vs-decentralized.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, September 15, 2014 at 9:06AM</span></div>
+    
 
-<div class="body">
+    
 
-_<span style="font-size: 80%;">Three baseball umpires were sitting around a bar, talking about how they make calls on each pitch: First umpire: Some are balls and some are strikes, and I call them as they are. Second umpire: Some are balls and some are strikes, and I call them as I see 'em. Third umpire: Some are balls and some are strikes, but they ain’t nothin' until I call 'em.</span>_
+_    Three baseball umpires were sitting around a bar, talking about how they make calls on each pitch: First umpire: Some are balls and some are strikes, and I call them as they are. Second umpire: Some are balls and some are strikes, and I call them as I see 'em. Third umpire: Some are balls and some are strikes, but they ain’t nothin' until I call 'em.    _
 
-<div>
+    
 
 <table cellpadding="5" align="CENTER">
 
@@ -29,7 +29,7 @@ NHL's [Situation Room](http://blogs.canoe.ca/krykslants/nfl/special-report-insid
 
 </table>
 
-</div>
+    
 
 **Update**: [Inside the NFL’s Replay Command Center](http://mmqb.si.com/2014/11/11/inside-the-nfls-replay-command-center/)
 
@@ -183,4 +183,4 @@ No matter how sophisticated the system, in our mind’s eye, we’ll always know
 
 *   [What The Heck Are You Actually Using NoSQL For?](http://highscalability.com/blog/2010/12/6/what-the-heck-are-you-actually-using-nosql-for.html)
 
-</div>
+    

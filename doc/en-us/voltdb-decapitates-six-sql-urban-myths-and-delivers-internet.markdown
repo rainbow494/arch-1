@@ -1,8 +1,8 @@
 ## [VoltDB Decapitates Six SQL Urban Myths and Delivers Internet Scale OLTP in the Process](/blog/2010/6/28/voltdb-decapitates-six-sql-urban-myths-and-delivers-internet.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, June 28, 2010 at 7:36AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4050/4702827693_65f350210e_m.jpg)
 
@@ -28,11 +28,11 @@ John Hugg, from VoltDB Engineering, [says](http://pgsnake.blogspot.com/2010/05
 
 Some other quotes indicating the spirit behind VoltDB:
 
-> VoltDB <span id="msgtxt17268837545" class="msgtxt en">is designed to make difficult or impossible problems manageable.</span>
+> VoltDB     is designed to make difficult or impossible problems manageable.    
 
-<span id="msgtxt17268837545" class="msgtxt en">And:</span>
+    And:    
 
-> <span id="msgtxt17268433104" class="msgtxt en">When we set out to build VoltDB, we figured it wasn't worth the tradeoffs unless it's MUCH faster. So it is.</span>
+>     When we set out to build VoltDB, we figured it wasn't worth the tradeoffs unless it's MUCH faster. So it is.    
 
 John is not kidding. What matters to VoltDB is: _speed at scale, speed at scale, speed at scale, SQL, and ACID_. If that matches your priorities then you'll probably be happy. Otherwise, as you'll see, everything is sacrificed for speed at scale and what is sacrificed is often ease of use, generality, and [error checking](http://community.voltdb.com/node/77). It's likely we'll see ease of use improve over time, but for now it looks like rough going, unless of course, you are a going for speed at scale.
 
@@ -46,7 +46,7 @@ John is not kidding. What matters to VoltDB is: _speed at scale, speed at scale,
 *   **A limited subset of SQL '99 is supported**. DDL operations like ALTER and DROP aren't supported. Operations having to do with users, groups and security have been moved into XML configuration files. Updating table structure on the fly is convenient, but it's not fast, so it's out. You are also discouraged from doing SUM operations because it would take a long time and block other transactions. Single threading means you must quantize your work into small enough chunks that don't stall the work pipeline. The goal is to have transactions run in under [50 milliseconds](http://community.voltdb.com/node/119). This is all done for speed. 
 *   [Design a schema and workflow to use single-sited procedures](https://source.voltdb.com/browse/~raw,r=3/Documentation/trunk/userdocs/UsingVoltDB/designingapp.xml). Data for a table is stored in a partition that is split onto different nodes. Each set of data on a node is called a_ slice_. When a query can run on a single node it it is said to be _single-sited_. Performance is clearly best when a query can run on just one node against a limited set of data. 
 *   **Challenging operations model**. Changing the database schema or reconfiguring the cluster hardware requires first saving and shutting down the database. An exception are stored procedures which can be updated on the fly. In general, choosing speed as the primary design point has made the development and deployment process complicated and limiting. VoltDB, for example, does not support bringing a node back into the cluster while the database is running. All clients must be stopped, the database must be snapshotted, the database must be restarted in a special mode, the data is reloaded, and then clients can be restarted. See [Using VoltDB](http://community.voltdb.com/downloads) for more details.
-*   **No WAN support**. In the case of a network partition VoltDB chooses consistency over availability, so you will see a hiccup until connectivity can be restored. Out of all the possible failures, Mr. Stonebraker argues, network partitioning is one of the least likely failures, especially compared to programmer error, so choosing strong consistency over availability is the right engineering call. <span style="color: #000000; font-family: Verdana; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px;">Future versions of VoltDB will do more to address this single-data-center catastrophe scenario.</span>
+*   **No WAN support**. In the case of a network partition VoltDB chooses consistency over availability, so you will see a hiccup until connectivity can be restored. Out of all the possible failures, Mr. Stonebraker argues, network partitioning is one of the least likely failures, especially compared to programmer error, so choosing strong consistency over availability is the right engineering call.     Future versions of VoltDB will do more to address this single-data-center catastrophe scenario.    
 *   **OLAP is purposefully kept separate**. VoltDB is only for OLTP. It's not for reporting or OLAP because those uses require locks be taken which destroys performance. Every update is spooled to a (optional) companion warehouse system that is a second or two behind the main transaction system (yet is perfectly consistent).  The companion system could be something like Vertica, an analytics RDBMS also built by Mr. Stonebraker. The justification for this split of responsibilities is that one size does not fit all. You should run transactions on something that is good at transactions and run reporting on something that's good at reporting. An specialized transaction architecture will run circles around (50 times to 100 times faster) a one size fits all solution. 
 
 VoltDB is different because it has consciously been architected to remove what [research shows](http://portal.acm.org/citation.cfm?id=1376616.1376713) are the four common sources of overhead in database management systems: _logging (19%), [latching](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.109.8323&rep=rep1&type=pdf) (19%), locking (17%), B-tree, and buffer management operations_ (35%). By removing all removing all four sources overhead VoltDB can be really fast while still being ACID. How fast?
@@ -63,17 +63,17 @@ I really like the parallelism of the origin of relational theory with the origin
 
 Here are the six myths that Mr. Stonebraker says NoSQL advocates incorrectly perpetuate:
 
-<div id="_mcePaste">• Myth #1: SQL is too slow, so use a lower level interface </div>
+    • Myth #1: SQL is too slow, so use a lower level interface     
 
-<div id="_mcePaste">• Myth #2: I like a K-V interface, so SQL is a non-starter </div>
+    • Myth #2: I like a K-V interface, so SQL is a non-starter     
 
-<div id="_mcePaste">• Myth #3: SQL systems don’t scale </div>
+    • Myth #3: SQL systems don’t scale     
 
-<div id="_mcePaste">• Myth #4: There are no open source, scalable SQL engines </div>
+    • Myth #4: There are no open source, scalable SQL engines     
 
-<div id="_mcePaste">• Myth #5: ACID is too slow, so avoid using it </div>
+    • Myth #5: ACID is too slow, so avoid using it     
 
-<div id="_mcePaste">• Myth #6: in CAP, choose AP over CA </div>
+    • Myth #6: in CAP, choose AP over CA     
 
 ## Myth #1A: SQL is too slow because of heavy interfaces like ODBC/JDBC
 
@@ -87,7 +87,7 @@ Only [stored procedures](http://en.wikipedia.org/wiki/Stored_procedure) are sup
 
 The execution flow is something like:
 
-<span class="full-image-block ssNonEditable"><span>![](http://farm5.static.flickr.com/4134/4735994727_092fb1092a_o.png?__SQUARESPACE_CACHEVERSION=1277583940664)</span></span>
+        ![](http://farm5.static.flickr.com/4134/4735994727_092fb1092a_o.png?__SQUARESPACE_CACHEVERSION=1277583940664)        
 
 **Discussion**:
 
@@ -105,8 +105,8 @@ An interesting fact about stored procedures is that they can [take anywhere from
 
 **Problem:**
 
-Traditional relational databases are using 30 year old architectures that make them slow by design. **<span style="font-weight: normal;">Ninety percent of all CPU cycles in your typical OLTP database go into non-productive work like: managing disk buffer pools, locking, crash recovery, multi-threading. To go faster you need to get rid of the overhead. Traditional relational databases do not do this, they are overhead rich and slow, but this is not the fault of SQL, it's the implementations that are faulty.  
-</span>**
+Traditional relational databases are using 30 year old architectures that make them slow by design. **    Ninety percent of all CPU cycles in your typical OLTP database go into non-productive work like: managing disk buffer pools, locking, crash recovery, multi-threading. To go faster you need to get rid of the overhead. Traditional relational databases do not do this, they are overhead rich and slow, but this is not the fault of SQL, it's the implementations that are faulty.  
+    **
 
 **VoltDB's Solution**:
 
@@ -245,4 +245,4 @@ What makes the polyglot future possible is open source. With open source it's po
 *   [VoltDB Don’ts Validating NoSQL Assumptions](http://nosql.mypopescu.com/post/730926448/voltdb-donts-validating-nosql-assumptions) on myNoNSql.
 *   What is a latch? [From Locking and Latching in a Memory-Resident Database System](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.109.8323&rep=rep1&type=pdf): A latch, or short-term lock, is a low level primitive that provides a cheap serialization mechanism with shared and exclusive lock modes, but no deadlock detection. In Starburst, things, gain exclusive or shared access to buffer pool pages. Each time the VRM storage component needs access to a page, it contacts the buffer pool which then latches the page in the buffer pool in a shared or exclusive mode.
 
-</div>
+    

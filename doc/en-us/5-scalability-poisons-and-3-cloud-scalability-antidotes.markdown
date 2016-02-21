@@ -1,8 +1,8 @@
 ## [5 Scalability Poisons and 3 Cloud Scalability Antidotes](/blog/2011/9/21/5-scalability-poisons-and-3-cloud-scalability-antidotes.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, September 21, 2011 at 9:03AM</span></div>
+    
 
-<div class="body">
+    
 
 [Sean Hull](http://www.iheavy.com/company/about/) with two helpful posts:
 
@@ -22,4 +22,4 @@
 
  This is just a brief summary. Please read the original articles for the full details.
 
-</div>
+    

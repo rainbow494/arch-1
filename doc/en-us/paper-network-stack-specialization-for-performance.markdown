@@ -1,8 +1,8 @@
 ## [Paper: Network Stack Specialization for Performance ](/blog/2014/2/12/paper-network-stack-specialization-for-performance.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, February 12, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm4.staticflickr.com/3720/12470482324_272e9ef2e6_n.jpg)
 
@@ -24,12 +24,12 @@ Even if you didn't want to change the stack on your front-end facing components,
 
 > General-purpose operating system stacks have been around a long time, and have demonstrated the ability to transcend multiple generations of hardware. We believe the same should be true of special-purpose stacks, but that tuning for particular hardware should be easier. We examined performance on servers manufactured seven years apart, and demonstrated that although the performance bottlenecks were now in different places, the same design delivered signiﬁcant beneﬁts on both platforms. It is our belief that a blend of specialized network stacks with performance-critical applications such as web services, can dramatically improve the scalability of current hardware, reducing costs and energy demands, offering a practical alternative to general-purpose designs.
 
-## <span>Related Articles</span>
+##     Related Articles    
 
-<div>
+    
 
 *   [Is It Time To Get Rid Of The Linux OS Model In The Cloud?](http://highscalability.com/blog/2012/1/19/is-it-time-to-get-rid-of-the-linux-os-model-in-the-cloud.html)
 
-</div>
+    
 
-</div>
+    

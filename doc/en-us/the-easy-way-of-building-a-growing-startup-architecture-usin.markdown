@@ -1,68 +1,68 @@
 ## [The Easy Way of Building a Growing Startup Architecture Using HAProxy, PHP, Redis and MySQL to Handle 1 Billion Requests a Week](/blog/2014/8/11/the-easy-way-of-building-a-growing-startup-architecture-usin.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 11, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm6.staticflickr.com/5568/14673350749_f0b4af41e4_m.jpg)
 
-<span style="font-style: italic;">This Case Study is a guest post written by</span> [Antoni Orfin](http://labs.octivi.com/author/aorfin/)<span style="font-style: italic;">, Co-Founder and Software Architect at </span>[Octivi](http://octivi.com/?utm_source=highscalability.com&utm_medium=referral&utm_campaign=guest-post)<span style="font-size: 12px;">. </span>
+    This Case Study is a guest post written by     [Antoni Orfin](http://labs.octivi.com/author/aorfin/)    , Co-Founder and Software Architect at     [Octivi](http://octivi.com/?utm_source=highscalability.com&utm_medium=referral&utm_campaign=guest-post)    .     
 
-<span id="docs-internal-guid-944ff78b-b627-2e13-1e89-2b8d3c8040d3"></span>
+        
 
-<span>In the post I'll show you the way we developed quite simple architecture based on HAProxy, PHP, Redis and MySQL that seamlessly handles approx 1 billion requests every week. There’ll be also a note of the possible ways of further scaling it out and pointed uncommon patterns, that are specific for this project.</span>
+    In the post I'll show you the way we developed quite simple architecture based on HAProxy, PHP, Redis and MySQL that seamlessly handles approx 1 billion requests every week. There’ll be also a note of the possible ways of further scaling it out and pointed uncommon patterns, that are specific for this project.    
 
-## <span>Stats:</span>
+##     Stats:    
 
-*   <span>Servers:</span>
+*       Servers:    
 
-    *   <span>3x application nodes</span>
+    *       3x application nodes    
 
-    *   <span>2x MySQL + 1x for backup</span>
+    *       2x MySQL + 1x for backup    
 
-    *   <span>2x Redis</span>
+    *       2x Redis    
 
-*   <span>Application:</span>
+*       Application:    
 
-    *   <span>Application handles 1,000,000,000 requests every week</span>
+    *       Application handles 1,000,000,000 requests every week    
 
-    *   <span>Single Symfony2 instance up to 700 req/s (at average workday - 550 req/s)</span>
+    *       Single Symfony2 instance up to 700 req/s (at average workday - 550 req/s)    
 
-    *   <span>Average response time - 30 milliseconds</span>
+    *       Average response time - 30 milliseconds    
 
-    *   <span>Varnish - more than 12,000 req/s (achieved during stress test)</span>
+    *       Varnish - more than 12,000 req/s (achieved during stress test)    
 
-*   <span>Data store:</span>
+*       Data store:    
 
-    *   <span>Redis - 160,000,000 records, 100 GB of data (our primary data store!),</span>
+    *       Redis - 160,000,000 records, 100 GB of data (our primary data store!),    
 
-    *   <span>MySQL - 300,000,000 records - 300 GB (third cache layer)</span>
+    *       MySQL - 300,000,000 records - 300 GB (third cache layer)    
 
-## <span>Platform:</span>
+##     Platform:    
 
-## <span>![logical architecture.png](https://lh5.googleusercontent.com/RTIlhmFrfZTe1e4rtLuaRKuMSTQLBgtYQdBn8w6f8dKuJUvW-kucxbKTDB3Y0lyEEp-Xi8nc7PuuZaQR5AD1SlxEwyrEtuE8oH99ZWoRrT8mROSUTr7mOHyPmTLvo0kQ)</span>
+##     ![logical architecture.png](https://lh5.googleusercontent.com/RTIlhmFrfZTe1e4rtLuaRKuMSTQLBgtYQdBn8w6f8dKuJUvW-kucxbKTDB3Y0lyEEp-Xi8nc7PuuZaQR5AD1SlxEwyrEtuE8oH99ZWoRrT8mROSUTr7mOHyPmTLvo0kQ)    
 
-*   <span>Monitoring:</span>
+*       Monitoring:    
 
-    *   <span>Icinga</span>
+    *       Icinga    
 
-    *   <span>Collectd</span>
+    *       Collectd    
 
-*   <span>Application:</span>
+*       Application:    
 
-    *   <span>HAProxy with Keepalived</span>
+    *       HAProxy with Keepalived    
 
-    *   <span>Varnish</span>
+    *       Varnish    
 
-    *   <span>PHP (PHP-FPM) with Symfony2 Framework</span>
+    *       PHP (PHP-FPM) with Symfony2 Framework    
 
-*   <span>Data store:</span>
+*       Data store:    
 
-    *   <span>MySQL (master-master) with HAProxy load balancing</span>
+    *       MySQL (master-master) with HAProxy load balancing    
 
-    *   <span>Redis (master-slave)</span>
+    *       Redis (master-slave)    
 
-# <span>The background</span>
+#     The background    
 
 Almost a year ago, our friends came to our office with a demanding problem. They’re running a fast growing e-commerce startup and at the time they wanted to expand to international. 
 
@@ -248,4 +248,4 @@ Platform was designed by Poland based software house [Octivi](http://octivi.com/
 
 *   [Push it to the limits - Symfony2 for High Performance needs](http://symfony.com/blog/push-it-to-the-limits-symfony2-for-high-performance-needs) - details of the Software Architecture with Symfony2 features described
 
-</div>
+    

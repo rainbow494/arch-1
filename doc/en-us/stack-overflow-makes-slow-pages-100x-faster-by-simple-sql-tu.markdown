@@ -1,8 +1,8 @@
 ## [Stack Overflow Makes Slow Pages 100x Faster by Simple SQL Tuning](/blog/2011/5/2/stack-overflow-makes-slow-pages-100x-faster-by-simple-sql-tu.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, May 2, 2011 at 8:45AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.static.flickr.com/5052/5488952221_77f2126053_o.jpg)
 
@@ -29,4 +29,4 @@ A NoSQLite might counter that this is what key-value database is for. All that d
 *   [Reddit Thread](http://www.reddit.com/r/programming/comments/h2eqc/a_day_in_the_life_of_a_slow_page_at_stack_overflow/)
 *   [HackerNews Thread](http://news.ycombinator.com/item?id=2509846)
 
-</div>
+    

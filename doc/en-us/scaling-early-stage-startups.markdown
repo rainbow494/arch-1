@@ -1,8 +1,8 @@
 ## [Scaling Early Stage Startups](/blog/2007/10/28/scaling-early-stage-startups.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Sunday, October 28, 2007 at 2:26PM</span></div>
+    
 
-<div class="body">
+    
 
 Mark Maunder of [No VC Required](http://novcrequired.com)--who advocates not taking VC money lest you be turned into a frog instead of the prince (or princess) you were dreaming of--has an excellent [slide deck](http://novcrequired.com/scalingEarly.ppt) on how to scale an early stage startup. His blog also has some good SEO tips and a very spooky widget showing the geographical location of his readers. Perfect for Halloween! What is Mark's other worldly scaling strategies for startups?
 
@@ -42,4 +42,4 @@ Site: http://novcrequired.com/
 
     *   Turn Keepalive off on your dynamic content. Increasing http requests can exhaust the thread and memory resources needed to serve them.  
 
-    *   You may not need a complex RDBMS for accessing data. Consider a lighter weight database BerkelyDB.</div>
+    *   You may not need a complex RDBMS for accessing data. Consider a lighter weight database BerkelyDB.    

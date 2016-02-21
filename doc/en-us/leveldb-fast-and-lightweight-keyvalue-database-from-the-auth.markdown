@@ -1,8 +1,8 @@
 ## [LevelDB - Fast and Lightweight Key/Value Database From the Authors of MapReduce and BigTable](/blog/2011/8/10/leveldb-fast-and-lightweight-keyvalue-database-from-the-auth.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, August 10, 2011 at 9:01AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.static.flickr.com/6203/6029536002_09bd2df6eb_m.jpg)
 
@@ -41,10 +41,10 @@ The LevelDB [mailing list](https://groups.google.com/forum/#!forum/leveldb) sta
 *   Every write will cause a log file to grow, regardless of whether or not you are writing to a key which already exists in the database, and regardless of whether or not you are overwriting a key with the exact same value.  Only background compactions will get rid of overwritten data.  So you should expect high cpu usage while you are inserting data, and also for a while afterwards as background compactions rearrange things.
 *   [LevelDB Benchmarks](http://leveldb.googlecode.com/svn/trunk/doc/benchmark.html) look good:
     *   Using 16 byte keys at 100 byte values:
-        *   Sequential Reads: LevelDB <span></span> 4,030,000 ops/sec; Kyoto TreeDB <span></span> 1,010,000 ops/sec; SQLite3 <span></span> 186,000 ops/sec
-        *   Random Reads: LevelDB <span></span> 129,000 ops/sec; Kyoto TreeDB <span></span> 151,000 ops/sec; SQLite3 <span></span> 146,000 ops/sec
-        *   Sequential Writes: LevelDB <span></span> 779,000 ops/sec; Kyoto TreeDB <span></span> 342,000 ops/sec; SQLite3 <span></span> 26,900 ops/sec
-        *   Random Writes: LevelDB <span></span> 164,000 ops/sec; Kyoto TreeDB <span></span> 88,500 ops/sec; SQLite3 <span></span> 420 ops/sec
+        *   Sequential Reads: LevelDB          4,030,000 ops/sec; Kyoto TreeDB          1,010,000 ops/sec; SQLite3          186,000 ops/sec
+        *   Random Reads: LevelDB          129,000 ops/sec; Kyoto TreeDB          151,000 ops/sec; SQLite3          146,000 ops/sec
+        *   Sequential Writes: LevelDB          779,000 ops/sec; Kyoto TreeDB          342,000 ops/sec; SQLite3          26,900 ops/sec
+        *   Random Writes: LevelDB          164,000 ops/sec; Kyoto TreeDB          88,500 ops/sec; SQLite3          420 ops/sec
     *   Writing large values of 100,000 bytes each: LevelDB is even Kyoto TreeDB. SQLite3 is nearly 3 times as fast. LevelDB writes keys and values at least twice.
     *   A single batch of N writes may be significantly faster than N individual writes. 
     *   LevelDB's performance improves greatly with more memory, a larger write buffer reduces the need to merge sorted files (since it creates a smaller number of larger sorted files).
@@ -78,4 +78,4 @@ The LevelDB [mailing list](https://groups.google.com/forum/#!forum/leveldb) sta
 *   [Bigtable: A Distributed Storage System for Structured Data](http://labs.google.com/papers/bigtable.html)
 *   [Hot Trend: Move Behavior To Data For A New Interactive Application Architecture](http://highscalability.com/blog/2010/11/1/hot-trend-move-behavior-to-data-for-a-new-interactive-applic.html)
 
-</div>
+    

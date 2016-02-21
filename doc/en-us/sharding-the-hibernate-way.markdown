@@ -1,8 +1,8 @@
 ## [Sharding the Hibernate Way](/blog/2008/7/26/sharding-the-hibernate-way.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Saturday, July 26, 2008 at 3:04AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update**: _A very nice JavaWorld podcast interview with [Google engineer Max Ross on Hibernate Shards](http://www.javaworld.com/podcasts/jtech/2008/072408jtech.html). Max defines Hibernate Shards (horizontal partitioning), how it works (pretty well), virtual shards (don't ask), what they need to do in the future (query, replication, operational tools), and how it relates to Google AppEngine (not much)._  
 
@@ -78,4 +78,4 @@ To scale you are supposed to partition your data. Sounds good, but how do you do
 
 1.  [An Unorthodox Approach to Database Design: The Coming of the Shard](http://highscalability.com/unorthodox-approach-database-design-coming-shard).  
 
-</div>
+    

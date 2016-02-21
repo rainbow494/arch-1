@@ -1,8 +1,8 @@
 ## [How I Learned to Stop Worrying and Love Using a Lot of Disk Space to Scale](/blog/2008/5/27/how-i-learned-to-stop-worrying-and-love-using-a-lot-of-disk.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, May 27, 2008 at 10:04AM</span></div>
+    
 
-<div class="body">![](http://blog.seattlepi.nwsource.com/art/library/bombstrangelove.jpg)
+    ![](http://blog.seattlepi.nwsource.com/art/library/bombstrangelove.jpg)
 
 **Update 3**: ReadWriteWeb says [Google App Engine Announces New Pricing Plans, APIs, Open Access](http://www.readwriteweb.com/archives/google_app_engine_announcements.php). Pricing is specified but I'm not sure what to make of it yet. An image manipulation library is added (thus the need to pay for more CPU :-) and memcached support has been added. Memcached will help resolve the can't write for every read problem that pops up when keeping counters.  
 **Update 2**: onGWT.com threw a GAE load party and a lot of people came. The results at [Load test : Google App Engine = 1, Community = 0](http://www.ongwt.com/post/2008/05/24/Google-App-Engine-1-Community-0). GAE handled a peak of 35 requests/second and a sustained 10 requests/second. Some think performance was good, others not so good. My GMT watch broke and I was late to arrive. Maybe next time. Also added a few new design rules from the post.  
@@ -99,4 +99,4 @@ For a more modern post-relational discussion of data ethics I’m using as my pr
 
     ## Related Articles
 
-    *   [ER-Modeling with Google App Engine (updated)](http://daily.profeth.de/2008/04/er-modeling-with-google-app-engine.html)*   [Tips on writing scalable apps](http://googleappengine.blogspot.com/2008/04/posted-by-ken-ashcraft-software.html)</div>
+    *   [ER-Modeling with Google App Engine (updated)](http://daily.profeth.de/2008/04/er-modeling-with-google-app-engine.html)*   [Tips on writing scalable apps](http://googleappengine.blogspot.com/2008/04/posted-by-ken-ashcraft-software.html)    

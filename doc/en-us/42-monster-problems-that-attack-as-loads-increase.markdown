@@ -1,8 +1,8 @@
 ## [42 Monster Problems that Attack as Loads Increase](/blog/2013/2/27/42-monster-problems-that-attack-as-loads-increase.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, February 27, 2013 at 9:50AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8233/8513732858_fc162638da_m.jpg)
 
@@ -211,11 +211,11 @@ Magic hardware caching speedups tend to break down when processors are asked to 
 
 ## Related Articles
 
-<div>
+    
 
 *   [Big List Of 20 Common Bottlenecks](http://highscalability.com/blog/2012/5/16/big-list-of-20-common-bottlenecks.html)
 *   [Russ’ 10 Ingredient Recipe For Making 1 Million TPS On $5K Hardware](http://highscalability.com/blog/2012/9/10/russ-10-ingredient-recipe-for-making-1-million-tps-on-5k-har.html)
 
-</div>
+    
 
-</div>
+    

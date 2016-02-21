@@ -1,8 +1,8 @@
 ## [How FarmVille Scales to Harvest 75 Million Players a Month](/blog/2010/2/8/how-farmville-scales-to-harvest-75-million-players-a-month.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, February 8, 2010 at 8:04AM</span></div>
+    
 
-<div class="body">
+    
 
 _Several readers had follow-up questions in response to this article. Luke's responses can be found in [How FarmVille Scales - The Follow-up](http://highscalability.com/blog/2010/3/10/how-farmville-scales-the-follow-up.html)._
 
@@ -45,4 +45,4 @@ I'd like to thank Zynga and Luke Rajlich for making the time for this interview.
 7.  [How to Succeed at Capacity Planning Without Really Trying : An Interview with Flickr's John Allspaw on His New Book](../../blog/2009/6/29/how-to-succeed-at-capacity-planning-without-really-trying-an.html)
 8.  [Scaling FarmVille](http://perspectives.mvdirona.com/2010/02/13/ScalingFarmVille.aspx) by James Hamilton
 
-</div>
+    

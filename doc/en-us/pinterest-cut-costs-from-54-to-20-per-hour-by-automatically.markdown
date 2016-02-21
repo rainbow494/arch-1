@@ -1,8 +1,8 @@
 ## [Pinterest Cut Costs from $54 to $20 Per Hour by Automatically Shutting Down Systems](/blog/2012/12/12/pinterest-cut-costs-from-54-to-20-per-hour-by-automatically.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, December 12, 2012 at 9:30AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7180/6886606039_bc5c70dbf9_m.jpg)
 
@@ -26,4 +26,4 @@ We are in very early days of Adaptive Architectures. What is being managed are r
 *   [Pinterest Architecture Update - 18 Million Visitors, 10x Growth,12 Employees, 410 TB Of Dat](http://highscalability.com/blog/2012/5/21/pinterest-architecture-update-18-million-visitors-10x-growth.html)
 *   [A Short On The Pinterest Stack For Handling 3+ Million Users](http://highscalability.com/blog/2012/2/16/a-short-on-the-pinterest-stack-for-handling-3-million-users.html)
 
-</div>
+    

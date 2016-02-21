@@ -1,8 +1,8 @@
 ## [Product: SciDB - A Science-Oriented DBMS at 100 Petabytes](/blog/2010/4/29/product-scidb-a-science-oriented-dbms-at-100-petabytes.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, April 29, 2010 at 6:42AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://www.scidb.org/images/sci-db.gif)
 
@@ -30,4 +30,4 @@ Some interesting bits from the paper:
 
 Not your typical looking database. The Domain Specific aspects create something unique and hopefully uniquely useful. I wonder if we'll see more Domain Specific Database efforts in the future?
 
-</div>
+    

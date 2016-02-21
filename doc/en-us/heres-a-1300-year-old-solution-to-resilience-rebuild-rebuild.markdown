@@ -1,8 +1,8 @@
 ## [Here's a 1300 Year Old Solution to Resilience - Rebuild, Rebuild, Rebuild](/blog/2014/4/23/heres-a-1300-year-old-solution-to-resilience-rebuild-rebuild.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, April 23, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm4.staticflickr.com/3711/13939473364_567efc92e9_n.jpg)
 
@@ -46,10 +46,10 @@ The books we have from antiquity survived because people copied them. Presumably
 
 Perhaps the patterns of recurrence we see in software are not just a wasteful silliness, but a familiar example of a Darwinian selection process, where simplicity and value are kept alive in a community of human minds. 
 
-<span style="font-size: 1.5em;">Related Articles </span>
+    Related Articles     
 
 *   Some beautiful pictures from a trip. [Part 1](http://pursuingwabi.com/2013/06/30/ise-grand-shrine-part-1-geku/) and [part 2](http://pursuingwabi.com/2013/07/14/ise-grand-shrine-part-2-naiku/).
 *   [Alexander Rose Visits Ise Shrine Reconstruction Ceremony](http://blog.longnow.org/02013/10/03/alexander-rose-visits-ise-shrine-reconstruction-ceremony/). 
 *   [Rebuilding Every 20 Years Renders Sanctuaries Eternal -- the Sengu Ceremony at Jingu Shrine in Ise](http://www.japanfs.org/en/news/archives/news_id034293.html)
 
-</div>
+    

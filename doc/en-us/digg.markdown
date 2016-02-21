@@ -1,8 +1,8 @@
 ## [Digg - Looking to the Future with Cassandra](/blog/2009/10/29/digg-looking-to-the-future-with-cassandra.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, October 29, 2009 at 8:47AM</span></div>
+    
 
-<div class="body">
+    
 
 Digg has been researching ways to scale our database infrastructure for some time now. We’ve adopted a [traditional vertically partitioned master-slave](http://blog.digg.com/?p=213) configuration with MySQL, and also investigated sharding MySQL with [IDDB](http://blog.digg.com/?p=607). Ultimately, these solutions left us wanting. In the case of the traditional architecture, the lack of redundancy on the write masters is painful, and both approaches have significant management overhead to keep running.
 
@@ -12,4 +12,4 @@ Each system has its own strengths and weaknesses, but Cassandra has a good blend
 
 [continue...](http://blog.digg.com/?p=966) 
 
-</div>
+    

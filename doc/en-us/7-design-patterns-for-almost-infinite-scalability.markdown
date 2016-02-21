@@ -1,8 +1,8 @@
 ## [7 Design Patterns for Almost-infinite Scalability](/blog/2010/12/16/7-design-patterns-for-almost-infinite-scalability.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, December 16, 2010 at 8:02AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://www.codeproject.com/KB/cs/cmdpatternleo/Design_Pattern_Book_Cover.JPG)
 
@@ -29,4 +29,4 @@ The article then compares how these principles compare to the design principles 
 *   **Symmetry:** Nodes in the system are identical in terms of functionality, and require no or minimal node-specific configuration to function.
 *   **Simplicity:** The system should be made as simple as possible (- but no simpler).
 
-</div>
+    

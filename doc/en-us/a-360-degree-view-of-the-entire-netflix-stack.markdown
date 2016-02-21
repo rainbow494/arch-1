@@ -1,41 +1,41 @@
 ## [A 360 Degree View of the Entire Netflix Stack](/blog/2015/11/9/a-360-degree-view-of-the-entire-netflix-stack.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, November 9, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://c1.staticflickr.com/1/636/22710586190_e5d99f00d8_o.jpg)
 
-<div class="container">
+    
 
-<div class="row">
+    
 
-<div class="col-md-pull-3 col-md-9">
+    
 
-<div class="clearfix postprofiletop">_This is a guest [repost](http://www.scalescale.com/the-stack-behind-netflix-scaling/) by [Chris Ueland](http://twitter.com/ChrisUeland), creator of [Scale Scale](http://scalescale.com/), with a creative high level view of the Netflix stack._  
+    _This is a guest [repost](http://www.scalescale.com/the-stack-behind-netflix-scaling/) by [Chris Ueland](http://twitter.com/ChrisUeland), creator of [Scale Scale](http://scalescale.com/), with a creative high level view of the Netflix stack._  
 
-<div class="info">
+    
 
 > As we research and dig deeper into scaling, we keep running into Netflix. They are very public with their stories. This post is a round up that we put together with Bryan’s help. We collected info from all over the internet. If you’d like to reach out with more info, we’ll append this post. Otherwise, please enjoy!
 > 
 > –Chris / ScaleScale / MaxCDN
 
-</div>
+    
 
-</div>
+    
 
-<div class="grid">
+    
 
-<div class="left half"><span style="font-size: small;"><span class="full-image-block ssNonEditable"><span>![](https://c2.staticflickr.com/6/5685/22539311029_449f86e17a_z.jpg?__SQUARESPACE_CACHEVERSION=1447204302683)</span></span>  
-</span></div>
+                ![](https://c2.staticflickr.com/6/5685/22539311029_449f86e17a_z.jpg?__SQUARESPACE_CACHEVERSION=1447204302683)          
+        
 
-</div>
+    
 
 ## A look at what we think is interesting about how Netflix Scales
 
 Netflix was founded in 1997 by Marc Randolph and Reed Hastings in Scotts Valley, California and started with 30 employees with 925 working on pay-per-rent.Netflix, now the world’s leading Internet television network, has more than 69 million subscribers in 50 countries enjoying more than ten billion hours of TV shows and movies per month. They are very transparent and publish a lot of information online. We’ve collected it and are sharing the things we think are most interesting:
 
-<span style="font-size: small;"><span class="full-image-block ssNonEditable"><span>![](https://c2.staticflickr.com/6/5755/22480496217_e03746d942_o.png?__SQUARESPACE_CACHEVERSION=1447083309082)</span></span></span>  
+            ![](https://c2.staticflickr.com/6/5755/22480496217_e03746d942_o.png?__SQUARESPACE_CACHEVERSION=1447083309082)              
 
 ## Scaling Culture
 
@@ -49,11 +49,11 @@ The Full presentation is [here](http://www.scalescale.com/the-stack-behind-netf
 
 ## Supporting Many titles with Amazon
 
-Netflix’s infrastructure is on <span class="no-wrap"> Amazon EC2</span> with master copies of digital films from movie studios being stored on <span class="no-wrap">Amazon S3</span>. Each film is encoded into over 50 different versions based on video resolution and audio quality using machines on the cloud. Over 1 petabyte of data is stored on <span class="no-wrap">Amazon</span>. These data are sent to content delivery networks to feed the content to local ISPs.
+Netflix’s infrastructure is on      Amazon EC2     with master copies of digital films from movie studios being stored on     Amazon S3    . Each film is encoded into over 50 different versions based on video resolution and audio quality using machines on the cloud. Over 1 petabyte of data is stored on     Amazon    . These data are sent to content delivery networks to feed the content to local ISPs.
 
 Netflix uses a number of open-source software at the backend, including Java, MySQL, Gluster, Apache Tomcat, Hive, Chukwa, Cassandra, and Hadoop.
 
-<div class="annotated"><span class="full-image-block ssNonEditable"><span>[![](https://c1.staticflickr.com/1/720/22910079121_024fdbf805_z.jpg?__SQUARESPACE_CACHEVERSION=1447083510278)](http://2zmzkp23rtmx20a8qi485hmn.wpengine.netdna-cdn.com/wp-content/uploads/2015/11/netflix-architecture.png)</span></span></div>
+            [![](https://c1.staticflickr.com/1/720/22910079121_024fdbf805_z.jpg?__SQUARESPACE_CACHEVERSION=1447083510278)](http://2zmzkp23rtmx20a8qi485hmn.wpengine.netdna-cdn.com/wp-content/uploads/2015/11/netflix-architecture.png)            
 
 ## Supporting Many Devices
 
@@ -70,7 +70,7 @@ They support every title in the following Codecs with different bit rates to mak
 
 ### Netflix Open Connect CDN
 
-The Netflix Open Connect CDN is provided for larger ISPs that have over 100,000 subscribers. A specially built low power high storage density appliance caches Netflix content within the ISPs’ data centers to reduce internet transit costs. This appliance runs the <span class="no-wrap"> FreeBSD</span> operating system, <span class="no-wrap"> nginx</span> and the<span class="no-wrap"> Bird Internet routing daemon</span>.
+The Netflix Open Connect CDN is provided for larger ISPs that have over 100,000 subscribers. A specially built low power high storage density appliance caches Netflix content within the ISPs’ data centers to reduce internet transit costs. This appliance runs the      FreeBSD     operating system,      nginx     and the     Bird Internet routing daemon    .
 
 ![](http://pbs.twimg.com/media/BxhuMI3IIAAljvI.jpg)  
 
@@ -94,7 +94,7 @@ On their Engineering blog, the Netflix team covers [Learning a Personalized Hom
 
 [https://netflix.github.io/](https://netflix.github.io/). Netflix has a great engineering blog and they recently did a post called [The Evolution of Open Source at Netflix](http://techblog.netflix.com/2015/10/evolution-of-open-source-at-netflix.html).
 
-<div id="ossprojects">
+    
 
 ## Big Data
 
@@ -116,7 +116,7 @@ On their Engineering blog, the Netflix team covers [Learning a Personalized Hom
 *   [Ribbon](https://github.com/Netflix/ribbon) - Resilent and intelligent inter-process and service communication.
 *   [Hystrix](https://github.com/Netflix/hystrix) - Provides reliability beyond single service calls. Isolates latency and fault tolerance at runtime.
 *   **[Karyon](https://github.com/Netflix/karyon)** and **[Governator](https://github.com/Netflix/governator) - **JVM container services.
-*   [Prana](https://github.com/Netflix/prana)<span style="font-weight: bold;"> sidecar</span> <span style="font-weight: bold;">-</span><span style="font-weight: bold;"> </span>Prana provides proxy capabilities within an instance.
+*   [Prana](https://github.com/Netflix/prana)     sidecar         -             Prana provides proxy capabilities within an instance.
 *   [Zuul](https://github.com/Netflix/zuul) - Provides dyamically scriptable proxying at the edge of the cloud deployment.
 *   [Fenzo](https://github.com/Netflix/Fenzo) - Provides advanced scheduling and resource management for cloud native frameworks.
 
@@ -134,7 +134,7 @@ On their Engineering blog, the Netflix team covers [Learning a Personalized Hom
 *   [Ice](https://github.com/Netflix/ice) - Exposes ongoing cost and and cloud utilization trends.
 *   [Simian Army](https://github.com/Netflix/SimianArmy) - Tests Netflix instances for random failures.
 
-## Security<span style="font-size: 12px;"> </span>
+## Security         
 
 *   [Security Monkey](https://github.com/Netflix/security_monkey) - Helps monitor and secure large AWS-based environments.
 *   [Scumblr](https://github.com/Netflix/scumblr) - Leverages Internet-wide targeted searches to surface specific security issues for investigation.
@@ -143,9 +143,9 @@ On their Engineering blog, the Netflix team covers [Learning a Personalized Hom
 *   [Restify](https://github.com/restify/node-restify) - node.js REST framework specifically meant for web service APIs
 *   [RxJS](https://github.com/ReactiveX/RxJS) - A reactive programming library for JavaScript
 
-</div>
+    
 
-</div>
+    
 
 ## References
 
@@ -160,8 +160,8 @@ On their Engineering blog, the Netflix team covers [Learning a Personalized Hom
 9.  [https://www.quora.com/How-does-the-Netflix-movie-recommendation-algorithm-work ](https://www.quora.com/How-does-the-Netflix-movie-recommendation-algorithm-work)
 10.  [https://netflix.github.io/ ](https://netflix.github.io/)
 
-</div>
+    
 
-</div>
+    
 
-</div>
+    

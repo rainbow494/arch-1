@@ -1,14 +1,14 @@
 ## [A Flock of Tasty Sources on How to Start Learning High Scalability](/blog/2014/11/24/a-flock-of-tasty-sources-on-how-to-start-learning-high-scala.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, November 24, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 _This is a [guest repost](http://leandromoreira.com.br/2014/11/20/how-to-start-to-learn-high-scalability/) by [Leandro Moreira](http://www.linkedin.com/in/leandromoreira)._
 
-<div class="entry-content">
+    
 
-<span class="full-image-float-right ssNonEditable"><span>![distributed systems](http://s.hswstatic.com/gif/dns-rev-3.jpg)</span></span>
+        ![distributed systems](http://s.hswstatic.com/gif/dns-rev-3.jpg)        
 
 When we usually are interested about scalability we look for links, explanations, books, and references. This mini article links to the references I think might help you in this journey.
 
@@ -41,8 +41,8 @@ Now that you know you can empower yourself with virtual servers, I challenge you
 
 **Bonus round:** sometimes simple things can achieve your goals of making even an [AB test](http://viget.com/extend/split-test-traffic-distribution-with-nginx).
 
-<span style="text-decoration: underline;">Please let me know any mistake, I’ll be happy to fix it.</span>
+    Please let me know any mistake, I’ll be happy to fix it.    
 
-</div>
+    
 
-</div>
+    

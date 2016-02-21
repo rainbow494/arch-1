@@ -1,8 +1,8 @@
 ## [Facebook Timeline: Brought to You by the Power of Denormalization](/blog/2012/1/23/facebook-timeline-brought-to-you-by-the-power-of-denormaliza.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, January 23, 2012 at 9:14AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7164/6749666161_e362edc633_m.jpg)
 
@@ -16,7 +16,7 @@ Five big takeaways from the article are:
 *   **Denormalize. Format data in the way you need to use it**. 
     *   Denormalzation, creating special purpose objects instead of distributed rows that must be joined, minimizes random IO by reducing the number of trips to the database. Caching can often get around the need for denormalization, but given the amount of timeline data and how much of it is cold, that is it will rarely be viewed, caching everything isn't a good design.
     *   Timeline decides the order to display data by calculating a rank based on metadata. The denormalization process brought all that metadata together in a format that meant ranking could be done in a few IOs and streamed efficiently from the database using a primary key range query
-    *   Timeline is like a datamart in a data warehouse. Data must be slurped up from dozens of different systems, cleaned, merged, and reformatted into a new canonical format. Facebook of course did this in a Facebook-like way. They created a custom data conversion language, they deployed hundreds of MySQL servers to extract the data out of "legacy" systems as fast as possible, they deployed flash storage to speed up joins, they created a parallelizing query proxy, and they standardized on the <span>Multifeed data format for future flexibility.</span>
+    *   Timeline is like a datamart in a data warehouse. Data must be slurped up from dozens of different systems, cleaned, merged, and reformatted into a new canonical format. Facebook of course did this in a Facebook-like way. They created a custom data conversion language, they deployed hundreds of MySQL servers to extract the data out of "legacy" systems as fast as possible, they deployed flash storage to speed up joins, they created a parallelizing query proxy, and they standardized on the     Multifeed data format for future flexibility.    
 *   **Keep different types of caches**. 
     *   **Short term cache.  **A timeline of recent activity is frequently invalidated because it is changing all the time as you perform actions through your life. This cache is an in RAM row cache inside InnoDB that uses the [Flashcache](https://www.facebook.com/note.php?note_id=388112370932) kernel driver _to expand the OS cache onto a flash device_.
     *   **Long term cache**. A query cache is kept in memcached. The results of large queries, like the ranking of all your activities in 2010, can be efficiently cached since they will rarely be invalidated.
@@ -27,4 +27,4 @@ Five big takeaways from the article are:
 
 *   [Under the Hood: Mobile Timeline](http://www.facebook.com/notes/facebook-engineering/under-the-hood-mobile-timeline/10150500366118920)
 
-</div>
+    

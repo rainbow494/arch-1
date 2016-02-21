@@ -1,8 +1,8 @@
 ## [5 Tips for Scaling NoSQL Databases: Don’t Trust Assumptions—Test, Test, Test!](/blog/2014/9/24/5-tips-for-scaling-nosql-databases-dont-trust-assumptionstes.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, September 24, 2014 at 9:08AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm4.staticflickr.com/3907/15155548569_94b0c59654_m.jpg)
 
@@ -16,4 +16,4 @@ Alex Bordei, product manager for Bigstep’s Full Metal Cloud, in [Scaling NoSQ
 
 Lots of good advice. Each of these points in discussed in more detail in the [original article](http://radar.oreilly.com/2014/09/scaling-nosql-databases-5-tips-for-increasing-performance.html), which is well worth reading.
 
-</div>
+    

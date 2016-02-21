@@ -1,8 +1,8 @@
 ## [The Changing Face of Scale - The Downside of Scaling in the Contextual Age ](/blog/2013/3/27/the-changing-face-of-scale-the-downside-of-scaling-in-the-co.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, March 27, 2013 at 9:38AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8104/8595718016_c9b7590454_m.jpg)
 
@@ -24,7 +24,7 @@ One example Robert gives in a [StackExchange podcast](http://blog.stackoverflow
 
 In a [GigaOM interview](http://gigaom.com/2013/02/19/want-tempos-new-calendar-assistant-youll-have-to-wait-for-its-ai-to-catch-up/), Tempo CEO Raj Singh explains exactly why each new customer is so expensive:
 
-> <div id="_mcePaste">It takes a huge amount of computing resources to bring new customer online. Its platform must initially cull through all of the data in the customer’s various email and social media accounts. Once the customer is on-boarded the burden on the AI lessens, though it does reprocess all of that data on a regular basis – any time new email or contact data is added to system, Tempo can generate new semantic links between new data and old. There is just generally a ton of CPU to make all of this work; processing data takes time and we don’t get a network effect, since we have to process each individual’s data. We re-process data constantly; to be semantically relevant and contextual, we’re constantly re-processing, this is very expensive (it’s like Google constantly re-crawling). </div>
+>     It takes a huge amount of computing resources to bring new customer online. Its platform must initially cull through all of the data in the customer’s various email and social media accounts. Once the customer is on-boarded the burden on the AI lessens, though it does reprocess all of that data on a regular basis – any time new email or contact data is added to system, Tempo can generate new semantic links between new data and old. There is just generally a ton of CPU to make all of this work; processing data takes time and we don’t get a network effect, since we have to process each individual’s data. We re-process data constantly; to be semantically relevant and contextual, we’re constantly re-processing, this is very expensive (it’s like Google constantly re-crawling).     
 
 Once separate database silos must be built, constantly rebuilt, and linked together. No small task. Each new customer takes a lot of processing power and in a socially networked world applications quickly become flash mobbed with registration applications. Robert notes Twitter took 6 months to grow to 13,000 users and Twitter had scaling issues for years. Tempo got to 13,000 users the first hour it was open. Hundreds of thousands of users were put on a waiting list. On its first day Tempo server load was 24 times higher than expected. 
 
@@ -36,4 +36,4 @@ Startups in the Contextual Age are not so fortunate. Fairy tales are stories of 
 
 And don't take it too hard if your app doesn't win the popularity lottery, a lot of it is [pure luck](http://300songs.com/2011/07/15/74-hits-are-black-swans-take-the-skinheads-bowling/). 
 
-</div>
+    

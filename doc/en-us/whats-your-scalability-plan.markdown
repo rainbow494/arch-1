@@ -1,8 +1,8 @@
 ## [What's your scalability plan?](/blog/2008/2/13/whats-your-scalability-plan.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, February 13, 2008 at 2:38PM</span></div>
+    
 
-<div class="body">How do you plan to scale your system as you reach predictable milestones? This topic came up in another venue and it reminded me about a great comment an Anonymous wrote a while ago and I wanted to make sure that comment didn't get lost.  
+    How do you plan to scale your system as you reach predictable milestones? This topic came up in another venue and it reminded me about a great comment an Anonymous wrote a while ago and I wanted to make sure that comment didn't get lost.  
 
 The Anonymous scaling plan was relatively simple and direct:  
 _My two cents on what I'm using to start a website from scratch using a single server for now. Later, I'll scale out horizontally when the need arises.  
@@ -47,4 +47,4 @@ _*   Use Munin to tell when to think about upgrading. When your growth trend wil
 
 The great insight ThemBid had was to use monitoring to predict when performance is hitting a limit so you can take action before the world ends. Take a look at [Monitoring](http://highscalability.com/tags/monitoring) for some options. Some examples of how monitoring is used: [Feedburner Architecture](http://www.highscalability.com/feedburner-architecture), [Scaling Early Stage Startups](http://highscalability.com/scaling-early-stage-startups), [Thembid Architecture](http://www.highscalability.com/thembid-architecture), [Flickr Architecture](http://www.highscalability.com/flickr-architecture), [Ebay Architecture](http://highscalability.com/ebay-architecture).  
 
-Most problems are pretty predictable, especially if you read this site. Have a plan in mind for what you want to do when you grow. You don't have to do all now, but make the path easier by starting in the right direction now. You'll also be much less stressed when all hell breaks loose.</div>
+Most problems are pretty predictable, especially if you read this site. Have a plan in mind for what you want to do when you grow. You don't have to do all now, but make the path easier by starting in the right direction now. You'll also be much less stressed when all hell breaks loose.    

@@ -1,8 +1,8 @@
 ## [The Implications of Punctuated Scalabilium for Website Architecture](/blog/2009/3/11/the-implications-of-punctuated-scalabilium-for-website-archi.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, March 11, 2009 at 5:29AM</span></div>
+    
 
-<div class="body">**Update:** [How do you design and handle peak load on the Cloud?](http://www.cloudiquity.com/2009/03/how-do-you-design-and-handle-peak-load-on-the-cloud/#) by Cloudiquity. Gives a formula to try and predict and plan for peak load and talks about how GigaSpaces XAP, Scalr, RightScale and FreedomOSS can be used to handle peak load within EC2.  
+    **Update:** [How do you design and handle peak load on the Cloud?](http://www.cloudiquity.com/2009/03/how-do-you-design-and-handle-peak-load-on-the-cloud/#) by Cloudiquity. Gives a formula to try and predict and plan for peak load and talks about how GigaSpaces XAP, Scalr, RightScale and FreedomOSS can be used to handle peak load within EC2.  
 
 Theo Schlossnagle, with his usual insight, talks about in [Dissecting today's surges](http://www.lethargy.org/~jesus/archives/118-Dissecting-todays-surges.html) how the nature of internet traffic has evolved over time. Traffic now spikes like a heart attack, larger and more quickly than ever from traffic inflow sources like Digg and The New York Times. Theo relates how _At least eight times in the past month, we've experienced from 100% to 1000% sudden increases in traffic across many of our clients_ and those spike can happen as quickly as 60 seconds. To me this sounds a lot like [Punctuated equilibrium](http://en.wikipedia.org/wiki/Punctuated_equilibrium) in evolution, a force that accounts for much creative growth in species...  
 
@@ -18,4 +18,4 @@ A few things that might help:
     *   Would an in-cloud service to offer stem cell VMs make sense? This is a VM that could quickly become any one of a number of different images on demand. So a service could keep a reservoir of stem cell VMs up and running, shared by a number of customers, and an application could request the low latency spin up of one of the reserved VMs.  
 
     The idea that internet traffic patterns have evolved such that even our cloud architectures can't easily cope is an interesting one. I find it ironic that many of the techniques needed to build real-time systems are helpful to handle this new world too when at first glance the problems look nothing alike. Sometimes piling on more resources isn't enough, efficiency matters too.  
-    </div>
+        

@@ -1,8 +1,8 @@
 ## [Pursue robust indefinite scalability with the Movable Feast Machine](/blog/2011/9/28/pursue-robust-indefinite-scalability-with-the-movable-feast.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, September 28, 2011 at 9:10AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.static.flickr.com/6158/6192442184_bca3fe3333_m.jpg)
 
@@ -53,4 +53,4 @@ How all this can be programmed to solve problem in real-life, I don't know. But 
 *   [HOTOS XIII Conference Report](http://www.usenix.org/publications/login/2011-08/openpdfs/HOTOSXIIIreports.pdf)
 *   [Pursue Robust Indefinite Scalability With The Movable Feast Machine](http://tuvalu.santafe.edu/events/workshops/images/b/b1/Ackley-csss-2011.pdf) by Dave Ackley
 
-</div>
+    

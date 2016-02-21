@@ -1,8 +1,8 @@
 ## [Designing for Resiliency will be so 2013](/blog/2012/12/31/designing-for-resiliency-will-be-so-2013.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, December 31, 2012 at 10:25AM</span></div>
+    
 
-<div class="body">
+    
 
 <iframe align="right" width="250" height="141" src="http://www.youtube.com/embed/2S0k12uZR14" frameborder="0" allowfullscreen=""></iframe>
 
@@ -20,11 +20,11 @@ Fortunately, [Dr. Richard Cook](http://velocityconf.com/velocity2012/public/sch
 
 Here's a gloss of the essentials from his talk:
 
-## <span>Why Don’t Systems Fail More Often?</span>
+##     Why Don’t Systems Fail More Often?    
 
-<span>The normal world is not well behaved. The real surprise is not that there are so many accidents but there are so few. Is this because of or in spite of our system designs? We all  have had the sense of barely escaping our just getting by. It seems like we should have crashes all the time. Why is that? What does that mean about IT design implementation and ops?</span>
+    The normal world is not well behaved. The real surprise is not that there are so many accidents but there are so few. Is this because of or in spite of our system designs? We all  have had the sense of barely escaping our just getting by. It seems like we should have crashes all the time. Why is that? What does that mean about IT design implementation and ops?    
 
-## <span>Summary of 25 years of Research</span>
+##     Summary of 25 years of Research    
 
 *   **Story**. A hospital replaced all its pumps at once. A year later 20% of the pumps failed at the same time. The cause was a forced software upgrade set one year into the future that was required to happen or the unit would simply not accept new commands. Each individual step seemed to work and seemed fine at the time, but nobody saw the one year time bomb ticking.
 *   **The real world often produces surprises**, things you haven’t seen before. Sometimes these are an existential threat, that compromise your core missions.
@@ -36,41 +36,41 @@ Here's a gloss of the essentials from his talk:
 *   **Continuous change of technology and people**. The world you live in is anything but static.
 *   **Coping with shallow and deep conflicts**. Shallow conflicts: can we make a little more, can this run a little better, is this guy giving me hard time on the phone. Deep conflicts: we have trade offs. Are we going to take the system down to fix it or fix it on the fly?
 
-## <span>System as Imagined vs System as Found</span>
+##     System as Imagined vs System as Found    
 
 *   **System as imagined**. Few people have contact with systems as found. They are imagined in state diagrams and layouts and other diagrams. It’s how we make stuff. They are static and deterministic. You rarely see pictures of people doing work, sitting in front of screens and making the system run. It’s encountered during design and development and reviews of outcomes when a system fails. Archetype is state transition diagram or fault tree analysis.
 *   **Systems as found**. They are dynamic and stochastic. It’s constantly changing. It’s only predictable in some statistical way. Performance can’t be deterministically defined. We are always doing some kind of maintenance. Do not touch any of these wires. It’s what we encounter during implementation, operations, maintenance, and recovery from faults. They are very hard to draw these things. One way is using a FRAM (functional resonance analysis method) diagram.
 
-## <span>What are people doing in these As Found systems? What should operations look like?</span>
+##     What are people doing in these As Found systems? What should operations look like?    
 
-<span>Resilience is the combination in systems of these four activities:</span>
+    Resilience is the combination in systems of these four activities:    
 
 *   **Monitoring**. People look at the system to see what’s going on.
 *   **Responding**. Not in a reacting sense, but understanding what is going on in the system to figure out where it’s going and trying to make changes to deal with that.
 *   **Adapting**. Make the system work differently to get it to behave in a better way.
 *   **Learning**. Key component. It’s happening in communities of operators, shift personal etc, of people that we don’t have contact with.
 
-<span>These are terms of what we are trying to describe as resilience.</span>
+    These are terms of what we are trying to describe as resilience.    
 
-## <span>Reliability is made out of these things at design time:</span>
+##     Reliability is made out of these things at design time:    
 
-*   <span>Stiff boundaries</span>
-*   <span>Layers, formalisms</span>
-*   <span>Defence in depth</span>
-*   <span>Redundancy</span>
-*   <span>Interference protection, security, abstraction, hiding of details</span>
-*   <span>Assurance</span>
-*   <span>Accountability</span>
+*       Stiff boundaries    
+*       Layers, formalisms    
+*       Defence in depth    
+*       Redundancy    
+*       Interference protection, security, abstraction, hiding of details    
+*       Assurance    
+*       Accountability    
 
-## <span>What we really want is resilience:</span>
+##     What we really want is resilience:    
 
-*   <span>Withstand transients</span>
-*   <span>Recovery swiftly & smoothly from failures</span>
-*   <span>Prioritize to serve high level goals when the system is changing and we have to sacrifice something</span>
-*   <span>Recognize and respond to abnormal situations, including situations that were never considered at design time</span>
-*   <span>Adapt to change. Find someway to make system designed in the mindset of 4-7 years ago work for the next 3-5 years while we are building the next systems that will be obsolete when we install them.</span>
+*       Withstand transients    
+*       Recovery swiftly & smoothly from failures    
+*       Prioritize to serve high level goals when the system is changing and we have to sacrifice something    
+*       Recognize and respond to abnormal situations, including situations that were never considered at design time    
+*       Adapt to change. Find someway to make system designed in the mindset of 4-7 years ago work for the next 3-5 years while we are building the next systems that will be obsolete when we install them.    
 
-## <span>How do we design for resilience?</span>
+##     How do we design for resilience?    
 
 *   **We have the two quite separate worlds as Systems as Imagined as Systems as Found**. They look at different things and they work on different sorts of principles. Can you bring them together? Can you can make an As Engineered world that includes the quality of resilience? Is it possible to engineer systems ahead of time so that it is possible in operational time to have the resilience you want them to have?
 *   **Support for continuous maintenance**. Maintenance is not periodic. They are constantly being maintained in some way. That includes things like software, hardware, personnel,  physical plant. Maintenance needs to become part of the design rather than something added on later.
@@ -80,26 +80,26 @@ Here's a gloss of the essentials from his talk:
 *   **Deep-six the don’t touch me’s**. There are no parts of the systems that are closed.
 *   **Empower operator learning**.
 
-## <span>What’s the resilience agenda?</span>
+##     What’s the resilience agenda?    
 
-*   <span>Operations are competent to hold the keys to the systems we build. You should be willing to hand over the keys to the operators.</span>
-*   <span>Make resilience engineering the first priority of design for next gen systems.</span>
-*   <span>Commit resources to discovering, understanding and supporting resilience through the system life-cycle.</span>
+*       Operations are competent to hold the keys to the systems we build. You should be willing to hand over the keys to the operators.    
+*       Make resilience engineering the first priority of design for next gen systems.    
+*       Commit resources to discovering, understanding and supporting resilience through the system life-cycle.    
 
-## <span>Final Thoughts</span>
+##     Final Thoughts    
 
 [DevOps](http://en.wikipedia.org/wiki/DevOps) for sometime has been leading in the direction of unifying the System as Imagined with the System as Found, so disparate communities aren't formed around a system. Learning is being pushed up to the developers and back down through the code so the System as Found can become wedded to the System as Imagined through the entire stack.
 
-<span>But what Dr. Cook asks for is something developers can’t deliver: such a clear understanding of a complex system that you can hold it in the palm of your hand, turn it, twist it, interrogate it, and make it dance to your tune. Complex systems can only be built incrementally, which means there is only ever an incremental understanding of how the whole thing works, which means it can never be opened to the degree he wishes. A system will always be in large part subconscious, just like how in the the human brain the conscious mind is only the</span> [<span>smallest window</span>](http://www.brainsciencepodcast.com/bsp/review-of-self-comes-to-mind-by-antonio-damasio-bsp-90.html) <span>on a vast subconscious mind.</span>
+    But what Dr. Cook asks for is something developers can’t deliver: such a clear understanding of a complex system that you can hold it in the palm of your hand, turn it, twist it, interrogate it, and make it dance to your tune. Complex systems can only be built incrementally, which means there is only ever an incremental understanding of how the whole thing works, which means it can never be opened to the degree he wishes. A system will always be in large part subconscious, just like how in the the human brain the conscious mind is only the     [    smallest window    ](http://www.brainsciencepodcast.com/bsp/review-of-self-comes-to-mind-by-antonio-damasio-bsp-90.html)     on a vast subconscious mind.    
 
-## <span>Related Articles</span>
+##     Related Articles    
 
-*   <span>[CTLAB](http://www.ctlab.com/) / </span>[How Complex Systems Fail](http://www.ctlab.org/documents/How%20Complex%20Systems%20Fail.pdf)
-*   [<span>How Complex Systems Fail: A WebOps Perspective</span>](http://www.kitchensoap.com/2009/11/12/how-complex-systems-fail-a-webops-perspective) <span>by  John Allspaw</span>
-*   <span>[Netflix: Run Consistency Checkers All The Time To Fixup Transactions](http://highscalability.com/blog/2011/4/6/netflix-run-consistency-checkers-all-the-time-to-fixup-trans.html)</span>
+*       [CTLAB](http://www.ctlab.com/) /     [How Complex Systems Fail](http://www.ctlab.org/documents/How%20Complex%20Systems%20Fail.pdf)
+*   [    How Complex Systems Fail: A WebOps Perspective    ](http://www.kitchensoap.com/2009/11/12/how-complex-systems-fail-a-webops-perspective)     by  John Allspaw    
+*       [Netflix: Run Consistency Checkers All The Time To Fixup Transactions](http://highscalability.com/blog/2011/4/6/netflix-run-consistency-checkers-all-the-time-to-fixup-trans.html)    
 *   [Continuous Deployment at Etsy](http://www.slideshare.net/chaddickerson/continuous-deployment-at-etsy-sxsw-lean-startup-track)
-*   <span>[Taleb on Black Swans, Fragility, and Mistakes](http://www.econtalk.org/archives/2010/05/taleb_on_black_1.html)</span>
-*   [<span>Introducing Hystrix for Resilience Engineering</span>](http://techblog.netflix.com/2012/11/hystrix.html)
-*   <span>[Startups Are Creating A New System Of The World For IT](http://highscalability.com/blog/2012/5/7/startups-are-creating-a-new-system-of-the-world-for-it.html)</span>
+*       [Taleb on Black Swans, Fragility, and Mistakes](http://www.econtalk.org/archives/2010/05/taleb_on_black_1.html)    
+*   [    Introducing Hystrix for Resilience Engineering    ](http://techblog.netflix.com/2012/11/hystrix.html)
+*       [Startups Are Creating A New System Of The World For IT](http://highscalability.com/blog/2012/5/7/startups-are-creating-a-new-system-of-the-world-for-it.html)    
 
-</div>
+    

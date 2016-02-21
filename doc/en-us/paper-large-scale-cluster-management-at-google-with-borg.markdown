@@ -1,8 +1,8 @@
 ## [Paper: Large-scale cluster management at Google with Borg](/blog/2015/4/16/paper-large-scale-cluster-management-at-google-with-borg.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, April 16, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm8.staticflickr.com/7635/16979575928_db7726a8a5_m.jpg)
 
@@ -34,4 +34,4 @@ The next version of Borg was called Omega and Omega is being rolled up into [Kub
 *   [What's the difference between Apache's Mesos and Google's Kubernetes](http://stackoverflow.com/questions/26705201/whats-the-difference-between-apaches-mesos-and-googles-kubernetes)
 *   [2011 GAFS Omega](https://www.youtube.com/watch?v=0ZFMlO98Jkc) John Wilkes
 
-</div>
+    

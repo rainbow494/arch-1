@@ -1,8 +1,8 @@
 ## [Hidden History: Driving the Last Spike of the Transcontinental Railroad was an Early Version of the Internet of Things](/blog/2013/11/27/hidden-history-driving-the-last-spike-of-the-transcontinenta.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, November 27, 2013 at 8:55AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm3.staticflickr.com/2815/10407108593_453bf045e5_m.jpg)
 
@@ -43,4 +43,4 @@ Here we have things, a spike and sledgehammer, connected electrically to a teleg
 *   [A B C Telegraphic Code, Fourth Edition](http://people.eku.edu/styere/Encrypt/ABC4/)
 *   [The Information: A History, A Theory, A Flood](http://www.amazon.com/gp/product/1400096235)
 
-</div>
+    

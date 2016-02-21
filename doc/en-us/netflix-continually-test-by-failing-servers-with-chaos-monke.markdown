@@ -1,8 +1,8 @@
 ## [Netflix: Continually Test by Failing Servers with Chaos Monkey](/blog/2010/12/28/netflix-continually-test-by-failing-servers-with-chaos-monke.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, December 28, 2010 at 10:18AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.static.flickr.com/5004/5300815358_7bcb67efe1_m.jpg)
 
@@ -25,4 +25,4 @@ This strategy fits nicely with recent practices like continuous integration, con
 
 *   [Netflix: Use Less Chatty Protocols In The Cloud - Plus 26 Fixes](http://highscalability.com/blog/2010/12/20/netflix-use-less-chatty-protocols-in-the-cloud-plus-26-fixes.html)
 
-</div>
+    

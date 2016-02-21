@@ -1,8 +1,8 @@
 ## [Zynga's Z Cloud - Scale Fast or Fail Fast by Merging Private and Public Clouds](/blog/2011/5/19/zyngas-z-cloud-scale-fast-or-fail-fast-by-merging-private-an.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, May 19, 2011 at 9:06AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4049/4335031559_fa690c1f81_m.jpg)
 
@@ -34,4 +34,4 @@ I love the [MythBusters](http://dsc.discovery.com/tv/mythbusters/) as an example
 *   [Clinical Trial Process](http://en.wikipedia.org/wiki/Clinical_trial)
 *   [Trial by Fire](http://en.wikipedia.org/wiki/Trial_by_fire)
 
-</div>
+    

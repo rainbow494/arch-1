@@ -1,8 +1,8 @@
 ## [Big List of Scalabilty Conferences](/blog/2011/9/14/big-list-of-scalabilty-conferences.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, September 14, 2011 at 9:21AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.static.flickr.com/6063/6076246207_ed805c3c31_o.jpg)
 
@@ -51,4 +51,4 @@ Some have a low opinion of conferences. I'm not one of them. Sure, some conferen
     2.  [Usenix Conferences](http://www.usenix.org/events/)
     3.  [Lanyrd](http://lanyrd.com/) - social conference directory 
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [Some Facebook Secrets to Better Operations](/blog/2008/9/3/some-facebook-secrets-to-better-operations.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, September 3, 2008 at 1:27AM</span></div>
+    
 
-<div class="body">
+    
 
 Kim Nash in an [interview with Jonathan Heiliger](http://www.itworld.com/internet/54625/facebook-tech-infrastructure-needs-constant-care), Facebook VP of technical operations, provides some juicy details on how Facebook handles operations. Operations is one of those departments everyone runs differently as it is usually an _ontogeny recapitulates phylogeny_ situation. With 2,000 databases, 25 terabytes of cache, 90 million active users, and 10,000 servers you know Facebook has some serious operational issues. What are some of Facebook's secrets to better operations?
 
@@ -16,4 +16,4 @@ Kim Nash in an [interview with Jonathan Heiliger](http://www.itworld.com/interne
 
     ## Related Articles
 
-    *   [HighScalability Operations](/blog/category/operations)*   [On Designing and Deploying Internet-Scale Services](http://highscalability.com/paper-designing-and-deploying-internet-scale-services)*   [Amazon Architecture](http://highscalability.com/amazon-architecture)</div>
+    *   [HighScalability Operations](/blog/category/operations)*   [On Designing and Deploying Internet-Scale Services](http://highscalability.com/paper-designing-and-deploying-internet-scale-services)*   [Amazon Architecture](http://highscalability.com/amazon-architecture)    

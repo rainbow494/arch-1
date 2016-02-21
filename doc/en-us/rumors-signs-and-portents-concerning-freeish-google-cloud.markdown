@@ -1,8 +1,8 @@
 ## [Rumors of Signs and Portents Concerning Freeish Google Cloud](/blog/2008/4/7/rumors-of-signs-and-portents-concerning-freeish-google-cloud.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, April 7, 2008 at 3:30PM</span></div>
+    
 
-<div class="body">_Update 2: Rumor no more. [Google Jumps Head First Into Web Services With Google App Engine](http://www.techcrunch.com/2008/04/07/google-jumps-head-first-into-web-services-with-google-app-engine/). The quick and dirty of it: developers simply upload their Python code to Google, launch the application, and can monitor usage and other metrics via a multi-platform desktop application. There were 10,000 developer slots open and of course I was too late. More as the cobra strikes._  
+    _Update 2: Rumor no more. [Google Jumps Head First Into Web Services With Google App Engine](http://www.techcrunch.com/2008/04/07/google-jumps-head-first-into-web-services-with-google-app-engine/). The quick and dirty of it: developers simply upload their Python code to Google, launch the application, and can monitor usage and other metrics via a multi-platform desktop application. There were 10,000 developer slots open and of course I was too late. More as the cobra strikes._  
 _Update: TechCrunch reports [Google To Launch BigTable As Web Service](http://www.techcrunch.com/2008/04/04/source-google-to-launch-bigtable-as-web-service/) next week. It competes with Amazon's SimpleDB. Though it won't be truly comparable until they also release an EC2 and S3 equivalent. An internet hit for each data access is a little painful. As Jimmy says in Goodfellas, "That's the way. You don't take no sh*t from nobody. "_  
 
 First [Dave Winer](http://www.scripting.com/stories/2008/03/29/pigs.html) hallucinates a pig on the mean streets of Walnut Creek that told him Google's long foretold cloud offering will be free for bloggers of "modest needs." GigaOM then says a free cloud service is how Google could eat [Amazon's bacon for lunch](http://gigaom.com/2008/03/31/how-google-can-eat-amazons-lunch/).  
@@ -21,4 +21,4 @@ I could see an [Adoption Led](http://blogs.sun.com/webmink/entry/the_adoption_le
 
 We certainly do need a better way to create, deploy, and manage applications across VMs and data centers, but I don't quite see how this allows Google to make money offering an expensive service any better than the current VM approach. Though with all their cash maybe they plan to just wait it out until all the others bash themselves apart on the rocky shores of free.  
 
-Just in case this is an April fools joke, I already know I am an idiot, so no harm done.</div>
+Just in case this is an April fools joke, I already know I am an idiot, so no harm done.    

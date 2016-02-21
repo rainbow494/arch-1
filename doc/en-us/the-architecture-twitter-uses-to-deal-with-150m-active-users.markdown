@@ -1,14 +1,14 @@
 ## [The Architecture Twitter Uses to Deal with 150M Active Users, 300K QPS, a 22 MB/S Firehose, and Send Tweets in Under 5 Seconds](/blog/2013/7/8/the-architecture-twitter-uses-to-deal-with-150m-active-users.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, July 8, 2013 at 8:54AM</span></div>
+    
 
-<div class="body">
+    
 
 [![](http://farm6.staticflickr.com/5481/9235686327_168142245c_m.jpg)](http://www.flickr.com/photos/13733851@N00/9235686327/sizes/o/in/photostream/)
 
-Toy solutions solving Twitter’s “problems” are a favorite scalability trope. Everybody has this idea that Twitter is easy. With a little architectural hand waving we have a scalable Twitter, just that simple. Well, it’s not that simple as [<span>Raffi Krikorian</span>](https://twitter.com/raffi)<span>, VP of Engineering at Twitter, describes in his superb and very detailed presentation on</span> [<span>Timelines at Scale</span>](http://www.infoq.com/presentations/Twitter-Timeline-Scalability)<span>. If you want to know how Twitter works - then start here.</span>
+Toy solutions solving Twitter’s “problems” are a favorite scalability trope. Everybody has this idea that Twitter is easy. With a little architectural hand waving we have a scalable Twitter, just that simple. Well, it’s not that simple as [    Raffi Krikorian    ](https://twitter.com/raffi)    , VP of Engineering at Twitter, describes in his superb and very detailed presentation on     [    Timelines at Scale    ](http://www.infoq.com/presentations/Twitter-Timeline-Scalability)    . If you want to know how Twitter works - then start here.    
 
-It happened gradually so you may have missed it, but Twitter has grown up. It started as a struggling [<span>three-tierish Ruby on Rails</span>](http://highscalability.com/scaling-twitter-making-twitter-10000-percent-faster) <span>website to become a beautifully service driven core that we actually go to now to see if other services are down. Quite a change.</span>
+It happened gradually so you may have missed it, but Twitter has grown up. It started as a struggling [    three-tierish Ruby on Rails    ](http://highscalability.com/scaling-twitter-making-twitter-10000-percent-faster)     website to become a beautifully service driven core that we actually go to now to see if other services are down. Quite a change.    
 
 Twitter now has 150M world wide active users, handles 300K QPS to generate timelines, and a firehose that churns out 22 MB/sec. 400 million tweets a day flow through the system and it can take up to 5 minutes for a tweet to flow from Lady Gaga’s fingers to her 31 million followers.
 
@@ -114,7 +114,7 @@ How does Twitter work? Read this gloss of Raffi’s excellent talk and find out.
 *   On the search timeline:
     *   Write. when a tweet comes in and hits the Ingester only one Early Bird machine is hit. Write time path is O(1). A single tweet is ingested in under 5 seconds between the queuing and processing to find the one Early Bird to write it to.
     *   Read. When a read comes in it must do an 0(n) read across the cluster. Most people don’t use search so they can be efficient on how to store tweets for search. But they pay for it in time. Reading is on the order of 100 msecs. Search never hits disk. The entire Lucene index is in RAM so scatter-gather reading is efficient as they never hit disk.
-*   Text of the tweet is almost irrelevant to most of the infrastructure. [<span>T-bird stores</span>](http://highscalability.com/blog/2011/12/19/how-twitter-stores-250-million-tweets-a-day-using-mysql.html) <span>the entire corpus of tweets. Most of the text of a tweet is in RAM. If not then hit T-bird and do a select query to get them back out again. Text is almost irrelevant except perhaps on Search, Trends, or What’s Happening pipelines. The home timeline doesn’t care almost at all.</span>
+*   Text of the tweet is almost irrelevant to most of the infrastructure. [    T-bird stores    ](http://highscalability.com/blog/2011/12/19/how-twitter-stores-250-million-tweets-a-day-using-mysql.html)     the entire corpus of tweets. Most of the text of a tweet is in RAM. If not then hit T-bird and do a select query to get them back out again. Text is almost irrelevant except perhaps on Search, Trends, or What’s Happening pipelines. The home timeline doesn’t care almost at all.    
 
 ## The Future
 
@@ -139,9 +139,9 @@ How does Twitter work? Read this gloss of Raffi’s excellent talk and find out.
 *   Tweet input statistics: 400m tweets per day; 5K/sec daily average; 7K/sec daily peak; >12K/sec during large events.
 *   Timeline delivery statistics: 30b deliveries / day (~21m / min); 3.5 seconds @ p50 (50th percentile) to deliver to 1m; 300k deliveries /sec; @ p99 it could take up to 5 minutes
 *   A system called VIZ monitors every cluster. Median request time to the Timeline Service to get data out of Scala cluster is 5msec. @ p99 it’s 100msec. And @ p99.9 is where they hit disk, so it takes a couple hundred of milliseconds.
-*   [<span>Zipkin</span>](https://twitter.com/zipkinproject) <span>is based on Google’s Dapper system. With it they can taint a request and see every single service it  hits, with request times, so they can get a very detailed idea of performance for each request. You can then drill down and see every single request and understand all the different timings. A lot of time is spent debugging the system by looking at where time is being spent on requests. They can also present aggregate statistics by phase, to see how long fanout or delivery took, for example. It was a 2 year project to get the get for the activities user timeline down to 2 msec. A lot of time was spent fighting GC pauses, fighting memcache lookups, understanding what the topology of the datacenter looks like, and really setting up the clusters for this type of success.</span>
+*   [    Zipkin    ](https://twitter.com/zipkinproject)     is based on Google’s Dapper system. With it they can taint a request and see every single service it  hits, with request times, so they can get a very detailed idea of performance for each request. You can then drill down and see every single request and understand all the different timings. A lot of time is spent debugging the system by looking at where time is being spent on requests. They can also present aggregate statistics by phase, to see how long fanout or delivery took, for example. It was a 2 year project to get the get for the activities user timeline down to 2 msec. A lot of time was spent fighting GC pauses, fighting memcache lookups, understanding what the topology of the datacenter looks like, and really setting up the clusters for this type of success.    
 
-## <span>Related Articles</span>
+##     Related Articles    
 
 *   [Why Are Facebook, Digg, And Twitter So Hard To Scale?](http://highscalability.com/blog/2009/10/13/why-are-facebook-digg-and-twitter-so-hard-to-scale.html)
 *   [On Reddit](http://www.reddit.com/r/programming/comments/1hve87/the_architecture_twitter_uses_to_deal_with_150m/)
@@ -151,4 +151,4 @@ How does Twitter work? Read this gloss of Raffi’s excellent talk and find out.
 *   [Google: Taming The Long Latency Tail - When More Machines Equals Worse Results](http://highscalability.com/blog/2012/3/12/google-taming-the-long-latency-tail-when-more-machines-equal.html)
 *   [Did Facebook develop a custom in-memory database to manage its News Feeds?](http://www.quora.com/Facebook-Engineering/Did-Facebook-develop-a-custom-in-memory-database-to-manage-its-News-Feeds) (fan-out-on-read)
 
-</div>
+    

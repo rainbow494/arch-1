@@ -1,8 +1,8 @@
 ## [Strategy: Google Sends Canary Requests into the Data Mine](/blog/2010/11/22/strategy-google-sends-canary-requests-into-the-data-mine.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, November 22, 2010 at 8:27AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4121/4811648148_ec2174d906_o.jpg)
 
@@ -17,4 +17,4 @@ Two solutions:
 
 The result is only a few servers are crashed instead of 1000s. This is a pretty clever technique, especially given the combined trends of scale-out and continuous deployment. It could also be a useful strategy for others. 
 
-</div>
+    

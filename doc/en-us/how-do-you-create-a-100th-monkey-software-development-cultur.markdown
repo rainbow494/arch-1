@@ -1,12 +1,12 @@
 ## [How do you create a 100th Monkey software development culture?](/blog/2013/7/17/how-do-you-create-a-100th-monkey-software-development-cultur.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, July 17, 2013 at 8:49AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7423/9303214200_17f4406e9d_m.jpg)
 
-<div id="_mcePaste">Someone reading my now ancient [C++ coding standard](http://www.possibility.com/Cpp/CppCodingStandard.html) recommendation for using doxygen to automatically generate documentation from source code, asked a great question:</div>
+    Someone reading my now ancient [C++ coding standard](http://www.possibility.com/Cpp/CppCodingStandard.html) recommendation for using doxygen to automatically generate documentation from source code, asked a great question:    
 
 > I've often considered using doxygen, I always ask myself - is this really useful? Would I use it if I were new to a project? Would programmers working on the project use it?
 
@@ -16,13 +16,13 @@ It's like the hair stylist whose own hair looks like someone cut it using a late
 
 Software organizations rarely build software to make developing software easier. Why is that?
 
-<div>Because there are three ways changes are made in an organization:</div>
+    Because there are three ways changes are made in an organization:    
 
-*   <div id="_mcePaste">**Top Dog** - Someone so high up in the org chart you would need a telescope to see him decided because his brother-in-law sells this very expensive Whatever system, you should use it too. Of course it will never work, even after spending all those plump and tasty consulting dollars.</div>
+*       **Top Dog** - Someone so high up in the org chart you would need a telescope to see him decided because his brother-in-law sells this very expensive Whatever system, you should use it too. Of course it will never work, even after spending all those plump and tasty consulting dollars.    
 
-*   <div id="_mcePaste">**Drunken Clown** - Someone accidentally did something some way once a while back and that's just the way it works now. I think of this whenever I need to add a copyright to an html page. Instead of a clear "Add Copyright" directive I instead have to create a footer and then I need to insert a "special" character into the footer to see the copyright. What's up with that? I've always wanted to ask the original perp who wrote this feature just what were they were thinking? How am I ever supposed to remember copyright  == special character? But it doesn't matter anymore, that's just how it works and people can't even imagine it working a different way. It just seems the natural and right way now even though it makes no sense at all!</div>
+*       **Drunken Clown** - Someone accidentally did something some way once a while back and that's just the way it works now. I think of this whenever I need to add a copyright to an html page. Instead of a clear "Add Copyright" directive I instead have to create a footer and then I need to insert a "special" character into the footer to see the copyright. What's up with that? I've always wanted to ask the original perp who wrote this feature just what were they were thinking? How am I ever supposed to remember copyright  == special character? But it doesn't matter anymore, that's just how it works and people can't even imagine it working a different way. It just seems the natural and right way now even though it makes no sense at all!    
 
-*   <div id="_mcePaste">**100th Monkey** - Someone who had a problem took on the responsibility on their own to make something useful. What they built naturally spreads because other people find it useful too. It's usually not the best of all possible systems, but it gets the job done. The [100th Monkey approach](http://en.wikipedia.org/wiki/Hundredth_monkey_effect) (a phenomenon in which a behavior or thought spreads rapidly from one group to all related groups once a critical number of initiates is reached) to improvement is often actively discouraged. People don't have any "extra" time because they are fully loaded with work backlog. If you can't show continual progress on your assigned tasks then a manager somewhere will get itchy. All that wood must be behind an arrow or it's useless.</div>
+*       **100th Monkey** - Someone who had a problem took on the responsibility on their own to make something useful. What they built naturally spreads because other people find it useful too. It's usually not the best of all possible systems, but it gets the job done. The [100th Monkey approach](http://en.wikipedia.org/wiki/Hundredth_monkey_effect) (a phenomenon in which a behavior or thought spreads rapidly from one group to all related groups once a critical number of initiates is reached) to improvement is often actively discouraged. People don't have any "extra" time because they are fully loaded with work backlog. If you can't show continual progress on your assigned tasks then a manager somewhere will get itchy. All that wood must be behind an arrow or it's useless.    
 
 And of course you can't get time to work on anything extra because where is the ROI for your customers? If bathroom breaks weren't physically required they would outlawed because there's no ROI in it.
 
@@ -92,4 +92,4 @@ So don't give up. Next time you want to make a change and nobody else seems to c
 
 *   [On Reddit](http://www.reddit.com/r/programming/comments/1ii27u/how_do_you_create_a_100th_monkey_software/)
 
-</div>
+    

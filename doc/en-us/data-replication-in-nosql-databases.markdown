@@ -1,12 +1,12 @@
 ## [Data Replication in NoSQL Databases](/blog/2012/7/9/data-replication-in-nosql-databases.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, July 9, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 <iframe width="244" height="150" src="http://www.youtube.com/embed/yjspIn_Mta8?rel=0" frameborder="0" align="RIGHT"></iframe>
 
-<span style="font-style: italic;">This is the third guest post (</span>[part 1](http://highscalability.com/blog/2012/4/25/the-anatomy-of-search-technology-blekkos-nosql-database.html)<span style="font-style: italic;">,</span> [part 2](http://highscalability.com/blog/2012/5/28/the-anatomy-of-search-technology-crawling-using-combinators.html)<span style="font-style: italic;">) of a series by Greg Lindahl, CTO of blekko, the spam free search engine. Previously, Greg was Founder and Distinguished Engineer at PathScale, at which he was the architect of the InfiniPath low-latency InfiniBand HCA, used to build tightly-coupled supercomputing clusters.</span>
+    This is the third guest post (    [part 1](http://highscalability.com/blog/2012/4/25/the-anatomy-of-search-technology-blekkos-nosql-database.html)    ,     [part 2](http://highscalability.com/blog/2012/5/28/the-anatomy-of-search-technology-crawling-using-combinators.html)    ) of a series by Greg Lindahl, CTO of blekko, the spam free search engine. Previously, Greg was Founder and Distinguished Engineer at PathScale, at which he was the architect of the InfiniPath low-latency InfiniBand HCA, used to build tightly-coupled supercomputing clusters.    
 
 blekko's home-grown NoSQL database was designed from the start to support a web-scale search engine, with 1,000s of servers and petabytes of disk. Data replication is a very important part of keeping the database up and serving queries. Like many NoSQL database authors, we decided to keep R=3 copies of each piece of data in the database, and not use RAID to improve reliability. The key goal we were shooting for was a database which degrades gracefully when there are many small failures over time, without needing human intervention.
 
@@ -69,4 +69,4 @@ There are a few storage-related topics that I'd like to briefly talk about, even
 
 You can probably tell from reading this post that we've learned a lot of lessons the hard way. We've run the system as described for about 4 years now, starting with 150 servers and growing to 1,500, scaling our raw disk storage from 1 petabyte to 15\. During this time, we have never gone below R1 due to hardware failures. We've had site downtime, but it's always been related to software bugs (the "baseball game incident" was very unfortunate), or network issues.
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [6 Ways Not to Scale that Will Make You Hip, Popular and Loved By VCs](/blog/2011/4/18/6-ways-not-to-scale-that-will-make-you-hip-popular-and-loved.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, April 18, 2011 at 8:49AM</span></div>
+    
 
-<div class="body">
+    
 
 This is a hilarious presentation by [Josh Berkus](http://it.toolbox.com/people/josh_berkus/), called [Scale Fail](http://youtu.be/nPG4sK_glls), given at O'Reilly MySQL CE 2011\. Josh is entertaining, well spoken, and cleverly hides insight inside chaos. And he makes some dang good points along the way.
 
@@ -29,6 +29,6 @@ I may add that here at HighScalability.com we would love your story on how you k
 
 *   [Hilarious Video: Relational Database Vs NoSQL Fanbois](http://highscalability.com/blog/2010/9/5/hilarious-video-relational-database-vs-nosql-fanbois.html)
 *   [NSFW: Hilarious Fault-Tolerance Cartoon](http://highscalability.com/blog/2009/7/31/nsfw-hilarious-fault-tolerance-cartoon.html)
-*   <div id="_mcePaste">[Brian Aker's Hilarious NoSQL Stand Up Routine](http://highscalability.com/blog/2009/11/25/brian-akers-hilarious-nosql-stand-up-routine.html)</div>
+*       [Brian Aker's Hilarious NoSQL Stand Up Routine](http://highscalability.com/blog/2009/11/25/brian-akers-hilarious-nosql-stand-up-routine.html)    
 
-</div>
+    

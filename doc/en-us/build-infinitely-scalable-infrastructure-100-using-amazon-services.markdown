@@ -1,8 +1,8 @@
 ## [Build an Infinitely Scalable Infrastructure for $100 Using Amazon Services](/blog/2007/7/30/build-an-infinitely-scalable-infrastructure-for-100-using-am.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, July 30, 2007 at 8:11AM</span></div>
+    
 
-<div class="body">
+    
 
 Can you really create an infinitely scalable infrastructure for less than $100 using Amazon's storage, grid, and queuing services platform? It appears so, at least for the right application. Amazon beams a spot light on the future battle of the roll-your-own versus the connect-the-dots approach to building next generation websites using core external services. Their argument is strong. Using Amazon's platform you can quickly build an infrastructure that would otherwise take an eternity to make, a pile of money to create, and an unbounded mass of people to implement and maintain. Yet Amazon doesn't provide SLAs, so you can you really trust them with your crown jewels? Facebook recently leap frogged Amazon's vision with an even more comprehensive set of services. The battle for the future is on.
 
@@ -74,4 +74,4 @@ Site: http://aws.amazon.com/
 
     *   [Flickr](http://highscalability.com/flickr-architecture) and [YouTube](http://highscalability.com/youtube-architecture) also deal with service level APIs.  
 
-    *   [Running Hadoop MapReduce on Amazon EC2 and Amazon S3](http://developer.amazonwebservices.com/connect/entry.jspa?externalID=873&categoryID=112)</div>
+    *   [Running Hadoop MapReduce on Amazon EC2 and Amazon S3](http://developer.amazonwebservices.com/connect/entry.jspa?externalID=873&categoryID=112)    

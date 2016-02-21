@@ -1,8 +1,8 @@
 ## [Digg Architecture](/blog/2009/4/4/digg-architecture.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Saturday, April 4, 2009 at 2:46AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 4:**: [Introducing Digg’s IDDB Infrastructure](http://blog.digg.com/?p=607) by Joe Stump. _IDDB is a way to partition both indexes (e.g. integer sequences and unique character indexes) and actual tables across multiple storage servers (MySQL and MemcacheDB are currently supported with more to follow)._  
 **Update 3:**: [Scaling Digg and Other Web Applications](http://highscalability.com/scaling-digg-and-other-web-applications).  
@@ -50,4 +50,4 @@ The data layer is where most scaling and performance problems are to be found an
 *   [An Unorthodox Approach to Database Design : The Coming of the Shard](http://highscalability.com/unorthodox-approach-database-design-coming-shard)
 *   [Ebay Architecture](http://highscalability.com/ebay-architecture)
 
-</div>
+    

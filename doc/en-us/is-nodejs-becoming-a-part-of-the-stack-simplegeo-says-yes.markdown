@@ -1,8 +1,8 @@
 ## [Is Node.js Becoming a Part of the Stack? SimpleGeo Says Yes.](/blog/2011/2/22/is-nodejs-becoming-a-part-of-the-stack-simplegeo-says-yes.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, February 22, 2011 at 9:05AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.static.flickr.com/5138/5468883306_866b2bf533_m.jpg)
 
@@ -59,4 +59,4 @@ There are many more to be found on [https://github.com/simplegeo](https://githu
 *   Quora: [What language is SimpleGeo's API platform coded in?](http://www.quora.com/What-language-is-SimpleGeos-API-platform-coded-in/answer/Joe-Stump)
 *   [HackerNews Thread](http://hackerne.ws/item?id=2251490)
 
-</div>
+    

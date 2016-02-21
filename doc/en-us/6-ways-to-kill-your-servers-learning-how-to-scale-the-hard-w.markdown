@@ -1,8 +1,8 @@
 ## [6 Ways to Kill Your Servers - Learning How to Scale the Hard Way](/blog/2010/8/23/6-ways-to-kill-your-servers-learning-how-to-scale-the-hard-w.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 23, 2010 at 7:58AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4118/4918481237_62e7536f3e_o.jpg)
 
@@ -87,4 +87,4 @@ Over the past years we kept optimizing the pages. We put the Smarty caches into 
 
 Scaling a website is a never ending process. As soon as you fix one bottleneck you’r very likely to stumble into the next one. Never ever start thinking “that’s it, we’re done” and lean back. It will kill your servers and perhaps even your business. It’s a constant process of planning and learning. If you can’t get a job done on your own, because you have a lack of experience and/or resources – find a competent and realiable partner to work with. Never stop talking with your team and partners about the current issues and the ones that might arise in (near) future. Think ahead and be proactive!
 
-</div>
+    

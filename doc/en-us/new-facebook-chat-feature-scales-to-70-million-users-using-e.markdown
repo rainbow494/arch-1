@@ -1,8 +1,8 @@
 ## [New Facebook Chat Feature Scales to 70 Million Users Using Erlang](/blog/2008/5/14/new-facebook-chat-feature-scales-to-70-million-users-using-e.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, May 14, 2008 at 5:09PM</span></div>
+    
 
-<div class="body">
+    
 
 **Update**: [Erlang at Facebook](http://www.erlang-factory.com/upload/presentations/31/EugeneLetuchy-ErlangatFacebook.pdf) by Eugene Letuchy. How Facebook uses Erlang to implement Chat, AIM Presence, and Chat Jabber support.   
 
@@ -28,4 +28,4 @@ One of the downsides of multi-language development is reusing code across langua
 
 A problem Facebook probably doesn't have to worry about scaling is the XMPP roster (contact list). Handling that many user accounts would challenge most XMPP server vendors, but Facebook has that part already solved. They could concentrate on scaling the protocol across a bunch of shiny new servers without getting bogged down in database issues. Wouldn't that be nice :-) They can just load balance users across servers and scalability is solved horizontally, simply by adding more servers. Nice work.
 
-</div>
+    

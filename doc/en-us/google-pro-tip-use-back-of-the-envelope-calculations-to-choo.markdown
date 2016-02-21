@@ -1,8 +1,8 @@
 ## [Google Pro Tip: Use Back-of-the-envelope-calculations to Choose the Best Design](/blog/2011/1/26/google-pro-tip-use-back-of-the-envelope-calculations-to-choo.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, January 26, 2011 at 8:44AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.static.flickr.com/5211/5388087174_ccd999afe6_o.jpg)
 
@@ -56,36 +56,36 @@ The is the example given in the video. Two design alternatives are used as desig
 
 ### Design 1 - Serial 
 
-<div id="_mcePaste">
+    
 
 *   Read images serially. Do a disk seek. Read a 256K image and then go on to the next image.
 *   Performance: 30 seeks * 10 ms/seek + 30 * 256K / 30 MB /s = 560ms
 
 ### Design 2 - Parallel 
 
-<div>
+    
 
 *   Issue reads in parallel.
 *   Performance: 10 ms/seek + 256K read / 30 MB/s = 18ms
 *   There will be variance from the disk reads, so the more likely time is 30-60ms
 
-</div>
+    
 
-</div>
+    
 
 Which design is best? It depends on you requirements, but given the back-of-the-envelope calculations you have a quick way to compare them without building them.
 
 Now you have a framework for asking yourself other design questions and comparing different design variations:
 
-<div id="_mcePaste">
+    
 
 *   Does it make sense to cache single thumbnail images?
 *   Should you cache a whole set of images in one entry?
 *   Does it make sense to precompute the thumbnails?
 
-<div id="_mcePaste">To make these estimates realistic you'll have to know the performance of your services. If there is an unknown variable then perhaps you could rapidly prototype just that part to settle the question.  To know if caching is a good design alternative, for example, you'll have to know how long it takes to write into your cache.</div>
+    To make these estimates realistic you'll have to know the performance of your services. If there is an unknown variable then perhaps you could rapidly prototype just that part to settle the question.  To know if caching is a good design alternative, for example, you'll have to know how long it takes to write into your cache.    
 
-</div>
+    
 
 ## Lessons Learned
 
@@ -102,4 +102,4 @@ I personally quite like this approach. It seems much more grounded in the end-to
 *   [The Back of the Napkin](http://www.thebackofthenapkin.com/) by Dan Roam
 *   [A Physicist Explains Why Parallel Universes May Exist](http://www.npr.org/2011/01/24/132932268/a-physicist-explains-why-parallel-universes-may-exist?ft=1&f=13&sc=17) by Brian Green 
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [5 Lessons from 5 Years of Building Instagram](/blog/2015/10/21/5-lessons-from-5-years-of-building-instagram.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, October 21, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7011/6464246201_bddb8c499e_o.jpg)
 
@@ -18,7 +18,7 @@ The tradition continues. [Mike Krieger](https://en.wikipedia.org/wiki/Mike_Krie
 
 ## <a>Related Articles</a>
 
-<div><a></a>
+    <a></a>
 
 <a></a>
 *   [5 Lessons And 8 Industry Changes Over 5 Years As Etsy CTO](http://highscalability.com/blog/2015/9/16/5-lessons-and-8-industry-changes-over-5-years-as-etsy-cto.html)
@@ -29,6 +29,6 @@ The tradition continues. [Mike Krieger](https://en.wikipedia.org/wiki/Mike_Krie
 *   [3 Secrets To Lightning Fast Mobile Design At Instagram](http://highscalability.com/blog/2012/6/7/3-secrets-to-lightning-fast-mobile-design-at-instagram.html)
 *   [This. Just. This.](http://highscalability.com/blog/2015/7/16/this-just-this.html)
 
-</div>
+    
 
-</div>
+    

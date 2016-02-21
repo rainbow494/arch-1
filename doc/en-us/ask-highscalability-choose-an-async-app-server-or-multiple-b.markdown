@@ -1,8 +1,8 @@
 ## [Ask HighScalability: Choose an Async App Server or Multiple Blocking Servers?](/blog/2015/8/24/ask-highscalability-choose-an-async-app-server-or-multiple-b.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 24, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm1.staticflickr.com/696/20630118899_f811690958_m.jpg)
 
@@ -53,4 +53,4 @@ If your work is such that response latencies don't really matter then you can ge
 
 If your workload is CPU bound then you'll need more boxes anyway because there won't be the same opportunity for parallelism because the servers won't be blocking on IO.
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [Six Lessons Learned the Hard Way About Scaling a Million User System ](/blog/2014/4/16/six-lessons-learned-the-hard-way-about-scaling-a-million-use.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, April 16, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm8.staticflickr.com/7100/13895290294_ec9598f752_m.jpg)
 
@@ -22,6 +22,6 @@ Here's a gloss on the six lessons (plus a bonus lesson):
 6.  **Change capture is under-appreciated**. As data changes in a system it must flow through many services like a database, search index, graph, index, read replicas, cache invalidation, etc. You could have applications write to multiple locations every time they make updates, but that never works in practice. You could have apps read database logs, but this isn't possible on every system. A good solution is to use a [Change Capture System](https://github.com/linkedin/databus) that receives and stores all the writes to the database. Applications can receive these updates in real-time and/or they can stream through a history of changes. The change capture system becomes the single source of truth for data for all applications. A big advantage of this approach is that data producers and consumers are decoupled which gives "you great freedom to experiment without fear of bringing down the main site." 
 7.  **Cache and cache invalidation**. This is a bonus lesson from a comment by [mysteriousllama](https://news.ycombinator.com/item?id=7477146) on the article: Without proper caching and a good invalidation strategy your databases will get pounded. Use redis and memcache to cache everything possible. Don't even connect to the database unless you have to. Ensure that you can invalidate any cache entry easily and keep things atomic so you do not run in to race conditions. Use locking to ensure that when the cache expires the database does not get a dog-pile with multiple copies of the same query. You'd think the query-cache in your database of choice may be just as efficient but trust me, it is not even close. You can also cache higher-level objects than just simple queries.
 
-    <div id="_mcePaste">Depending on your reliability requirements you may even consider treating your cache as writeback and doing batched database writes in the background. These are generally more efficient than individual writes due to a variety of factors. I've worked on several top-200 ranking sites and this has always been one of the main go-to strategies for scaling. Databases suck - Avoid querying them.</div>
+        Depending on your reliability requirements you may even consider treating your cache as writeback and doing batched database writes in the background. These are generally more efficient than individual writes due to a variety of factors. I've worked on several top-200 ranking sites and this has always been one of the main go-to strategies for scaling. Databases suck - Avoid querying them.    
 
-</div>
+    

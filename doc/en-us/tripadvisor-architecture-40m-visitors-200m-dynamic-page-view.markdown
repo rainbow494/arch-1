@@ -1,8 +1,8 @@
 ## [TripAdvisor Architecture - 40M Visitors, 200M Dynamic Page Views, 30TB Data](/blog/2011/6/27/tripadvisor-architecture-40m-visitors-200m-dynamic-page-view.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, June 27, 2011 at 8:53AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm3.static.flickr.com/2740/5860936154_c02d47fbe6_o.jpg)
 
@@ -116,4 +116,4 @@ I'd really like to thank Andy Gelfond for this amazingly useful description of w
 
 *   [Hacker News Thread](http://news.ycombinator.com/item?id=2701936)
 
-</div>
+    

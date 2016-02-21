@@ -1,8 +1,8 @@
 ## [8 Ways Stardog Made its Database Insanely Scalable](/blog/2014/1/20/8-ways-stardog-made-its-database-insanely-scalable.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, January 20, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7422/11955152784_753d953b65_m.jpg)
 
@@ -21,4 +21,4 @@ What did they do that you can also do?
 
 A well written article with extended explanations that are [well worth reading](http://weblog.clarkparsia.com/2014/01/10/scalability-improvements-in-stardog-21). 
 
-</div>
+    

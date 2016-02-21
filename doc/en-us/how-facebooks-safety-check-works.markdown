@@ -1,8 +1,8 @@
 ## [How Facebook's Safety Check Works](/blog/2015/11/14/how-facebooks-safety-check-works.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Saturday, November 14, 2015 at 8:33AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://c1.staticflickr.com/1/652/21759732026_52643d03bd_m.jpg)
 
@@ -76,4 +76,4 @@ This is a really short version, there's a [longer article](http://highscalabilit
 
 [On HackerNews](https://news.ycombinator.com/item?id=10571781)
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [How Ravelry Scales to 10 Million Requests Using Rails](/blog/2009/9/22/how-ravelry-scales-to-10-million-requests-using-rails.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, September 22, 2009 at 10:45AM</span></div>
+    
 
-<div class="body">
+    
 
 [Tim Bray](http://en.wikipedia.org/wiki/Tim_Bray) has a wonderful [interview with Casey Forbes](http://www.tbray.org/ongoing/When/200x/2009/09/02/Ravelry), creator of Ravelry, a Ruby on Rails site supporting a 400,000+ strong community of dedicated knitters and crocheters.  
 
@@ -34,4 +34,4 @@ Site: [http://www.ravelry.com](http://www.ravelry.com)
 
     ## Related Articles
 
-    *   [Ravelry gets funding from its own community](http://37signals.com/svn/posts/1012-ravelry-gets-funding-from-its-own-community).*   [Appache/Passenger vs Nginx/Mongrel](http://blog.matt-darby.com/posts/697-apache-passenger-vs-nginx-mongrel) by Matt Darby*   [The Ravelry Blog](http://blog.ravelry.com/) (note the number of comments on posts).*   Podcast - [Episode 4: Y Ravelry (featuring Jess & Casey)](http://yknit.com/index.php?post_id=319675)*   [Beta testing and beyond](http://codemonkey.ravelry.com/2008/06/29/beta-testing-and-beyond/)*   [Hacker News Thread](http://news.ycombinator.com/item?id=838512) - I included the reasoning from a user named Brett for why the HTTP request path is "Nginx out front passing requests to HAProxy and THEN to Apache + mod_rails."</div>
+    *   [Ravelry gets funding from its own community](http://37signals.com/svn/posts/1012-ravelry-gets-funding-from-its-own-community).*   [Appache/Passenger vs Nginx/Mongrel](http://blog.matt-darby.com/posts/697-apache-passenger-vs-nginx-mongrel) by Matt Darby*   [The Ravelry Blog](http://blog.ravelry.com/) (note the number of comments on posts).*   Podcast - [Episode 4: Y Ravelry (featuring Jess & Casey)](http://yknit.com/index.php?post_id=319675)*   [Beta testing and beyond](http://codemonkey.ravelry.com/2008/06/29/beta-testing-and-beyond/)*   [Hacker News Thread](http://news.ycombinator.com/item?id=838512) - I included the reasoning from a user named Brett for why the HTTP request path is "Nginx out front passing requests to HAProxy and THEN to Apache + mod_rails."    

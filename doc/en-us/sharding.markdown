@@ -1,8 +1,8 @@
 ## [How MySQL is able to scale to 200 Million QPS - MySQL Cluster](/blog/2015/5/18/how-mysql-is-able-to-scale-to-200-million-qps-mysql-cluster.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, May 18, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 _This is a guest post by [Andrew Morgan](https://twitter.com/andrewmorgan), MySQL Principal Product Manager at Oracle._
 
@@ -14,4 +14,4 @@ The purpose of this post is to introduce [MySQL Cluster](http://www.clusterdb.co
 
 [Click to read more ...](/blog/2015/5/18/how-mysql-is-able-to-scale-to-200-million-qps-mysql-cluster.html)
 
-</div>
+    

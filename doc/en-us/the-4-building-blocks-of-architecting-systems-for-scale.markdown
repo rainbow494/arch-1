@@ -1,8 +1,8 @@
 ## [The 4 Building Blocks of Architecting Systems for Scale](/blog/2012/9/19/the-4-building-blocks-of-architecting-systems-for-scale.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, September 19, 2012 at 8:32AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8316/8003362389_19cb902e0d_m.jpg)
 
@@ -23,4 +23,4 @@ If you are looking for an excellent overview of general architecture principles 
     3.  ****Map-Reduce**.** When your system becomes too large for ad hoc queries then move to using a specialized data processing infrastructure.
 4.  ****Platform Layer**.** Disconnect application code from web servers, load balancers, and databases using a service level API. This makes it easier to add new resources, reuse infrastructure between projects, and scale a growing organization. 
 
-</div>
+    

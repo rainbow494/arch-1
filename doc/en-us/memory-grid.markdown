@@ -1,8 +1,8 @@
 ## [Paper: Log-structured Memory for DRAM-based Storage - High Memory Utilization Plus High Performance](/blog/2014/3/20/paper-log-structured-memory-for-dram-based-storage-high-memo.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, March 20, 2014 at 9:55AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7383/13290626565_dc21d694a5_o.png)
 
@@ -16,4 +16,4 @@ And for your edification they've written an excellent paper on their findings. 
 
 [Click to read more ...](/blog/2014/3/20/paper-log-structured-memory-for-dram-based-storage-high-memo.html)
 
-</div>
+    

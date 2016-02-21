@@ -1,8 +1,8 @@
 ## [iDoneThis - Scaling an Email-based App from Scratch](/blog/2012/6/20/idonethis-scaling-an-email-based-app-from-scratch.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, June 20, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8147/7402945462_2a8216aef6_m.jpg)
 
@@ -79,4 +79,4 @@ So far, the code that is written in this style is far simpler than it’s old-fa
 *   **Simplicity over performance**: we could probably get away with a smaller EC2 instance and use nginx, but the default apache configuration with mod_wsgi works just fine and it is simpler to automate. We do this sort of a thing a lot: get the simplest and easiest thing out the door, worry about it's performance and polish afterwards.
 *   For a short while we were moving in the direction of splitting components to run in their own servers. This started causing more trouble than it was worth and thus we ended up with a **single EC2 instance**.
 
-</div>
+    

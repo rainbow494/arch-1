@@ -1,8 +1,8 @@
 ## [Product: Hbase](/blog/2009/7/2/product-hbase.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, July 2, 2009 at 12:43AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 3:** Presentation from the [NoSQL Conference](http://blog.oskarsson.nu/2009/06/nosql-debrief.html): [slides](http://static.last.fm/johan/nosql-20090611/hbase_nosql.pdf), [video](http://vimeo.com/5198411).  
 **Update 2:** Jim Wilson helps with the [Understanding HBase and BigTable](http://jimbojw.com/wiki/index.php?title=Understanding_Hbase_and_BigTable) by explaining them from a "conceptual standpoint."  
@@ -20,4 +20,4 @@ Google is of course still way ahead of the game. They have huge core competencie
 
 It will be interesting to see how these sorts of tools along with [Software as a Service](http://highscalability.com/tags/saas) can be leveraged to create the next generation of systems.
 
-</div>
+    

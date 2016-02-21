@@ -1,8 +1,8 @@
 ## [Product: ScaleOut StateServer is Memcached on Steroids](/blog/2008/8/29/product-scaleout-stateserver-is-memcached-on-steroids.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, August 29, 2008 at 2:39AM</span></div>
+    
 
-<div class="body">
+    
 
 [ScaleOut StateServer](http://www.scaleoutsoftware.com/) is an in-memory distributed cache across a server farm or compute grid. Unlike middleware vendors, StateServer is aims at being a very good data cache, it doesn't try to handle job scheduling as well.  
 
@@ -61,4 +61,4 @@ First, for an in-depth discussion of their technology take a look [ScaleOut Soft
 
     *   [RAM is the new disk](http://www.infoq.com/news/2008/06/ram-is-disk)*   [Latency is Everywhere and it Costs You Sales - How to Crush it](http://highscalability.com/latency-everywhere-and-it-costs-you-sales-how-crush-it)*   [A Bunch of Great Strategies for Using Memcached and MySQL Better Together](http://highscalability.com/bunch-great-strategies-using-memcached-and-mysql-better-together)*   [Paper: Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web](http://highscalability.com/paper-consistent-hashing-and-random-trees-distributed-caching-protocols-relieving-hot-spots-world-wi)*   [Google's Paxos Made Live – An Engineering Perspective](http://highscalability.com/googles-paxos-made-live-engineering-perspective)*   [Industry Chat with Bill Bain and Marc Jacobs](http://blogs.msdn.com/jrubino/archive/2008/04/07/industry-chat-with-bill-bain-and-marc-jacobs.aspx) - Joe Rubino interviews William L. Bain, Founder & CEO of ScaleOut Software and Marc Jacobs, Director at Lab49, on distributed caches and their use within Financial Services.  
 
-    </div>
+        

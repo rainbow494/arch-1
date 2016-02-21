@@ -1,8 +1,8 @@
 ## [A Toolkit to Measure Basic System Performance and OS Jitter](/blog/2015/5/27/a-toolkit-to-measure-basic-system-performance-and-os-jitter.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, May 27, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm6.staticflickr.com/5348/18091159212_9955d7db9d_o.jpg)
 
@@ -137,4 +137,4 @@ For example, these are a few things that are challenging to observe and understa
 *   off-heap memory access and the bdflush process cleaning dirty pages and causing disk io bottleneck
 *   Messaging infrastructure and appliances …
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [How Google Taught Me to Cache and Cash-In](/blog/2009/9/12/how-google-taught-me-to-cache-and-cash-in.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Saturday, September 12, 2009 at 2:31AM</span></div>
+    
 
-<div class="body">
+    
 
 A user named Apathy[](http://highscalability.com/links/goto/759/643/links_weblink) on how Reddit scales some of their features, shares some advice he learned while working at Google and other major companies.  
 
@@ -35,4 +35,4 @@ _To be fair, I [Apathy] was working at Google at the time, and every job I held 
 25.  The majority of traffic on almost all websites comes from the default, un-logged-in front page or from random forum/comment/result pages. Make sure those are cached as much as possible.. If one or more of the components aren't found, regenerate those from the DB (now it's cached!) and proceed. Never hit the database unless you have to.
 26.  You (almost) always have to hit the database on writes. The key is to avoid hitting it for reads until you're forced to do so.
 
-</div>
+    

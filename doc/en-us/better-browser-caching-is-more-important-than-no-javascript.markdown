@@ -1,8 +1,8 @@
 ## [Better Browser Caching is More Important than No Javascript or Fast Networks for HTTP Performance](/blog/2013/1/30/better-browser-caching-is-more-important-than-no-javascript.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, January 30, 2013 at 9:30AM</span></div>
+    
 
-<div class="body">
+    
 
 <iframe align="right" width="300" height="169" src="http://www.youtube.com/embed/HKNZ-tQQnSY" frameborder="0" allowfullscreen=""></iframe>
 
@@ -37,4 +37,4 @@ The implication being that caching is important so you must understand how HTTP 
 *   [httparchive.org](http://httparchive.org/) - tracks how the Web is built
 *   [www.webpagetest.org](http://www.webpagetest.org/) - quick and easy performance testing tool 
 
-</div>
+    

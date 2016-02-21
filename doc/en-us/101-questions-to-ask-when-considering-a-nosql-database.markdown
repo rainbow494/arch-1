@@ -1,18 +1,18 @@
 ## [101 Questions to Ask When Considering a NoSQL Database](/blog/2011/6/15/101-questions-to-ask-when-considering-a-nosql-database.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, June 15, 2011 at 8:08AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4127/5188198566_3fe006d562_m.jpg)
 
 You need answers, I know, but all I have here are some questions to consider when thinking about which database to use. These are taken from my [webinar](http://voltdb.com/resources/webinars-all) [What Should I Do? Choosing SQL, NoSQL or Both for Scalable Web Applications](http://www.slideshare.net/toddhoffious/what-should-ido-11). It's a companion article to [What The Heck Are You Actually Using NoSQL For?](http://highscalability.com/blog/2010/12/6/what-the-heck-are-you-actually-using-nosql-for.html)
 
-<div>Actually, I don't even know if there are a 101 questions, but there are a lot/way too many. You might want to use these questions as kind of a NoSQL [I Ching](http://en.wikipedia.org/wiki/I_Ching), guiding your way through the immense possibility space of options that are in front of you. Nothing is fated, all is interpreted, but it might just trigger a new insight or two along the way.</div>
+    Actually, I don't even know if there are a 101 questions, but there are a lot/way too many. You might want to use these questions as kind of a NoSQL [I Ching](http://en.wikipedia.org/wiki/I_Ching), guiding your way through the immense possibility space of options that are in front of you. Nothing is fated, all is interpreted, but it might just trigger a new insight or two along the way.    
 
 ## Where are you starting from?
 
-<div>
+    
 
 *   A can do anything green field application?
 *   In the middle of a project and worried about hitting bottlenecks? 
@@ -23,7 +23,7 @@ You need answers, I know, but all I have here are some questions to consider whe
 *   What are your priorities? Prioritize them. What is really important to you, what must get done?
 *   What are your risks? Prioritize them. Is the risk of being unavailable more important than being inconsistent?
 
-</div>
+    
 
 ## What are you trying to accomplish?
 
@@ -31,22 +31,22 @@ You need answers, I know, but all I have here are some questions to consider whe
 *   What's the delivery schedule? 
 *   Do the research to be specific, like Facebook did with their [messaging system](http://highscalability.com/blog/2010/11/16/facebooks-new-real-time-messaging-system-hbase-to-store-135.html):
 
-> <div>
+>     
 > 
-> <div>
+>     
 > 
-> <div>Facebook chose HBase because they monitored their usage and figured out what was needed: a system that could handle two types of data patterns.</div>
+>     Facebook chose HBase because they monitored their usage and figured out what was needed: a system that could handle two types of data patterns.    
 > 
-> </div>
+>     
 > 
-> </div>
+>     
 
 ## Things to Consider...Your Problem
 
-<div>
+    
 
-*   <span>Do you need to build a custom system?</span>
-*   <span>Access patterns: 1) A short set of temporal data that tends to be volatile 2) An ever-growing set of data that rarely gets accessed 3) High write loads 4) High throughput, 5) Sequential, 6) Random</span>
+*       Do you need to build a custom system?    
+*       Access patterns: 1) A short set of temporal data that tends to be volatile 2) An ever-growing set of data that rarely gets accessed 3) High write loads 4) High throughput, 5) Sequential, 6) Random    
 *   Requires scalability?
 *   Is availability more important than consistency, or is it latency, transactions, durability, performance, or ease of use?
 *   Cloud or colo? Hosted services? Resources like disk space?
@@ -57,21 +57,21 @@ You need answers, I know, but all I have here are some questions to consider whe
 
 ## Things to Consider...Money
 
-<div>
+    
 
-*   <span>Cost? With money you have different options than if you don't. You can probably make the technologies you know best scale.</span>
-*   <span>Inexpensive scaling?</span>
-*   <span>Lower operations cost? </span>
-*   <span>No sysadmins?</span>
-*   <span>Type of license?</span>
-*   <span>Support costs?</span>
+*       Cost? With money you have different options than if you don't. You can probably make the technologies you know best scale.    
+*       Inexpensive scaling?    
+*       Lower operations cost?     
+*       No sysadmins?    
+*       Type of license?    
+*       Support costs?    
 
 ## Things to Consider...Programming
 
-<div>
+    
 
-*   <span>Flexible datatypes and schemas?</span>
-*   <span>Support for which language bindings?</span>
+*       Flexible datatypes and schemas?    
+*       Support for which language bindings?    
 *   Web support: JSON, REST, HTTP, JSON-RPC
 *   Built-in stored procedure support? Javascript?
 *   Platform support: mobile, workstation, cloud
@@ -81,7 +81,7 @@ You need answers, I know, but all I have here are some questions to consider whe
 
 ## Things to Consider...Performance
 
-<div>
+    
 
 *   Performance metrics: IOPS/sec, reads, writes, streaming?
 *   Support for your access pattern: random read/write; sequential read/write; large or small or whatever chunk size you use. 
@@ -93,10 +93,10 @@ You need answers, I know, but all I have here are some questions to consider whe
 
 ## Things to Consider...Features
 
-<div>
+    
 
-*   <span>Spooky scalability at a distance: support across multiple data-centers?</span>
-*   <span>Ease of installation, configuration, operations, development, deployment, support, manage, upgrade, etc.</span>
+*       Spooky scalability at a distance: support across multiple data-centers?    
+*       Ease of installation, configuration, operations, development, deployment, support, manage, upgrade, etc.    
 *   Data Integrity: In DDL, Stored Procedure, or App
 *   Persistence design: Memtable/SSTable; Apend-only B-tree; B-tree; On-disk linked lists; In-memory  replicated; In-memory snapshots; In-memory only; Hash; Pluggable.
 *   Schema support: none, rigid, optional, mixed
@@ -104,14 +104,14 @@ You need answers, I know, but all I have here are some questions to consider whe
 *   Support for search, secondary indexes, range queries, ad-hoc queries, MapReduce?
 *   Hitless upgrades?
 
-</div>
+    
 
 ## Things to Consider...More Features
 
-<div>
+    
 
 *   Tunability of consistency models?
-*   <span>Tools availability and product maturity?</span>
+*       Tools availability and product maturity?    
 *   Expand rapidly? Develop rapidly? Change rapidly?
 *   Durability? On power failure?
 *   Bulk import? Export? 
@@ -124,7 +124,7 @@ You need answers, I know, but all I have here are some questions to consider whe
 *   Automatic load balancing, partitioning, and repartitioning?
 *   Live addition and removal of machines?
 
-</div>
+    
 
 ## Things to Consider...The Vendor
 
@@ -136,12 +136,12 @@ You need answers, I know, but all I have here are some questions to consider whe
 *   Quality and quantity of partnerships developed?
 *   Customer support: enterprise-level SLA, paid support, none
 
-</div>
+    
 
-</div>
+    
 
-</div>
+    
 
-</div>
+    
 
-</div>
+    

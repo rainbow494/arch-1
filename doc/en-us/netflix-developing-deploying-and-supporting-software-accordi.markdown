@@ -1,8 +1,8 @@
 ## [Netflix: Developing, Deploying, and Supporting Software According to the Way of the Cloud](/blog/2011/12/12/netflix-developing-deploying-and-supporting-software-accordi.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, December 12, 2011 at 9:05AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm2.static.flickr.com/1207/5104530447_c187318ba6_m.jpg) At a [Cloud Computing Meetup](http://www.meetup.com/cloudcomputing/events/42723632/?a=ed1_l6), Siddharth "Sid" Anand of Netflix, backed by a merry band of Netflixians, gave an interesting talk: [Keeping Movies Running Amid Thunderstorms](http://www.slideshare.net/r39132/keeping-movies-running-amid-thunderstorms). While the talk gave a good overview of their move to the cloud, issues with capacity planning, [thundering herds](http://highscalability.com/blog/2008/3/14/problem-mobbing-the-least-used-resource-error.html), latency problems, and [simian armageddon](http://highscalability.com/blog/2011/7/20/netflix-harden-systems-using-a-barrel-of-problem-causing-mon.html), I found myself most taken with how they handle **software deployment in the cloud**.
 
@@ -51,4 +51,4 @@ For the Internet facing services they use Amazon's load balancers because they h
 *   Google: [Build in the Cloud: How the Build System works](http://google-engtools.blogspot.com/2011/08/build-in-cloud-how-build-system-works.html)
 *   Etsy: [Design for Continuous Deployment](http://www.lukew.com/ff/entry.asp?1460)
 
-</div>
+    

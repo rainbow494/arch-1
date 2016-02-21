@@ -1,14 +1,14 @@
 ## [Instagram Strategy to Radically Reduce Traffic: Kill all the spambots!](/blog/2015/1/28/instagram-strategy-to-radically-reduce-traffic-kill-all-the.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, January 28, 2015 at 9:50AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7011/6464246201_bddb8c499e_o.jpg)
 
 > RIP to my fallen robot followers on Instagram, if there's a heaven for robot instagram users, you guys are in there
 > 
-> <span style="color: #111111; font-family: Arial, Helvetica, sans-serif;">— alldaychubbyboy (@Allday)</span>
+>     — alldaychubbyboy (@Allday)    
 
 How do you scale to handle increased user traffic? Have less traffic. No, this is not a koan. The best way to deal with traffic is not to have it. 
 
@@ -22,7 +22,7 @@ Why? Gabe Madway, an Instagram spokesman, [tells us why](http://bits.blogs.nytim
 
 Uncomfortable is an understatement. A [BuzzFeed article](http://www.buzzfeed.com/alanwhite/instagram-killed-off-thousands-of-spambots-and-people-are-go) nicely captured some of the anger, here's just one example (could be NSFW):
 
-<span class="ssNonEditable full-image-block">![](https://farm8.staticflickr.com/7325/16203064407_90f6fc310e_n.jpg?__SQUARESPACE_CACHEVERSION=1422461837578)</span>
+    ![](https://farm8.staticflickr.com/7325/16203064407_90f6fc310e_n.jpg?__SQUARESPACE_CACHEVERSION=1422461837578)    
 
 These sentiments were emphatically repeated by many victims of the purge. Facebook has always been a real identity refuge, so maybe the drive for Instagram authenticity is part of that vision? The thought being real identities are the key to more profitable ad campaigns.
 
@@ -46,7 +46,7 @@ Spam fighting spells are a technology forged deep in the heart of Mordor, using 
 
 It would be nice to change that, for in the on-line arms race we can only expect faux people to get better and better at being faux. We now know it may not be so hard to pass the [Turing test](http://www.theverge.com/2014/6/11/5800440/ray-kurzweil-and-others-say-turing-test-not-passed) after all. A disturbing thought is we may not really mind the faux world being built by spam world builders. It can make each of us a star, but only if we choose to believe.
 
-<span style="font-size: 1.5em;">Related Articles</span>
+    Related Articles    
 
 *   [Large Scale Spam Detection](https://www.google.com/search?q=large+scale+spam+detection&oq=large+scale+spam+detection&aqs=chrome..69i57.17876j0j4&sourceid=chrome&es_sm=119&ie=UTF-8)
 *   [The Instagram Architecture Facebook Bought For A Cool Billion Dollars](http://highscalability.com/blog/2012/4/9/the-instagram-architecture-facebook-bought-for-a-cool-billio.html)
@@ -68,4 +68,4 @@ It would be nice to change that, for in the on-line arms race we can only expect
 *   [Spam Detection on Twitter Using Traditional Classifiers ](http://wbox0.cse.lehigh.edu/~chuah/publications/atc11_spam_camera.pdf)
 *   [Large Scale Deep Learning](http://static.googleusercontent.com/media/research.google.com/en/us/people/jeff/CIKM-keynote-Nov2014.pdf)
 
-</div>
+    

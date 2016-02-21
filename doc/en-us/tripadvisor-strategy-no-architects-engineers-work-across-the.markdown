@@ -1,8 +1,8 @@
 ## [TripAdvisor Strategy: No Architects, Engineers Work Across the Entire Stack](/blog/2011/7/1/tripadvisor-strategy-no-architects-engineers-work-across-the.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, July 1, 2011 at 10:54AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm3.static.flickr.com/2740/5860936154_c02d47fbe6_o.jpg)
 
@@ -15,4 +15,4 @@ Typically engineers live in a box. They are specialized, they do database work a
 
 A radical take for an established organization. We've seen companies where backend engineers are also responsible for front-line site support, but I don't recall, other than for startups obviously, where engineers have such breadth and depth of responsibility. It's not right or wrong, but something outside-the-box to consider, especially if you are an Agile shop.
 
-</div>
+    

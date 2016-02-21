@@ -1,8 +1,8 @@
 ## [Google Strategy: Tree Distribution of Requests and Responses](/blog/2011/2/1/google-strategy-tree-distribution-of-requests-and-responses.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, February 1, 2011 at 7:30AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://www.google.com/images/logos/ps_logo2.png)
 
@@ -29,4 +29,4 @@ In Google's search system, for example:
 *   Parents return the best 20-30 responses out of the 30 leaves the parent is responsible for.
 *   This is a large degree of data reduction compared to the case the root had to process all that data directly.
 
-</div>
+    

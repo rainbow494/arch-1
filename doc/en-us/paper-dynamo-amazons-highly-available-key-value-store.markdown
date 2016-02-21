@@ -1,8 +1,8 @@
 ## [Paper: Dynamo: Amazon’s Highly Available Key-value Store](/blog/2007/10/30/paper-dynamo-amazons-highly-available-key-value-store.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, October 30, 2007 at 11:43PM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 2**: Read/WriteWeb has a good article talking about the scalability issues of relational databases and how Dynamo solves them: [Amazon Dynamo: The Next Generation Of Virtual Distributed Storage](http://www.readwriteweb.com/archives/amazon_dynamo.php). But since Dynamo is just another frustrating walled garden protected by barbed wire and guard dogs, its relevance is somewhat overstated.  
 
@@ -38,4 +38,4 @@ My first impressions after reading the paper:
 
     A lot of this thinking is driven by the [CAP](http://citeseer.ist.psu.edu/cache/papers/cs/26764/http:zSzzSztheory.lcs.mit.eduzSztdszSzpaperszSzGilbertzSzBrewer6.pdf/brewer-s-conjecture-and.pdf) conjecture which states it's impossible for a web service to simultaneously guarantee consistency, availability, and partition-tolerance. When you get over your initial "that can't be true" reaction and embrace it, you get something like Dynamo.  
 
-    I'd really love to hear what you guys think about Dynamo.</div>
+    I'd really love to hear what you guys think about Dynamo.    

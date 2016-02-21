@@ -1,8 +1,8 @@
 ## [LiveJournal Architecture](/blog/2007/7/9/livejournal-architecture.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, July 9, 2007 at 2:57AM</span></div>
+    
 
-<div class="body">
+    
 
 A fascinating and detailed story of how LiveJournal evolved their system to scale. LiveJournal was an early player in the free blog service race and faced issues from quickly adding a large number of users. Blog posts come fast and furious which causes a lot of writes and writes are particularly hard to scale. Understanding how LiveJournal faced their scaling problems will help any aspiring website builder.
 
@@ -32,4 +32,4 @@ Site: http://www.livejournal.com/
 
     *   Low level issues like which OS event notification mechanism to use, file system and disk interactions, threading and even models, and connection types, matter at scale.  
 
-    *   Large sites eventually turn to a distributed queuing and scheduling mechanism to distribute large work loads across a grid.</div>
+    *   Large sites eventually turn to a distributed queuing and scheduling mechanism to distribute large work loads across a grid.    

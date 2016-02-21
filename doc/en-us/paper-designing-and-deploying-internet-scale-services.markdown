@@ -1,8 +1,8 @@
 ## [Paper: On Designing and Deploying Internet-Scale Services](/blog/2008/3/25/paper-on-designing-and-deploying-internet-scale-services.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, March 25, 2008 at 5:58AM</span></div>
+    
 
-<div class="body">
+    
 
 [Greg Linden](http://glinden.blogspot.com/2008/03/designing-for-internet-scale.html) links to a heavily lesson ladened LISA 2007 paper titled _On Designing and Deploying Internet-Scale Services_ by James Hamilton of the Windows Live Services Platform group. I know people crave nitty-gritty details, but this isn't a how to configure a web server article. It hitches you to a rocket and zooms you up to 50,000 feet so you can take a look at best web operations practices from a broad, yet practical perspective. The author and his team of contributors obviously have a lot of in the trenches experience. Many non-obvious topics are covered. And there's a lot to learn from.  
 
@@ -29,4 +29,4 @@ The paper has too many details to cover here, but the big sections are:
     to look first to operations since that is where the problem actually took place. Most operations issues,  
     however, either have their genesis in design and development are best solved there.  
     _  
-    Understand this and I think much of the rest follows naturally.</div>
+    Understand this and I think much of the rest follows naturally.    

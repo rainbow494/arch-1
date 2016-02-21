@@ -1,8 +1,8 @@
 ## [The FireBox Warehouse Scale Computer in 2020 Will Have 1K Sockets, 100K Cores, 100PB NV RAM, and a 4Pb/s Network](/blog/2014/9/17/the-firebox-warehouse-scale-computer-in-2020-will-have-1k-so.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, September 17, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 That's the eye popping prediction from Krste Asanović, [University of California, Berkeley](https://aspire.eecs.berkeley.edu/), in a presentation he gave at [FAST '14](https://www.usenix.org/conference/fast14) titled: [FireBox: A Hardware Building Block for 2020 Warehouse-Scale Computers](https://www.youtube.com/watch?v=dffsqiHyylQ) ([pdf](https://www.usenix.org/sites/default/files/conference/protected-files/fast14_asanovic.pdf)).
 
@@ -21,7 +21,7 @@ FireFox looks system like this:
 *   **Move to an open Instruction Set Architecture (ISA)**. There's not reason to be tied to AMD or Intel. It's just an interface. [RISC-V](http://riscv.org/) is one example. 1st generation WSC used open-source software. 2nd generation WSC is using open-source hardware (OpenCompute) and OpenFlow API for networking. 3rd generation could be open-source chip design. They plan to release their FireBox WSC chip generator. 
 *   **Message passing simplifies programming of large servers**. It's a simple and consistent programming abstraction. Talking between any two cored will take ~100ns, 2X DRAM latency.
 
-##  FireBox Overview:<span style="font-size: 12px;"> </span>
+##  FireBox Overview:         
 
 *   **1000 sockets in a server. 100K cores in a server**. These are individual System on Chips that have high bandwidth memory attached. Each socket has a logic chip plus associated high bandwidth DRAM right next to the CPU. 
 *   **100PB  NonVolatile Memory spread over up to 1000 memory modules**.
@@ -35,4 +35,4 @@ FireFox looks system like this:
 
 Obviously this is a complicated talk so viewing the source video is highly recommended. There are many more details in the talk.
 
-</div>
+    

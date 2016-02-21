@@ -1,8 +1,8 @@
 ## [The 10 Deadly Sins Against Scalability](/blog/2013/6/10/the-10-deadly-sins-against-scalability.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, June 10, 2013 at 8:27AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm3.staticflickr.com/2872/8991422996_094136cbe5_n.jpg)
 
@@ -19,4 +19,4 @@ In the moral realm there may be 7 deadly sins, but scalability maven [Sean Hull
 9.  **Having No Metrics.** Visualize what's happening to your system using one of the many monitoring packages.
 10.  **Lack of Feature Flags.** Be able to turn off features via a flag so when a spike hits features can be turned off to reduce load.
 
-</div>
+    

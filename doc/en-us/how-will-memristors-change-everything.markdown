@@ -1,8 +1,8 @@
 ## [How will memristors change everything? ](/blog/2010/5/5/how-will-memristors-change-everything.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, May 5, 2010 at 7:36AM</span></div>
+    
 
-<div class="body">
+    
 
 [![](http://spectrum.ieee.org/images/dec08/images/memr01.jpg)](http://spectrum.ieee.org/semiconductors/processors/how-we-found-the-missing-memristor)
 
@@ -20,7 +20,7 @@ Here's a simple analogy defining a memristor from [How We Found the Missing Memr
 
 > A memristor is a pipe that changes diameter with the amount and direction of water that flows through it. If water flows through this pipe in one direction, it expands (becoming less resistive). But send the water in the opposite direction and the pipe shrinks (becoming more resistive). Further, the memristor remembers its diameter when water last went through. Turn off the flow and the diameter of the pipe ”freezes” until the water is turned back on. That freezing property suits memristors brilliantly for computer memory. The ability to indefinitely store resistance values means that a memristor can be used as a nonvolatile memory.
 
-For a more technical take on how a memristor works watch [Finding the Missing Memristor](http://www.youtube.com/watch?v=bKGhvKyjgLY). The video is excellent. It has three sections. The first part of the video recounts the fascinating story of [Leon Chua](http://www.eecs.berkeley.edu/~chua/)'s discovery of the memristor, the fourth circuit element, in the 1960s. Williams says Chua is to circuit theory what Albert Einstein is to relativity. Chua postulated that the memristor existed based on symmetry. The resistor, capacitor, and inductor existed so there should be a fourth box to fill out the square. I imagine the process something like how missing elements in the periodic table were predicted to exist by looking at gaps in the table.<span id="main" style="visibility: visible;"><span id="search" style="visibility: visible;"> </span></span>A <span>[fifth Cylon](http://blog.zap2it.com/ithappenedlastnight/2009/01/battlestar-gala.html)</span> was also predicted, but that turned out to be a completely different show.
+For a more technical take on how a memristor works watch [Finding the Missing Memristor](http://www.youtube.com/watch?v=bKGhvKyjgLY). The video is excellent. It has three sections. The first part of the video recounts the fascinating story of [Leon Chua](http://www.eecs.berkeley.edu/~chua/)'s discovery of the memristor, the fourth circuit element, in the 1960s. Williams says Chua is to circuit theory what Albert Einstein is to relativity. Chua postulated that the memristor existed based on symmetry. The resistor, capacitor, and inductor existed so there should be a fourth box to fill out the square. I imagine the process something like how missing elements in the periodic table were predicted to exist by looking at gaps in the table.                 A     [fifth Cylon](http://blog.zap2it.com/ithappenedlastnight/2009/01/battlestar-gala.html)     was also predicted, but that turned out to be a completely different show.
 
 ![](http://farm4.static.flickr.com/3532/4560804054_21db04eff1_m.jpg)
 
@@ -90,7 +90,7 @@ Designing for memristors may be a bit like the radical shift in our sense of spa
 
 ### RAM is the New Disk
 
-This is an obvious one. Even before 2006, when Jim Gray declared [<span style="font-weight: normal;">RAM is the new disk</span>](http://research.microsoft.com/en-us/um/people/gray/talks/flash_is_good.ppt)<span style="font-weight: normal;">, many latency sensitive</span> [<span style="font-weight: normal;">applications had moved</span>](/blog/2009/3/16/are-cloud-based-memory-architectures-the-next-big-thing.html) <span style="font-weight: normal;">their databases into RAM. The reasons are obvious: RAM is fast, disk is slow, disk is effectively sequential, RAM is random, RAM is</span> <span style="font-weight: normal;">colocated</span> <span style="font-weight: normal;">wi</span><span style="font-weight: normal;">th</span> <span style="font-weight: normal;">the CPU, disk is far away.</span>
+This is an obvious one. Even before 2006, when Jim Gray declared [    RAM is the new disk    ](http://research.microsoft.com/en-us/um/people/gray/talks/flash_is_good.ppt)    , many latency sensitive     [    applications had moved    ](/blog/2009/3/16/are-cloud-based-memory-architectures-the-next-big-thing.html)     their databases into RAM. The reasons are obvious: RAM is fast, disk is slow, disk is effectively sequential, RAM is random, RAM is         colocated         wi        th         the CPU, disk is far away.    
 
 The largest amount of RAM you can get on Amazon's EC2 is 68.4 GB. Systems capable of 128GB of RAM are now common and inexpensive. For a price 256GB, 512GB and even [1TB RAM](http://serverfault.com/questions/31394/where-to-purchase-a-server-capable-of-512gb-of-ram) systems are available today. And if you have Mariana Trench deep pockets a [128TB](http://www.sgi.com/products/servers/altix/4000/configs.html) monster system can be yours.
 
@@ -104,7 +104,7 @@ Petabits of persistent memory storage attack these weaknesses and make in-memor
 
 But if these parameters come in as hoped then the face of application architectures will truly change. RAM, flash, and disk are all unified and all databases are effectively in memory. That would change things up and level the technological playing field. You wouldn't have to be Google to implement truly large systems.
 
-### <span id="quote_24729">**Locality is King **</span>
+###     **Locality is King **    
 
 The is somewhat obvious too and revolves around the idea that when networks are expensive moving your computation close to storage is the optimal architecture. Again Jim Gray makes the world clear, from [Distributed Computing Economics](http://research.microsoft.com/apps/pubs/default.aspx?id=70001):
 
@@ -190,4 +190,4 @@ In [Building Super Scalable Systems: Blade Runner Meets Autonomic Computing in t
 *   [The SyNAPSE Project](http://celest.bu.edu/outreach-and-impacts/the-synapse-project) - uses memristors in their goal of developing a petascale machine that requires no more than a kilowatt of power and two liters of space. 
 *   [Identifying Suspicious URLs: An Application of Large-Scale Online Learning](http://www.youtube.com/watch?v=n3iANHusfcY). About 31 minutes into this video they say it's not possible to keep a 1 million by 1 million training matrix in memory. Now it will.
 
-</div>
+    

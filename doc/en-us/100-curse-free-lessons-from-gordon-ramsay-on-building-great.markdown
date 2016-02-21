@@ -1,8 +1,8 @@
 ## [100 Curse Free Lessons from Gordon Ramsay on Building Great Software](/blog/2013/8/12/100-curse-free-lessons-from-gordon-ramsay-on-building-great.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 12, 2013 at 8:55AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.staticflickr.com/5506/9486917479_17837cbbb7_n.jpg)
 
@@ -143,4 +143,4 @@ What I love most is when Ramsay goes out and asks locals why they didn't like a 
 
 How much these lessons apply to software is your call. I think a lot of them do. Ramsey may be a total a**hole, but that doesn't mean we can't learn from him.
 
-</div>
+    

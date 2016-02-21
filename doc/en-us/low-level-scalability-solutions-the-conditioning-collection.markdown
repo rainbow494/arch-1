@@ -1,8 +1,8 @@
 ## [Low Level Scalability Solutions - The Conditioning Collection](/blog/2013/3/11/low-level-scalability-solutions-the-conditioning-collection.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, March 11, 2013 at 9:51AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8251/8534554068_6f95503f2f_o.jpg)
 
@@ -173,4 +173,4 @@ This is the kind of monitoring you need to build into your communication layer a
 
 [Gossip protocols](http://highscalability.com/blog/2011/11/14/using-gossip-protocols-for-failure-detection-monitoring-mess.html) are one way to distribute this information though the system so each entity can take proper action. [Zookeeper](http://highscalability.com/zookeeper-reliable-scalable-distributed-coordination-system) is something else to look into as a way of distributing state.
 
-</div>
+    

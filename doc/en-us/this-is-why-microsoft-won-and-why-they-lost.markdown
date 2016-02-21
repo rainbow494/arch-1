@@ -1,8 +1,8 @@
 ## [This is why Microsoft won. And why they lost.](/blog/2014/4/21/this-is-why-microsoft-won-and-why-they-lost.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, April 21, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm4.staticflickr.com/3708/13950633693_6f5c0dc78a_m.jpg)
 
@@ -16,7 +16,7 @@ Much of the article is a play-by-play account of the cat and mouse game David pl
 
 For a general audience David's explanation of how and why Microsoft came to dominance and why they lost that dominance is most revealing. It stares directly into the heart of the entropy that brings everything down in the end.
 
-## Why Microsoft Won<span style="font-size: 12px;"> </span>
+## Why Microsoft Won         
 
 > Gates and Allen were skilled coders, but the history of software is littered with people just as smart or smarter who did not end up as billionaires. Their strength was on the business side. For years they remained a small company, but you didn’t need to be big to make soft- ware back then. The programs were simple, and they were all that was available, so you could charge a premium for them. The amount of person-hours that goes into a $50 piece of software today dwarfs that of a $50 item of software thirty years ago. In 1983, a word processor so primitive it advised users to put little stickers on their keyboards so they’d know which functions correlated to which keys retailed for $289\. For this price it offered a tiny fraction of what most freeware can do today. It was a different world.
 > 
@@ -38,4 +38,4 @@ The slow decline of empires follows a familiar pattern. The initial creativity a
 
 *   Airbnb -  [Don't F*ck Up the Culture](https://medium.com/p/597cde9ee9d4)
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [The Anatomy of Search Technology: Crawling using Combinators](/blog/2012/5/28/the-anatomy-of-search-technology-crawling-using-combinators.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, May 28, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7130/6966737104_1df7a549d6_m.jpg)
 
@@ -60,4 +60,4 @@ In the future, there is one major thing we'd like to add to our crawling system:
 *   [On Hacker News](http://news.ycombinator.com/item?id=4033983)
 *   [The Anatomy Of Search Technology: Blekko’s NoSQL Database](http://highscalability.com/blog/2012/4/25/the-anatomy-of-search-technology-blekkos-nosql-database.html)
 
-</div>
+    

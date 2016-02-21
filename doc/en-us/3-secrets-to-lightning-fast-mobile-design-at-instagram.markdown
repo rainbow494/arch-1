@@ -1,8 +1,8 @@
 ## [3 Secrets to Lightning Fast Mobile Design at Instagram](/blog/2012/6/7/3-secrets-to-lightning-fast-mobile-design-at-instagram.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, June 7, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7011/6464246201_bddb8c499e_o.jpg)
 
@@ -19,4 +19,4 @@ Smart and simple.
 
 *   [Instagram on HighScalability](http://highscalability.com/display/Search?moduleId=4876569&searchQuery=instagram)
 
-</div>
+    

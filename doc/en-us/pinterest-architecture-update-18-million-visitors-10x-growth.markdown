@@ -1,8 +1,8 @@
 ## [Pinterest Architecture Update - 18 Million Visitors, 10x Growth,12 Employees, 410 TB of Data](/blog/2012/5/21/pinterest-architecture-update-18-million-visitors-10x-growth.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, May 21, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7180/6886606039_bc5c70dbf9_m.jpg)
 
@@ -14,7 +14,7 @@ While it's true that both Pinterest and Instagram are not making great advances 
 
 Here's what Pinterest looks like today: 
 
-*   80 million objects stored in S3 with 410 terabytes of user data, 10x what they had in August. EC2 instances have grown by 3x. <span> Around $39K fo S3 and $30K for EC2.</span>
+*   80 million objects stored in S3 with 410 terabytes of user data, 10x what they had in August. EC2 instances have grown by 3x.      Around $39K fo S3 and $30K for EC2.    
 *   12 employees as of last December. Using the cloud a site can grow dramatically while maintaining a very small team. _Looks like [31 employees](http://pinterest.com/about/team/) as of now_.
 *   Pay for what you use saves money. Most traffic happens in the afternoons and evenings, so they reduce the number of instances at night by 40%. At peak traffic  $52 an hour is spent on EC2 and at night, during off peak, the spend is as little as $15 an hour.
 *   150 EC2 instances in the web tier
@@ -35,4 +35,4 @@ Here's what Pinterest looks like today: 
 *   [Startups Are Creating A New System Of The World For IT](http://highscalability.com/blog/2012/5/7/startups-are-creating-a-new-system-of-the-world-for-it.html)
 *   [What is Amazon’s Secret for Success and Why is EC2 a Runaway Train?](http://www.cloudscaling.com/blog/cloud-computing/what-is-amazons-secret-for-success-and-why-is-ec2-a-runaway-train/)
 
-</div>
+    

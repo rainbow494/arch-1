@@ -1,8 +1,8 @@
 ## [Tagged Architecture - Scaling to 100 Million Users, 1000 Servers, and 5 Billion Page Views](/blog/2011/8/8/tagged-architecture-scaling-to-100-million-users-1000-server.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 8, 2011 at 9:20AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.static.flickr.com/6070/6023161643_5103915345_m.jpg)
 
@@ -14,7 +14,7 @@ Since 2004, [Tagged](http://www.tagged.com/) has grown from a tiny social experi
 
 ## V1: PHP webapp, 100k users, 15 servers, 2004
 
-<span class="full-image-block ssNonEditable"><span>![](http://farm7.static.flickr.com/6007/6009718761_f465daa24b.jpg?__SQUARESPACE_CACHEVERSION=1312502344842)</span></span>
+        ![](http://farm7.static.flickr.com/6007/6009718761_f465daa24b.jpg?__SQUARESPACE_CACHEVERSION=1312502344842)        
 
 Tagged was born in the rapid-prototyping culture of an incubator that usually launched two new concepts each year in search of the big winner. LAMP was the natural choice for this style of work, which emphasized flexibility and quick turnaround at a time when Java development was mostly oriented towards development at large enterprises, Python attracted too few programmers, and Perl brought the wrong sort. Also, we knew that Yahoo was a big proponent of PHP, so it would be possible to scale the business when the need arose.
 
@@ -24,7 +24,7 @@ Remarkably, many smaller web sites are still built just like the original Tagged
 
 ## V2: Cached PHP **w****ebapp, 1m users, 20 servers, 2005**
 
-<span class="full-image-block ssNonEditable"><span>![](http://farm7.static.flickr.com/6124/6009718733_a1f0215987.jpg?__SQUARESPACE_CACHEVERSION=1312502444826)</span></span>
+        ![](http://farm7.static.flickr.com/6124/6009718733_a1f0215987.jpg?__SQUARESPACE_CACHEVERSION=1312502444826)        
 
 Even at eight servers Tagged had more web traffic than most of us had known. Fortunately, memcached brought dual advantages, removing over 90% of database reads, and ensuing that social networking pages packed with diverse information would render quickly.
 
@@ -34,7 +34,7 @@ Our site continued to evolve in complexity beyond standard social networking fea
 
 ## V3: Databases scaling, 10m users, 100 servers, 2006
 
-<span class="full-image-block ssNonEditable"><span>![](http://farm7.static.flickr.com/6027/6009718697_a0482a7af0.jpg?__SQUARESPACE_CACHEVERSION=1312502473359)</span></span>
+        ![](http://farm7.static.flickr.com/6027/6009718697_a0482a7af0.jpg?__SQUARESPACE_CACHEVERSION=1312502473359)        
 
 With 10 million registered users and thousands online at any moment we approached the challenge that I had been dreading. We had just raised capital and were working hard on growth, but the database was bursting for capacity. We scrambled to release one caching or SQL tuning optimization after the other, but the CPU our servers would time and again trend towards the 100% mark.
 
@@ -44,7 +44,7 @@ Java edged further into the environment when Tagged began to offer personalized 
 
 ## V4: Database sharding, 50m users, 500 servers, 2007
 
-<span class="full-image-block ssNonEditable"><span>![](http://farm7.static.flickr.com/6024/6010267986_483d84a809.jpg?__SQUARESPACE_CACHEVERSION=1312502502333)</span></span>
+        ![](http://farm7.static.flickr.com/6024/6010267986_483d84a809.jpg?__SQUARESPACE_CACHEVERSION=1312502502333)        
 
 Sharding the database was without a doubt the most challenging, but also the most rewarding episode in scaling Tagged. By splitting up users among multiple databases we finally had a design that at all places allowed us to scale just by adding hardware.
 
@@ -56,7 +56,7 @@ Having many databases means having many database connections. Especially as we a
 
 ## V5: Refinements and extensions, 80m users, 1,000 servers, 2010
 
-<span class="full-image-block ssNonEditable"><span>![](http://farm7.static.flickr.com/6133/6010267942_9f73ae5cb1.jpg?__SQUARESPACE_CACHEVERSION=1312502537554)</span></span>
+        ![](http://farm7.static.flickr.com/6133/6010267942_9f73ae5cb1.jpg?__SQUARESPACE_CACHEVERSION=1312502537554)        
 
 Here we jump ahead several years. With the crux database scalability problems solved, we found it straightforward to support expansion by adding hardware. PHP and memcached continued to serve us well, supporting rapid feature development.
 
@@ -72,4 +72,4 @@ Today, Tagged delivers five billion page views each month to its millions of mem
 
 *   [Johann Schleier-Smith Interview with theCube](http://siliconangle.tv/video/johann-schleier-smith-cto-cofounder-tagged)
 
-</div>
+    

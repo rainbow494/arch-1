@@ -1,8 +1,8 @@
 ## [Strategy: Flickr - Do the Essential Work Up-front and Queue the Rest ](/blog/2008/10/8/strategy-flickr-do-the-essential-work-up-front-and-queue-the.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, October 8, 2008 at 1:41AM</span></div>
+    
 
-<div class="body">This strategy is stated perfectly by Flickr's Myles Grant: _The Flickr engineering team is obsessed with making pages load as quickly as possible. To that end, we’re refactoring large amounts of our code to do only the essential work up front, and rely on our queuing system to do the rest._ Flickr uses a queuing system to process 11 million tasks a day. Leslie Michael Orchard also does a great job explaining the queuing meme in his excellent post [Queue everything and delight everyone](http://decafbad.com/blog/2008/07/04/queue-everything-and-delight-everyone). Asynchronous work queues are how you scalably solve problems that are too big to handle in real-time.  
+    This strategy is stated perfectly by Flickr's Myles Grant: _The Flickr engineering team is obsessed with making pages load as quickly as possible. To that end, we’re refactoring large amounts of our code to do only the essential work up front, and rely on our queuing system to do the rest._ Flickr uses a queuing system to process 11 million tasks a day. Leslie Michael Orchard also does a great job explaining the queuing meme in his excellent post [Queue everything and delight everyone](http://decafbad.com/blog/2008/07/04/queue-everything-and-delight-everyone). Asynchronous work queues are how you scalably solve problems that are too big to handle in real-time.  
 
 The process:  
 *   **Identify the minimum feedback the client (UI, API) needs to know an operation succeeded**. It's enough, for example, to update a client's view when a posting a message to a microblogging service. The client probably isn't aware of all the other steps that happen when a message is added and doesn't really care when they happen as long as the obvious cases happen in an appropariate period of time.  
@@ -69,4 +69,4 @@ The process:
     *   [Queue everything and delight everyone](http://decafbad.com/blog/2008/07/04/queue-everything-and-delight-everyone) by Leslie Michael Orchard.  
     *   [Gearman - Open Source Message Queuing System](http://highscalability.com/product-gearman-open-source-message-queuing-system/)  
     *   [GridGain: One Compute Grid, Many Data Grids](http://highscalability.com/gridgain-one-compute-grid-many-data-grids)  
-    </div>
+        

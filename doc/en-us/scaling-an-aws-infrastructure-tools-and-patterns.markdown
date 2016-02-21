@@ -1,8 +1,8 @@
 ## [Scaling an AWS infrastructure - Tools and Patterns](/blog/2010/8/16/scaling-an-aws-infrastructure-tools-and-patterns.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 16, 2010 at 7:52AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4115/4898148374_05259ec94e_m.jpg)
 
@@ -37,11 +37,11 @@ _**Centralised configuration management**_In order to instantiate multiple serve
 
 It is thus very simple to mount a new instance of a given type, and to be sure that from one server to another, the configuration is identical in every way. It should be noted that the Puppet Master descriptors run on a node system, and a server may reference more than one node. You will therefore obtain a very modular configuration.
 
-<div id="attachment_1310" class="wp-caption alignleft" style="width: 306px;">![Puppet Module Descriptor](http://decrypt.ysance.com/wp-content/uploads/2010/06/puppet_type_node_def-296x300.png "Puppet Module Descriptor")
+    ![Puppet Module Descriptor](http://decrypt.ysance.com/wp-content/uploads/2010/06/puppet_type_node_def-296x300.png "Puppet Module Descriptor")
 
 Puppet Module Descriptor
 
-</div>
+    
 
 The centralised configuration manager is indispensable on a scalable infrastructure, which can have a large number of instances, some of which should be mounted rapidly, in order to reply to user requests during load peak.
 
@@ -57,29 +57,29 @@ _**Execution of automated tasks in parallel**_Because of the variation in the nu
 *   Ensuring the reproducibility of a task.
 *   Capitalise on know-how (Cf. Puppet).
 
-<div id="attachment_1311" class="wp-caption alignnone" style="width: 654px;">![Capistrano Task Descriptor](http://decrypt.ysance.com/wp-content/uploads/2010/06/cap_task.png "Capistrano Task Descriptor")</div>
+    ![Capistrano Task Descriptor](http://decrypt.ysance.com/wp-content/uploads/2010/06/cap_task.png "Capistrano Task Descriptor")    
 
-<span class="full-image-float-right ssNonEditable"><span>![Logo Capistrano](http://decrypt.ysance.com/wp-content/uploads/2009/07/capistrano-logo-big-300x114.png "Logo Capistrano")</span></span>
+        ![Logo Capistrano](http://decrypt.ysance.com/wp-content/uploads/2009/07/capistrano-logo-big-300x114.png "Logo Capistrano")        
 
 This tool is very practical and easy to use. It executes tasks in parallel (by connecting with SSH – don’t use the ‘root’ key of your EC2 instances in the tool, it’s classier to use a dedicated key…) on one or a group of servers defined by roles.
 
 This tool should be used as a supplement to Puppet and not a replacement, as they do not have the same targets:
 
-_<span style="text-decoration: underline;">Objective</span>_  
-<span style="color: #339966;">_Puppet_ </span>- Uniform configuration of the server pool.  
-<span style="color: #800080;">_Capistrano_ </span>– Task reproducibility and in-parallel execution.
+_    Objective    _  
+    _Puppet_     - Uniform configuration of the server pool.  
+    _Capistrano_     – Task reproducibility and in-parallel execution.
 
-_<span style="text-decoration: underline;">Operating mode</span>_  
-<span style="color: #339966;">_Puppet_ </span>– Regular pull requests by clients (or even push from the master).  
-<span style="color: #800080;">_Capistrano_ </span>- Occasional tasks (manual request or by cron).
+_    Operating mode    _  
+    _Puppet_     – Regular pull requests by clients (or even push from the master).  
+    _Capistrano_     - Occasional tasks (manual request or by cron).
 
-_<span style="text-decoration: underline;">Orientation</span>_  
-<span style="color: #339966;">_Puppet_ </span>- Pre-defined objects / notions such as ‘Package’, ‘Service’, ‘File’, etc.  
-<span style="color: #800080;">_Capistrano_ </span>– Generic commands such as ‘upload’, ‘download’, ‘system’, ‘run’, etc.
+_    Orientation    _  
+    _Puppet_     - Pre-defined objects / notions such as ‘Package’, ‘Service’, ‘File’, etc.  
+    _Capistrano_     – Generic commands such as ‘upload’, ‘download’, ‘system’, ‘run’, etc.
 
-_<span style="text-decoration: underline;">Target</span>_  
-<span style="color: #339966;">_Puppet_ </span>- Infrastructure and services.  
-<span style="color: #800080;">_Capistrano_ </span>- Services and applications.
+_    Target    _  
+    _Puppet_     - Infrastructure and services.  
+    _Capistrano_     - Services and applications.
 
 Note that [Webistrano](http://labs.peritor.com/webistrano "Site de Webistrano") is an HMI enabling access to the Capistrano features and introducing the notion of project management by managing access to the tasks according to profile, to trace who deployed what on which server and to send email signals in response to certain actions. I find this joint operation with project management very interesting.
 
@@ -93,11 +93,11 @@ The provision of metrics is more representative of metrology than of supervision
 
 Quite a number of monitoring tools are available on the market, each with its pros and cons, some more supervision-oriented, others more towards metrology. Among them: [Centreon](http://www.centreon.com/ "Site de Centreon")/[Nagios](http://www.nagios.org/ "Site de Nagios"), [Zabbix](http://www.zabbix.com/ "Site de Zabbix"), [Cacti](http://www.cacti.net/ "Site de Cacti") and [Munin](http://munin.projects.linpro.no/ "Site de  Munin"). Personally I use Centreon/Nagios mainly for supervision and Cacti for software-oriented metrology with pre-packaged graphs such as for Apache, MySQL, Memcached, etc. I tried Munin, it lacks some of the useful features of Cacti but it is really easy to use and it matchs very well with Puppet (configuration based on descriptors and symlinks). I’ve also heard many good things about Zabbix (comprehensive range of features).
 
-<div id="attachment_388" class="wp-caption alignright" style="width: 414px;"><span class="full-image-float-right ssNonEditable"><span>![Thread Scoreboard Apache - Yearly - 1 Day Average](http://decrypt.ysance.com/wp-content/uploads/2009/07/Thread-Scoreboard-Apache-Yearly-1-Day-Average.png "Thread Scoreboard Apache - Yearly - 1 Day Average")</span></span>
+            ![Thread Scoreboard Apache - Yearly - 1 Day Average](http://decrypt.ysance.com/wp-content/uploads/2009/07/Thread-Scoreboard-Apache-Yearly-1-Day-Average.png "Thread Scoreboard Apache - Yearly - 1 Day Average")        
 
 Thread Scoreboard Apache - Yearly - 1 Day Average
 
-</div>
+    
 
 It should be noted that these tools operate mostly (Centreon, Cacti and Munin) on [RRDtool](http://oss.oetiker.ch/rrdtool/ "Site de RRDtool") (Round-Robin Database), a database management tool which also enables a graphic representation of the data contained in the base. The big advantage stems from the fact that the stored data volume is minimal, whether for storage of several months, or even years. This is made possible by calculating the averages of the time periods (from 1 minute to 1 day): the recent data is exact, whereas the older data is approximate. This is very practical, as you have both the recent exact metrics and you keep the historic, a representation of the evolution of your architecture. This is excellent for visualising the evolution of the key metrics and understanding the impact of the evolution of the components of the aforementioned infrastructure, or the applications supported as and when the different releases are delivered.
 
@@ -115,11 +115,11 @@ Consider trying a tool such as [Syslog-NG](http://www.balabit.com/network-securi
 *   The client recovers the files/pipe/unix-dgram/etc. logs and sends the information to the network (TCP/UDP).
 *   The server recovers the information from the network (TCP/UDP) and registers it in files, databases, etc.
 
-<div id="attachment_1314" class="wp-caption alignleft" style="width: 432px;">![Syslog-NG Architecture](http://decrypt.ysance.com/wp-content/uploads/2010/06/syslog-ng-archi.png "Syslog-NG Architecture")
+    ![Syslog-NG Architecture](http://decrypt.ysance.com/wp-content/uploads/2010/06/syslog-ng-archi.png "Syslog-NG Architecture")
 
 Syslog-NG Architecture
 
-</div>
+    
 
 We’re talking about only minimal differences in terms of configuration. The component can also act as a relay on more complex infrastructures by receiving the network logs from diverse clients and sending them back to the network for a server.
 
@@ -141,7 +141,7 @@ Over and above the tools presented here, it is the underlying functions and capa
 ![Scale-Out in the Matrix](http://decrypt.ysance.com/wp-content/uploads/2010/06/MatrixScaleOut-300x123.png "Scale-Out in the Matrix") In this part of the article I describe the architecture model and the underlying technical components you should use in order to implement a scalable infrastructure. We will look in particular at the optimisation of data access in scale-out-type architectures suitable for implementation as a distributed system, as much at the data model level as the lower layers for I/O optimisation. We will also examine the recommended development concepts such as Stateless, in the finest REST tradition. I will end the article with some tips and tricks. My aim is to help you set up and optimise your infrastructure by understanding how Amazon tools operate and to get the most benefit from them.
 
 _**Scale-out**_  
-<span class="full-image-float-right ssNonEditable"><span>![Scale-Up in Ghost Buster](http://decrypt.ysance.com/wp-content/uploads/2010/06/GhostBusterScaleUp.jpg "Scale-Up in Ghost Buster")</span></span>Scale-out is the opposite of scale-up: the latter means the dynamic expansion on the fly of a given server’s resources (addition of RAM or CPU). Thus, the application continues running on a single machine whose capacity has been increased. Scale-out (the AWS way), on the other hand, offers to increase the number of servers in order to respond to the increased load of an application. Ultimately, the global potential of the infrastructure increases too, but is divided among several servers. This implies that the application supported on the server had been thought out in terms of distribution, that is, it can be executed in parallel on several servers without the risk of corrupting the business logic (think to shared session management or no session, for example) or creating a problem of access to the resources (which must then be available via the network and not locally on any given server, for example).
+        ![Scale-Up in Ghost Buster](http://decrypt.ysance.com/wp-content/uploads/2010/06/GhostBusterScaleUp.jpg "Scale-Up in Ghost Buster")        Scale-out is the opposite of scale-up: the latter means the dynamic expansion on the fly of a given server’s resources (addition of RAM or CPU). Thus, the application continues running on a single machine whose capacity has been increased. Scale-out (the AWS way), on the other hand, offers to increase the number of servers in order to respond to the increased load of an application. Ultimately, the global potential of the infrastructure increases too, but is divided among several servers. This implies that the application supported on the server had been thought out in terms of distribution, that is, it can be executed in parallel on several servers without the risk of corrupting the business logic (think to shared session management or no session, for example) or creating a problem of access to the resources (which must then be available via the network and not locally on any given server, for example).
 
 Scale-out can be likened to Agent Smith in _Matrix_. As for scale-up, think more along the lines of the Stay Puft Marshmallow Man in _Ghostbusters_!
 
@@ -158,7 +158,7 @@ Optimising data access requires two elements:
 *   The data model and software architecture that are found in scalable architecture, whether you are on an AWS infrastructure or not.
 *   I/O management, which can be optimised in particular by thoroughly exploiting AWS.
 
-_<span style="text-decoration: underline;">The scalable model</span>_  
+_    The scalable model    _  
 This subject deserves an entire article of its own, but the scalable model is in keeping with a rather classic model within the casual gaming-type applications, or more generally linked to applications based on the social graphs, or centred on a distinct business concept in particular.
 
 To summarize, two methods of data storage are:
@@ -166,11 +166,11 @@ To summarize, two methods of data storage are:
 *   Storage of what we’ll call the meta-model, which is not intended for distribution, built on a structured, indexed relational base (even though essentially used in the form of a key-value access), containing the general information of each user (in the case of a social application the following: _name_, _top score_, _previous day’s wins_, etc.), primarily accessed in read and for which it is possible to alleviate the load via a Memcached in front of it. You can therefore carry out SQL-type set-based requests (ensemblist) and thus recover information by using clauses (_WHERE_). This base can be a MySQL or a PgSQL for example. I suggest you read this [very interesting report](http://www.dotdeb.org/2010/05/04/mysql-on-amazon-benchmarks-rds-vs-ec2/ "Dotdeb, MySQL et Amazon : RDS vs EC2") by Guillaume Plessis, comparing MySQL installed on an [EC2](http://aws.amazon.com/ec2/ "Site de Amazon Web Services, Rubrique EC2") with the Amazon [RDS](http://aws.amazon.com/rds/ "Site de Amazon Web Services, Rubrique RDS") (Relational Database Service). I don’t risk ruining the suspense by telling you that databases are a real bearded geek affair! :o)
 *   Storage for more volatile data (such as game data etc.), with a heavy write:read ratio, difficult to cache, and for which you must choose a real, structured, non-relational storage solution of a key-value-type (NoSQL / Not only SQL, some would say), thus enabling easy distribution of the data on X servers. I can mention a few names: [Redis](http://code.google.com/p/redis/ "Site de Redis"), [Tokyo Tyrant](http://1978th.net/tokyotyrant/ "Site de  Tokyo Tyrant")/[Tokyo Cabinet](http://1978th.net/tokyocabinet/ "Site de Tokyo Cabinet"), [MemcacheDB](http://memcachedb.org/ "Site de MemcacheDB"). And also the new peer to peer models such as [Cassandra](http://cassandra.apache.org/ "Site de Cassandra").
 
-<div id="attachment_1353" class="wp-caption alignright" style="width: 291px;"><span class="full-image-float-right ssNonEditable"><span>![Tokyo Cabinet](http://decrypt.ysance.com/wp-content/uploads/2010/06/TokyoCabinet.png "Tokyo Cabinet")</span></span>
+            ![Tokyo Cabinet](http://decrypt.ysance.com/wp-content/uploads/2010/06/TokyoCabinet.png "Tokyo Cabinet")        
 
 Tokyo Cabinet
 
-</div>
+    
 
 In this case, Tokyo Tyrant / Tokyo Cabinet is a solution that I have implemented, which I find satisfactory (note that a new tool [Kyoto Cabinet](http://1978th.net/kyotocabinet/ "Site de Kyoto Cabinet") has come and one of his worthy features is to optimize the management of multi threading and thread concurrency compared to Tokyo Cabinet). Tokyo Tyrant / Tokyo Cabinet is a twosome, managing the requests from distant servers (network interface) and access to the storage system respectively. Six APIs are available for storing the data:
 
@@ -187,16 +187,16 @@ Regarding performance: apart from its natural capabilities, it has the notable a
 
 The arguments concerning this tool should be applied to all key-value-type storage.
 
-_<span style="text-decoration: underline;">I/O management</span>_  
+_    I/O management    _  
 Now we come to the specific characteristics of AWS in terms of storage: [EBS](http://aws.amazon.com/ebs/ "Site de Amazon Web Services, Rubrique EBS") (Elastic Block Stores). EBS volumes are network disks optimised for I/Os, easy to use, ensuring the survival of crucial data during an EC2 (volatile) shutdown. On a purely practical note, I did however notice latency variances: not enormous, but on an application that is much in demand, it does get noticed. This is not insurmountable, it’s simply something to bear in mind. If your servers’ Load Average increases, it’s not necessarily the CPU which is to blame … Think I/Os!
 
 Firstly think striping, therefore RAID0\. No need for mirroring (RAID1), as the data safety in EBS is already guaranteed by Amazon, transparently, by network replication: let’s make the most of this service and concentrate on striping. Remember too to spread the writes of the different physical files (data, update logs, etc.) among different disks (for tools using update logs – and this is the case for MySQL and Tokyo Tyrant for example – do remember to set their capacity parameters). This is what allows you the best optimisations. Next, choose your filesystem carefully with regard to the tool (EXT3, XFS, etc.) and consider the mounting options (noatime, nodiratime, etc.) Finally, check the default scheduler on the EC2 instances that you are starting up: it’s the NOOP scheduler by default (I/O requests in a simple FIFO file). Consider something more efficient, such as CFQ (Completely Fair Queuing). Well, I say that, but it always depends on the top software layer, and if and how it manages the priorities: [in this example](http://www.mysqlperformanceblog.com/2009/01/30/linux-schedulers-in-tpcc-like-benchmark/ "MySQL Performance Blog, Linux  schedulers in tpcc like benchmark") (which is not on EBS) on the MySQL Performance Blog, it appears that the NOOP and DEADLINE schedulers are the best for improving the InnoDB I/O. It just goes to show, it’s always better to test first for your own particular case!
 
-<div id="attachment_1177" class="wp-caption alignleft" style="width: 310px;">![Logical Volume Management](http://decrypt.ysance.com/wp-content/uploads/2010/06/Archi_LVM-300x280.png "Logical Volume Management")
+    ![Logical Volume Management](http://decrypt.ysance.com/wp-content/uploads/2010/06/Archi_LVM-300x280.png "Logical Volume Management")
 
 Logical Volume Management
 
-</div>
+    
 
 Another tool I have used with the EBS and which works very well is LVM2 (Logical Volume Management, version 2). I haven’t used it with an architecture with a high number of IOPS (I/O Operations Per Second) and have therefore not tested the striping possibilities (RAID0) offered by the tool. On the other hand, I have used it with an infrastructure which had to be able to tolerate considerable increases in data volume but without interruptions in service. The snapshot and volume re-creation operations of an EBS are too long. LVM provides the solution, because this abstraction layer enables the management of software volumes independent of physical resources: you only need to raise a new EBS resource (a command line), associate it with the EC2 instance (another command line) and add this resource to the LVM resource pool. All that’s needed is to increase the logical volume (still transparent, without service interruption), then extend the file system. That last operation (which is a joint operation with the re-creation of the EBS volume) can necessitate shutting down the service for a few moments (around ten seconds). Note that it is possible to hot-extend your file system with EXT3, personally, I prefer a service interruption of a few seconds on this type of very short but crucial operation. And what’s more, it is easy to perform backups on an LVM system offering a snapshot differential option, which you can mount like an independent logical volume: when there is a modification to the origin volume, the initial value is copied in the snapshot volume, so you can snapshot large volumes on a limited space because only the frequency of modification is what counts. You can find further information on LVM2 and EBS by consulting this [very good article](http://decrypt.ysance.com/2010/06/ebs-et-lvm2-ou-comment-optimiser-elasticite-des-aws/ "Decrypt,  EBS et LVM2 ou comment optimiser l’élasticité des AWS") (in French) by Laurent Roux.
 
@@ -211,15 +211,15 @@ In all cases, handling the EBS is easy and this flexibility is a plus.
 **_Tips & tricks_**  
 This last section contains some useful hints.
 
-_<span style="text-decoration: underline;">Aliases & IPs</span>_  
+_    Aliases & IPs    _  
 Remember, on an AWS infrastructure, to position aliases corresponding to your instances’ private IPs in the ‘hosts’ file, which you then deploy via [Puppet](http://www.puppetlabs.com/ "Site de Puppet") for greater reactivity, given that the IPs are ‘variable’ (when you shut down one instance and start up another straight away, you will not keep the same IP). By using the the ‘hosts’ file you will avoid provoking internal DNS resolutions for Amazon.
 
-_<span style="text-decoration: underline;">CDN & S3 Headers</span>_  
+_    CDN & S3 Headers    _  
 For the CDNs (Content Delivery Networks) that you will have to use in a scalable architecture, remember to use S3 in order to provide images and other static content. It’s useless to keep a Web server only for that purpose: that’s what S3 is for, and at minimal cost.
 
 Remember also that in certain cases where your traffic is more moderate and you don’t wish to change over to a CDN (for reasons of cost, for example), you can always optimise the management of your resources on S3 by using the metadata attributed to the said resources on S3, by positioning, for example, _Cache-Control_ or _Expires-__type_ headers. You may visualise the metadata via the new [S3 tab](https://console.aws.amazon.com/s3/home "Site de Amazon Web Services, Console AWS, Onglet S3") of the Amazon management console.
 
-_<span style="text-decoration: underline;">Backups… What else?</span>_  
+_    Backups… What else?    _  
 S3 is also the solution for backups. I have not found any integrated tools satisfactory for this task: I simply use a command line tool “[s3cmd](http://s3tools.org/s3cmd "Site de s3tools, s3cmd")” in order to store my backups. I integrated this tool into [Capistrano](http://www.capify.org/ "Site de Capistrano") tasks called by cron. s3cmd is very simple to operate, enables the use of S3 services and offers the possibility of transferring data in HTTPS, and also to store it in encrypted format.
 
 **_Conclusion_**  
@@ -233,4 +233,4 @@ There are many more things to be said on this subject, but the abovementioned po
 
 I hope you enjoyed my report on the scalability of AWS infrastructures.
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [A Bunch of Great Strategies for Using Memcached and MySQL Better Together](/blog/a-bunch-of-great-strategies-for-using-memcached-and-mysql-be.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 4, 2008 at 5:06PM</span></div>
+    
 
-<div class="body">
+    
 
 The primero recommendation for speeding up a website is almost always to add cache and more cache. And after that add a little more cache just in case. Memcached is almost always given as the recommended cache to use. What we don't often hear is how to effectively use a cache in our own products. MySQL hosted two excellent webinars (referenced below) on the subject of how to deploy and use memcached. The star of the show, other than MySQL of course, is Farhan Mashraqi of Fotolog. You may recall we did an earlier article on Fotolog in [Secrets to Fotolog's Scaling Success](http://highscalability.com/secrets-fotologs-scaling-success), which was one of my personal favorites.  
 
@@ -137,4 +137,4 @@ There's a little embrace and extend in the webinar as MySQL cluster is presented
 
     ## Related Articles
 
-    *   [Designing and Implementing Scalable Applications with Memcached and MySQL](http://www.mysql.com/news-and-events/on-demand-webinars/display-od-142.html) by Farhan Mashraqi from Fotolog, Monty Taylor from Sun, and Jimmy Guerrero from Sun*   [Memcached for Mysql Advanced Use Cases](http://mashraqi.com/2008/07/memcached-for-mysql-advanced-use-cases_09.html) by Farhan Mashraqi of Fotolog*   [Memcached and MySQL tutorial](http://download.tangent.org/talks/Memcached%20Study.pdf) by Brian Aker, Alan Kasindorf - Overview with examples of how a few companies use memcached. Good presentation notes by [Colin Charles](http://www.bytebot.net/blog/archives/2008/04/14/memcached-and-mysql-tutorial).*   Strategy: [Break Up the Memcache Dog Pile](http://highscalability.com/strategy-break-memcache-dog-pile)*   [Secrets to Fotolog's Scaling Success](http://highscalability.com/secrets-fotologs-scaling-success)*   [Memcached for MySQL](http://www.mysql.com/products/enterprise/memcached.html)</div>
+    *   [Designing and Implementing Scalable Applications with Memcached and MySQL](http://www.mysql.com/news-and-events/on-demand-webinars/display-od-142.html) by Farhan Mashraqi from Fotolog, Monty Taylor from Sun, and Jimmy Guerrero from Sun*   [Memcached for Mysql Advanced Use Cases](http://mashraqi.com/2008/07/memcached-for-mysql-advanced-use-cases_09.html) by Farhan Mashraqi of Fotolog*   [Memcached and MySQL tutorial](http://download.tangent.org/talks/Memcached%20Study.pdf) by Brian Aker, Alan Kasindorf - Overview with examples of how a few companies use memcached. Good presentation notes by [Colin Charles](http://www.bytebot.net/blog/archives/2008/04/14/memcached-and-mysql-tutorial).*   Strategy: [Break Up the Memcache Dog Pile](http://highscalability.com/strategy-break-memcache-dog-pile)*   [Secrets to Fotolog's Scaling Success](http://highscalability.com/secrets-fotologs-scaling-success)*   [Memcached for MySQL](http://www.mysql.com/products/enterprise/memcached.html)    

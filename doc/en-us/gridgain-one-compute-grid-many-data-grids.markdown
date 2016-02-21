@@ -1,8 +1,8 @@
 ## [GridGain: One Compute Grid, Many Data Grids](/blog/2008/9/25/gridgain-one-compute-grid-many-data-grids.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, September 25, 2008 at 2:02AM</span></div>
+    
 
-<div class="body">[GridGain](http://www.gridgain.com/) was kind enough to present at the September 17th instance of the [Silicon Valley Cloud Computing Group](http://web.meetup.com/66/). I've been curious about GridGain so I was glad to see them there. In short GridGain is: _an open source computational grid framework that enables Java developers to improve general performance of processing intensive applications by splitting and parallelizing the workload_. GridGain can also be thought of as a set of middleware primitives for building applications. GridGain's peer group of competitors includes GigaSpaces, Terracotta, Coherence, and Hadoop.  
+    [GridGain](http://www.gridgain.com/) was kind enough to present at the September 17th instance of the [Silicon Valley Cloud Computing Group](http://web.meetup.com/66/). I've been curious about GridGain so I was glad to see them there. In short GridGain is: _an open source computational grid framework that enables Java developers to improve general performance of processing intensive applications by splitting and parallelizing the workload_. GridGain can also be thought of as a set of middleware primitives for building applications. GridGain's peer group of competitors includes GigaSpaces, Terracotta, Coherence, and Hadoop.  
 
 The speaker for GridGain was the President and Founder, Nikita Ivanov. He has a very pleasant down-to-earth way about him that contrasts nicely with a field given to religious discussions of complex taxomic definitions. Nikita first talked about cloud computing in general. He feels Java is the perfect gateway for cloud computing. Which is good because **GridGain only works with Java**. The Java centricity of GridGain may be an immediate deal killer or a non-issue for a Java shop. Being so close to the language does offer a lot of power, but it sure sucks in a multi-language environment.  
 
@@ -89,4 +89,4 @@ Nikita gave a few definitions which are key to understanding where GridGain stan
     *   [Developers Productivity: Unsung Hero of GridGain](http://www.jroller.com/nivanov/entry/developers_productivity_unsung_hero_of)  
     *   [GridGain vs Hadoop](http://gridgain.blogspot.com/2008/05/gridgain-vs-hadoop-continued.html)  
     *   [Cameron Purdy: Defining a Data Grid](http://www.theserverside.com/news/thread.tss?thread_id=48114)  
-    *   [Compute Grids vs. Data Grids](http://gridgain.blogspot.com/2008/07/compute-grids-vs-data-grids.html)</div>
+    *   [Compute Grids vs. Data Grids](http://gridgain.blogspot.com/2008/07/compute-grids-vs-data-grids.html)    

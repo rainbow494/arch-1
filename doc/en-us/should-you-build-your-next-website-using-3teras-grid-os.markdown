@@ -1,8 +1,8 @@
 ## [Should you build your next website using 3tera's grid OS?](/blog/2007/10/20/should-you-build-your-next-website-using-3teras-grid-os.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Saturday, October 20, 2007 at 8:27AM</span></div>
+    
 
-<div class="body">
+    
 
 _Update 2: 3tera has added [Dynamic Appliances](http://www.3tera.com/dynamic-appliances.html), which are "packaged data center operations like backup, migration or SLAs that users can add to their applications to provide functionality."_  
 _Update: in an effort to help cross the chasm of how start building a website using their grid OS, 3tera is offering their [Assured Success Plan](http://www.3tera.com/assured-success-plan.html). The idea is to provide training, consulting, and support so you can get started with some confidence you'll end up succeeding._
@@ -86,4 +86,4 @@ Here are some notes taken from the podcast.
 
     ## Related Sites and Articles
 
-    *   http://www.3tera.com/*   [On-Demand Infinitely Scalable Database Seed the Amazon EC2 Cloud](http://highscalability.com/demand-infinitely-scalable-database-seed-amazon-ec2-cloud)</div>
+    *   http://www.3tera.com/*   [On-Demand Infinitely Scalable Database Seed the Amazon EC2 Cloud](http://highscalability.com/demand-infinitely-scalable-database-seed-amazon-ec2-cloud)    

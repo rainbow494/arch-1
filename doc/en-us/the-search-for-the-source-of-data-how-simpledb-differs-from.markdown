@@ -1,8 +1,8 @@
 ## [The Search for the Source of Data - How SimpleDB Differs from a RDBMS](/blog/2008/4/21/the-search-for-the-source-of-data-how-simpledb-differs-from.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, April 21, 2008 at 2:20PM</span></div>
+    
 
-<div class="body">_Update 2: Yurii responds with the [Top 10 Reasons to Avoid Document Databases FUD](http://rashkovskii.com/articles/2008/4/26/top-10-reasons-to-avoid-document-databases-fud)._  
+    _Update 2: Yurii responds with the [Top 10 Reasons to Avoid Document Databases FUD](http://rashkovskii.com/articles/2008/4/26/top-10-reasons-to-avoid-document-databases-fud)._  
 _Update: [Top 10 Reasons to Avoid the SimpleDB Hype](http://www.ryanpark.org/2008/04/top-10-avoid-the-simpledb-hype.html) by Ryan Park provides a well written counter take. Am I really that fawning? If so, doesn't that make me a dear?_  
 
 All your life you've used a relational database. At the tender age of five you banged out your first SQL query to track your allowance. Your RDBMS allegiance was just assumed, like your politics or religion would have been assumed 100 years ago. They now say--you know them--that relations won't scale and we have to do things differently. New databases like SimpleDB and BigTable are what's different. As a long time RDBMS user what can you expect of SimpleDB? That's what Alex Tolley of MyMeemz.com set out to discover. Like many brave explorers before him, Alex gave a report of his adventures to the Royal Society of the [AWS Meetup](http://web.meetup.com/66/). Alex told a wild almost unbelievable tale of cultures and practices so different from our own you almost could not believe him. But Alex brought back proof.  
@@ -28,4 +28,4 @@ SimpleDB shifts work out of the database and onto programmers which is why the S
 ## Related Articles
 
 *   [The new attack on the RDBMS](http://almaer.com/blog/the-new-attack-on-the-rdbms) by techno.blog("Dion")  
-    *   [The End of an Architectural Era (It’s Time for a Complete Rewrite)](http://highscalability.com/paper-end-architectural-era-it-s-time-complete-rewrite) - A really fascinating paper bolstering many of the anti-RDBMS threads the have popped up on the intertube.</div>
+    *   [The End of an Architectural Era (It’s Time for a Complete Rewrite)](http://highscalability.com/paper-end-architectural-era-it-s-time-complete-rewrite) - A really fascinating paper bolstering many of the anti-RDBMS threads the have popped up on the intertube.    

@@ -1,8 +1,8 @@
 ## [Misco: A MapReduce Framework for Mobile Systems - Start of the Ambient Cloud?](/blog/2010/8/18/misco-a-mapreduce-framework-for-mobile-systems-start-of-the.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, August 18, 2010 at 7:03AM</span></div>
+    
 
-<div class="body">
+    
 
 [![](http://farm3.static.flickr.com/2661/4188985841_8a7dd5671e.jpg)](http://whatisthematrix.warnerbros.com/)
 
@@ -14,13 +14,13 @@ MapReduce was selected as the programming interface because it is **familiar to 
 
 It's interesting to contrast the economics of the ambient cloud to the economics of the data center cloud. The goal of a data center cloud is **100 percent utilization**. Use every possible CPU cycle or money is being wasted money on unused equipment. In an ambient cloud the idea is more parasitic, deploy to more resources yet leave the primary function of the device unaffected. It's a different perspective that may lead to different architectures. MapReduce scales linearly with the number devices. Since there are more phones than computers, using more of less capable devices will increase overall performance.
 
-<div id="_mcePaste">Misco first began as an intern project in the summer of 2008 at Nokia Research Center in Palo Alto. A quick introduction to Misco from the abstract:</div>
+    Misco first began as an intern project in the summer of 2008 at Nokia Research Center in Palo Alto. A quick introduction to Misco from the abstract:    
 
 > The proliferation of increasingly powerful, ubiquitous mobile devices has created a new and powerful sensing and computational environment. Software development and application deployment in such distributed mobile settings is especially challenging due to issues of failures, concurrency, and lack of easy programming models. We present a framework which provides a powerful software abstraction that hides many of such complexities from the application developer. We design and implement a mobile MapReduce framework targeted at any device which supports Python and network connectivity. We have implemented our system on a testbed of Nokia N95 8GB smartphones and demonstrated the feasibility and performance of our approach.
 
 An overview of the architecture is depicted by this excellent diagram:
 
-<span class="full-image-block ssNonEditable"><span>![](http://farm5.static.flickr.com/4118/4902321600_7ff0e9ba31.jpg?__SQUARESPACE_CACHEVERSION=1282073376294)</span></span>
+        ![](http://farm5.static.flickr.com/4118/4902321600_7ff0e9ba31.jpg?__SQUARESPACE_CACHEVERSION=1282073376294)        
 
 1.  **MasterServer** - keeps track of user applications; maintains input, intermediary and results data associated with applications; tracks worker progress; assigns tasks to workers. Communication between the server and worker is via HTTP. A server consists of:
     1.  **Application Repository Scheduler component** - keeps track of application input and output data.
@@ -65,18 +65,18 @@ Obviously still early days, but it's exciting to see the beginning of this kind 
 
 ## Related Articles
 
-<div>
+    
 
 *   [Exploring How to Build a Cloud With Smartphones](http://www.readwriteweb.com/cloud/2010/08/nokia-explores-how-to-build-a.php) by Alex Williams of ReadWriteWeb.
 *   [Misco Home Page](http://www.cs.ucr.edu/~jdou/misco/)
 *   [Disco](http://discoproject.org/) - a distributed computing framework based on the MapReduce.
 
-</div>
+    
 
-<div><span style="color: #000000; font-family: arial, sans-serif; font-size: 13px; border-collapse: collapse;">  
-</span></div>
+          
+        
 
-<div><span style="color: #000000; font-family: arial, sans-serif; font-size: 13px; border-collapse: collapse;">  
-</span></div>
+          
+        
 
-</div>
+    

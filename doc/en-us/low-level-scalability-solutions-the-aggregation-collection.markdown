@@ -1,8 +1,8 @@
 ## [Low Level Scalability Solutions - The Aggregation Collection](/blog/2013/3/6/low-level-scalability-solutions-the-aggregation-collection.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, March 6, 2013 at 10:16AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8251/8534554068_6f95503f2f_o.jpg)
 
@@ -120,4 +120,4 @@ We'll talk more about this later, but the idea is to consider that your system h
 
 This intelligence system produces a constant stream of signals that can be used to control how other parts of the system behave. Aggregation policies are very sensitive to what is happening out in the world. So you need to setup your own intelligence operation, conduct your own ops, even do your own counter intelligence. All sensors lie. 
 
-</div>
+    

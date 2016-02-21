@@ -1,8 +1,8 @@
 ## [Paper: Consensus Protocols: Paxos  ](/blog/2009/3/10/paper-consensus-protocols-paxos.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, March 10, 2009 at 12:58AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update: **[Barbara Liskov’s Turing Award, and Byzantine Fault Tolerance](http://hnr.dnsalias.net/wordpress/2009/03/barbara-liskovs-turing-award-and-byzantine-fault-tolerance/#).  
 
@@ -18,4 +18,4 @@ So when companies like Amazon do the seemingly insane thing of creating [eventua
 
 ## Related Articles
 
-*   [Google's Paxos Made Live – An Engineering Perspective](http://highscalability.com/googles-paxos-made-live-engineering-perspective)*   [ZooKeeper - A Reliable, Scalable Distributed Coordination System](http://highscalability.com/zookeeper-reliable-scalable-distributed-coordination-system)*   [Impossibility of Distributed Consensus with One Faulty Process](http://groups.csail.mit.edu/tds/papers/Lynch/pods83-flp.pdf) by Lynch et al*   [Consensus, impossibility results and Paxos](http://www.cs.cornell.edu/Courses/cs614/2007fa/Slides/FLP_and_Paxos.pdf) by Ken Birman*   [Paxos for System Builders](http://www.cnds.jhu.edu/pub/papers/cnds-2008-2.pdf) by Jonathan Kirsch and Yair Amir</div>
+*   [Google's Paxos Made Live – An Engineering Perspective](http://highscalability.com/googles-paxos-made-live-engineering-perspective)*   [ZooKeeper - A Reliable, Scalable Distributed Coordination System](http://highscalability.com/zookeeper-reliable-scalable-distributed-coordination-system)*   [Impossibility of Distributed Consensus with One Faulty Process](http://groups.csail.mit.edu/tds/papers/Lynch/pods83-flp.pdf) by Lynch et al*   [Consensus, impossibility results and Paxos](http://www.cs.cornell.edu/Courses/cs614/2007fa/Slides/FLP_and_Paxos.pdf) by Ken Birman*   [Paxos for System Builders](http://www.cnds.jhu.edu/pub/papers/cnds-2008-2.pdf) by Jonathan Kirsch and Yair Amir    

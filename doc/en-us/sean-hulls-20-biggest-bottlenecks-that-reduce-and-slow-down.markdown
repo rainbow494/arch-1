@@ -1,8 +1,8 @@
 ## [Sean Hull's 20 Biggest Bottlenecks that Reduce and Slow Down Scalability](/blog/2013/8/28/sean-hulls-20-biggest-bottlenecks-that-reduce-and-slow-down.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, August 28, 2013 at 9:09AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm4.staticflickr.com/3671/9616263004_ce0845b560_m.jpg)
 
@@ -20,47 +20,47 @@ Synchronous replication has these issues as well; hence, MySQL's solution is sem
 
 Caching is very important at all layers, so where is the best place to cache: at the browser, the page, the object, or the database layer? Let's work through each of these.
 
-_Browser caching_<span> might seem out of reach, until you realize that the browser takes directives from the Web server and the pages it renders. Therefore, if the objects contained therein have longer expire times, the browser will cache them and will not need to fetch them again. This is faster not only for the user, but also for the servers hosting the Web site, as all returning visitors will weigh less.</span>
+_Browser caching_     might seem out of reach, until you realize that the browser takes directives from the Web server and the pages it renders. Therefore, if the objects contained therein have longer expire times, the browser will cache them and will not need to fetch them again. This is faster not only for the user, but also for the servers hosting the Web site, as all returning visitors will weigh less.    
 
-<span><span>More information about browser caching is available at </span>[http://www.iheavy.com/2011/11/01/5-tips-cache-websites-boost-speed/](http://www.iheavy.com/2011/11/01/5-tips-cache-websites-boost-speed/)<span>. Be sure to set expire headers and cache control.</span></span>
+        More information about browser caching is available at     [http://www.iheavy.com/2011/11/01/5-tips-cache-websites-boost-speed/](http://www.iheavy.com/2011/11/01/5-tips-cache-websites-boost-speed/)    . Be sure to set expire headers and cache control.        
 
-<span>_Page caching_ requires using a technology such as Varnish (https://www.varnish-cache.org/). Think of this as a mini Web server with high speed and low overhead. It can't handle as complex pages as Apache can, but it can handle the very simple ones better. It therefore sits in front of Apache and reduces load, allowing Apache to handle the more complex pages. This is like a traffic cop letting the bikes go through an intersection before turning full attention to the more complex motorized vehicles.</span>
+    _Page caching_ requires using a technology such as Varnish (https://www.varnish-cache.org/). Think of this as a mini Web server with high speed and low overhead. It can't handle as complex pages as Apache can, but it can handle the very simple ones better. It therefore sits in front of Apache and reduces load, allowing Apache to handle the more complex pages. This is like a traffic cop letting the bikes go through an intersection before turning full attention to the more complex motorized vehicles.    
 
-<span>_Object caching_ is done by something like memcache. Think of it as a Post-it note for your application. Each database access first checks the object cache for current data and answers to its questions. If it finds the data it needs, it gets results 10 to 100 times faster, allowing it to construct the page faster and return everything to the user in the blink of an eye. If it doesn't find the data it needs, or finds only part of it, then it will make database requests and put those results in memcache for later sessions to enjoy and benefit from.</span>
+    _Object caching_ is done by something like memcache. Think of it as a Post-it note for your application. Each database access first checks the object cache for current data and answers to its questions. If it finds the data it needs, it gets results 10 to 100 times faster, allowing it to construct the page faster and return everything to the user in the blink of an eye. If it doesn't find the data it needs, or finds only part of it, then it will make database requests and put those results in memcache for later sessions to enjoy and benefit from.    
 
-### <span>3\. SLOW DISK I/O, RAID 5, MULTITENANT STORAGE</span>
+###     3\. SLOW DISK I/O, RAID 5, MULTITENANT STORAGE    
 
-<span>Everything, everything, everything in a database is constrained by storage—not by the size or space of that storage but by how fast data can be written to those devices.</span>
+    Everything, everything, everything in a database is constrained by storage—not by the size or space of that storage but by how fast data can be written to those devices.    
 
-<span>If you're using physical servers, watch out for RAID 5, a type of RAID (redundant array of independent disks) that uses one disk for both parity and protection. It comes with a huge write penalty, however, which you must always carry. What's more, if you lose a drive, these arrays are unusably slow during rebuild.</span>
+    If you're using physical servers, watch out for RAID 5, a type of RAID (redundant array of independent disks) that uses one disk for both parity and protection. It comes with a huge write penalty, however, which you must always carry. What's more, if you lose a drive, these arrays are unusably slow during rebuild.    
 
-<span>The solution is to start with RAID 10, which gives you striping over mirrored sets. This results in no parity calculation and no penalty during a rebuild.</span>
+    The solution is to start with RAID 10, which gives you striping over mirrored sets. This results in no parity calculation and no penalty during a rebuild.    
 
-<span>Cloud environments may work with technology such as Amazon EBS (Elastic Block Store), a virtualized disk similar to a storage area network. Since it's network based, you must contend and compete with other tenants (aka customers) reading and writing to that storage. Further, those individual disk arrays can handle only so much reading and writing, so your neighbors will affect the response time of your Web site and application.</span>
+    Cloud environments may work with technology such as Amazon EBS (Elastic Block Store), a virtualized disk similar to a storage area network. Since it's network based, you must contend and compete with other tenants (aka customers) reading and writing to that storage. Further, those individual disk arrays can handle only so much reading and writing, so your neighbors will affect the response time of your Web site and application.    
 
-<span>Recently Amazon rolled out a badly branded offering called Provisioned IOPS (I/O operations per second). That might sound like a great name to techies, but to everyone else it doesn't mean anything noteworthy. It's nonetheless important. It means you can lock in and guarantee the disk performance your database is thirsty for. If you're running a database on Amazon, then definitely take a look at this.</span>
+    Recently Amazon rolled out a badly branded offering called Provisioned IOPS (I/O operations per second). That might sound like a great name to techies, but to everyone else it doesn't mean anything noteworthy. It's nonetheless important. It means you can lock in and guarantee the disk performance your database is thirsty for. If you're running a database on Amazon, then definitely take a look at this.    
 
-### <span>4\. SERIAL PROCESSING</span>
+###     4\. SERIAL PROCESSING    
 
-<span>When customers are waiting to check out in a grocery store with 10 cash registers open, that's working in parallel. If every cashier is taking a lunch break and only one register is open, that's serialization. Suddenly a huge line forms and snakes around the store, frustrating not only the customers checking out, but also those still shopping. It happens at bridge tollbooths when not enough lanes are open, or in sports arenas when everyone is leaving at the same time.</span>
+    When customers are waiting to check out in a grocery store with 10 cash registers open, that's working in parallel. If every cashier is taking a lunch break and only one register is open, that's serialization. Suddenly a huge line forms and snakes around the store, frustrating not only the customers checking out, but also those still shopping. It happens at bridge tollbooths when not enough lanes are open, or in sports arenas when everyone is leaving at the same time.    
 
-<span>Web applications should definitely avoid serialization. Do you see a backup waiting for API calls to return, or are all your Web nodes working off one search server? Anywhere your application forms a line, that's serialization and should be avoided at all costs.</span>
+    Web applications should definitely avoid serialization. Do you see a backup waiting for API calls to return, or are all your Web nodes working off one search server? Anywhere your application forms a line, that's serialization and should be avoided at all costs.    
 
-### <span>5\. MISSING FEATURE FLAGS</span>
+###     5\. MISSING FEATURE FLAGS    
 
-<span>Developers normally build in features and functionality for business units and customers. Feature flags are operational necessities that allow those features to be turned on or off in either back-end config files or administration UI pages.</span>
+    Developers normally build in features and functionality for business units and customers. Feature flags are operational necessities that allow those features to be turned on or off in either back-end config files or administration UI pages.    
 
-<span>Why are they so important? If you have ever had to put out a fire at 4 a.m., then you understand the need for contingency plans. You must be able to disable ratings, comments, and other auxiliary features of an application, just so the whole thing doesn't fall over. What's more, as new features are rolled out, sometimes the kinks don't show up until a horde of Internet users hit the site. Feature flags allow you to disable a few features, without taking the whole site offline.</span>
+    Why are they so important? If you have ever had to put out a fire at 4 a.m., then you understand the need for contingency plans. You must be able to disable ratings, comments, and other auxiliary features of an application, just so the whole thing doesn't fall over. What's more, as new features are rolled out, sometimes the kinks don't show up until a horde of Internet users hit the site. Feature flags allow you to disable a few features, without taking the whole site offline.    
 
-### <span>6\. SINGLE COPY OF THE DATABASE</span>
+###     6\. SINGLE COPY OF THE DATABASE    
 
-<span>You should always have at least one read replica or MySQL slave online. This allows for faster recovery in the event that the master fails, even if you're not using the slave for browsing—but you should do that, too, since you're going to build a browse-only mode, right?</span>
+    You should always have at least one read replica or MySQL slave online. This allows for faster recovery in the event that the master fails, even if you're not using the slave for browsing—but you should do that, too, since you're going to build a browse-only mode, right?    
 
-<span>Having multiple copies of a database suggests horizontal scale. Once you have two, you'll see how three or four could benefit your infrastructure.</span>
+    Having multiple copies of a database suggests horizontal scale. Once you have two, you'll see how three or four could benefit your infrastructure.    
 
-### <span>7\. USING YOUR DATABASE FOR QUEUING</span>
+###     7\. USING YOUR DATABASE FOR QUEUING    
 
-<span>A MySQL database server is great at storage tables or data, and relationships between them. Unfortunately, it's not great at serving as a queue for an application. Despite this, a lot of developers fall into the habit of using a table for this purpose. For example, does your app have some sort of jobs table, or perhaps a status column, with values such as "in-process," "in-queue," and "finished"? If so, you're inadvertently using tables as queues.</span>
+    A MySQL database server is great at storage tables or data, and relationships between them. Unfortunately, it's not great at serving as a queue for an application. Despite this, a lot of developers fall into the habit of using a table for this purpose. For example, does your app have some sort of jobs table, or perhaps a status column, with values such as "in-process," "in-queue," and "finished"? If so, you're inadvertently using tables as queues.    
 
 Such solutions run into scalability hang-ups because of locking challenges and the scan and poll process to find more work. They will typically slow down a database. Fortunately, some good open source solutions are available, such as RabbitMQ ([http://www.rabbitmq.com/](http://www.rabbitmq.com/)) or Amazon's SQS (Simple Queue Service;[http://aws.amazon.com/sqs/](http://aws.amazon.com/sqs/)).
 
@@ -68,9 +68,9 @@ Such solutions run into scalability hang-ups because of locking challenges and
 
 Page searching is another area where applications get caught. Although MySQL has had full-text indexes for some time, they have worked only with MyISAM tables, the legacy table type that is not crash-proof, not transactional, and just an all-around headache for developers. 
 
-<div id="_mcePaste">One solution is to go with a dedicated search server such as Solr (http://lucene.apache.org/solr/). These servers have good libraries for whatever language you're using and high-speed access to search. These nodes also scale well and won't bog down your database.</div>
+    One solution is to go with a dedicated search server such as Solr (http://lucene.apache.org/solr/). These servers have good libraries for whatever language you're using and high-speed access to search. These nodes also scale well and won't bog down your database.    
 
-<div>Alternatively, Sphinx SE, a storage engine for MySQL, integrates the Sphinx server right into the database. If you're looking on the horizon, Fulltext is coming to InnoDB, MySQL's default storage engine, in version 5.6 of MySQL.</div>
+    Alternatively, Sphinx SE, a storage engine for MySQL, integrates the Sphinx server right into the database. If you're looking on the horizon, Fulltext is coming to InnoDB, MySQL's default storage engine, in version 5.6 of MySQL.    
 
 ### 9\. OBJECT RELATIONAL MODELS
 
@@ -102,7 +102,7 @@ Once you starting using version control, be sure to get all the components in th
 
 If your data is on a single master database, that's a single point of failure. If your server is sitting on a single disk, that's a single point of failure. This is just technical vernacular for an Achilles heel.
 
-<span style="color: #333333; font-family: Verdana, Arial, sans-serif; line-height: 15px;">These single points of failure must be rooted out at all costs. The trouble is recognizing them. Even relying on a single cloud provider can be a single point of failure. Amazon's data center or zone failures are a case in point. If it had had multiple providers or used Amazon differently, AirBNB would not have experienced downtime when part of Amazon Web Services went down in October 2012</span>([http://www.iheavy.com/2012/10/23/airbnb-didnt-have-to-fail/](http://www.iheavy.com/2012/10/23/airbnb-didnt-have-to-fail/)).
+    These single points of failure must be rooted out at all costs. The trouble is recognizing them. Even relying on a single cloud provider can be a single point of failure. Amazon's data center or zone failures are a case in point. If it had had multiple providers or used Amazon differently, AirBNB would not have experienced downtime when part of Amazon Web Services went down in October 2012    ([http://www.iheavy.com/2012/10/23/airbnb-didnt-have-to-fail/](http://www.iheavy.com/2012/10/23/airbnb-didnt-have-to-fail/)).
 
 ### 13\. LACK OF BROWSE-ONLY MODE
 
@@ -146,10 +146,10 @@ Teams need to communicate what they're changing, do so in a managed way, plan fo
 
 As an app evolves over the years, the team may spend more and more time maintaining and supporting old code, squashing bugs, or ironing out kinks. Therefore, they have less time to devote to new features. This balance of time devoted to debt servicing versus real new features must be managed closely. If you find your technical debt increasing, it may be time to bite the bullet and rewrite. Rewriting will take time away from the immediate business benefit of new functionality and customer features, but it is best for the long term.
 
-<span style="color: #333333; font-family: Verdana, Arial, sans-serif; line-height: 15px;">Technical debt isn't always easy to recognize or focus on. As you're building features or squashing bugs, you're more attuned to details at the </span>five-foot<span style="color: #333333; font-family: Verdana, Arial, sans-serif; line-height: 15px;"> level. It's easy to miss the forest for the trees. That's why generalists are better at scaling the Web (</span>[http://www.iheavy.com/2011/10/25/why-generalists-better-scaling-web/](http://www.iheavy.com/2011/10/25/why-generalists-better-scaling-web/)<span style="color: #333333; font-family: Verdana, Arial, sans-serif; line-height: 15px;">).</span>
+    Technical debt isn't always easy to recognize or focus on. As you're building features or squashing bugs, you're more attuned to details at the     five-foot     level. It's easy to miss the forest for the trees. That's why generalists are better at scaling the Web (    [http://www.iheavy.com/2011/10/25/why-generalists-better-scaling-web/](http://www.iheavy.com/2011/10/25/why-generalists-better-scaling-web/)    ).    
 
-### <span style="font-family: Verdana, Arial, sans-serif; color: #333333;"><span style="line-height: 15px;">20\. INSUFFICIENT LOGGING</span></span>
+###         20\. INSUFFICIENT LOGGING        
 
-<span style="font-family: Verdana, Arial, sans-serif; color: #333333;"><span style="line-height: 15px;">Logging is closely related to metrics and monitoring. You may enable a lot more of it when you're troubleshooting and debugging, but on an ongoing basis you'll need it for key essential services. Server syslogs, Apache and MySQL logs, caching logs, etc., should all be working. You can always dial down logging if you're getting too much of it, or trim and rotate log files, discarding the old ones.</span></span>
+        Logging is closely related to metrics and monitoring. You may enable a lot more of it when you're troubleshooting and debugging, but on an ongoing basis you'll need it for key essential services. Server syslogs, Apache and MySQL logs, caching logs, etc., should all be working. You can always dial down logging if you're getting too much of it, or trim and rotate log files, discarding the old ones.        
 
-</div>
+    

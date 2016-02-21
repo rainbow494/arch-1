@@ -1,12 +1,12 @@
 ## [Busting 4 Modern Hardware Myths - Are Memory, HDDs, and SSDs Really Random Access?](/blog/2013/6/13/busting-4-modern-hardware-myths-are-memory-hdds-and-ssds-rea.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, June 13, 2013 at 8:29AM</span></div>
+    
 
-<div class="body">
+    
 
 _"It’s all a numbers game – the dirty little secret of scalable systems"_
 
-<div><iframe width="225" height="127" align="right" src="http://www.youtube.com/embed/MC1EKLQ2Wmg" frameborder="0" allowfullscreen=""></iframe></div>
+    <iframe width="225" height="127" align="right" src="http://www.youtube.com/embed/MC1EKLQ2Wmg" frameborder="0" allowfullscreen=""></iframe>    
 
 [Martin Thompson](https://twitter.com/mjpt777) is a High Performance Computing Specialist with a real mission to teach programmers how to understand the innards of modern computing systems. He has many talks and classes (listed below) on caches, buffers, memory controllers, processor architectures, cache lines, etc.
 
@@ -64,7 +64,7 @@ The most surprising part of the talk is the counter intuitive idea that many of 
 
 ## Related Articles
 
-<div>
+    
 
 *   [On Hacker News](https://news.ycombinator.com/item?id=7955093)
 *   [Slides for Video](http://gotocon.com/dl/goto-aar-2012/slides/MartinThompson_MythbustingModernHardwareToGainMechanicalSympathy.pdf)
@@ -76,6 +76,6 @@ The most surprising part of the talk is the counter intuitive idea that many of 
 *   Review of [Martin Thompson’s Writing Concurrent Code with Lock Free Algorithms Course](http://www.heartysoft.com/martin-thompson-lock-free-algos) ([more on course](http://skillsmatter.com/course/home/martin-thompsons-writing-concurrent-code-with-lock-free-algorithms))
 *   [Switch Your Databases To Flash Storage. Now. Or You're Doing It Wrong.](http://highscalability.com/blog/2012/12/10/switch-your-databases-to-flash-storage-now-or-youre-doing-it.html)
 
-</div>
+    
 
-</div>
+    

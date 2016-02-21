@@ -1,8 +1,8 @@
 ## [Is NoSQL a Premature Optimization that's Worse than Death? Or the Lady Gaga of the Database World?](/blog/2011/7/25/is-nosql-a-premature-optimization-thats-worse-than-death-or.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, July 25, 2011 at 9:03AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.static.flickr.com/6007/5971685438_28ff951283_o.jpg)
 
@@ -105,4 +105,4 @@ As Mituzas hints at, when operating at this scale, all the programs created to m
 *   [Is VoltDB really as scalable as they claim?](http://www.mysqlperformanceblog.com/2011/02/28/is-voltdb-really-as-scalable-as-they-claim/) by Baron Schwartz.
 *   [Exclusive Guest Column from Dr. Michael Stonebraker - High Velocity Transactional Systems](http://www.dbta.com/Articles/Editorial/Trends-and-Applications/Exclusive-Guest-Column-from-Mike-Stonebraker---High-Velocity-Transactional-Systems-76776.aspx)
 
-</div>
+    

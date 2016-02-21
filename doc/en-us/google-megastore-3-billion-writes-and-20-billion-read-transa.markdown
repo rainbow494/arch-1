@@ -1,8 +1,8 @@
 ## [Google Megastore - 3 Billion Writes and 20 Billion Read Transactions Daily](/blog/2011/1/11/google-megastore-3-billion-writes-and-20-billion-read-transa.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, January 11, 2011 at 11:39PM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm2.static.flickr.com/1278/5179816576_2b186d41b3_m.jpg)
 
@@ -29,7 +29,7 @@ Some Megastorehighlights:
 *   Writes are limited to an estimated 1 per second per entity group, so HRD is not a good match when high usage is expected. This number is not a strict limit, but a good rule of thumb for write performance.
 *   With eventual consistency, more than 99.9% of your writes are available for queries within a few seconds.
 *   Only new applications can choose the HRD option. An existing application must be moved to a new application.
-*   <div id="_mcePaste">Performance can be improved at the expense of consistency by setting the read_policy to eventually consistent. This will be bring performance similar to that of Master/Slave datastore. Writes are not affected by this flag,  it only works for read performance, which are already fast in the 99% case, so it doesn't have a very big impact. Applications doing batch gets will notice impressive speed ups from using this flag.</div>
+*       Performance can be improved at the expense of consistency by setting the read_policy to eventually consistent. This will be bring performance similar to that of Master/Slave datastore. Writes are not affected by this flag,  it only works for read performance, which are already fast in the 99% case, so it doesn't have a very big impact. Applications doing batch gets will notice impressive speed ups from using this flag.    
 
 *   One application can't mix Master/Slave with HRD. The reasoning is HRD can serve out of multiple datacenters and Master/Slave can not, so there's no way to ensure in failure cases that apps are running in the right place. So if you planned to use an expensive HRD for critical data and the less expensive Master/Slave for less critical data, you can't do that. You might be thinking to delegate Master/Slave operations to another application, but splitting up applications that way is against the TOS. 
 *   Once HRD is selected your choice can't be changed. So if you would like to start with the cheeper Master/Slave for customers who want to pay less and use HRD who would like to pay for a premium service, you can't do that.
@@ -49,4 +49,4 @@ Some Megastorehighlights:
 *   [Consensus Protocols: Paxos](http://highscalability.com/blog/2009/3/10/paper-consensus-protocols-paxos.html)
 *   [Yahoo!'S PNUTS Database: Too Hot, Too Cold Or Just Right?](http://highscalability.com/blog/2009/8/8/yahoos-pnuts-database-too-hot-too-cold-or-just-right.html)
 
-</div>
+    

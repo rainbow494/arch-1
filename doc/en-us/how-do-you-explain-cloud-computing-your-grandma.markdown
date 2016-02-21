@@ -1,8 +1,8 @@
 ## [How do you explain cloud computing to your grandma?](/blog/2008/5/25/how-do-you-explain-cloud-computing-to-your-grandma.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Sunday, May 25, 2008 at 1:03AM</span></div>
+    
 
-<div class="body">_Update 2: Nice introductory New York Time's article [Cloud Computing: So You Don’t Have to Stand Still](http://www.nytimes.com/2008/05/25/technology/25proto.html). Good example of how Animoto used RightScale and Amazon to meet a Facebook driven demand of 25,000 test drives an hour._  
+    _Update 2: Nice introductory New York Time's article [Cloud Computing: So You Don’t Have to Stand Still](http://www.nytimes.com/2008/05/25/technology/25proto.html). Good example of how Animoto used RightScale and Amazon to meet a Facebook driven demand of 25,000 test drives an hour._  
 _Update: Peter Laird in [Understanding the Cloud Computing/SaaS/PaaS markets: a Map of the Players in the Industry](http://dev2dev.bea.com/blog/plaird/archive/2008/05/understanding_t.html) paints a very cool visual map of all the cloud service players. It's a larger industry than you might think._  
 
 Once upon a time I worked at an Asynchronous Transfer Mode (ATM) switch startup. Over a delicious Christmas punch my grandma asked me what I did for a living that I could afford such extravagantly inexpensive gifts. Always so subtle. I explained I worked on an ATM switch. Mistake. She sniffed, said that's nice, and asked me why the Automated Teller Machine ate her bank card that morning. No matter how hard I tried I couldn't convince her I didn't work on bank ATMs. To all future job interrogations I waxed off, protesting I do boring software stuff that nobody cares about.  
@@ -34,4 +34,4 @@ James Urquhart [defines the cloud](http://blog.jamesurquhart.com/2008/02/engage-
 Confident I must have answered her original question, I asked “Now, doesn’t that clear things up grandma?”  
 
 Grandma sniffed, said that's all very nice, but she still wanted to know why the ATM ate her bank card! I groaned and said “Goodnight grandma. I’ll call again next week.” “Excellent,“ she Cheshire smiled, “next week my church group is going to tackle if social networks are really monitizeable.”  
-</div>
+    

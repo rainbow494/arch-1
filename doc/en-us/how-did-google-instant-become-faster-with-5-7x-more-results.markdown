@@ -1,8 +1,8 @@
 ## [How did Google Instant become Faster with 5-7X More Results Pages?](/blog/2010/9/9/how-did-google-instant-become-faster-with-5-7x-more-results.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, September 9, 2010 at 1:53PM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://www.google.com/images/logos/ps_logo2.png)
 
@@ -27,4 +27,4 @@ We see here the merging of various caching strategies with the real-time web. A 
 *   [Google search index splits with MapReduce](http://www.theregister.co.uk/2010/09/09/google_caffeine_explained/). _With Caffeine, Google can update its index by making direct changes to the web map already stored in BigTable_.
 *   [Our new search index: Caffeine](http://googleblog.blogspot.com/2010/06/our-new-search-index-caffeine.html). _Caffeine lets us index web pages on an enormous scale. In fact, every second Caffeine processes hundreds of thousands of pages in parallel. If this were a pile of paper it would grow three miles taller every second. Caffeine takes up nearly 100 million gigabytes of storage in one database and adds new information at a rate of hundreds of thousands of gigabytes per day_. _You would need 625,000 of the largest iPods to store that much information; if these were stacked end-to-end they would go for more than 40 miles._
 
-</div>
+    

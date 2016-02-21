@@ -1,8 +1,8 @@
 ## [Hot New Trend: Linking Clouds Through Cheap IP VPNs Instead of Private Lines ](/blog/2009/6/30/hot-new-trend-linking-clouds-through-cheap-ip-vpns-instead-o.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, June 30, 2009 at 4:38AM</span></div>
+    
 
-<div class="body">
+    
 
 You might think major Internet companies have a latency, availability, and bandwidth advantage because they can afford expensive dedicated point-to-point private line networks between their data centers. And you would be right. It's a great advantage. Or it at least it was a great advantage. Cost is the great equalizer and companies are now scrambling for ways to cut costs. Many of the most recognizable Internet companies are moving to IP VPNs (Virtual Private Networks) as a much cheaper alternative to private lines. This is a strategy you can effectively use too.  
 
@@ -34,4 +34,4 @@ The line of reasoning for adopting IP VPNs goes something like this:
 
     ## Related Articles
 
-    *   [Cloud Computing Requires Infrastructure 2.0](http://seekingalpha.com/article/98119-cloud-computing-requires-infrastructure-2-0#%20-%20Cloud%20Computing%20Requires%20Infrastructure%202.0) by Gregory Ness*   [Myth of Bandwidth and Application Performance](http://media.podtech.net/media/2006/12/PID_001545/Podtech_t_1580-the-myth-of-bandwidth-a.html) by Ameet Dhillon*   [How Does WAN Optimization Work?](http://www.enterprisenetworkingplanet.com/_featured/article.php/3816601/How-Does-WAN-Optimization-Work.htm) by Paul Rubens*   [SilverPeak Technology Overview](http://www.silver-peak.com/assets/download/pdf/wp_SilverPeak_Technology_Overview.pdf)</div>
+    *   [Cloud Computing Requires Infrastructure 2.0](http://seekingalpha.com/article/98119-cloud-computing-requires-infrastructure-2-0#%20-%20Cloud%20Computing%20Requires%20Infrastructure%202.0) by Gregory Ness*   [Myth of Bandwidth and Application Performance](http://media.podtech.net/media/2006/12/PID_001545/Podtech_t_1580-the-myth-of-bandwidth-a.html) by Ameet Dhillon*   [How Does WAN Optimization Work?](http://www.enterprisenetworkingplanet.com/_featured/article.php/3816601/How-Does-WAN-Optimization-Work.htm) by Paul Rubens*   [SilverPeak Technology Overview](http://www.silver-peak.com/assets/download/pdf/wp_SilverPeak_Technology_Overview.pdf)    

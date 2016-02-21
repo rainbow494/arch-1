@@ -1,8 +1,8 @@
 ## [Product: Gearman - Open Source Message Queuing System](/blog/2009/1/13/product-gearman-open-source-message-queuing-system.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, January 13, 2009 at 1:16AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update:** [New Gearman Server & Library in C, MySQL UDFs](http://www.oddments.org/?p=30).  
 
@@ -42,4 +42,4 @@ Gearman uses a very robust, if somewhat higher latency, signal-and-pull architec
 
     ## Related Articles
 
-    *   [Gearman Wiki](http://gearmanproject.org/doku.php)*   [German Google Groups](http://groups.google.com/group)*   [Queue everything and delight everyone](http://decafbad.com/blog/2008/07/04/queue-everything-and-delight-everyone) by Leslie Michael Orchard.*   [USENIX 2007](http://danga.com/words/2007_06_usenix/). Starts at slide 83.*   [PEAR and Gearman](http://clockwerx.blogspot.com/2008/04/pear-and-gearman.html) by Daniel O'Connor.*   [Amazon Architecture](http://highscalability.com/amazon-architecture)</div>
+    *   [Gearman Wiki](http://gearmanproject.org/doku.php)*   [German Google Groups](http://groups.google.com/group)*   [Queue everything and delight everyone](http://decafbad.com/blog/2008/07/04/queue-everything-and-delight-everyone) by Leslie Michael Orchard.*   [USENIX 2007](http://danga.com/words/2007_06_usenix/). Starts at slide 83.*   [PEAR and Gearman](http://clockwerx.blogspot.com/2008/04/pear-and-gearman.html) by Daniel O'Connor.*   [Amazon Architecture](http://highscalability.com/amazon-architecture)    

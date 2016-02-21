@@ -1,8 +1,8 @@
 ## [7 Life Saving Scalability Defenses Against Load Monster Attacks](/blog/2013/3/4/7-life-saving-scalability-defenses-against-load-monster-atta.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, March 4, 2013 at 9:30AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8511/8519485352_0fa79b99f8_m.jpg)We talked about [42 Monster Problems That Attack As Loads Increase](http://highscalability.com/blog/2013/2/27/42-monster-problems-that-attack-as-loads-increase.html). Here are a few ways you can defend yourself, secrets revealed by scaling masters across the ages. Note that these are low level programming level moves, not large architecture type strategies.
 
@@ -79,4 +79,4 @@ In some systems it is not possible to shed load because you are required to hand
 
 There are many more strategies and we'll see more of them in later posts.
 
-</div>
+    

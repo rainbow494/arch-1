@@ -1,8 +1,8 @@
 ## [11 Common Web Use Cases Solved in Redis](/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, July 6, 2011 at 9:16AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.static.flickr.com/6034/5909127950_be0f5beeeb_o.png)
 
@@ -29,4 +29,4 @@ Please read the [original article](http://antirez.com/post/take-advantage-of-re
 *   [Resque](https://github.com/blog/542-introducing-resque) - Redis-backed library for creating background jobs, placing those jobs on multiple queues, and processing them later.
 *   [Hacker News thread](http://news.ycombinator.com/item?id=2705475). 
 
-</div>
+    

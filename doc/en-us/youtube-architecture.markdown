@@ -1,8 +1,8 @@
 ## [YouTube Architecture](/blog/2008/3/12/youtube-architecture.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, March 12, 2008 at 3:54PM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 3:** [7 Years Of YouTube Scalability Lessons In 30 Minutes](http://highscalability.com/blog/2012/3/26/7-years-of-youtube-scalability-lessons-in-30-minutes.html) and [YouTube Strategy: Adding Jitter Isn't A Bug](http://highscalability.com/blog/2012/4/17/youtube-strategy-adding-jitter-isnt-a-bug.html)
 
@@ -152,4 +152,4 @@ This loop runs many times a day.
 
 [On reddit](http://www.reddit.com/r/programming/comments/2yfab3/the_youtube_architecture_2008/).
 
-</div>
+    

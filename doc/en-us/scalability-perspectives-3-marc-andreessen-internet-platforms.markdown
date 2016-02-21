@@ -1,8 +1,8 @@
 ## [Scalability Perspectives #3: Marc Andreessen – Internet Platforms](/blog/2008/11/24/scalability-perspectives-3-marc-andreessen-internet-platform.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, November 24, 2008 at 3:09AM</span></div>
+    
 
-<div class="body">
+    
 
 _[Scalability Perspectives](http://highscalability.com/tags/perspectives) is a series of posts that highlights the ideas that will shape the next decade of IT architecture. Each post is dedicated to a thought leader of the information age and his vision of the future. Be warned though – the journey into the minds and perspectives of these people requires an open mind._
 
@@ -95,4 +95,4 @@ Read Marc's full blog post for more details! Can you add more Level 3 Platforms?
 *   [Internet Platforms Defined](http://innowave.blogspot.com/2007/09/internet-platforms-defined.html)
 *   [Interview with Marc Andreessen from 1995](http://americanhistory.si.edu/collections/comphist/ma1.html)
 
-</div>
+    

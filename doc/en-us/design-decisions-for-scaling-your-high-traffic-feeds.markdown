@@ -1,8 +1,8 @@
 ## [Design Decisions for Scaling Your High Traffic Feeds](/blog/2013/10/28/design-decisions-for-scaling-your-high-traffic-feeds.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, October 28, 2013 at 9:55AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm3.static.flickr.com/2661/4188985841_8a7dd5671e.jpg)
 
@@ -12,7 +12,7 @@ _Guest post by Thierry Schellenbach, Founder/CTO of Fashiolista.com, follow @tsc
 
 Feeds are a core component of many large startups such as Pinterest, Instagram, Wanelo and Fashiolista. At Fashiolista the feed system powers the [flat feed](http://www.fashiolista.com/feed/?feed_type=F), [aggregated feed](http://www.fashiolista.com/feed/?feed_type=A) and the [notification](http://www.fashiolista.com/my_style/notification/) system. This article will explain the troubles we ran into when scaling our feeds and the design decisions involved with building your own solution. Understanding the basics of how these feed systems work is essential as more and more applications rely on them.
 
-<div>
+    
 
 Furthermore we’ve open sourced [Feedly](https://github.com/tschellenbach/Feedly), the Python module powering our feeds. Where applicable I’ll reference how to use it to quickly build your own feed solution.
 
@@ -20,17 +20,17 @@ Furthermore we’ve open sourced [Feedly](https://github.com/tschellenbach/Feedl
 
 The problem of scaling feed systems has been widely discussed, but let me start by clarifying the basics. The solutions are aimed at making a page like your Facebook news feed, Twitter stream or [Fashiolista](http://www.fashiolista.com/) feed work under high traffic conditions. What all these systems have in common is that they show activities by the people you follow. In our case we based the activity object on [this standard](http://activitystrea.ms/specs/atom/1.0/) for activity streams. Examples of activities are “Thierry added an item to a list on Fashiolista” or “Tommaso tweeted a message”.
 
-<div>There are two strategies for building feed systems:</div>
+    There are two strategies for building feed systems:    
 
-<div>
+    
 
 1.  **Pull**, where the feed is gathered during reads
 
 2.  **Push** where all the feeds are pre computed during the writes.
 
-</div>
+    
 
-</div>
+    
 
 Most real live applications will use a combination of these two approaches. The process of pushing an activity to all your followers is called a fanout.
 
@@ -50,13 +50,13 @@ The most surprising thing was how robust this system was. We passed 1M loves and
 
 Our second approach stored a feed for every user in Redis. When you loved an item this activity was fanned out to all your followers. We used a few smart tricks to keep memory usage low, which I’ll cover in the next section. Redis was really easy to setup and maintain. We sharded across several Redis machines using Nydus and used [Sentinel](http://redis.io/topics/sentinel) for automatic failovers. (Currently we recommend using [Twemproxy](https://github.com/twitter/twemproxy) instead of [Nydus](https://github.com/disqus/nydus))
 
-<div>Redis was a good solution, but several reasons made us look for an alternative. Firstly we wanted to support multiple content types, which made falling back to the database harder and increased our storage requirements. In addition the database fallback we were still relying on became slower as our community grew. Both these problems could be addressed by storing more data in Redis, but doing so was prohibitively expensive.</div>
+    Redis was a good solution, but several reasons made us look for an alternative. Firstly we wanted to support multiple content types, which made falling back to the database harder and increased our storage requirements. In addition the database fallback we were still relying on became slower as our community grew. Both these problems could be addressed by storing more data in Redis, but doing so was prohibitively expensive.    
 
-<div><span id="docs-internal-guid-6335c160-ffb2-b457-c32d-baa50f7f7dc3">
+        
 
 ### Part three - Cassandra & Feedly
 
-<div>We briefly looked at [HBase](http://hbase.apache.org/), [DynamoDB](http://aws.amazon.com/dynamodb/) and [Cassandra 2.0](http://cassandra.apache.org/download/). Eventually we opted for Cassandra since it has few moving parts, is used by Instagram and is supported by [Datastax](http://www.datastax.com/). Fashiolista currently does a full push flow for the flat feed and a combination between push and pull for the aggregated feed. We store a maximum of 3600 activities in your feed, which currently takes up 2.12TB of storage. The fluctuations caused by high profile users are mitigated using priority queues, overcapacity and auto scaling.</div>
+    We briefly looked at [HBase](http://hbase.apache.org/), [DynamoDB](http://aws.amazon.com/dynamodb/) and [Cassandra 2.0](http://cassandra.apache.org/download/). Eventually we opted for Cassandra since it has few moving parts, is used by Instagram and is supported by [Datastax](http://www.datastax.com/). Fashiolista currently does a full push flow for the flat feed and a combination between push and pull for the aggregated feed. We store a maximum of 3600 activities in your feed, which currently takes up 2.12TB of storage. The fluctuations caused by high profile users are mitigated using priority queues, overcapacity and auto scaling.    
 
 ## Feed Design
 
@@ -106,7 +106,7 @@ Note that you only need to solve this problem once you get millions of activitie
 
 To learn more about feed design I highly recommend reading some of the articles which we based Feedly on:
 
-<span id="docs-internal-guid-6335c160-ffcf-ae68-3847-403f98fff913">
+    
 
 *   [Yahoo Research Paper](http://research.yahoo.com/files/sigmod278-silberstein.pdf)
 *   [Twitter 2013](http://highscalability.com/blog/2013/7/8/the-architecture-twitter-uses-to-deal-with-150m-active-users.html) Redis based, with fallback
@@ -122,6 +122,6 @@ To learn more about feed design I highly recommend reading some of the articles 
 *   [Thoonk setup](http://blog.thoonk.com/)
 *   [Twitter's Approach](http://www.slideshare.net/nkallen/q-con-3770885)
 
-</span></span></div>
+            
 
-</div>
+    

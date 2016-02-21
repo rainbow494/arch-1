@@ -1,8 +1,8 @@
 ## [What if Cars Were Rented Like We Hire Programmers?](/blog/2013/1/16/what-if-cars-were-rented-like-we-hire-programmers.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, January 16, 2013 at 9:30AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8193/8382169633_1464b3a027_m.jpg)
 
@@ -61,4 +61,4 @@ Imagine if you will that car rental agencies rented cars like programmers are hi
 *   [On Hacker News](http://news.ycombinator.com/item?id=5068413)
 *   [On Reddit](http://www.reddit.com/r/programming/comments/16pb88/what_if_cars_were_rented_like_we_hire_programmers/) 
 
-</div>
+    

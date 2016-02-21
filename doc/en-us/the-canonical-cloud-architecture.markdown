@@ -1,8 +1,8 @@
 ## [The Canonical Cloud Architecture ](/blog/2009/8/7/the-canonical-cloud-architecture.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, August 7, 2009 at 12:06AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 2:** [Elastic Load Balancer and EC2 instance bandwidth](http://dailyawswtf.com/post/157140960/elastic-load-balancer-and-ec2-instance-bandwidth#). _It turns out we are limited by bandwidth and not by CPU_. Solution: _use DNS Round Robin for two to three HighCPU medium instances_.  
 **Update:** [The Skinny Straw: Cloud Computing's Bottleneck and How to Address It](http://www.cio.com/article/499137/The_Skinny_Straw_Cloud_Computing_s_Bottleneck_and_How_to_Address_It). _For cloud computing, bandwidth to and from the cloud provider is a bottleneck_. Solution: _Evaluate application architecture and consider application partitioning_.  
@@ -68,4 +68,4 @@ Amazon suggests a [few applications of the Cloud Architecture](http://developer.
 
     *   [SkyNet Lives! (aka EC2 @ SmugMug)](http://blogs.smugmug.com/don/2008/06/03/skynet-lives-aka-ec2-smugmug/).*   [Flickr - Do the Essential Work Up-front and Queue the Rest](http://highscalability.com/strategy-flickr-do-essential-work-front-and-queue-rest)*   [Hadoop](http://highscalability.com/tags/hadoop)*   [GridGain: One Compute Grid, Many Data Grids](http://highscalability.com/gridgain-one-compute-grid-many-data-grids)*   [Building GrepTheWeb in the Cloud, Part 1: Cloud Architectures](http://developer.amazonwebservices.com/connect/entry.jspa?externalID=1632&categoryID=102)*   [Building GrepTheWeb in the Cloud, Part 2: Best Practices](http://developer.amazonwebservices.com/connect/entry.jspa?externalID=1633&categoryID=102).  
 
-    </div>
+        

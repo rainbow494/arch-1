@@ -1,8 +1,8 @@
 ## [Facebook's New Realtime Analytics System: HBase to Process 20 Billion Events Per Day](/blog/2011/3/22/facebooks-new-realtime-analytics-system-hbase-to-process-20.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, March 22, 2011 at 9:55AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.static.flickr.com/5293/5549426078_11305abe54_m.jpg) Facebook did it again. They've built another system capable of doing something useful with ginormous streams of realtime data. Last time we saw Facebook release their [New Real-Time Messaging System: HBase To Store 135+ Billion Messages A Month](http://highscalability.com/blog/2010/11/16/facebooks-new-real-time-messaging-system-hbase-to-store-135.html). This time it's a realtime analytics system handling _over 20 billion events per day (200,000 events per second) with a lag of less than 30 seconds_. 
 
@@ -178,4 +178,4 @@ What does this mean for you? Even if you aren't Facebook this architecture is si
 *   [Twitter’s Plan To Analyze 100 Billion Tweets](http://highscalability.com/blog/2010/2/19/twitters-plan-to-analyze-100-billion-tweets.html)
 *   [Scaling Analytics Solutions Tech Talk (3/2/11) [HQ]](http://www.facebook.com/video/video.php?v=707216889765&oid=9445547199&comments)
 
-</div>
+    

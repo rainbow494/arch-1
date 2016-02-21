@@ -1,8 +1,8 @@
 ## [Rescuing an Outsourced Project from Collapse: 8 Problems Found and 8 Lessons Learned](/blog/2015/2/11/rescuing-an-outsourced-project-from-collapse-8-problems-foun.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, February 11, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 [![](https://farm9.staticflickr.com/8652/16314638648_e124f4a5f9_m.jpg)](http://medicmadness.com/2010/02/teach-them-while-their-young/)
 
@@ -98,4 +98,4 @@ Jacques Mattheij has written a really fine article with lots more color that's n
 
 *   [On Reddit](http://www.reddit.com/r/programming/comments/2vk8z1/rescuing_an_outsourced_project_from_collapse_8/) / [On Hacker News](https://news.ycombinator.com/item?id=9039184)
 
-</div>
+    

@@ -1,12 +1,12 @@
 ## [Aztec Empire Strategy: Use Dual Pipes in Your Aqueduct for High Availability](/blog/2011/3/28/aztec-empire-strategy-use-dual-pipes-in-your-aqueduct-for-hi.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, March 28, 2011 at 9:36AM</span></div>
+    
 
-<div class="body">
+    
 
 With the [Chapultepec aqueduct](http://en.wikipedia.org/wiki/Chapultepec_aqueduct), also named _the great aqueduct_, the [Aztecs](http://en.wikipedia.org/wiki/Aztec) built a novel uninterruptible water supply for providing fresh water to [Tenochtitlan](http://en.wikipedia.org/wiki/Tenochtitlan), their fast growing jewel of a capital city. A section of the aqueduct is still around today: 
 
-<span class="full-image-inline ssNonEditable"><span>![](http://farm6.static.flickr.com/5053/5563439058_e26d5c8c2e.jpg)</span></span>
+        ![](http://farm6.static.flickr.com/5053/5563439058_e26d5c8c2e.jpg)        
 
 It's fun to think about how even 600 years ago how it was built with high availability in mind. We find [engineers being engineers](http://iahs.info/redbooks/a164/iahs_164_0003.pdf), no matter the age:
 
@@ -20,7 +20,7 @@ Clearly they valued 100% uptime for their water supply and felt strongly enough 
 
 One reason their water supply was so important was because of a design requirement I did not mention, the city is located in the middle of [lake Texcoco](http://en.wikipedia.org/wiki/Lake_Texcoco)!
 
-<span class="full-image-block ssNonEditable"><span>![](http://farm6.static.flickr.com/5301/5562885409_c21c6185e2.jpg?__SQUARESPACE_CACHEVERSION=1301205187910)</span></span>
+        ![](http://farm6.static.flickr.com/5301/5562885409_c21c6185e2.jpg?__SQUARESPACE_CACHEVERSION=1301205187910)        
 
 ## Tenochtitlan and Venice - Separated at Birth
 
@@ -38,7 +38,7 @@ The Aztecs figured out how to make land and bring in water, but what about food?
 
 The Aztecs did just that with the invention of a new highly productive agricultural process called [chinampa](http://en.wikipedia.org/wiki/Chinampa), which is the process of creating "floating gardens" in the lake and growing crops on those floating gardens.
 
-<span class="full-image-block ssNonEditable"><span>![](http://farm6.static.flickr.com/5134/5563460974_02d3a7d8ca.jpg?__SQUARESPACE_CACHEVERSION=1301205548455)</span></span>
+        ![](http://farm6.static.flickr.com/5134/5563460974_02d3a7d8ca.jpg?__SQUARESPACE_CACHEVERSION=1301205548455)        
 
 Lake Texcoco is not created by vast flowing rivers, it is a spring fed lake, which means it is both large and shallow. They figured out they could build small rectangle-shaped areas from reeds and grasses that would float on the water. Then they could scoop up dirt from the shallow lake bed to put on these floating garden plots.
 
@@ -51,4 +51,4 @@ How cool is that?
 *   [The remarkable hydrological works of the Aztec civilization](http://iahs.info/redbooks/a164/iahs_164_0003.pdf) by JOSE A. RAYNAL-VILLASENOR
 *   [Farming With Nature - Permaculture with Sepp Holzer](http://www.youtube.com/watch?v=Bw7mQZHfFVE)
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [When all the Program's a Graph - Prismatic's Plumbing Library](/blog/2013/2/14/when-all-the-programs-a-graph-prismatics-plumbing-library.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, February 14, 2013 at 11:35AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8516/8474378252_642e845366_m.jpg)
 
@@ -18,4 +18,4 @@ You may remember Prismatic from previous profile we did on HighScalability: [Pr
 
 [Click to read more ...](/blog/2013/2/14/when-all-the-programs-a-graph-prismatics-plumbing-library.html)
 
-</div>
+    

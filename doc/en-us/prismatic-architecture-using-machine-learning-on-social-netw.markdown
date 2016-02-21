@@ -1,8 +1,8 @@
 ## [Prismatic Architecture - Using Machine Learning on Social Networks to Figure Out What You Should Read on the Web ](/blog/2012/7/30/prismatic-architecture-using-machine-learning-on-social-netw.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, July 30, 2012 at 8:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7271/7676619050_2ff0bbe555_m.jpg)
 
@@ -142,7 +142,7 @@ There are a few other separate client-facing services:
 
 ## Machine Learning on Documents and Users
 
-<span style="font-weight: normal;">Documents and users are two areas where Prismatic applies ML (machine learning):</span>
+    Documents and users are two areas where Prismatic applies ML (machine learning):    
 
 ### ML on Documents
 
@@ -185,4 +185,4 @@ There are a few other separate client-facing services:
 *   [How Prismatic deals with data storage and aggregation](http://blog.getprismatic.com/blog/2012/4/9/how-prismatic-deals-with-data-storage-and-aggregation.html)
 *   [DataSift Architecture: Realtime Datamining At 120,000 Tweets Per Second](http://highscalability.com/blog/2011/11/29/datasift-architecture-realtime-datamining-at-120000-tweets-p.html )
 
-</div>
+    

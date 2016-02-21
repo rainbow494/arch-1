@@ -1,8 +1,8 @@
 ## [Scaling DISQUS to 75 Million Comments and 17,000 RPS](/blog/2010/10/26/scaling-disqus-to-75-million-comments-and-17000-rps.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, October 26, 2010 at 8:38AM</span></div>
+    
 
-<div class="body">
+    
 
 This [presentation](http://www.slideshare.net/zeeg/djangocon-2010-scaling-disqus) and [video](http://python.mirocommunity.org/video/1886/djangocon-2010-scaling-the-wor) by Jason Yan and David Cramer discusses how they scaled DISQUS, a comments as a service service for easily adding comments to your site and connecting communities. The presentation is very good, so here are just a few highlights: 
 
@@ -12,4 +12,4 @@ This [presentation](http://www.slideshare.net/zeeg/djangocon-2010-scaling-disqus
 *   **Architecture**: Requests are load balanced across an Apache cluster. Apache talks to memcached, HAProxy/pgbouncer to handle connection pooling to the database, and a central queue service. 
 *   **Strategies**: make sure indexes fit in memory; log slow queries; use connection pooling; the data model consists of user, forum, thread, post; partitions horizontally (Disqus, Your blog, etc) and vertically (forums, posts, users, sentry) at application level; joins performed in Python; Hudson is used for continuous integration; Redmine is used for bug tracking; extensive test suite; feature switches are used to turn off features; isolate slow functions from transactions; use autocommit for read slaves; a queue is used for low priority tasks; Django QuerySet caching is turned off to save memory.
 
-</div>
+    

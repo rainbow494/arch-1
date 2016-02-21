@@ -1,8 +1,8 @@
 ## [The Three Ages of Google - Batch, Warehouse, Instant](/blog/2011/8/29/the-three-ages-of-google-batch-warehouse-instant.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 29, 2011 at 9:22AM</span></div>
+    
 
-<div class="body">
+    
 
 [![](http://farm7.static.flickr.com/6193/6091368869_dc65aa3ed9_m.jpg)](http://highscalability.com/blog/2009/12/16/building-super-scalable-systems-blade-runner-meets-autonomic.html)
 
@@ -44,7 +44,7 @@ The flip side of search is content indexing. The month long indexing runs are lo
 
 Luiz thinks in the next few years the level of interactivity, insight and background information the system will have to help you, will dwarf what there is in Instant Search. If you want to know why Google is so insistent on using Real Names in Google+, this is why.
 
-<div>Luiz explains this change having 4 drivers:
+    Luiz explains this change having 4 drivers:
 
 *   Applications - instantaneous , personalized, contextual
 *   Scale - increased attention to latency tail
@@ -59,9 +59,9 @@ The problem is we aren't meeting this challenge. Our infrastructure is broken. 
 *   Revisit operating systems scheduling.
 *   Rethink threading models.
 *   Re-read 1990's fast messaging papers.
-*   <span style="color: #000000;">Make IO design a higher priority. Not just NICs and RDMA,  consider CPU design and memory systems.</span>
+*       Make IO design a higher priority. Not just NICs and RDMA,  consider CPU design and memory systems.    
 
-"The fun starts now" Luiz <span> says, these are still very early days, predicting this will be the:
+"The fun starts now" Luiz      says, these are still very early days, predicting this will be the:
 
 *   Decade of resource efficiency
 *   Decade of IO
@@ -76,6 +76,6 @@ This is a [great talk](http://dl.acm.org/citation.cfm?id=2019527&CFID=39785911&C
 *   [The Datacenter as a Computer: An Introduction to the Design of Warehouse-Scale Machines](http://research.google.com/pubs/pub35290.html) by  Luiz André Barroso, Urs Hölzle
 *   [It’s time for low latency](http://www.usenix.org/event/hotos11/tech/final_files/Rumble.pdf) by Stephen M. Rumble, Diego Ongaro, Ryan Stutsman, Mendel Rosenblum, and John K. Ousterhout
 
-</span></div>
+        
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [The Four Meta Secrets of Scaling at Facebook](/blog/2010/6/10/the-four-meta-secrets-of-scaling-at-facebook.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, June 10, 2010 at 10:42PM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://creative.ak.fbcdn.net/ads3/creative/pressroom/jpg/b_1234209334_facebook_logo.jpg)
 
@@ -23,7 +23,7 @@ This leads into the four meta secrets of scaling at Facebook:
 *   **Facebook is difficult to scale**. Each type of content has its own access pattern which makes scaling difficult. Everyone uses Facebook in a different way. Every experience is unique. Most websites have a scaling story of adding more servers because the data can be partitioned. Scale horizontally. In Facebook users can't be partitioned because users can join any network. It's a global network that tries to capture everyone in the world, it allows anyone to friend anyone, and can represent any relationship between users. Every new user can access any other user's data which means there's no way to partition users by geography, or any other metric. Every user on Facebook has 130 friends, but there's no cut that allows you to partition the data so that access is only in that cluster.
 *   **Overall architecture has 4 main components**: Load Balancer, Web Servers (written in PHP), Services (fast, complicated, search, ad, scribe), Memcached (fast, simple), Databases (slow, persistent).
 
-## The Four Scaling Meta Secrets<span style="font-weight: normal; font-size: 12px;"> </span>
+## The Four Scaling Meta Secrets         
 
 **1\. Scaling takes Iteration**. Solutions of often work in the beginning, but you'll have to modify them as you go on. What works in year one may not work later. PHP, for example, is simple to use at first, but is not a good choice when you have 10s of thousands of web servers.
 
@@ -54,4 +54,4 @@ Isolate the part of the culture that you value and want to preserve. It doesn't
 *   [Should Startups Worry about Their Company Culture?](.readwriteweb.com/start/2010/06/should-startups-worry-about-th.php) by [Audrey Watters](http://www.readwriteweb.com/start/author/audrey-watters.php).
 *   [Facebook Related Articles](http://highscalability.com/blog/category/facebook)
 
-</div>
+    

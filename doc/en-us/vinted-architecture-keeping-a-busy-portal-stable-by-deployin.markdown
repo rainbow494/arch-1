@@ -1,14 +1,14 @@
 ## [Vinted Architecture: Keeping a busy portal stable by deploying several hundred times per day](/blog/2015/2/9/vinted-architecture-keeping-a-busy-portal-stable-by-deployin.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, February 9, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm8.staticflickr.com/7375/16286520378_5e8136d8d4_o.jpg)
 
 _This is guest post by [Nerijus Bendžiūnas](https://www.linkedin.com/profile/view?id=48589106) and [Tomas Varaneckas](https://twitter.com/spajus) of [Vinted](https://www.vinted.com/)._
 
-[Vinted](https://www.vinted.com/) <span>is a peer-to-peer marketplace to sell, buy and swap clothes. It allows members to communicate directly and has the features of a social networking service.</span>
+[Vinted](https://www.vinted.com/)     is a peer-to-peer marketplace to sell, buy and swap clothes. It allows members to communicate directly and has the features of a social networking service.    
 
 Started in 2008 as a small community for Lithuanian girls, it developed into a worldwide project that serves over 7 million users in 8 different countries, and is growing non-stop, handling over 200 M requests per day.
 
@@ -299,4 +299,4 @@ We can change the structure of our production MySQL databases without downtime, 
 *   The core Hadoop infrastructure (HDFS, YARN) is rock solid but the newer tools usually have unpleasant nuances.
 *   Kafka is amazing.
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [Big Data Counting: How to count a billion distinct objects using only 1.5KB of Memory](/blog/2012/4/5/big-data-counting-how-to-count-a-billion-distinct-objects-us.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, April 5, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7214/7045847171_9e4a8f91c8_o.jpg)
 
@@ -14,7 +14,7 @@ To better understand the challenge of determining the cardinality of large sets 
 
 4f67bfc603106cb2
 
-<span>These 16 characters represent 128 bits. 65K IDs would require 1 </span><span>megabyte of space. We receive over 3 billion events per day, and each </span><span>event has an ID. Those IDs require 384,000,000,000 bits or 45 </span><span>gigabytes of storage.</span> And that is just the space that the ID field requires! To get the cardinality of IDs in our daily events we could take a simplistic approach. The most straightforward idea is to use an in memory hash set that contains the unique list of IDs seen in the input files. Even if we assume that only 1 in 3 records are unique the hash set would still take 119 gigs of RAM, not including the [overhead](http://www.google.com/url?q=http%3A%2F%2Fwww.cs.virginia.edu%2Fkim%2Fpublicity%2Fpldi09tutorials%2Fmemory-efficient-java-tutorial.pdf&sa=D&sntz=1&usg=AFQjCNGvTExorP0XIWM56gRSDqCy25iBQg) Java requires to store objects in memory. You would need a machine with several hundred gigs of memory to count distinct elements this way and that is only to count a single day's worth of unique IDs. The problem only gets more difficult if we want to count weeks or months of data. We certainly don't have a single machine with several hundred gigs of free memory sitting around so we needed a better solution.
+    These 16 characters represent 128 bits. 65K IDs would require 1         megabyte of space. We receive over 3 billion events per day, and each         event has an ID. Those IDs require 384,000,000,000 bits or 45         gigabytes of storage.     And that is just the space that the ID field requires! To get the cardinality of IDs in our daily events we could take a simplistic approach. The most straightforward idea is to use an in memory hash set that contains the unique list of IDs seen in the input files. Even if we assume that only 1 in 3 records are unique the hash set would still take 119 gigs of RAM, not including the [overhead](http://www.google.com/url?q=http%3A%2F%2Fwww.cs.virginia.edu%2Fkim%2Fpublicity%2Fpldi09tutorials%2Fmemory-efficient-java-tutorial.pdf&sa=D&sntz=1&usg=AFQjCNGvTExorP0XIWM56gRSDqCy25iBQg) Java requires to store objects in memory. You would need a machine with several hundred gigs of memory to count distinct elements this way and that is only to count a single day's worth of unique IDs. The problem only gets more difficult if we want to count weeks or months of data. We certainly don't have a single machine with several hundred gigs of free memory sitting around so we needed a better solution.
 
 One common approach to this problem is the use of [bitmaps](http://www.google.com/url?q=http%3A%2F%2Fblog.getspool.com%2F2011%2F11%2F29%2Ffast-easy-realtime-metrics-using-redis-bitmaps%2F&sa=D&sntz=1&usg=AFQjCNHGPx3WH6mD-AfrvY8RXJxRwJCp8A). Bitmaps can be used to quickly and accurately get the cardinality of a given input. The basic idea with a bitmap is mapping the input dataset to a bit field using a hash function where each input element uniquely maps to one of the bits in the field. This produces zero collisions, and reduces the space required to count each unique element to 1 bit. While bitmaps drastically reduce the space requirements from the naive set implementation described above they are still problematic when the cardinality is very high and/or you have a very large number of different sets to count. For example, if we want to count to one billion using a bitmap you will need one billion bits, or roughly 120 megabytes for each counter. Sparse bitmaps can be compressed in order to gain space efficiency, but that is not always helpful.
 
@@ -169,4 +169,4 @@ Hopefully this post has helped you better understand the concept and application
 *   [On HackerNews](http://news.ycombinator.com/item?id=3803524)
 *   [Fast, easy, realtime metrics using Redis bitmaps](http://blog.getspool.com/2011/11/29/fast-easy-realtime-metrics-using-redis-bitmaps/)
 
-</div>
+    

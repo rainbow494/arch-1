@@ -1,8 +1,8 @@
 ## [MySQL and Memcached: End of an Era?](/blog/2010/2/26/mysql-and-memcached-end-of-an-era.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, February 26, 2010 at 9:06AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm3.static.flickr.com/2711/4389679059_fef885e3bc_o.jpg)
 
@@ -14,4 +14,4 @@ With a little perspective, it's clear the MySQL+memcached era is passing. It wil
 
 [Click to read more ...](/blog/2010/2/26/mysql-and-memcached-end-of-an-era.html)
 
-</div>
+    

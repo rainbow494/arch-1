@@ -1,8 +1,8 @@
 ## [7 Strategies for 10x Transformative Change](/blog/2015/8/26/7-strategies-for-10x-transformative-change.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, August 26, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm6.staticflickr.com/5670/20274886884_a0f2d5d11a_o.png)[Peter Thiel](https://en.wikipedia.org/wiki/Peter_Thiel), VC, PayPal co-founder, early Facebook investor, and most importantly, the supposed [inspiration for Silicon Valley's](http://www.inc.com/john-boitnott/7-fascinating-peter-thiel-quotes-from-techcrunch-disrupt-2014.html) intriguing Peter Gregory character, argues in his book [Zero to One](https://en.wikipedia.org/wiki/Zero_to_One) that a **successful** **business needs to make a product that is 10 times better than its closest competitor**. 
 
@@ -40,4 +40,4 @@ Where do you start? What problem do you work on? Peter Thiel [asks](https://gis
 *   [mesos, omega, borg: a survey](http://www.umbrant.com/blog/2015/mesos_omega_borg_survey.html)
 *   [No Death, No Taxes](http://www.newyorker.com/magazine/2011/11/28/no-death-no-taxes)
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [How big is a Petabyte, Exabyte, Zettabyte, or a Yottabyte?](/blog/2012/9/11/how-big-is-a-petabyte-exabyte-zettabyte-or-a-yottabyte.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, September 11, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm3.static.flickr.com/2661/4188985841_8a7dd5671e.jpg)
 
@@ -94,4 +94,4 @@ This is an intuitive look at large data sizes By Julian Bunn in [Globally Interc
 
 *   [Numbers Everyone Should Know](http://highscalability.com/numbers-everyone-should-know) 
 
-</div>
+    

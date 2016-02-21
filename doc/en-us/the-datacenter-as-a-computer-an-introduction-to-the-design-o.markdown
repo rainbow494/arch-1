@@ -1,8 +1,8 @@
 ## [The Datacenter as a Computer: An Introduction to the Design of Warehouse-Scale Machines, Second edition](/blog/2013/8/22/the-datacenter-as-a-computer-an-introduction-to-the-design-o.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, August 22, 2013 at 8:45AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm4.staticflickr.com/3673/9505722254_15768c9eef_m.jpg)
 
@@ -26,6 +26,6 @@ Conclusion:
 
 ## Related Articles
 
-*   <div id="_mcePaste">James Hamilton on the first edition of the [The Datacenter as a Computer](http://perspectives.mvdirona.com/2009/05/16/TheDatacenterAsAComputer.aspx)</div>
+*       James Hamilton on the first edition of the [The Datacenter as a Computer](http://perspectives.mvdirona.com/2009/05/16/TheDatacenterAsAComputer.aspx)    
 
-</div>
+    

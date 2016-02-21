@@ -1,8 +1,8 @@
 ## [An Unorthodox Approach to Database Design : The Coming of the Shard](/blog/2009/8/6/an-unorthodox-approach-to-database-design-the-coming-of-the.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, August 6, 2009 at 3:24PM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 4:** [Why you don’t want to shard.](http://www.mysqlperformanceblog.com/2009/08/06/why-you-dont-want-to-shard/) by Morgon on the MySQL Performance Blog. _Optimize everything else first, and then if performance still isn’t good enough, it’s time to take a very bitter medicine._  
 **Update 3:** [Building Scalable Databases: Pros and Cons of Various Database Sharding Schemes](http://www.25hoursaday.com/weblog/2009/01/16/BuildingScalableDatabasesProsAndConsOfVariousDatabaseShardingSchemes.aspx) by Dare Obasanjo. Excellent discussion of why and when you would choose a sharding architecture, how to shard, and problems with sharding.  
@@ -68,4 +68,4 @@ The advantages are:
 
     ## See Also
 
-    *   The [Flickr Architecture](http://highscalability.com/flickr-architecture) for more interesting ideas on how to implement sharding.*   The [Google Arhitecture](http://highscalability.com/google-architecture).*   The [LiveJournal Architecture](http://highscalability.com/livejournal-architecture). They talk quite a bit about their sharding approach and give a lot of helpful details.*   The [Shard](/blog/category/shard) category.</div>
+    *   The [Flickr Architecture](http://highscalability.com/flickr-architecture) for more interesting ideas on how to implement sharding.*   The [Google Arhitecture](http://highscalability.com/google-architecture).*   The [LiveJournal Architecture](http://highscalability.com/livejournal-architecture). They talk quite a bit about their sharding approach and give a lot of helpful details.*   The [Shard](/blog/category/shard) category.    

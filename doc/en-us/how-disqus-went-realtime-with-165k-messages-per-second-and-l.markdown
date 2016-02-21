@@ -1,12 +1,12 @@
 ## [How Disqus Went Realtime with 165K Messages Per Second and Less than .2 Seconds Latency](/blog/2014/4/28/how-disqus-went-realtime-with-165k-messages-per-second-and-l.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, April 28, 2014 at 9:21AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm3.staticflickr.com/2936/14046544182_2e110fb29c_m.jpg)
 
-<span id="docs-internal-guid-2e08fc45-a8fa-e50d-9c76-9c4a1710718e"></span>
+        
 
 _Here's an [Update On Disqus: It's Still About Realtime, But Go Demolishes Python](http://highscalability.com/blog/2014/5/7/update-on-disqus-its-still-about-realtime-but-go-demolishes.html)._
 
@@ -26,167 +26,167 @@ So let's see how Disqus evolved their realtime commenting architecture and creat
 
 ## Stats
 
-*   <span>Current:</span>
+*       Current:    
 
-    *   <span>3 million websites use Disqus as their commenting system</span>
+    *       3 million websites use Disqus as their commenting system    
 
-    *   <span>Half a billion people engaged in conversations every month</span>
+    *       Half a billion people engaged in conversations every month    
 
-    *   <span>20 million comments every month</span>
+    *       20 million comments every month    
 
-*   <span>As of ~March 2013:</span>
+*       As of ~March 2013:    
 
-    *   <span>A billion unique visitors a month.</span>
+    *       A billion unique visitors a month.    
 
-    *   <span>18 Engineers</span>
+    *       18 Engineers    
 
-## <span>Platform</span>
+##     Platform    
 
-*   <span>Python (Disqus is a service and is written in Python and other languages)</span>
+*       Python (Disqus is a service and is written in Python and other languages)    
 
-*   <span>Django</span>
+*       Django    
 
-*   [<span>Thoonk Redis Queue</span>](http://blog.thoonk.com/) <span>- a queue library on top of redis.</span>
+*   [    Thoonk Redis Queue    ](http://blog.thoonk.com/)     - a queue library on top of redis.    
 
-*   <span>Nginx</span> [<span>Push Stream Module</span>](http://wiki.nginx.org/HttpPushStreamModule) <span>- A pure stream http push technology for your Nginx setup. Comet made easy and really scalable.</span>
+*       Nginx     [    Push Stream Module    ](http://wiki.nginx.org/HttpPushStreamModule)     - A pure stream http push technology for your Nginx setup. Comet made easy and really scalable.    
 
-*   [<span>Gevent</span>](http://www.gevent.org/) <span>- coroutine-based Python networking library that uses greenlet to provide a high-level synchronous API on top of the libev event loop.</span>
+*   [    Gevent    ](http://www.gevent.org/)     - coroutine-based Python networking library that uses greenlet to provide a high-level synchronous API on top of the libev event loop.    
 
-*   <span>Long Polling using EventSource (in the browser)</span>
+*       Long Polling using EventSource (in the browser)    
 
-*   [<span>Sentry</span>](https://github.com/getsentry/sentry) <span>- a realtime, platform-agnostic error logging and aggregation platform.</span>
+*   [    Sentry    ](https://github.com/getsentry/sentry)     - a realtime, platform-agnostic error logging and aggregation platform.    
 
-*   [<span>Scales</span>](https://github.com/Cue/scales) <span>- tracks server state and statistics, allowing you to see what your server is doing.</span>
+*   [    Scales    ](https://github.com/Cue/scales)     - tracks server state and statistics, allowing you to see what your server is doing.    
 
-*   <span>Runs on raw metal, not EC2\.</span>
+*       Runs on raw metal, not EC2\.    
 
-## <span>Architecture</span>
+##     Architecture    
 
-*   <span>Motivation for realtime:</span>
+*       Motivation for realtime:    
 
-    *   <span>**Engagement**</span><span>. Realtime distribution of comments encourages users to stay on a page longer. More people comment after realtime than they did before.</span>
+    *       **Engagement**        . Realtime distribution of comments encourages users to stay on a page longer. More people comment after realtime than they did before.    
 
-    *   <span>**Sell/trade data**</span><span>. Create a fire-hose product out of the global comment stream.</span>
+    *       **Sell/trade data**        . Create a fire-hose product out of the global comment stream.    
 
-*   <span>Old realtime system:</span>
+*       Old realtime system:    
 
-    *   <span>The Disqus app, written in Django, would post to memcache on many keys: forum:id, thread:id, user:id, post:id. Maybe someone in the future might find it interesting. Since pub/sub is cheap to do, this allows for later innovation.</span>
+    *       The Disqus app, written in Django, would post to memcache on many keys: forum:id, thread:id, user:id, post:id. Maybe someone in the future might find it interesting. Since pub/sub is cheap to do, this allows for later innovation.    
 
-    *   <span>Front-end client would poll the memcache key every couple of seconds.</span>
+    *       Front-end client would poll the memcache key every couple of seconds.    
 
-    *   <span>Client would display any new comments.</span>
+    *       Client would display any new comments.    
 
-    *   <span>Problem: did not scale at all. Only 10% of the network could use the product at one time.</span>
+    *       Problem: did not scale at all. Only 10% of the network could use the product at one time.    
 
-*   <span>First solution approach:</span>
+*       First solution approach:    
 
-    *   <span>New Posts -> Disqus -> redis</span> [<span>pub/sub</span>](http://redis.io/topics/pubsub) <span>-></span> [<span>Flask</span>](http://en.wikipedia.org/wiki/Flask_(web_framework)) <span>(a web framework) Front End cluster <- HAProxy <- clients.</span>
+    *       New Posts -> Disqus -> redis     [    pub/sub    ](http://redis.io/topics/pubsub)     ->     [    Flask    ](http://en.wikipedia.org/wiki/Flask_(web_framework))     (a web framework) Front End cluster <- HAProxy <- clients.    
 
-    *   <span>Clients would connect to HAProxy. HAProxy was used to handle millions of connections.</span>
+    *       Clients would connect to HAProxy. HAProxy was used to handle millions of connections.    
 
-    *   <span>Problem: rapidly ran out of CPU on flask machines because they were doing redundant work. If two subscribers were listening to the same thread the message would be formatted twice.</span>
+    *       Problem: rapidly ran out of CPU on flask machines because they were doing redundant work. If two subscribers were listening to the same thread the message would be formatted twice.    
 
-*   <span>Second approach:</span>
+*       Second approach:    
 
-    *   <span>A backend server was created to do the dedupe formatting work. </span>
+    *       A backend server was created to do the dedupe formatting work.     
 
-    *   <span>So  the new flow: New Posts -> Disqus -> redis queue -> “python glue” Gevent formatting server (2 servers for redundancy) -> redis pub/sub (6 servers) -> Flask FE (front end) Cluster (14 big servers) <- HA Proxy (5 servers) <- clients</span>
+    *       So  the new flow: New Posts -> Disqus -> redis queue -> “python glue” Gevent formatting server (2 servers for redundancy) -> redis pub/sub (6 servers) -> Flask FE (front end) Cluster (14 big servers) <- HA Proxy (5 servers) <- clients    
 
-    *   <span>This worked well. Except as it scaled out it was using more and more servers, especially the Flask cluster. The redis pub/sub cluster was also growing quickly.</span>
+    *       This worked well. Except as it scaled out it was using more and more servers, especially the Flask cluster. The redis pub/sub cluster was also growing quickly.    
 
-## <span>Third and winning approach:</span>
+##     Third and winning approach:    
 
-*   <span>Uses a</span> [<span>pipelined architecture</span>](http://www.cs.sjsu.edu/~pearce/modules/patterns/distArch/pipeline.htm) <span>where messages pass from queue to queue while being acted upon by filters.</span>
+*       Uses a     [    pipelined architecture    ](http://www.cs.sjsu.edu/~pearce/modules/patterns/distArch/pipeline.htm)     where messages pass from queue to queue while being acted upon by filters.    
 
-*   <span>Switched to nginx + push stream module. This replaced redis pub/sub, flask servers and the HAProxy cluster.</span>
+*       Switched to nginx + push stream module. This replaced redis pub/sub, flask servers and the HAProxy cluster.    
 
-*   <span>New flow looks like: New Posts -> Disqus -> redis queue ->  “python glue” Gevent formatting server (2 servers) -> http post -> nginx pub endpoint -> nginx + push stream module (5 servers) <- clients</span>
+*       New flow looks like: New Posts -> Disqus -> redis queue ->  “python glue” Gevent formatting server (2 servers) -> http post -> nginx pub endpoint -> nginx + push stream module (5 servers) <- clients    
 
-*   <span>Only the pub/sub of redis was being used and the nginx push stream module supported the same functionality.</span>
+*       Only the pub/sub of redis was being used and the nginx push stream module supported the same functionality.    
 
-*   <span>5 push stream servers were required because of network memory limitations in the kernel. It’s a socket allocation problem, that is having lots of sockets open. Otherwise could run on 3 servers, including redundancy.</span>
+*       5 push stream servers were required because of network memory limitations in the kernel. It’s a socket allocation problem, that is having lots of sockets open. Otherwise could run on 3 servers, including redundancy.    
 
-*   <span>The Disqus part of the flow is a Django web app that uses post_save and post_delete hooks to put stuff onto a thoonk queue. These hooks are very useful for generating notifications for realtime data.</span>
+*       The Disqus part of the flow is a Django web app that uses post_save and post_delete hooks to put stuff onto a thoonk queue. These hooks are very useful for generating notifications for realtime data.    
 
-*   <span>Thoonk is a queue library on top of redis.</span>
+*       Thoonk is a queue library on top of redis.    
 
-    *   <span>They already had thoonk so used it instead of spinning up a HA cluster of RabbitMQ machines. Ended up really liking it.</span>
+    *       They already had thoonk so used it instead of spinning up a HA cluster of RabbitMQ machines. Ended up really liking it.    
 
-    *   <span>Thoonk is Implemented as a state machine so it’s easy to see what jobs are claimed or not claimed, etc. Makes cleanup after a failure easy.</span>
+    *       Thoonk is Implemented as a state machine so it’s easy to see what jobs are claimed or not claimed, etc. Makes cleanup after a failure easy.    
 
-    *   <span>Since the queue is stored in redis using zsets, range queries can be performed on the queue. Useful to implement end-to-end acks because you can ask which messages have been processed yet, for example, and take appropriate action.</span>
+    *       Since the queue is stored in redis using zsets, range queries can be performed on the queue. Useful to implement end-to-end acks because you can ask which messages have been processed yet, for example, and take appropriate action.    
 
-*   <span>The python glue program.</span>
+*       The python glue program.    
 
-    *   <span>Listens to the thoonk queue.</span>
+    *       Listens to the thoonk queue.    
 
-    *   <span>Performs all of the formatting and computation for clients. Includes cleaning and formatting data.</span>
+    *       Performs all of the formatting and computation for clients. Includes cleaning and formatting data.    
 
-    *   <span>Originally did formatting in the flask cluster, but that took too much CPU.</span>
+    *       Originally did formatting in the flask cluster, but that took too much CPU.    
 
-    *   <span>Found that gzipping individual messages was not a win because there wasn’t enough redundancy in a message to generate sufficient savings from compression.</span>
+    *       Found that gzipping individual messages was not a win because there wasn’t enough redundancy in a message to generate sufficient savings from compression.    
 
-    *   <span>Gevent runs really fast for an IO bound system like this.</span>
+    *       Gevent runs really fast for an IO bound system like this.    
 
-    *   <span>A watchdog makes sure a</span> [<span>greenlet</span>](https://pypi.python.org/pypi/greenlet) <span>was always running, which is to say work is always being performed. A greenlet is micro-thread with no implicit scheduling:</span> [<span>coroutines</span>](http://en.wikipedia.org/wiki/Coroutine)<span>.</span>
+    *       A watchdog makes sure a     [    greenlet    ](https://pypi.python.org/pypi/greenlet)     was always running, which is to say work is always being performed. A greenlet is micro-thread with no implicit scheduling:     [    coroutines    ](http://en.wikipedia.org/wiki/Coroutine)    .    
 
-    *   <span>A monitor watches for lots of failures and then raises an alert when observed.</span>
+    *       A monitor watches for lots of failures and then raises an alert when observed.    
 
-*   <span>Pipelined architectures.</span>
+*       Pipelined architectures.    
 
-    *   <span>The python glue program is structured as a data pipeline, there are stages the data must go through: parsing, computation, publish it to another place. These are run in a greenlet.</span>
+    *       The python glue program is structured as a data pipeline, there are stages the data must go through: parsing, computation, publish it to another place. These are run in a greenlet.    
 
-    *   [<span>Mixins</span>](http://stackoverflow.com/questions/533631/what-is-a-mixin-and-why-are-they-useful) <span>were used to implement stage functionality: JSONParserMixin,  AnnomizeDataMixin, SuperSecureEncryptDataMixin, HTTPPublisher, FilePublisher.</span>
+    *   [    Mixins    ](http://stackoverflow.com/questions/533631/what-is-a-mixin-and-why-are-they-useful)     were used to implement stage functionality: JSONParserMixin,  AnnomizeDataMixin, SuperSecureEncryptDataMixin, HTTPPublisher, FilePublisher.    
 
-    *   <span>The idea is to compose pipelines. A message would come off of thoonk and run through a pipeline: JSONAnnonHTTPPipeline, JSONSecureHTTPPipeline, JSONAnnonFilePipeline.</span>
+    *       The idea is to compose pipelines. A message would come off of thoonk and run through a pipeline: JSONAnnonHTTPPipeline, JSONSecureHTTPPipeline, JSONAnnonFilePipeline.    
 
-    *   <span>Pipelines can share most of their functionality, yet still be specialized. Great when bringing up a new feature you can make a new pipeline stage, make a new pipeline, and have the old pipeline run side by side with the new pipeline. Old and new features happily coexist.</span>
+    *       Pipelines can share most of their functionality, yet still be specialized. Great when bringing up a new feature you can make a new pipeline stage, make a new pipeline, and have the old pipeline run side by side with the new pipeline. Old and new features happily coexist.    
 
-    *   <span>Tests are also composable within a pipeline. To run tests just insert a filter/module/mixin in the pipeline and the tests will get run.</span>
+    *       Tests are also composable within a pipeline. To run tests just insert a filter/module/mixin in the pipeline and the tests will get run.    
 
-    *   <span>Easy to reason about. Each mixin is easy to understand. It does one thing. New engineers on a project have a much easier time groking a system designed this way.</span>
+    *       Easy to reason about. Each mixin is easy to understand. It does one thing. New engineers on a project have a much easier time groking a system designed this way.    
 
-*   <span>Nginx Push Stream</span>
+*       Nginx Push Stream    
 
-    *   <span>Handles pub/sub aspect and web serving aspect of a system. And does both well.</span>
+    *       Handles pub/sub aspect and web serving aspect of a system. And does both well.    
 
-    *   <span>Recently hit two million concurrent users with 5 servers. Hit peaks of ~950K subscribers per machine and 40 MBytes/second per machine with the CPU usage under 15%.</span>
+    *       Recently hit two million concurrent users with 5 servers. Hit peaks of ~950K subscribers per machine and 40 MBytes/second per machine with the CPU usage under 15%.    
 
-    *   <span>Continually write data to sockets to test of a socket is still open. If not it is cleaned up to make room for the next connection.</span>
+    *       Continually write data to sockets to test of a socket is still open. If not it is cleaned up to make room for the next connection.    
 
-    *   <span>Configuration is a publish endpoint and a subscribe endpoint and how to map data between them.</span>
+    *       Configuration is a publish endpoint and a subscribe endpoint and how to map data between them.    
 
-    *   <span>Good monitoring built-in and accessible over a push stream status endpoint.</span>
+    *       Good monitoring built-in and accessible over a push stream status endpoint.    
 
-    *   <span>A memory leak in the module requires rolling restarts throughout the day, especially when there are a couple of hundred thousand concurrent connections per process. The browser will know quickly when it has been disconnected so it will restart and reconnect.</span>
+    *       A memory leak in the module requires rolling restarts throughout the day, especially when there are a couple of hundred thousand concurrent connections per process. The browser will know quickly when it has been disconnected so it will restart and reconnect.    
 
-*   <span>Long(er) Polling</span>
+*       Long(er) Polling    
 
-    *   <span>This is on the browser/JavaScript client side of things.</span>
+    *       This is on the browser/JavaScript client side of things.    
 
-    *   <span>Currently using WebSockets because they are fast, but are moving to EventSource because it’s built into the browser and the browser handles everything. Just register for the message type and give it a callback handler.</span>
+    *       Currently using WebSockets because they are fast, but are moving to EventSource because it’s built into the browser and the browser handles everything. Just register for the message type and give it a callback handler.    
 
-## <span>Testing</span>
+##     Testing    
 
-*   <span>Darktime testing. Disqus is installed on millions of websites so need test with millions of concurrent connections. Use existing network to load test rather than create a faux setup in EC2\.</span>
+*       Darktime testing. Disqus is installed on millions of websites so need test with millions of concurrent connections. Use existing network to load test rather than create a faux setup in EC2\.    
 
-*   <span>Instrumented clients to say only 10% of users or exactly this website should flow through the new system, for example.</span>
+*       Instrumented clients to say only 10% of users or exactly this website should flow through the new system, for example.    
 
-*   <span>Darkesttime. Something important in the world is happening and a couple of websites are getting mega traffic. So they took all traffic and sent it through a single pub/sub key in the system. This helped identify a lot of hot spots in the code.</span>
+*       Darkesttime. Something important in the world is happening and a couple of websites are getting mega traffic. So they took all traffic and sent it through a single pub/sub key in the system. This helped identify a lot of hot spots in the code.    
 
-## <span>Measure</span>
+##     Measure    
 
-*   <span>Measure all the things. In a pipelined system you just measure input and output of every stage so you can reconcile your data with other systems like HAProxy. Without measurement data there’s no way to drill down and find out who is wrong.</span>
+*       Measure all the things. In a pipelined system you just measure input and output of every stage so you can reconcile your data with other systems like HAProxy. Without measurement data there’s no way to drill down and find out who is wrong.    
 
-*   <span>Express metrics as +1 and -1 if you can. (I didn’t really understand this one)</span>
+*       Express metrics as +1 and -1 if you can. (I didn’t really understand this one)    
 
-*   <span>Sentry helps find where problems are in code.</span>
+*       Sentry helps find where problems are in code.    
 
-*   <span>Measurements make it easy to create pretty graphs.</span>
+*       Measurements make it easy to create pretty graphs.    
 
-*   <span>When the Pope was selected and the white smoke was seen traffic peaked 245 MB per second, 6 TB of data was transferred that day, and peak CPU was 12%.</span>
+*       When the Pope was selected and the white smoke was seen traffic peaked 245 MB per second, 6 TB of data was transferred that day, and peak CPU was 12%.    
 
-## <span>Lessons Learned</span>
+##     Lessons Learned    
 
 *   **Do work once**. In a large fanout architecture, do work in one place and then send it out to all the consumers. Don’t repeat work for each consumer.
 
@@ -210,15 +210,15 @@ So let's see how Disqus evolved their realtime commenting architecture and creat
 
 *   **Use off the shelf technologies**. Don’t feel like you have to build everything from scratch. Leverage code so you can keep your team small.
 
-## <span>Related Articles</span>
+##     Related Articles    
 
-*   [<span>Scaling DISQUS To 75 Million Comments And 17,000 RPS</span>](http://highscalability.com/blog/2010/10/26/scaling-disqus-to-75-million-comments-and-17000-rps.html) <span>(2010)</span>
+*   [    Scaling DISQUS To 75 Million Comments And 17,000 RPS    ](http://highscalability.com/blog/2010/10/26/scaling-disqus-to-75-million-comments-and-17000-rps.html)     (2010)    
 
-*   <span>Disqus’</span> [<span>nginx-push-stream-module configuration</span>](https://gist.github.com/dctrwatson/0b3b52050254e273ff11) <span>for >1MM concurrent subscribers.</span>
+*       Disqus’     [    nginx-push-stream-module configuration    ](https://gist.github.com/dctrwatson/0b3b52050254e273ff11)     for >1MM concurrent subscribers.    
 
-*   [<span>Making DISQUS Realtime</span>](https://www.youtube.com/watch?v=5A5Iw9z6z2s) <span>(</span>[<span>slides</span>](https://speakerdeck.com/pyconslides/scaling-realtime-at-disqus-by-adam-hitchcock)<span>) by</span> [<span>Adam Hitchcock</span>](https://www.linkedin.com/in/adamhitchcock)<span>, Software Engineer, ~March 2013</span>
+*   [    Making DISQUS Realtime    ](https://www.youtube.com/watch?v=5A5Iw9z6z2s)     (    [    slides    ](https://speakerdeck.com/pyconslides/scaling-realtime-at-disqus-by-adam-hitchcock)    ) by     [    Adam Hitchcock    ](https://www.linkedin.com/in/adamhitchcock)    , Software Engineer, ~March 2013    
 
-*   [<span>Scaling Django to 8 Billion Page Views</span>](http://blog.disqus.com/post/62187806135/scaling-django-to-8-billion-page-views) <span>by</span> [<span>Matt Robenolt</span>](https://www.linkedin.com/in/mattrobenolt)<span>,  Operations Lead, Sep 2013</span>
+*   [    Scaling Django to 8 Billion Page Views    ](http://blog.disqus.com/post/62187806135/scaling-django-to-8-billion-page-views)     by     [    Matt Robenolt    ](https://www.linkedin.com/in/mattrobenolt)    ,  Operations Lead, Sep 2013    
 
 *   [HTTP for Great Good](https://www.youtube.com/watch?v=HAjOQ09I1UY) ([slides](https://speakerdeck.com/mattrobenolt/http-for-great-good)) by Matt Robenolt, ~Oct 2013
 
@@ -230,4 +230,4 @@ So let's see how Disqus evolved their realtime commenting architecture and creat
 
 *   [Trying out this Go thing…](http://blog.disqus.com/post/51155103801/trying-out-this-go-thing)
 
-</div>
+    

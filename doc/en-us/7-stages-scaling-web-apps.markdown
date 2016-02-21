@@ -1,8 +1,8 @@
 ## [The 7 Stages of Scaling Web Apps](/blog/2008/9/23/the-7-stages-of-scaling-web-apps.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, September 23, 2008 at 4:22AM</span></div>
+    
 
-<div class="body">
+    
 
 By John Engales CTO, Rackspace. Good presentation of the stages a typical successful website goes through:  
 
@@ -14,4 +14,4 @@ By John Engales CTO, Rackspace. Good presentation of the stages a typical succes
 *   Stage 6 - Getting a little less painful: scalable application and database architecture, acceptable performance, starting to add ne features again, optimizing some code, still growing but manageable.
 *   Stage 7 - Entering the unknown: where are the remaining bottlenecks (power, space, bandwidth, CDN, firewall, load balancer, storage, people, process, database), all eggs in one basked (single datacenter, single instance of data).
 
-</div>
+    

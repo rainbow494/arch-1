@@ -1,8 +1,8 @@
 ## [Facebook's New Real-time Messaging System: HBase to Store 135+ Billion Messages a Month](/blog/2010/11/16/facebooks-new-real-time-messaging-system-hbase-to-store-135.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, November 16, 2010 at 7:52AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4145/5038714561_34183a0639_m.jpg)
 
@@ -45,4 +45,4 @@ I wouldn't sleep on the idea that Facebook already having a lot of experience wi
 *   [BigTable Model with Cassandra and HBase](http://horicky.blogspot.com/2010/10/bigtable-model-with-cassandra-and-hbase.html) by Ricky Ho
 *   [New Facebook Chat Feature Scales To 70 Million Users Using Erlang](http://highscalability.com/blog/2008/5/14/new-facebook-chat-feature-scales-to-70-million-users-using-e.html)
 
-</div>
+    

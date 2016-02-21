@@ -1,8 +1,8 @@
 ## [Planetary-Scale Computing Architectures for Electronic Trading and How Algorithms Shape Our World](/blog/2014/2/19/planetary-scale-computing-architectures-for-electronic-tradi.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, February 19, 2014 at 10:09AM</span></div>
+    
 
-<div class="body">
+    
 
 Algorithms are moving out of the Platonic realm and are becoming dynamic first class players in real life. We've seen corporations become people. Algorithms will likely also follow that path to agency.
 
@@ -18,7 +18,7 @@ Mr. Slavin neatly sums this up by saying:
 
 The introduction to the paper spells out why this is so:
 
-> <div id="_mcePaste">Recent advances in high-frequency financial trading have brought typical trading latencies below 500 microseconds, at which point light propagation delays due to geographically separated information sources become relevant for trading strategies and coordination e.g., it takes 67 ms, over 100 times longer, for light to travel between antipodal points along the Earth’s surface. Moreover, as trading times continue to decrease in coming years e.g., latencies in the microseconds are already being targeted by traders, this feature will become even more pronounced. Here we report a relativistic generalization of statistical arbitrage trading strategies for space like separated trading locations. In particular, we report two major findings. First, we prove that there exist optimal intermediate locations between trading centers that host cointegrated securities such that coordination of arbitrage trading from those intermediate points maximizes profit potential in a locally auditable manner. Second, we show that if such intermediate coordination nodes are themselves promoted to trading centers that can utilize local information, a novel econophysical effect arises wherein the propagation of security pricing information through a chain of such nodes is effectively slowed or stopped.</div>
+>     Recent advances in high-frequency financial trading have brought typical trading latencies below 500 microseconds, at which point light propagation delays due to geographically separated information sources become relevant for trading strategies and coordination e.g., it takes 67 ms, over 100 times longer, for light to travel between antipodal points along the Earth’s surface. Moreover, as trading times continue to decrease in coming years e.g., latencies in the microseconds are already being targeted by traders, this feature will become even more pronounced. Here we report a relativistic generalization of statistical arbitrage trading strategies for space like separated trading locations. In particular, we report two major findings. First, we prove that there exist optimal intermediate locations between trading centers that host cointegrated securities such that coordination of arbitrage trading from those intermediate points maximizes profit potential in a locally auditable manner. Second, we show that if such intermediate coordination nodes are themselves promoted to trading centers that can utilize local information, a novel econophysical effect arises wherein the propagation of security pricing information through a chain of such nodes is effectively slowed or stopped.    
 
 We are not far from a world where the decision to build out these facilities will be driven by an optimization algorithm, as foreshadowed by Daniel Suarez in his ground breaking book [Daemon](http://www.amazon.com/Daemon-Daniel-Suarez/dp/0451228731).  
 
@@ -46,4 +46,4 @@ It's a really eye opening talk, the key theme being how algorithms are increasin
 
 This future is here, now, and will become more evenly distributed over time because as Mr. Slavin smartly concludes: "it's a bright future if you're an algorithm."
 
-</div>
+    

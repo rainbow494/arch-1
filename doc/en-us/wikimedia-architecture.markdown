@@ -1,8 +1,8 @@
 ## [Wikimedia architecture](/blog/2007/8/22/wikimedia-architecture.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, August 22, 2007 at 9:56AM</span></div>
+    
 
-<div class="body">
+    
 
 Wikimedia is the platform on which Wikipedia, Wiktionary, and the other seven wiki dwarfs are built on. This document is just excellent for the student trying to scale the heights of giant websites. It is full of details and innovative ideas that have been proven on some of the most used websites on the internet.
 
@@ -59,4 +59,4 @@ Site: http://wikimedia.org/
 
     *   It is a lot of work to scale out, more if you didn't design it in originally. Wikipedia's MediaWiki was originally written for a single master database server. Then slave support was added. Then partitioning by language/project was added. The designs from that time have stood the test well, though with much more refining to address new bottlenecks.  
 
-    *   Anyone who wants to design their database architecture so that it'll allow them to inexpensively grow from one box rank nothing to the top ten or hundred sites on the net should start out by designing it to handle slightly out of date data from replication slaves, know how to load balance to slaves for all read queries and if at all possible to design it so that chunks of data (batches of users, accounts, whatever) can go on different servers. You can do this from day one using virtualisation, proving the architecture when you're small. It's a LOT easier than doing it while load is doubling every few months!</div>
+    *   Anyone who wants to design their database architecture so that it'll allow them to inexpensively grow from one box rank nothing to the top ten or hundred sites on the net should start out by designing it to handle slightly out of date data from replication slaves, know how to load balance to slaves for all read queries and if at all possible to design it so that chunks of data (batches of users, accounts, whatever) can go on different servers. You can do this from day one using virtualisation, proving the architecture when you're small. It's a LOT easier than doing it while load is doubling every few months!    

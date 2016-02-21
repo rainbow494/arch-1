@@ -1,8 +1,8 @@
 ## [Seven Signs You May Need a NoSQL Database](/blog/2010/2/16/seven-signs-you-may-need-a-nosql-database.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, February 16, 2010 at 7:40AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm3.static.flickr.com/2735/4357443762_4472ed3ebd_m.jpg)
 
@@ -18,4 +18,4 @@ While exploring deep into some dusty old library stacks, I dug up Nostradamus' l
 
 Only time will tell if Nostradamus is as accurate with his NoSQL predictions as he has been with everything else.
 
-</div>
+    

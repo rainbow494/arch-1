@@ -1,8 +1,8 @@
 ## [Facebook: An Example Canonical Architecture for Scaling Billions of Messages](/blog/2011/5/17/facebook-an-example-canonical-architecture-for-scaling-billi.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, May 17, 2011 at 9:18AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4145/5038714561_34183a0639_m.jpg)
 
@@ -31,11 +31,11 @@ What about cross cell operations, how are they handled? Messages has a _Discover
 
 The [article](https://www.facebook.com/notes/facebook-engineering/scaling-the-messages-application-back-end/10150148835363920#) is very well written and has a lot of detail. Well worth reading, especially if you are trying to figure out how to structure your own service.
 
-## Related Articles<span style="font-weight: normal;"> </span>
+## Related Articles         
 
 *   [Facebook's New Real-Time Messaging System: HBase To Store 135+ Billion Messages A Month](/blog/2010/11/16/facebooks-new-real-time-messaging-system-hbase-to-store-135.html)
 *   [ZooKeeper - A Reliable, Scalable Distributed Coordination System ](/blog/2008/7/15/zookeeper-a-reliable-scalable-distributed-coordination-syste.html)
 *   [Facebook Articles on HighScalability](http://highscalability.com/blog/category/facebook)
 *   [A Look Inside the Force.com Infrastructure](http://www.salesforce.com/dreamforce/DF09/pdfs/BKSP005_Moldt.pdf) by Claus Moldt
 
-</div>
+    

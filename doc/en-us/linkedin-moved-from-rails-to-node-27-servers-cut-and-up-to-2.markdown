@@ -1,8 +1,8 @@
 ## [LinkedIn Moved from Rails to Node: 27 Servers Cut and Up to 20x Faster](/blog/2012/10/4/linkedin-moved-from-rails-to-node-27-servers-cut-and-up-to-2.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, October 4, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8317/8047052471_8388200c67_m.jpg)
 
@@ -37,4 +37,4 @@ The comment section is, well, vigorous, but has some interesting observations. I
 *   [10 Golden Principles For Building Successful Mobile/Web Applications](http://highscalability.com/blog/2012/7/5/10-golden-principles-for-building-successful-mobileweb-appli.html)
 *   [On Hacker News](http://news.ycombinator.com/item?id=4613870)
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [8 Commonly Used Scalable System Design Patterns](/blog/2010/12/1/8-commonly-used-scalable-system-design-patterns.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, December 1, 2010 at 8:36AM</span></div>
+    
 
-<div class="body">
+    
 
 [Ricky Ho](http://www.blogger.com/profile/03793674536997651667) in [Scalable System Design Patterns](http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html) has created a great list of scalability patterns along with very well done explanatory graphics. A summary of the patterns are:
 
@@ -15,4 +15,4 @@
 7.  **Bulk Synchronous Parallel** - a  lock-step execution across all workers, coordinated by a master.
 8.  **Execution Orchestrator **- an intelligent scheduler / orchestrator schedules ready-to-run tasks (based on a dependency graph) across a clusters of dumb workers.
 
-</div>
+    

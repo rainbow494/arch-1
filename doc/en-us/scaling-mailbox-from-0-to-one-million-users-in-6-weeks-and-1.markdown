@@ -1,8 +1,8 @@
 ## [Scaling Mailbox - From 0 to One Million Users in 6 Weeks and 100 Million Messages Per Day](/blog/2013/6/18/scaling-mailbox-from-0-to-one-million-users-in-6-weeks-and-1.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, June 18, 2013 at 8:38AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm4.staticflickr.com/3767/9072919945_5e8fe045d3.jpg)
 
@@ -38,4 +38,4 @@ Unfortunately we don't get a lot of technical details. It's easy to imagine howe
 *   [Scaling Pinterest - From 0 To 10s Of Billions Of Page Views A Month In Two Years](http://highscalability.com/blog/2013/4/15/scaling-pinterest-from-0-to-10s-of-billions-of-page-views-a.html)
 *   [How Mailbox Scaled To One Million Users In Six Weeks](http://readwrite.com/2013/06/05/from-0-to-1-million-users-in-six-weeks-how-mailbox-planned-for-scale) 
 
-</div>
+    

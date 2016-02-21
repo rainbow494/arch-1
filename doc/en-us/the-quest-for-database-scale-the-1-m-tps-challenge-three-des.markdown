@@ -1,8 +1,8 @@
 ## [The Quest for Database Scale: the 1 M TPS challenge - Three Design Points and Five common Bottlenecks to avoid](/blog/2014/5/6/the-quest-for-database-scale-the-1-m-tps-challenge-three-des.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, May 6, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8319/7952195310_8078e8c9df_m.jpg)
 
@@ -16,7 +16,7 @@ This article describes the three design points we kept in mind and the five comm
 
 ## Three Design Points
 
-Any distributed database system that operates with such intensity must be architected with 3 design points in mind:<span style="line-height: 1.15;"> </span>
+Any distributed database system that operates with such intensity must be architected with 3 design points in mind:         
 
 1) **Stability** - is achieved by simplicity and short, understandable code paths. Keeping each function slim and trim goes a long way to making sure the full system operates smoothly even when multiple such layers are stacked over one another. Any complex or esoteric logic makes the system very hard to maintain, and should be, at best, minimized and kept isolated.
 
@@ -24,11 +24,11 @@ Any distributed database system that operates with such intensity must be archit
 
 3) **Scalability** - by scaling both up and out. Vertical scaling along the lines of old school RDBMSs works in only some use cases, but neither does a dumb approach with massive scale out clusters where resources go underutilized. Costs escalate and management is a challenge at best - a distributed system can never be correct or predictable as it grows and failure rates increase. A balanced approach is best. Right from the start we designed Aerospike to scale both up and out, maximizing server utilization with transaction speeds per server 10x better than other NoSQL options, and yet also allowing in-service addition and removal of servers.
 
-<div><span id="docs-internal-guid-a22e2d85-c927-664b-e38b-3be1620f5434">
+        
 
 In addition, databases don’t exist in isolation, they must be architected as part of the full stack, so that the end to end system scales. A scale out database must take care of all clustering functions, not push the load to the app, for example, for sharding or load balancing. Any database that shifts its complexity to the app cannot be part of a truly high scale operation.
 
-</span></div>
+        
 
 ## Five Common Bottlenecks
 
@@ -67,7 +67,7 @@ Fundamental to scaling up and out, the system needs to be near 100% shared nothi
 
 The new ([4 step recipe](http://www.aerospike.com/blog/aerospike-doubles-in-memory-nosql-database-performance/)) was then used to run the same tests with 2 nodes, 50 million records, each record with 128 bytes of data replicated by a factor of 2\. Compared to the [previous results](http://www.aerospike.com/wp-content/uploads/2012/09/FastKVS_Final.pdf), this new recipe saw substantial performance improvements by using Aerospike Community Edition 3.2.8 on Centos 6.3:
 
-<span class="full-image-block ssNonEditable"><span>![](https://farm8.staticflickr.com/7368/13921440038_b5deb34991_o.png?__SQUARESPACE_CACHEVERSION=1399239408723)</span></span>
+        ![](https://farm8.staticflickr.com/7368/13921440038_b5deb34991_o.png?__SQUARESPACE_CACHEVERSION=1399239408723)        
 
 ## Related Articles
 
@@ -76,4 +76,4 @@ The new ([4 step recipe](http://www.aerospike.com/blog/aerospike-doubles-in-memo
 *   [Wide Fast SATA: The Recipe For Hot Performance](http://highscalability.com/blog/2013/9/4/wide-fast-sata-the-recipe-for-hot-performance.html)
 *   [42 Monster Problems That Attack As Loads Increase](http://highscalability.com/blog/2013/2/27/42-monster-problems-that-attack-as-loads-increase.html)
 
-</div>
+    

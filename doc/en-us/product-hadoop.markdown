@@ -1,8 +1,8 @@
 ## [Product: Hadoop](/blog/2009/5/17/product-hadoop.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Sunday, May 17, 2009 at 4:10AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 5:** [Hadoop Sorts a Petabyte in 16.25 Hours and a Terabyte in 62 Seconds](http://developer.yahoo.net/blogs/hadoop/2009/05/hadoop_sorts_a_petabyte_in_162.html) and has its [green cred questioned](http://databeta.wordpress.com/2009/05/14/bigdata-node-density/) because it took 40 times the number of machines Greenplum used to do the same work.  
 **Update 4:** [Introduction to Pig](http://www.cloudera.com/hadoop-training-pig-introduction). Pig allows you to skip programming Hadoop at the low map-reduce level. You don't have to know Java. Using the Pig Latin language, which is a scripting data flow language, you can think about your problem as a data flow program. 10 lines of Pig Latin = 200 lines of Java.  
@@ -36,4 +36,4 @@ I can't wait for experience reports about "normal" people, familiar with a compl
 
 ## See Also
 
-*   Site: [Hadoop](http://lucene.apache.org/hadoop/)*   [Open Source Distributed Computing: Yahoo's Hadoop Support](http://developer.yahoo.net/blog/archives/2007/07/yahoo-hadoop.html) by Jeremy Zawodny*   [Yahoo!'s bet on Hadoop](http://radar.oreilly.com/archives/2007/08/yahoos_bet_on_h.html) by Tim O'Reilly*   [Hadoop Presentations](http://wiki.apache.org/lucene-hadoop/HadoopPresentations)*   [Running Hadoop MapReduce on Amazon EC2 and Amazon S3](http://developer.amazonwebservices.com/connect/entry.jspa?externalID=873&categoryID=112)</div>
+*   Site: [Hadoop](http://lucene.apache.org/hadoop/)*   [Open Source Distributed Computing: Yahoo's Hadoop Support](http://developer.yahoo.net/blog/archives/2007/07/yahoo-hadoop.html) by Jeremy Zawodny*   [Yahoo!'s bet on Hadoop](http://radar.oreilly.com/archives/2007/08/yahoos_bet_on_h.html) by Tim O'Reilly*   [Hadoop Presentations](http://wiki.apache.org/lucene-hadoop/HadoopPresentations)*   [Running Hadoop MapReduce on Amazon EC2 and Amazon S3](http://developer.amazonwebservices.com/connect/entry.jspa?externalID=873&categoryID=112)    

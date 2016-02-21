@@ -1,8 +1,8 @@
 ## [AppBackplane - A Framework for Supporting Multiple Application Architectures](/blog/2013/3/25/appbackplane-a-framework-for-supporting-multiple-application.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, March 25, 2013 at 10:36AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/PICMG-Backplane-Details.jpg/300px-PICMG-Backplane-Details.jpg)
 
@@ -32,16 +32,16 @@ It has a lot to do with viewing your application performance as a whole, instea
 
 Programmers commonly talk about upping the number of threads in a thread pool or tuning garbage collection or tuning memory limits as their primary scalability tactics at the application level, but they don't talk about priorities, deadlock, queuing, latencies, and a lot of other issues to consider when structuring applications.
 
-For example, on an incoming request from a browser you want to setup the TCP/IP connection immediately so that the browser doesn't have to retry. <span>Retries add load and make the user experience horrible. Instead, </span><span>what you would like to do is set up the connection, then queue up the request </span><span>and satisfy it later after having immediately setup the connection. But if </span><span>each request is handled by a single thread then you can't implement </span><span>this sort of architecture and your responsiveness will appear </span><span>horrible as you run out of threads or threads run slow, or threads block other threads </span><span>on locks, when in fact you have tons of CPU resources available.</span>  
+For example, on an incoming request from a browser you want to setup the TCP/IP connection immediately so that the browser doesn't have to retry.     Retries add load and make the user experience horrible. Instead,         what you would like to do is set up the connection, then queue up the request         and satisfy it later after having immediately setup the connection. But if         each request is handled by a single thread then you can't implement         this sort of architecture and your responsiveness will appear         horrible as you run out of threads or threads run slow, or threads block other threads         on locks, when in fact you have tons of CPU resources available.      
 
-<span>Based on the source of the request you could assign the work a specific </span><span>priority or drop it immediately.</span>  
+    Based on the source of the request you could assign the work a specific         priority or drop it immediately.      
 
-<span>You can also do things like assign priorities to different phases of a process. If </span><span>one phase hits the disk you know that takes a lot of time relative </span><span>to other in memory operations. As your application scales you </span><span>decide if that phase of the work is more important and give it </span><span>a higher priority or you can possible drop work elsewhere because </span><span>you don't want to a request to fail once it has reached a certain </span><span>processing point.</span>  
+    You can also do things like assign priorities to different phases of a process. If         one phase hits the disk you know that takes a lot of time relative         to other in memory operations. As your application scales you         decide if that phase of the work is more important and give it         a higher priority or you can possible drop work elsewhere because         you don't want to a request to fail once it has reached a certain         processing point.      
 
-<span>Consider if an application must process a UI request, servlet work, and </span><span>database work. The work could be organized by priority. Maybe you want </span><span>to handle the UI work first so it queues ahead. But if you keep getting</span>  
-<span>UI work it will starve the other clients so you give other clients a </span><span>chance to process work. </span>
+    Consider if an application must process a UI request, servlet work, and         database work. The work could be organized by priority. Maybe you want         to handle the UI work first so it queues ahead. But if you keep getting      
+    UI work it will starve the other clients so you give other clients a         chance to process work.     
 
-<span>With your typical application architecture you don't have much control over any of this. That's what we'll address next, giving you control.</span>
+    With your typical application architecture you don't have much control over any of this. That's what we'll address next, giving you control.    
 
 ## AppBackplane
 
@@ -378,4 +378,4 @@ And then there's the actual scheduling, which is complicated, but it does allow 
 
 It's something to think about anyway.
 
-</div>
+    

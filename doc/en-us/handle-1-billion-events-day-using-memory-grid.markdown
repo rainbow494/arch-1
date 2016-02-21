@@ -1,8 +1,8 @@
 ## [Handle 1 Billion Events Per Day Using a Memory Grid](/blog/2009/2/16/handle-1-billion-events-per-day-using-a-memory-grid.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, February 16, 2009 at 1:58AM</span></div>
+    
 
-<div class="body">
+    
 
 Moshe Kaplan of RockeTier [shows the life cycle of an affiliate marketing system](http://www.rocketier.com/banner_network_case_study.html) that starts off as a cub handling one million events per day and ends up a lion handling 200 million to even one billion events per day. The resulting system uses ten commodity servers at a cost of $35,000\.  
 
@@ -34,4 +34,4 @@ As scaling and performance requirements for complicated operations increase, lea
 
     ## Related Articles
 
-    *   [GridGain: One Compute Grid, Many Data Grids](http://highscalability.com/gridgain-one-compute-grid-many-data-grids)</div>
+    *   [GridGain: One Compute Grid, Many Data Grids](http://highscalability.com/gridgain-one-compute-grid-many-data-grids)    

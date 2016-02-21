@@ -1,8 +1,8 @@
 ## [Segment: Rebuilding Our Infrastructure with Docker, ECS, and Terraform](/blog/2015/10/19/segment-rebuilding-our-infrastructure-with-docker-ecs-and-te.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, October 19, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://c1.staticflickr.com/1/776/22070996550_af91278fa6_m.jpg)
 
@@ -22,9 +22,9 @@ Here’s our solution.
 
 ## Separate AWS Accounts
 
-Instead of using regions or tags to separate different staging and prod instances, we switched over totally separate AWS <span>accounts</span>. We need to ensure that our provisioning scripts wouldn’t affect our currently running services, and using fresh accounts meant that we had a blank slate to start with.
+Instead of using regions or tags to separate different staging and prod instances, we switched over totally separate AWS     accounts    . We need to ensure that our provisioning scripts wouldn’t affect our currently running services, and using fresh accounts meant that we had a blank slate to start with.
 
-<span class="full-image-block ssNonEditable"><span>![](https://c2.staticflickr.com/6/5625/21638432883_2a5c56328f.jpg?__SQUARESPACE_CACHEVERSION=1445127191490)</span></span>
+        ![](https://c2.staticflickr.com/6/5625/21638432883_2a5c56328f.jpg?__SQUARESPACE_CACHEVERSION=1445127191490)        
 
 The `ops` account serves as the jump point and centralized login. Everyone in the organization can have a IAM account for it.
 
@@ -34,11 +34,11 @@ As an example, Alice might have access to all three environments, but Bob can on
 
 Instead of having complex IAM settings to restrict access, we can easily lock down users by environment and group them by _role._ Using each account from the interface is as simple as switching the currently active role.
 
-<span class="full-image-block ssNonEditable"><span>![](https://c2.staticflickr.com/6/5680/22233397696_716f3167af.jpg?__SQUARESPACE_CACHEVERSION=1445127246489)</span></span>
+        ![](https://c2.staticflickr.com/6/5680/22233397696_716f3167af.jpg?__SQUARESPACE_CACHEVERSION=1445127246489)        
 
 Instead of worrying that a staging box might be unsecured or alter a production database, we get _true isolation_ for free. No extra configuration required.
 
-There’s the additional benefit of being able to share configuration code so that our<span>staging environment actually mirrors prod</span>. The only difference in configuration are the sizes of the instances and the number of containers.
+There’s the additional benefit of being able to share configuration code so that our    staging environment actually mirrors prod    . The only difference in configuration are the sizes of the instances and the number of containers.
 
 Finally, we’ve also enabled consolidated billing across the accounts. We pay our monthly bill with the same invoicing and see a detailed breakdown of the costs split by environment.
 
@@ -58,7 +58,7 @@ The switch to ECS has vastly simplified running a service without needing to wor
 
 In our setup, the Docker images are built by CI, and then pushed to Docker Hub. When a service boots up, it pulls the image from Docker Hub, and then ECS schedules it across machines.
 
-<span class="full-image-block ssNonEditable"><span>![](https://c2.staticflickr.com/6/5683/22269948171_3a52e79653.jpg?__SQUARESPACE_CACHEVERSION=1445127298688)</span></span>
+        ![](https://c2.staticflickr.com/6/5683/22269948171_3a52e79653.jpg?__SQUARESPACE_CACHEVERSION=1445127298688)        
 
 We group our service clusters by their concern and load profile (e.g. different clusters for API, CDN, App, etc). Having separate clusters means that we get better visibility and can decide to use different instance types for each (since ECS has no concept of instance affinity).
 
@@ -66,9 +66,9 @@ Each service has a particular task definition indicating which version of the co
 
 During operation, the service registers itself with an ELB and uses a healthcheck to confirm that the container is actually ready to go. We point a local Route53 entry at the ELB, so that services can talk to each other and simply reference via DNS.
 
-<span class="full-image-block ssNonEditable"><span>![](https://c1.staticflickr.com/1/587/22071723248_94be73a14e.jpg?__SQUARESPACE_CACHEVERSION=1445127343573)</span></span>
+        ![](https://c1.staticflickr.com/1/587/22071723248_94be73a14e.jpg?__SQUARESPACE_CACHEVERSION=1445127343573)        
 
-The setup is nice because we don’t need <span>any</span> service discovery. The local DNS does all the bookkeeping for us.
+The setup is nice because we don’t need     any     service discovery. The local DNS does all the bookkeeping for us.
 
 ECS runs all the services and we get free cloudwatch metrics from the ELBs. It’s been a lot simpler than having to register services with a centralized authority at boot-time. And the best part is that we don’t have to deal with state conflicts ourselves.
 
@@ -151,9 +151,9 @@ Along the way we found a few gotchas around the `.tfstate`, since Terraform alw
 
 By this point, we had our infrastructure, our provisioning, and our isolation. The last things left were metrics and monitoring to keep track of everything running in production.
 
-In our new environment, we’ve switched all of our metrics and monitoring over to[Datadog](https://datadog.com/), and it’s been <span>fantastic</span>.
+In our new environment, we’ve switched all of our metrics and monitoring over to[Datadog](https://datadog.com/), and it’s been     fantastic    .
 
-<span class="full-image-block ssNonEditable"><span>![](https://c2.staticflickr.com/6/5694/22071429120_e577e2e78d.jpg?__SQUARESPACE_CACHEVERSION=1445127425484)</span></span>
+        ![](https://c2.staticflickr.com/6/5694/22071429120_e577e2e78d.jpg?__SQUARESPACE_CACHEVERSION=1445127425484)        
 
 We’ve been incredibly happy with Datadog’s UI, API, and complete integration with AWS, but getting the most out of the tool comes from a few key pieces of setup.
 
@@ -163,7 +163,7 @@ Next, we made sure to add the Datadog-agent as a container to our base AMI ([dat
 
 What’s even cooler is that the agent can visualize instance utilization across hosts in the environment, so we can get a high level overview of instances or clusters which might be having issues:
 
-<span class="full-image-block ssNonEditable"><span>![](https://c1.staticflickr.com/1/713/22259459015_6dfb586431.jpg?__SQUARESPACE_CACHEVERSION=1445127491370)</span></span>
+        ![](https://c1.staticflickr.com/1/713/22259459015_6dfb586431.jpg?__SQUARESPACE_CACHEVERSION=1445127491370)        
 
 Additionally, my teammate Vince created a [Terraform provider for Datadog](https://github.com/segmentio/terraform-datadog), so we can completely script our alerting against the _actual production configuration_. Our alerts will be recorded and stay in sync with what’s running in prod.
 
@@ -192,7 +192,7 @@ By convention, we specify two alert levels: `warning` and `critical`. The `w
 
 What’s more, once we transition to Terraform modules and add the Datadog provider to our service description, then all services end up getting alerts for _free_. The data will be powered directly by our internal toolkit and Cloudwatch metrics.
 
-## Let the good times <span>docker run</span>
+## Let the good times     docker run    
 
 Once we had all these pieces in place, the day had finally come to make the switch.
 
@@ -210,4 +210,4 @@ We also plan to keep an eye on promising tech for this space. The [Convox](http
 
 After all of these orchestration changes, we believe more strongly than ever in outsourcing our infrastructure to AWS. They’ve changed the game by productizing a lot of core services, while maintaining an incredibly competitive price point. It’s creating a new breed of startups that can build products efficiently and cheaply while spending less time on maintenance. And we’re bullish on the tools that will be built atop their ecosystem.
 
-</div>
+    

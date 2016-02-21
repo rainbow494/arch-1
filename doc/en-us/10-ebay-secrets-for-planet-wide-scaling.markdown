@@ -1,8 +1,8 @@
 ## [10 eBay Secrets for Planet Wide Scaling](/blog/2009/11/17/10-ebay-secrets-for-planet-wide-scaling.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, November 17, 2009 at 11:27AM</span></div>
+    
 
-<div class="body">
+    
 
 You don't even have to make a bid, Randy Shoup, an eBay Distinguished Architect, gives this [presentation](http://www.hpts.ws/session9/shoup.pdf) on how eBay scales, for free. Randy has done a fabulous job in this presentation and in other talks listed at the end of this post getting at the heart of the principles behind scalability. It's more about ideas of how things work and fit together than a focusing on a particular technology stack.
 
@@ -42,4 +42,4 @@ The presentation does a good job explaining each lesson, but the list is...
 *   [Scalability Best Practices: Lessons from eBay](http://www.infoq.com/articles/ebay-scalability-best-practices) by Randy Shoup
 *   [Episode 109: eBay's Architecture Principles](http://odeo.com/episodes/23259163-Episode-109-eBay-s-Architecture-Principles-with-Randy-Shoup) with Randy Shoup, [transcript](http://www.se-radio.net/transcript-109-ebay039s-architecture-principles-randy-shoup)
 
-</div>
+    

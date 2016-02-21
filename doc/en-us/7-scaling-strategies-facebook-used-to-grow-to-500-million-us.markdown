@@ -1,14 +1,14 @@
 ## [7 Scaling Strategies Facebook Used to Grow to 500 Million Users](/blog/2010/8/2/7-scaling-strategies-facebook-used-to-grow-to-500-million-us.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 2, 2010 at 7:42AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4127/4847617633_12bd62e2b4_m.jpg)
 
-<div>Robert Johnson,a director of engineering at Facebook, celebrated Facebook's monumental achievement of reaching 500 million users by sharing the [scaling principles that helped](http://www.facebook.com/note.php?note_id=409881258919) reach that milestone. In case you weren't suitably impressed by the 500 million user number, Robert ratchets up the numbers game with these impressive figures:</div>
+    Robert Johnson,a director of engineering at Facebook, celebrated Facebook's monumental achievement of reaching 500 million users by sharing the [scaling principles that helped](http://www.facebook.com/note.php?note_id=409881258919) reach that milestone. In case you weren't suitably impressed by the 500 million user number, Robert ratchets up the numbers game with these impressive figures:    
 
-<div>
+    
 
 *   1 million users per engineer
 *   500 million active users
@@ -17,11 +17,11 @@
 *   2 trillion objects cached, with hundreds of millions of requests per second
 *   130TB of logs every day
 
-</div>
+    
 
 How did Facebook get to this point?
 
-<div>
+    
 
 1.  **People Matter Most**. It's people who build and run systems. The best tools for scaling are an engineering and operations teams that can handle anything.
 2.  **Scale Horizontally**. Handling exponentially growing traffic requires spreading load arbitrarily across many machines. Using different databases for tables like accounts and profiles only doubles capacity. This approach hurts efficiency, but efficiency is a separate effort from scaling, efficiency by itself doesn't substantially impact scaling.
@@ -31,7 +31,7 @@ How did Facebook get to this point?
 6.  **Small, Independent Teams**. Small teams allow work to be done efficiently, quickly, and carefully. Only three people work on photos, for example, the largest photo site on the internet. 
 7.  **Control and Responsibility**. Responsibility requires control. If a team is responsible for something they must control it. For example, Facebook pushes code into production everyday. The person who wrote the code is there to fix anything that goes wrong. If the responsibility of pushing and wring code are split, then the code writer doesn't feel the effect of code that breaks the system. Robert puts it wonderfully: _The best way we know of to get great software to these 500 million people is to have a person who understands the importance of what they're doing make a good decision about something they understand and control._
 
-</div>
+    
 
 These principles are not really new, but I think when you see them all laid out together like this it's easy to see how they all work together to make a self-reinforcing virtuous circle. You can't move fast unless you have small teams who have control and responsibility. You can't know how your changes are working unless you get those changes into production and measure results. You can't move code into production unless people feel responsible for moving out working code. You can't handle the scale unless you figure out how to scale horizontally, move fast, measure everything, etc. and that all comes down to good people. 
 
@@ -43,4 +43,4 @@ Will these principles be enough to grow the next 500 million users? Because of p
 *   [Why Are Facebook, Digg, And Twitter So Hard To Scale?](http://highscalability.com/blog/2009/10/13/why-are-facebook-digg-and-twitter-so-hard-to-scale.html)
 *   [Facebook Related Articles on HighScalability](http://highscalability.com/display/Search?searchQuery=facebook)
 
-</div>
+    

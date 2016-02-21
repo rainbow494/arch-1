@@ -1,8 +1,8 @@
 ## [Netflix: Run Consistency Checkers All the time to Fixup Transactions](/blog/2011/4/6/netflix-run-consistency-checkers-all-the-time-to-fixup-trans.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, April 6, 2011 at 9:09AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm2.static.flickr.com/1207/5104530447_c187318ba6_m.jpg)
 
@@ -31,4 +31,4 @@ One thing this article has brought up for me again is how we have punted on the 
 
 We actually do have an independent measure that can be used to put an order on events. It's called _time_. What any device can do is put a very high precision timestamp on data. Maybe it's time to tackle the problem of time again?
 
-</div>
+    

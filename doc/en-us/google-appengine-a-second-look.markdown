@@ -1,8 +1,8 @@
 ## [Google AppEngine - A Second Look](/blog/2009/2/21/google-appengine-a-second-look.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Saturday, February 21, 2009 at 12:56AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 6:**: [Back to the Future for Data Storage](http://googleappengine.blogspot.com/2009/02/back-to-future-for-data-storage.html#). _We are in the middle of a renaissance in data storage with the application of many new ideas and techniques; there's huge potential for breaking out of thinking about data storage in just one way._  
 **Update 5**: [Building Scalable Web Applications with Google App Engine](http://sites.google.com/site/io/building-scalable-web-applications-with-google-app-engine#) by Brett Slatkin.
@@ -113,4 +113,4 @@ As expected there's lots of blog activity on GAE:
 
     Many "how do I" questions come up because of the requirement for service level interfaces. For example, something as simple as a hostname to IP mapping can't be done because you don't have socket level access. Someone, somewhere must make a service out of it. Make an external service is a common response to problems. You must make a service external to the GAE environment to get things to work which means you have to develop in multiple environments. This sort of sucks. To get cron functionality do I really need to create an external service outside of GAE?  
 
-    The outcome of all this is probably an **accelerated servicifaction** of everything. What were once simple library calls must now be exposed with service level interfaces. It's not that I think HTTP is too heavy, but as development model it is extremely painful. You are constantly hitting road blocks instead of getting stuff done.</div>
+    The outcome of all this is probably an **accelerated servicifaction** of everything. What were once simple library calls must now be exposed with service level interfaces. It's not that I think HTTP is too heavy, but as development model it is extremely painful. You are constantly hitting road blocks instead of getting stuff done.    

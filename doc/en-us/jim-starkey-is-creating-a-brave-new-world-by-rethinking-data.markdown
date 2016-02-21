@@ -1,8 +1,8 @@
 ## [Jim Starkey is Creating a Brave New World by Rethinking Databases for the Cloud](/blog/2011/8/4/jim-starkey-is-creating-a-brave-new-world-by-rethinking-data.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, August 4, 2011 at 9:11AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.static.flickr.com/6138/5980428056_fc1ccbb206_o.jpg)
 
@@ -44,4 +44,4 @@ _If this seems like magic, take a look at [How NimbusDB Works](http://nimbusdb.c
 *   [Jim Starkey: Introducing Falcon (the video and the podcast)](http://mike.kruckenberg.com/archives/2006/07/jim_starkey_int_1.html)
 *   [Special Relativity and the Problem of Database Scalability](http://www.gbcacm.org/sites/www.gbcacm.org/files/slides/SpecialRelativity%5B1%5D_0.pdf) by Jim Starkey ([audio](http://www.gbcacm.org/sites/www.gbcacm.org/files/2010_03_SpecialRelativityProblemOfDatabaseScalability_Starkey-1_0.mp3))
 
-</div>
+    

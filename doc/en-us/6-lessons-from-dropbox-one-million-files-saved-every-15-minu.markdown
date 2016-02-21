@@ -1,8 +1,8 @@
 ## [6 Lessons from Dropbox - One Million Files Saved Every 15 minutes](/blog/2011/3/14/6-lessons-from-dropbox-one-million-files-saved-every-15-minu.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, March 14, 2011 at 9:02AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.static.flickr.com/5099/5523801630_01b89b08a3.jpg)
 
@@ -59,4 +59,4 @@ About half way through the talk turns technical. Not a lot of info on how Dropbo
 *   [Slidedeck for the Talk](https://www.dropbox.com/s/mwxsyxtu9qieboo/pycon%20talk%20minus%20video.pptx)
 *   [Dropbox - Startup Lessons Learned](http://www.slideshare.net/gueste94e4c/dropbox-startup-lessons-learned-3836587) by Drew Houston. 
 
-</div>
+    

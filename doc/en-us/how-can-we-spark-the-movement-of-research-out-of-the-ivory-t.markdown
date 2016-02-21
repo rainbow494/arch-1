@@ -1,8 +1,8 @@
 ## [How can we spark the movement of research out of the Ivory Tower and into production?](/blog/2010/7/22/how-can-we-spark-the-movement-of-research-out-of-the-ivory-t.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, July 22, 2010 at 7:22AM</span></div>
+    
 
-<div class="body">
+    
 
 [![](http://farm5.static.flickr.com/4096/4809744067_b5d33acc86_m.jpg)](http://en.wikipedia.org/wiki/Rumpelstiltskin)
 
@@ -17,13 +17,13 @@ We need to do a better job of using research. There's a lot out there in the lit
 I'm bringing this up now because:
 
 *   It's been an issue I've thought about for a long while, but I never thought there was much that could be done about it.
-*   I attended a talk by [Daria Mochly-Rosen](http://www.stanford.edu/group/mochly-rosen/personalinfo2.html), PhD at Stanford titled: [How Are Drugs Developed and <span>Why Is It So Expensive?</span>](http://continuingstudies.stanford.edu/publicprograms/event.php?eid=20094_EVT%20277) Her talk made me think maybe there's something we in computer science could do about this problem because they are already doing something about a similar problem in the drug discovery space.
+*   I attended a talk by [Daria Mochly-Rosen](http://www.stanford.edu/group/mochly-rosen/personalinfo2.html), PhD at Stanford titled: [How Are Drugs Developed and     Why Is It So Expensive?    ](http://continuingstudies.stanford.edu/publicprograms/event.php?eid=20094_EVT%20277) Her talk made me think maybe there's something we in computer science could do about this problem because they are already doing something about a similar problem in the drug discovery space.
 
 ### The Gap Between Research and Development is More Like an Ocean
 
 Dr. Mochly-Rosen is Senior Associate Dean for Research and George D. Smith Professor in Translational Medicine, School of Medicine. Her talk was fascinating. She walked us through the incredible gauntlet every drug must run before being approved for human use. She also talked about a project called [SPARK](http://sparkmed.stanford.edu/why.html):
 
-> <div id="_mcePaste">SPARK was created to advance promising discoveries from the research laboratory into medical practice. SPARK’s mission is to facilitate collaboration between academia and industry by providing Stanford researchers with the support, knowledge, and partnerships that can bridge the gap between discovery and its application into important new medical therapies. SPARK was created to advance promising discoveries from the research laboratory into medical practice. SPARK’s mission is to facilitate collaboration between academia and industry   Stanford researchers with the support, knowledge,  that can bridge the gap between discovery and its application into important new medical therapies.</div>
+>     SPARK was created to advance promising discoveries from the research laboratory into medical practice. SPARK’s mission is to facilitate collaboration between academia and industry by providing Stanford researchers with the support, knowledge, and partnerships that can bridge the gap between discovery and its application into important new medical therapies. SPARK was created to advance promising discoveries from the research laboratory into medical practice. SPARK’s mission is to facilitate collaboration between academia and industry   Stanford researchers with the support, knowledge,  that can bridge the gap between discovery and its application into important new medical therapies.    
 
 I thought the idea of SPARK might also work for the computer industry.
 
@@ -79,4 +79,4 @@ Anything else that might help?
 
 *   [Data Abstraction and Hierarchy](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.12.819) by Barbara Liskov
 
-</div>
+    

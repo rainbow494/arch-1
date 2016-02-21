@@ -1,8 +1,8 @@
 ## [Second Life Architecture - The Grid](/blog/2008/12/20/second-life-architecture-the-grid.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Saturday, December 20, 2008 at 2:55PM</span></div>
+    
 
-<div class="body">
+    
 
 **Update:**[Presentation: Second Life’s Architecture](http://www.infoq.com/news/2008/12/Second-Life-Ian-Wilkes). _Ian Wilkes, VP of Systems Engineering, describes the architecture used by the popular game named Second Life. Ian presents how the architecture was at its debut and how it evolved over years as users and features have been added._  
 
@@ -131,4 +131,4 @@ The Simulator is the primary SL C++ server process which runs on most servers. A
 
     _Do you have more details?_
 
-</div>
+    

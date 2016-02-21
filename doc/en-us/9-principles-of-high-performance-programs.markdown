@@ -1,8 +1,8 @@
 ## [9 Principles of High Performance Programs](/blog/2014/5/21/9-principles-of-high-performance-programs.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, May 21, 2014 at 8:54AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm6.staticflickr.com/5036/14028263590_848c224784_n.jpg)
 
@@ -25,4 +25,4 @@ Rules to help balance the forces of evil:
 
 This is a very deep post with many more details than glossed here, so please read the [original article](http://blog.libtorrent.org/2012/12/principles-of-high-performance-programs/). There are also many other interesting articles on the site: [memory cache optimizations](http://blog.libtorrent.org/2013/12/memory-cache-optimizations/), [swarm connectivity](http://blog.libtorrent.org/2012/12/swarm-connectivity/), [asynchronous disk I/O](http://blog.libtorrent.org/2012/10/asynchronous-disk-io/).
 
-</div>
+    

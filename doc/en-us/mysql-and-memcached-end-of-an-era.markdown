@@ -1,8 +1,8 @@
 ## [MySQL and Memcached: End of an Era?](/blog/2010/2/26/mysql-and-memcached-end-of-an-era.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, February 26, 2010 at 9:06AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm3.static.flickr.com/2711/4389679059_fef885e3bc_o.jpg)
 
@@ -29,10 +29,10 @@ It's always a bit sad to see an era pass, but it's not all that often we get to 
 ## Related Articles
 
 *   [Plays well with others](http://mysqlha.blogspot.com/2010/03/plays-well-with-others.html) by Mark Callaghan. _I think that MySQL+memcached is still the default choice and I don't think it is going away in the high-scale market_.The death of Memcached is greatly exaggerated
-*   [The death of Memcached is greatly exaggerated](http://www.gear6.com/death-memcached-greatly-exaggerated) by <span class="submitted">[Mark Atwood](http://www.gear6.com/blog/87).</span> _Memcached is going to stick around._
+*   [The death of Memcached is greatly exaggerated](http://www.gear6.com/death-memcached-greatly-exaggerated) by     [Mark Atwood](http://www.gear6.com/blog/87).     _Memcached is going to stick around._
 *   [Cassandra and the NoSQL scalable OLTP argument](http://www.dbms2.com/2010/03/02/cassandra-nosql-scalable-oltp/) by Curt Monash. Cool, Curt Monash comented on my article. He poked a little fun at me of course, but that's OK, it's Curt Monash. Love his blog.
 *   [Getting Real about NoSQL and the SQL-Isn't-Scalable Lie](http://www.yafla.com/dforbes/Getting_Real_about_NoSQL_and_the_SQL_Isnt_Scalable_Lie/) by [Dennis Forbes](mailto:dforbes@yafla.com).
 *   [MySQL+Memcached is still the workhorse](http://machinesplusminds.blogspot.com/2010/03/mysqlmemcached-is-still-workhorse.html) by Mark Atwood. _Running a real live system is running a farm, ploughing a field.  You want a workhorse that you know how to use, you know you can get gear for at the blacksmith and the tackle shop, and that you know you can hire field hands who know how to use it well and take of properly._
 *   [Building Scalable Databases: Are Relational Databases Compatible with Large Scale Websites?](http://www.25hoursaday.com/weblog/2010/03/10/BuildingScalableDatabasesAreRelationalDatabasesCompatibleWithLargeScaleWebsites.aspx) by Dare Obasanjo. _I expect we’ll see more large scale websites decide that instead of treating a SQL database as a denormalized key-value pair store that they would rather use a NoSQL database_.
 
-</div>
+    

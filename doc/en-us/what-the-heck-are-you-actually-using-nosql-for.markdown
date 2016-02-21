@@ -1,8 +1,8 @@
 ## [What the heck are you actually using NoSQL for?](/blog/2010/12/6/what-the-heck-are-you-actually-using-nosql-for.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, December 6, 2010 at 9:34AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4127/5188198566_3fe006d562_m.jpg)
 
@@ -47,7 +47,7 @@ These are the general kinds of reasons people throw around for using NoSQL. Prob
 *   Dynamic table creation.
 *   Two tier applications where low latency data is made available through a fast NoSQL interface, but the data itself can be calculated and updated by high latency Hadoop apps or other low priority apps.
 *   Sequential data reading. The right underlying data storage model needs to be selected. A B-tree may not be the best model for sequential reads.
-*   <span style="font-family: 'Helvetica Neue', Helvetica, Arial, default; color: #333333;"><span style="line-height: 17px; font-size: small;">Slicing off part of service that may need better performance/scalability onto it's own system. For example, user logins may need to be high performance and this feature could use a dedicated service to meet those goals.</span></span>
+*           Slicing off part of service that may need better performance/scalability onto it's own system. For example, user logins may need to be high performance and this feature could use a dedicated service to meet those goals.        
 *   Caching. A  high performance caching tier for web sites and other applications. Example is a cache for the Data Aggregation System used by the Large Hadron Collider.
 *   Voting.
 *   Real-time page view counters.
@@ -58,10 +58,10 @@ These are the general kinds of reasons people throw around for using NoSQL. Prob
 *   Working with [heterogenous types of data](http://brehaut.net/blog/2010/couch_impedance#), for example, different media types at a generic level.
 *   Embedded systems. They don’t want the overhead of SQL and servers, so they uses something simpler for storage.
 *   A "market" game, where you own buildings in a town. You want the building list of someone to pop up quickly, so you partition on the owner column of the building table, so that the select is single-partitioned. But when someone buys the building of someone else you update the owner column along with price.
-*   <span style="border-collapse: separate; color: #000000; font-family: arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;"><span style="border-collapse: collapse;"><span style="border-collapse: separate; font-family: Lucida, 'Lucida Grande', Tahoma, sans-serif; font-size: 13px; color: #333333; line-height: 16px;">[JPL](http://qconsf.com/sf2010/presentation/Out+of+This+World+Cloud+Computing) is using SimpleDB to store rover plan attributes. References are kept to a full plan blob in S3. </span></span></span>
-*   <span style="border-collapse: separate; color: #000000; font-family: arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;"><span style="border-collapse: collapse;"><span style="border-collapse: separate; font-family: Lucida, 'Lucida Grande', Tahoma, sans-serif; font-size: 13px; color: #333333; line-height: 16px;">Federal law enforcement agencies [tracking Americans in real-time](http://www.wired.com/threatlevel/2010/12/realtime/) using credit cards, loyalty cards and travel reservations.</span></span></span>
-*   <span style="border-collapse: separate; color: #000000; font-family: arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;"><span style="border-collapse: collapse;"><span style="border-collapse: separate; font-family: Lucida, 'Lucida Grande', Tahoma, sans-serif; font-size: 13px; color: #333333; line-height: 16px;">[Fraud detection](http://www.slideshare.net/SparsityTechnologies/dex-introduction#) by comparing transactions to known patterns in real-time.</span></span></span>
-*   <span style="border-collapse: separate; color: #000000; font-family: arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;"><span style="border-collapse: collapse;"><span style="border-collapse: separate; font-family: Lucida, 'Lucida Grande', Tahoma, sans-serif; font-size: 13px; color: #333333; line-height: 16px;">[Helping diagnose](http://www.slideshare.net/SparsityTechnologies/dex-introduction#) the typology of tumors by integrating the history of every patient.</span></span></span>
+*               [JPL](http://qconsf.com/sf2010/presentation/Out+of+This+World+Cloud+Computing) is using SimpleDB to store rover plan attributes. References are kept to a full plan blob in S3.             
+*               Federal law enforcement agencies [tracking Americans in real-time](http://www.wired.com/threatlevel/2010/12/realtime/) using credit cards, loyalty cards and travel reservations.            
+*               [Fraud detection](http://www.slideshare.net/SparsityTechnologies/dex-introduction#) by comparing transactions to known patterns in real-time.            
+*               [Helping diagnose](http://www.slideshare.net/SparsityTechnologies/dex-introduction#) the typology of tumors by integrating the history of every patient.            
 *   In-memory database for high update situations, like a [web site](http://news.ycombinator.com/item?id=16430) that displays everyone's "last active" time (for chat maybe). If users are performing some activity once every 30 sec, then you will be pretty much be at your limit with about 5000 simultaneous users.
 *   Handling lower-frequency multi-partition queries using materialized views while continuing to process high-frequency streaming data.
 *   Priority queues.
@@ -249,6 +249,6 @@ Kevin Weil at Twitter is great at providing Hadoop use cases. At Twitter this in
 *   [SQL Databases Don't Scale](http://adam.heroku.com/past/2009/7/6/sql_databases_dont_scale/) by Adam Wiggins 
 *   [“One Size Fits All”: An Idea Whose Time Has Come and Gone](http://www.cs.brown.edu/~ugur/fits_all.pdf) by Michael Stonebraker and Uğur Çetintemel
 *   [Future of RDBMS is RAM Clouds & SSD](http://www.igvita.com/2009/12/07/future-of-rdbms-is-ram-clouds-ssd/) by Ilya Grigorik
-*   <div id="_mcePaste">[To scale or not to scale: Key/Value, Document, SQL, JPA](http://www.slideshare.net/uri1803/to-scale-or-not-to-scale-keyvalue-document-sql-jpa-whats-right-for-my-app#)  by Uri Cohen</div>
+*       [To scale or not to scale: Key/Value, Document, SQL, JPA](http://www.slideshare.net/uri1803/to-scale-or-not-to-scale-keyvalue-document-sql-jpa-whats-right-for-my-app#)  by Uri Cohen    
 
-</div>
+    

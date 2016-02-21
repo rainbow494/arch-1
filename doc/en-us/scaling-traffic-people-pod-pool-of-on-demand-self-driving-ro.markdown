@@ -1,10 +1,10 @@
 ## [Scaling Traffic: People Pod Pool of On Demand Self Driving Robotic Cars who Automatically Refuel from Cheap Solar](/blog/2009/7/16/scaling-traffic-people-pod-pool-of-on-demand-self-driving-ro.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, July 16, 2009 at 11:10AM</span></div>
+    
 
-<div class="body">
+    
 
-**Update 17**: [Are Wireless Road Trains the Cure for Traffic Congestion?](http://www.fastcompany.com/blog/addy-dugdale/addybaddy/wirelessly-road-trains-en-route-euro-highways?partner=rss) <span class="by">BY</span> [ADDY DUGDALE](http://www.fastcompany.com/user/addy-dugdale "View user profile."). _The concept of road trains--up to eight vehicles zooming down the road together--has long been considered a faster, safer, and greener way of traveling long distances by car_
+**Update 17**: [Are Wireless Road Trains the Cure for Traffic Congestion?](http://www.fastcompany.com/blog/addy-dugdale/addybaddy/wirelessly-road-trains-en-route-euro-highways?partner=rss)     BY     [ADDY DUGDALE](http://www.fastcompany.com/user/addy-dugdale "View user profile."). _The concept of road trains--up to eight vehicles zooming down the road together--has long been considered a faster, safer, and greener way of traveling long distances by car_
 
 **Update 16:** The first electric vehicle in the country [powered completely by ultracapacitors](http://ecotechdaily.com/2009/10/01/presentation-americas-first-zero-carbon-mass-transit-shuttle/). The minibus can be fully recharged in fifteen minutes, unlike battery vehicles, which typically takes hours to recharge.
 
@@ -89,11 +89,11 @@ The technologies I am talking about are:
 
     After a lot of reading on the topic and a lot of self-examination on why I am such a horrible person that I don't use mass transit more, this is the type of system I could really see myself using. It doesn't try to change the world, it uses what we got, and gives people what they want. It just might work.
 
-<div id="followup9445034" class="journal-entry-follow-up">
+    
 
-<div class="follow-up-caption">**Update** on Thursday, November 11, 2010 at 10:36AM by [![Registered Commenter](/universal/images/transparent.png "Registered Commenter")Todd Hoff](/member/highscalability "Registered Commenter") </div>
+    **Update** on Thursday, November 11, 2010 at 10:36AM by [![Registered Commenter](/universal/images/transparent.png "Registered Commenter")Todd Hoff](/member/highscalability "Registered Commenter")     
 
-<div class="follow-up-body">
+    
 
 Robert Scoble with a cool interview on the future of driving without traffic jams:  [Stanford Automotive, part II: The future of autonomous cars](http://www.building43.com/videos/2010/11/11/stanford-automotive-part-ii-the-future-of-autonomous-cars/)
 
@@ -101,8 +101,8 @@ Robert Scoble with a cool interview on the future of driving without traffic jam
 
 > Sokolsky estimates that many of the features that Junior employs, like cameras monitoring lanes and blind spot detection, will start becoming standard over the next ten years. But he also thinks that people will have to adapt, at least as much as the cars. “In some ways I think the technology is going to come along much faster than both the legal issues and societal acceptance,” says Sokolsky. “Because you’re going to have to convince people to give up driving their car everywhere, and some people are going to be extremely reluctant to do that. In this field, we sort of lose sight of this, but we talk to people, and they say, ‘That sounds terrifying.’ There’s a lot to overcome in terms of that.”
 
-</div>
+    
 
-</div>
+    
 
-</div>
+    

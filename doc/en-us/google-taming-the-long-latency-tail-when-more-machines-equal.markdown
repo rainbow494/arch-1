@@ -1,8 +1,8 @@
 ## [Google: Taming the Long Latency Tail - When More Machines Equals Worse Results](/blog/2012/3/12/google-taming-the-long-latency-tail-when-more-machines-equal.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, March 12, 2012 at 9:17AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.static.flickr.com/6154/6148166039_2800c8467a_m.jpg)
 
@@ -40,7 +40,7 @@ Using the same components and scaling them results in a really unexpected outcom
 
 In [Microstorm in a teacup: Are you suffering from the long tail effect?](http://www.seanet-tech.com/pdf/Use_case/Microstorm.pdf) there's a good discussion on the impact of long tail problems on trading:
 
-> <div id="_mcePaste">A long tail distribution in a trading network can represent the distribution of latency experienced by trades The majority of trades experience very low latency, less than 5 milliseconds, but a small number can experience trade latencies upwards of 900ms.  Latency can be symptomatic of a long tail anomaly such as a bandwidth saturating microburst.</div>
+>     A long tail distribution in a trading network can represent the distribution of latency experienced by trades The majority of trades experience very low latency, less than 5 milliseconds, but a small number can experience trade latencies upwards of 900ms.  Latency can be symptomatic of a long tail anomaly such as a bandwidth saturating microburst.    
 
 This latency could come from: RCP Library, DNS lookups, packet loss, microbursts, deep queues, high task response latency, locking, garbage collection, OS stack issues, router/switch overhead, transiting multiple hops, or slow processing code. 
 
@@ -131,4 +131,4 @@ From [Moving Network Server Latency Off the Disk Speed Curve](http://nsg.cs.pr
 
 *   [Characterizing Flash Memory: Anomalies, Observations, and Applications](http://cmrr-star.ucsd.edu/starpapers/309-Grupp-1.pdf)
 
-</div>
+    

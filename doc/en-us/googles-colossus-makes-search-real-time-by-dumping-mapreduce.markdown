@@ -1,8 +1,8 @@
 ## [Google's Colossus Makes Search Real-time by Dumping MapReduce](/blog/2010/9/11/googles-colossus-makes-search-real-time-by-dumping-mapreduce.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Saturday, September 11, 2010 at 5:50AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://www.google.com/images/logos/ps_logo2.png)
 
@@ -12,7 +12,7 @@ The challenge for Google has been how to support a real-time world when the core
 
 Details are slowly coming out about their new goals and approach:
 
-<div>
+    
 
 *   Goal is to update the search index continuously, within seconds of content changing, without rebuilding the entire index from scratch using MapReduce.
 *   The new system is a "database-driven, Big Table–variety indexing system."
@@ -21,11 +21,11 @@ Details are slowly coming out about their new goals and approach:
 
 The use of triggers is interesting because triggers are largely ignored in production systems. In a relational database triggers are integrity checks that are executed on a record every time a record is written. The idea is that if the data is checked for problems before it is written into the database, then your data will always be correct and the database can be a pure source of validated facts. For example, an account balance could be checked for a negative number. If the balance was negative then the write would fail, the transaction aborted, and the database would maintain a correct state.
 
-</div>
+    
 
 In practice there are many problems with triggers:
 
-<div>
+    
 
 *   **Destroys performance**. Since triggers happen on every write they slow down the write path to the extent that database performance is often killed. Triggers also take record locks which makes contention even worse.
 *   **Checking is distributed**. Not all integrity checks can be made from data inside the database so checks that are database oriented are put in the triggers and checks, that say access a 3rd party system, are kept in application code. So now we have checks in multiple places, which leads to the update anomalies in code that ironically, relational databases are meant to prevent in data.
@@ -39,7 +39,7 @@ This isn't to say you don't want to put logic in triggers, you do. Triggers are 
 
 It sounds like Google may have made a specialized database where triggers are efficient by design. We know [hundreds of thousands of pages](http://highscalability.com/blog/2010/9/9/how-did-google-instant-become-faster-with-5-7x-more-results.html) are being crawled simultaneously. When the pages are written to the database that's the perfect opportunity perform calculations and updates. The compute framework would make it efficient to perform operations in parallel on pages as they come in so that processing isn't completely centralized on each node.
 
-One can imagine that the in-memory data structures that existed on the MapReduce nodes have been extracted in some form and reified within BigTable. What we have is a sort of Internet DOM, analogous to the browser DOMs that have made it possible to have such incredibly powerful browser UIs, but for the web. I imagine programming the web for Google has become something like programming a browser DOM. I could be completely wrong of course, but I explored this idea a while ago in **<span><span>[All the world is a DOM](http://possibility.com/blog/content/all-world-dom-rise-identity-based-programming).</span></span>**
+One can imagine that the in-memory data structures that existed on the MapReduce nodes have been extracted in some form and reified within BigTable. What we have is a sort of Internet DOM, analogous to the browser DOMs that have made it possible to have such incredibly powerful browser UIs, but for the web. I imagine programming the web for Google has become something like programming a browser DOM. I could be completely wrong of course, but I explored this idea a while ago in **        [All the world is a DOM](http://possibility.com/blog/content/all-world-dom-rise-identity-based-programming).        **
 
 There's an interesting quote at the end of the article: "_We're in business of making searches useful, we're not in the business of selling infrastructure_."
 
@@ -47,6 +47,6 @@ These could actually be the same goal. It's a bit silly to have everyone in the 
 
 This Internet DOM could be shared and all that backbone bandwidth and web site CPU reclaimed for something more useful. Google is pretty open, but they may not be that open.
 
-</div>
+    
 
-</div>
+    

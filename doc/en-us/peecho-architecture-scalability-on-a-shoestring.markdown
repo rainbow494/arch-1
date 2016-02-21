@@ -1,8 +1,8 @@
 ## [Peecho Architecture - scalability on a shoestring](/blog/2011/8/1/peecho-architecture-scalability-on-a-shoestring.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 1, 2011 at 9:01AM</span></div>
+    
 
-<div class="body">
+    
 
 _This is a guest post by [Marcel Panse](http://www.linkedin.com/in/marcelpanse "Marcel Panse") and [Sander Nagtegaal](http://www.linkedin.com/in/centrical "Sander Nagtegaal") from [Peecho](http://www.peecho.com)._
 
@@ -152,4 +152,4 @@ Not bad, we think.
 
 Peecho proves that it is possible to create scalable architectures on a shoestring. We hope this information was useful to you and that it will help you to create great apps for next to nothing, too. Preferably with a print button, of course.
 
-</div>
+    

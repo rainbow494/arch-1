@@ -1,8 +1,8 @@
 ## [Mollom Architecture - Killing Over 373 Million Spams at 100 Requests Per Second](/blog/2011/2/8/mollom-architecture-killing-over-373-million-spams-at-100-re.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, February 8, 2011 at 12:18PM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.static.flickr.com/5098/5426183775_6b4d1eb673_m.jpg) [Mollom](http://mollom.com/) is one of those cool SaaS companies every developer dreams of creating when they wrack their brains looking for a viable software-as-a-service startup. Mollom profitably runs a useful service—[spam filtering](http://www.youtube.com/watch?v=anwy2MPT5RE)—with a small group of geographically distributed developers. Mollom helps protect nearly 40,000 websites from spam, including [one of mine](http://biztaxtalk.com/), which is where I first learned about Mollom. In a desperate attempt to stop spam on a Drupal site, where every other form of CAPTCHA had failed miserably, I installed Mollom in about 10 minutes and it immediately started working. That's the out of the box experience I was looking for.
 
@@ -166,17 +166,17 @@ It's a tough decision. Static CAPTCHA systems, that is systems that only require
 *   They will experiment using Glassfish for load balancing in each datacenter. 
 *   If the load goes up 10x they will have to add more Cassandra nodes. Disk IO is the bottleneck. Only when they have to grow more than 10x will they need to add more application servers. 
 
-## Lessons Learned<span style="font-size: 12px; font-weight: normal;"> </span>
+## Lessons Learned         
 
-*   **<span style="font-weight: normal;">**Efficiency leads to happiness. **Mollom takes high performance engineering very seriously. They are proud that Mollom is extremely cost effective. It can handle many many requests on a single server, with low latency, which makes customers happy, which makes them happy because they don't have to maintain lots of machines, and costs are low. They've made this a priority from the start and have chosen the right technologies to achieve their goals. This enabled them to take the profit they've made and invest in marketing, building a user base, and building new products on top of Mollom.</span>**
+*   **    **Efficiency leads to happiness. **Mollom takes high performance engineering very seriously. They are proud that Mollom is extremely cost effective. It can handle many many requests on a single server, with low latency, which makes customers happy, which makes them happy because they don't have to maintain lots of machines, and costs are low. They've made this a priority from the start and have chosen the right technologies to achieve their goals. This enabled them to take the profit they've made and invest in marketing, building a user base, and building new products on top of Mollom.    **
 *   **Free for breadth, pay for depth**. Machine learning requires a lot of example data to be able to detect spam successfully. To get that data Mollom offers a free service to customers, who provide the breadth of data needed to better train the learning algorithms, they are a constant source of intelligence and feedback. Larger customers provide the revenue and also benefit from the data learned from the free clients. This model seems peculiar to big data and machine learning, which as we all know is the future of everything.
-*   **Remove non domain-specific obstacles**. Big systems take a lot of infrastructure work. The infrastructure effort often takes work away from work on a product's true value producing domain related features (<span style="font-family: verdana, arial, sans-serif; line-height: 18px; color: #000000;">classifiers, reputation systems, client libraries)</span>. Mollom consciously tried to get out of the infrastructure business as much as possible with their selections of Cassandra and Glassfish.
+*   **Remove non domain-specific obstacles**. Big systems take a lot of infrastructure work. The infrastructure effort often takes work away from work on a product's true value producing domain related features (    classifiers, reputation systems, client libraries)    . Mollom consciously tried to get out of the infrastructure business as much as possible with their selections of Cassandra and Glassfish.
 *   **Be careful with client side code**. Code on the client side is attractive because it uses other people's resources instead of yours. The problem is that code can be poorly written which will make your system look bad. Work closely with client developers and provide quality reference code examples so developers can learn best practices.
 *   **Prioritize paying customers**. Paying customers get a better quality of service. They are handled first in the queues and experience less delay through the system. Paying customers have access to failover server and free customers only have one server. 
 *   **Reduce code by letting the stack do the heavy lifting**. In the early days the Mollom code base was a lot bigger than it is now. Cassandra removed a lot of complex code by handling replication and row caching and Glassfish removed a lot application code and will handle clustering. Simplify over time.
 *   **Minimize lock contention**. Mollom spent a lot of time working on minimizing lock contention in the Glassfish server as this became the major bottleneck. Lock as little is possible to maintain full parallelism.
 
-## Related Articles <span style="font-size: 12px; font-weight: normal;"> </span>
+## Related Articles          
 
 *   [Mollom API](http://mollom.com/api)
 *   [Mollom Drupal Module](http://drupal.org/project/mollom)
@@ -187,4 +187,4 @@ It's a tough decision. Static CAPTCHA systems, that is systems that only require
 *   [Fighting spam with Mollom on Glassfish](http://blogs.lodgon.com/johan/)
 *   To learn more about big data and machine learning take a look at some materials from the [Strata Conference](http://strataconf.com/strata2011/public/schedule/proceedings).
 
-</div>
+    

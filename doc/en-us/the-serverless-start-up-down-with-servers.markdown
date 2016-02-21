@@ -1,8 +1,8 @@
 ## [The Serverless Start-up - Down with Servers!](/blog/2015/12/7/the-serverless-start-up-down-with-servers.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, December 7, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 [![teletext.io](https://teletext.io/storage/logo_no_text.png)](https://teletext.io/ "Teletext.io - content as a service")
 
@@ -62,7 +62,7 @@ Let's dive into the building blocks of our system, which are based on several of
 
 ### AWS Lambda
 
-Instead of running cloud instances, we use [AWS Lambda](https://aws.amazon.com/lambda/ "AWS Lambda"). The name derives from the Greek letter lambda (<span>λ</span>) used to denote binding a variable in a function. AWS Lambda lets you run code without maintaining any server instances. You may think of an atomic, stateless function with a single task, that may run for a limited amount of time (one minute, currently). The functions can be written in Javascript (Node.js), Python or Java.
+Instead of running cloud instances, we use [AWS Lambda](https://aws.amazon.com/lambda/ "AWS Lambda"). The name derives from the Greek letter lambda (    λ    ) used to denote binding a variable in a function. AWS Lambda lets you run code without maintaining any server instances. You may think of an atomic, stateless function with a single task, that may run for a limited amount of time (one minute, currently). The functions can be written in Javascript (Node.js), Python or Java.
 
 If you upload your Lambda code, Amazon will take care of everything required to run and scale your code with high availability. Lambda executes in parallel. So, if a million requests are made, a million Lambda functions will execute without loss of speed or capacity. According to Amazon, "there are no fundamental limits to scaling a function".
 
@@ -270,4 +270,4 @@ So... Down with servers!
 
 [On HackerNews](https://news.ycombinator.com/item?id=10690842) / [On Reddit](https://www.reddit.com/r/programming/comments/3vwrf4/on_high_scalability_building_a_company_using_only/)
 
-</div>
+    

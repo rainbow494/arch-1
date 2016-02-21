@@ -1,8 +1,8 @@
 ## [Scaling Digg and Other Web Applications](/blog/2009/2/14/scaling-digg-and-other-web-applications.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Saturday, February 14, 2009 at 3:04AM</span></div>
+    
 
-<div class="body">
+    
 
 Joe Stump, Lead Architect at Digg, gave [this presentation](http://www.krisjordan.com/2008/09/18/joe-stump-scaling-digg-and-other-web-applications/) at the Web 2.0 Expo. I couldn't find the actual presentation, but fortunately [Kris Jordan](http://www.krisjordan.com/2008/09/18/joe-stump-scaling-digg-and-other-web-applications/) took some great notes. That's how key moments in history are accidentally captured forever. Joe was also kind enough to respond to my email questions with a phone call.  
 
@@ -57,4 +57,4 @@ In this first part of the post Joe shares some timeless wisdom that you may or m
 
     ## Related Articles
 
-    *   [Scaling Digg and Other Web Applications](http://www.krisjordan.com/2008/09/18/joe-stump-scaling-digg-and-other-web-applications/) by Kris Jordan.*   [MemcacheDB](http://memcachedb.org/)*   [Joe Stump's Blog](http://www.joestump.net/)*   [MemcachedRelated Tags on HighScalability](http://highscalability.com/tags/memcached)*   [Caching Related Tags on HighScalability](http://highscalability.com/tags/caching)*   [BigTable](http://highscalability.com/tags/bigtable)*   [SimpleDB](http://highscalability.com/tags/simpledb)*   [Anti-RDBMS: A list of distributed key-value stores](http://highscalability.com/anti-rdbms-list-distributed-key-value-stores)*   [An Unorthodox Approach to Database Design : The Coming of the Shard](http://highscalability.com/unorthodox-approach-database-design-coming-shard)*   [Flickr Architecture](http://highscalability.com/flickr-architecture)*   [Episode 4: Scaling Large Web Sites with Joe Stump, Lead Architect at DIGG](http://deepfriedbytes.com/podcast/deep-fried-bytes-episode-4-scaling-large-web-sites-with-joe-stump-lead-architect-at-digg/)</div>
+    *   [Scaling Digg and Other Web Applications](http://www.krisjordan.com/2008/09/18/joe-stump-scaling-digg-and-other-web-applications/) by Kris Jordan.*   [MemcacheDB](http://memcachedb.org/)*   [Joe Stump's Blog](http://www.joestump.net/)*   [MemcachedRelated Tags on HighScalability](http://highscalability.com/tags/memcached)*   [Caching Related Tags on HighScalability](http://highscalability.com/tags/caching)*   [BigTable](http://highscalability.com/tags/bigtable)*   [SimpleDB](http://highscalability.com/tags/simpledb)*   [Anti-RDBMS: A list of distributed key-value stores](http://highscalability.com/anti-rdbms-list-distributed-key-value-stores)*   [An Unorthodox Approach to Database Design : The Coming of the Shard](http://highscalability.com/unorthodox-approach-database-design-coming-shard)*   [Flickr Architecture](http://highscalability.com/flickr-architecture)*   [Episode 4: Scaling Large Web Sites with Joe Stump, Lead Architect at DIGG](http://deepfriedbytes.com/podcast/deep-fried-bytes-episode-4-scaling-large-web-sites-with-joe-stump-lead-architect-at-digg/)    

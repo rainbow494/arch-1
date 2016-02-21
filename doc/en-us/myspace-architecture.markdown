@@ -1,8 +1,8 @@
 ## [MySpace Architecture](/blog/2009/2/12/myspace-architecture.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, February 12, 2009 at 1:28AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update:**[Presentation: Behind the Scenes at MySpace.com](http://www.infoq.com/news/2009/02/MySpace-Dan-Farino). Dan Farino, Chief Systems Architect at MySpace shares details of some of MySpace's cool internal operations tools.  
 
@@ -47,4 +47,4 @@ Site: http://myspace.com
 
     ## Lessons Learned
 
-    *   You can build big websites using Microsoft tech.*   A cache should have been used from the beginning.*   The cache is a better place to store transitory data that doesn't need to be recorded in a database, such as temporary files created to track a particular user's session on the Web site.*   Built in OS features to detect denial of service attacks can cause inexplicable failures.*   Distribute your data to geographically diverse data centers to handle power failures.*   Consider using virtualized storage/clustered file systems from the start. It allows you to massively parallelize IO access while being able to add disk as needed without any reorganization needed.*   Develop tools that work in a production environment. Can't simulate everything in test environment. The scale and variety of uses APIs are put to can't be simulated in QA during testing. Legitimate users and hackers will run into corner cases that weren't hit in testing, though QA will find most of the problems.*   Throw hardware at problems. Easier than changing their backend software to a new way of doing things. The example is they add a new database server for every million users. It might be more efficient to change their approach to more efficiently use the database hardware, but it's easier just to add servers. For now.</div>
+    *   You can build big websites using Microsoft tech.*   A cache should have been used from the beginning.*   The cache is a better place to store transitory data that doesn't need to be recorded in a database, such as temporary files created to track a particular user's session on the Web site.*   Built in OS features to detect denial of service attacks can cause inexplicable failures.*   Distribute your data to geographically diverse data centers to handle power failures.*   Consider using virtualized storage/clustered file systems from the start. It allows you to massively parallelize IO access while being able to add disk as needed without any reorganization needed.*   Develop tools that work in a production environment. Can't simulate everything in test environment. The scale and variety of uses APIs are put to can't be simulated in QA during testing. Legitimate users and hackers will run into corner cases that weren't hit in testing, though QA will find most of the problems.*   Throw hardware at problems. Easier than changing their backend software to a new way of doing things. The example is they add a new database server for every million users. It might be more efficient to change their approach to more efficiently use the database hardware, but it's easier just to add servers. For now.    

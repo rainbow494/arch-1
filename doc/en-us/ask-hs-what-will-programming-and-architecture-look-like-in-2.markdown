@@ -1,8 +1,8 @@
 ## [Ask HS: What will programming and architecture look like in 2020?](/blog/2012/12/26/ask-hs-what-will-programming-and-architecture-look-like-in-2.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, December 26, 2012 at 9:09AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8222/8301880885_7d035cb88f_n.jpg)
 
@@ -59,7 +59,7 @@ With some frequency there are recommendations that everyone should learn to prog
 
 A lot of hype surrounds chasing the next Big Idea. A goal most people must necessarily fail at achieving. We will instead find value in making Bigger People. The Big Idea is an end without regard to means. Bigger People are the means. If we make Bigger People then the ends will take care of themselves. And everyone can become a Bigger Person.
 
-## **<span style="font-size: 120%;">What do you think the future will look like? </span>**
+## **    What do you think the future will look like?     **
 
 ## **Predictions and Trends from Elsewhere**
 
@@ -74,4 +74,4 @@ A lot of hype surrounds chasing the next Big Idea. A goal most people must neces
 *   Xanny: [I really want to see new age hardware come about. ](http://www.reddit.com/r/programming/comments/15ha26/what_will_programming_and_architecture_look_like)
 *   jfaucett: [the future of "programming" lies in the machine learning and ai subsets within the CS field.](http://news.ycombinator.com/item?id=4973541)
 
-</div>
+    

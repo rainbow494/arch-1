@@ -1,8 +1,8 @@
 ## [GoogleTalk Architecture](/blog/2007/7/23/googletalk-architecture.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, July 23, 2007 at 8:47AM</span></div>
+    
 
-<div class="body">
+    
 
 Google Talk is Google's instant communications service. Interestingly the IM messages aren't the major architectural challenge, handling user presence indications dominate the design. They also have the challenge of handling small low latency messages and integrating with many other systems. How do they do it?
 
@@ -74,4 +74,4 @@ Site: http://www.google.com/talk
     *   Software Development Strategies  
     - Make sure binaries are both backward and forward compatible so you can have old clients work with new code.  
     - Build an experimentation framework to try new features.  
-    - Give engineers access to product machines. Gives end-to-end ownership. This is very different than many companies who have completely separate OP teams in their data centers. Often developers can't touch production machines.</div>
+    - Give engineers access to product machines. Gives end-to-end ownership. This is very different than many companies who have completely separate OP teams in their data centers. Often developers can't touch production machines.    

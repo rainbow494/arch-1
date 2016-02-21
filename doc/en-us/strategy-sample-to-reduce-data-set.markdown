@@ -1,8 +1,8 @@
 ## [Strategy: Sample to Reduce Data Set](/blog/2008/4/29/strategy-sample-to-reduce-data-set.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, April 29, 2008 at 4:01PM</span></div>
+    
 
-<div class="body">
+    
 
 **Update:** [Arjen](http://arjen-lentz.livejournal.com/112554.html) links to video [Supporting Scalable Online Statistical Processing](http://youtube.com/watch?v=KYUay3dCWBc) which shows  
 "rather than doing complete aggregates, use statistical sampling to provide a reasonable estimate (unbiased guess) of the result."  
@@ -15,4 +15,4 @@ But, if you want to know many people bought a car then you could take a sample a
 
 We generally like exact numbers. But if running a report takes an entire day because the data set is so large, then taking a sample is an excellent way to scale.
 
-</div>
+    

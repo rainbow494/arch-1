@@ -1,8 +1,8 @@
 ## [More Troubles with Caching](/blog/2010/9/30/more-troubles-with-caching.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, September 30, 2010 at 2:52PM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4133/5040270820_368ba3a193_m.jpg)
 
@@ -20,4 +20,4 @@ Peter also suggested a few other helpful strategies:
 *   Have a way to increase traffic gradually 
 *   Consider Pre-Priming Caches 
 
-</div>
+    

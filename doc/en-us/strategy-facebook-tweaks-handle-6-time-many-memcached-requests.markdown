@@ -1,8 +1,8 @@
 ## [Strategy: Facebook Tweaks to Handle 6 Time as Many Memcached Requests](/blog/2008/12/13/strategy-facebook-tweaks-to-handle-6-time-as-many-memcached.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Saturday, December 13, 2008 at 5:19AM</span></div>
+    
 
-<div class="body">
+    
 
 Our latest strategy is taken from a [great post by Paul Saab of Facebook](http://www.facebook.com/note.php?note_id=39391378919), detailing how with changes Facebook has made to memcached they have:
 
@@ -18,4 +18,4 @@ Some of the problem Facebook faced and fixed:
 
     A summary of potential strategies:*   **Profile everything**. Problems are always specific. The understanding of the problem must be specific. The fix must be specific.*   **Burn profiling into your regression tests**. Detect when and where performance tanks as a regular part of your build.*   **Use resources in proportion to what grows slowest**. This requires multiplexing, but at least your resource usage is more predictable and bounded.*   **Batch work**. When you have the CPU do all the work you possibly can in the quantum or the whole system grinds to a halt in processing overhead.*   **Do work and maintain resources per task**. Otherwise locking for shared resources takes more and more time when there's less and less time to do the work that needs to be done.*   **Change algorithms**. Sometimes you simply need to do things differently. Tweaking will only get you so far.  
 
-    You can find their changes on [github](http://www.facebook.com/note_redirect.php?note_id=39391378919&h=ad011a56d1398e90d074fe748116d967&url=http%3A%2F%2Fgithub.com%2Ffbmarc%2Ffacebook-memcached), the hub that says "git."</div>
+    You can find their changes on [github](http://www.facebook.com/note_redirect.php?note_id=39391378919&h=ad011a56d1398e90d074fe748116d967&url=http%3A%2F%2Fgithub.com%2Ffbmarc%2Ffacebook-memcached), the hub that says "git."    

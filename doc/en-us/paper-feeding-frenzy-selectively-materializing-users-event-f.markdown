@@ -1,8 +1,8 @@
 ## [Paper: Feeding Frenzy: Selectively Materializing Users’ Event Feeds](/blog/2012/1/17/paper-feeding-frenzy-selectively-materializing-users-event-f.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, January 17, 2012 at 9:33AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7148/6715530229_a401abd485_m.jpg)
 
@@ -28,4 +28,4 @@ Abstract from the paper:
 
 *   [Feeding Frenzy: Selectively Materializing Users’ Event Feeds](http://research.yahoo.com/pub/3203) by Silberstein, A.; Terrace, J.; Cooper, B.F.; Ramakrishnan, R
 
-</div>
+    

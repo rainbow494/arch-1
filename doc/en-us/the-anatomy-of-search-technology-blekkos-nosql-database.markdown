@@ -1,8 +1,8 @@
 ## [The Anatomy of Search Technology: blekko’s NoSQL database](/blog/2012/4/25/the-anatomy-of-search-technology-blekkos-nosql-database.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, April 25, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7130/6966737104_1df7a549d6_m.jpg)
 
@@ -47,7 +47,7 @@ In blekko's datastore, we heavily rely on a construct called combinators to do p
 
 If a bunch of database nodes would like to add 1 to the same cell in the database, without learning what the end value of the cell is, it is possible to combine these operations in a hierarchy within the cluster, such that the final disk operation is a single operation that adds the sum of the initial increments.
 
-<span class="full-image-block ssNonEditable"><span>![](https://lh3.googleusercontent.com/-UzNIHb15W-I/T5gI8AnOmkI/AAAAAAAABx0/iUotly-JleA/s576/image003.png?__SQUARESPACE_CACHEVERSION=1335363921548)</span></span>
+        ![](https://lh3.googleusercontent.com/-UzNIHb15W-I/T5gI8AnOmkI/AAAAAAAABx0/iUotly-JleA/s576/image003.png?__SQUARESPACE_CACHEVERSION=1335363921548)        
 
 The fact that addition is associative and commutative means that we will (eventually) get the same answer in all 3 replicas of this cell. The hierarchy of combinations means that the total number of transactions is dramatically reduced compared to a naive implementation, where every process talks directly to the 3 replicas of the cell, and every addition operation results in 3 immediate transactions.
 
@@ -63,7 +63,7 @@ Another common search engine operation is remembering the most important N items
 
 The TopN combinator can represent the top N URLs in a finite-sized array that fits into a single cell of the database:
 
-<span class="full-image-block ssNonEditable"><span>![](https://lh6.googleusercontent.com/-da1br7Ulo78/T5gLWQKVJ7I/AAAAAAAAByc/8U3qKNJCROQ/s593/Screen+shot+2012-04-25+at+7.30.31+AM.png?__SQUARESPACE_CACHEVERSION=1335364503316)</span></span>
+        ![](https://lh6.googleusercontent.com/-da1br7Ulo78/T5gLWQKVJ7I/AAAAAAAAByc/8U3qKNJCROQ/s593/Screen+shot+2012-04-25+at+7.30.31+AM.png?__SQUARESPACE_CACHEVERSION=1335364503316)        
 
 The TopN combinator can be updated incrementally, as we crawl new webpages, and these updates are inexpensive. It can be read back in a single disk operation, without needing indexing or sorting or reading of any data about URLs not in the top N.  Thanks to the ranks used to decide which of the urls fit into the N most important, it is commutative and associative. And it's re-runnable.
 
@@ -101,4 +101,4 @@ Now that we have nearly 3 years of operational experience with this home-grown 
 
 In the next installment of this series, we'll take a more detailed look at web crawling, and using combinators to implement a crawler. 
 
-</div>
+    

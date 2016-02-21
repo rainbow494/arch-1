@@ -1,8 +1,8 @@
 ## [Scalability Perspectives #1: Nicholas Carr – The Big Switch](/blog/2008/11/11/scalability-perspectives-1-nicholas-carr-the-big-switch.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, November 10, 2008 at 9:45PM</span></div>
+    
 
-<div class="body">_Scalability Perspectives is a series of posts that highlights the ideas that will shape the next decade of IT architecture. Each post is dedicated to a thought leader of the information age and his vision of the future. Be warned though – the journey into the minds and perspectives of these people requires an open mind._  
+    _Scalability Perspectives is a series of posts that highlights the ideas that will shape the next decade of IT architecture. Each post is dedicated to a thought leader of the information age and his vision of the future. Be warned though – the journey into the minds and perspectives of these people requires an open mind._  
 
 ### Nicholas Carr
 
@@ -66,4 +66,4 @@ Good news for [highscalability.com](http://highscalability.com/) :-)
 
 *   [Rough Type: Nicholas Carr's Blog](http://www.roughtype.com/)
 
-</div>
+    

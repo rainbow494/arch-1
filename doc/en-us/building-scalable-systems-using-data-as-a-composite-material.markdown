@@ -1,10 +1,10 @@
 ## [Building Scalable Systems Using Data as a Composite Material](/blog/2009/11/16/building-scalable-systems-using-data-as-a-composite-material.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, November 16, 2009 at 8:50AM</span></div>
+    
 
-<div class="body">
+    
 
-<span class="full-image-float-right ssNonEditable"><span>![](/storage/Gothic.jpg?__SQUARESPACE_CACHEVERSION=1258479627949)</span></span>Think of building websites as engineering [composite materials](http://en.wikipedia.org/wiki/Composite_material). A composite material is when two or more materials are combined to create a third material that does something useful that the components couldn't do on their own. Composites like reinforced concrete have revolutionized design and construction. When building websites we usually bring different component materials together, like creating a composite, to get the features we need rather than building a completely new thing from scratch that does everything we want.
+        ![](/storage/Gothic.jpg?__SQUARESPACE_CACHEVERSION=1258479627949)        Think of building websites as engineering [composite materials](http://en.wikipedia.org/wiki/Composite_material). A composite material is when two or more materials are combined to create a third material that does something useful that the components couldn't do on their own. Composites like reinforced concrete have revolutionized design and construction. When building websites we usually bring different component materials together, like creating a composite, to get the features we need rather than building a completely new thing from scratch that does everything we want.
 
 This approach has been seen as a hack because it leads to inelegancies like data duplication; great gobs of component glue; consistency issues; and messy operations. But what if the the composite approach is really a strength, not a hack, but a messy part of the world that needs to be embraced rather than belittled?
 
@@ -58,4 +58,4 @@ Biology uses a similar strategy of building larger systems from components provi
 
 The point of all this is to counter seeing any one technology as the saviour. About now there's a lot of excitement over [NoSQL](http://blogs.neotechnology.com/emil/2009/11/nosql-scaling-to-size-and-scaling-to-complexity.html) style solutions. There's a rush to toss out the relational database and replace it with one of the many NoSQL options. Replacement, however, may not suffice. Each data model has a weakness. The idea behind creating composite materials is that materials can be combined together to make something better and that this approach to building systems is not a hack, it may in fact be better. 
 
-</div>
+    

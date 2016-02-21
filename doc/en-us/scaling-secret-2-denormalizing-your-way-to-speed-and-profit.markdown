@@ -1,8 +1,8 @@
 ## [Scaling Secret #2: Denormalizing Your Way to Speed and Profit](/blog/2007/8/16/scaling-secret-2-denormalizing-your-way-to-speed-and-profit.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, August 16, 2007 at 11:16AM</span></div>
+    
 
-<div class="body">
+    
 
 Alan Watts once observed how after we accepted Descartes' separation of the mind and body we've been trying to smash them back together again ever since when really they were never separate to begin with.  
 
@@ -46,4 +46,4 @@ Normalization has been standard practice now for decades. But times are changing
 
     ## Related Articles
 
-    *   [Flickr](http://highscalability.com/flickr-architecture) both denormalizes and duplicates data. Horror!*   [Ebay](http://highscalability.com/ebay-architecture) is the most radical in moving almost all functionality out of the database and into the application.*   [Plenty of Fish](http://highscalability.com/plentyoffish-architecture) also advocates denormalization as a key strategy.*   [Hadoop](http://highscalability.com/product-hadoop) - a framework for running applications on large clusters of commodity hardware using a computational paradigm named map/reduce.</div>
+    *   [Flickr](http://highscalability.com/flickr-architecture) both denormalizes and duplicates data. Horror!*   [Ebay](http://highscalability.com/ebay-architecture) is the most radical in moving almost all functionality out of the database and into the application.*   [Plenty of Fish](http://highscalability.com/plentyoffish-architecture) also advocates denormalization as a key strategy.*   [Hadoop](http://highscalability.com/product-hadoop) - a framework for running applications on large clusters of commodity hardware using a computational paradigm named map/reduce.    

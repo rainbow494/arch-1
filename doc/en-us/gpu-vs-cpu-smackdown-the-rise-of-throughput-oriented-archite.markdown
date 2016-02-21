@@ -1,8 +1,8 @@
 ## [GPU vs CPU Smackdown : The Rise of Throughput-Oriented Architectures](/blog/2010/12/3/gpu-vs-cpu-smackdown-the-rise-of-throughput-oriented-archite.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, December 3, 2010 at 9:20AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.static.flickr.com/5003/5229458672_e4f25a895d_o.jpg)
 
@@ -21,7 +21,7 @@ To get a feeling of the speed involved read [BillMcColl's comment](http://www.al
 Having both CPU and GPU clusters seems a bit strange. Why have two? Dr. Vogels does a good job explaining the reasoning:
 
 *   GPUs work best on problem sets that are ideally solved using massive fine-grained parallelism, using for example at least 5,000 - 10,000 threads. To be able build applications that exploit this level of parallelism one needs to enter a very specific mindset of kernels, kernel functions, threads-blocks, grids of threads-blocks, mapping to hierarchical memory, etc. Configuring kernel execution is not a trivial exercise and requires GPU device specific knowledge. There are a number of techniques that every programmer has grown up with, such as branching, that are not available, or should be avoided on GPUs if one wants to truly exploit its power.
-*   <div id="_mcePaste">Modern CPUs strongly favor lower latency of operations with clock cycles in the nanoseconds and we have built general purpose software architectures that can exploit these low latencies very well.  Now that our ability to generate higher and higher clock rates has stalled and CPU architectural improvements have shifted focus towards multiple cores, we see that it is becoming harder to efficiently use these computer systems. One trade-off area where our general purpose CPUs were not performing well was that of massive fine grain parallelism. Graphics processing is one such area with huge computational requirements, but where each of the tasks is relatively small and often a set of operations are performed on data in the form of a pipeline. **The throughput of this pipeline is more important than the latency of the individual operations**. Because of its focus on latency, the generic CPU yielded rather inefficient system for graphics processing. This lead to the birth of the Graphics Processing Unit (GPU) which was focused on providing a very fine grained parallel model, with processing organized in multiple stages, where the data would flow through.  The model of a GPU is that of task parallelism describing the different stages in the pipeline, as well as data parallelism within each stage, resulting in a highly efficient, high throughput computation architecture.</div>
+*       Modern CPUs strongly favor lower latency of operations with clock cycles in the nanoseconds and we have built general purpose software architectures that can exploit these low latencies very well.  Now that our ability to generate higher and higher clock rates has stalled and CPU architectural improvements have shifted focus towards multiple cores, we see that it is becoming harder to efficiently use these computer systems. One trade-off area where our general purpose CPUs were not performing well was that of massive fine grain parallelism. Graphics processing is one such area with huge computational requirements, but where each of the tasks is relatively small and often a set of operations are performed on data in the form of a pipeline. **The throughput of this pipeline is more important than the latency of the individual operations**. Because of its focus on latency, the generic CPU yielded rather inefficient system for graphics processing. This lead to the birth of the Graphics Processing Unit (GPU) which was focused on providing a very fine grained parallel model, with processing organized in multiple stages, where the data would flow through.  The model of a GPU is that of task parallelism describing the different stages in the pipeline, as well as data parallelism within each stage, resulting in a highly efficient, high throughput computation architecture.    
 
 The ACM has a timely article about using GPUs for high performance computing ACM: [Understanding Throughput-Oriented Architecture](http://cacm.acm.org/magazines/2010/11/100622-understanding-throughput-oriented-architectures/fulltext) by Michael Garland and David Kirk:
 
@@ -33,7 +33,7 @@ First, there's another exotic tool in the toolbox to solve difficult problems in
 
 Second, for a surprisingly large number of problems there is now a ready supply of GPU supercomputeryness. With supply there can be demand and not that many people know how to program GPUs. Programming GPUs is a specialized skill. GPUs are a very different kind of device. It's nothing like using your typical threading library, eventing infrastructure, and message passing library. Now that GPU processors are so readily available we'll need GPU programmers to make use of all that power. Something to think about as a potential career direction.
 
-In retrospect the [title of this article seems to imply](http://news.ycombinator.com/item?id=1969100) it's either CPU or GPU and that there will be one winner. That wasn't the intent. The core idea here is to say here's something many people aren't familiar with, it's now easily and publicly available, here are some more sources to learn from, and maybe you can use these new capabilities to your advantage in your project. But that's kind of boring :-) Clearly <span>GPUs aren't general purpose processors</span>. The context here is more what your average developer now has easy access to in the cloud, not what they can do with a lot of expertise and special equipment in their own server room.
+In retrospect the [title of this article seems to imply](http://news.ycombinator.com/item?id=1969100) it's either CPU or GPU and that there will be one winner. That wasn't the intent. The core idea here is to say here's something many people aren't familiar with, it's now easily and publicly available, here are some more sources to learn from, and maybe you can use these new capabilities to your advantage in your project. But that's kind of boring :-) Clearly     GPUs aren't general purpose processors    . The context here is more what your average developer now has easy access to in the cloud, not what they can do with a lot of expertise and special equipment in their own server room.
 
 ## **Related Articles**
 
@@ -41,4 +41,4 @@ In retrospect the [title of this article seems to imply](http://news.ycombinator
 *   [HPC in the Cloud with GPGPUs](http://perspectives.mvdirona.com/2010/11/15/HPCInTheCloudWithGPGPUs.aspx) by James Hamilton
 *   [Designing Efficient Sorting Algorithms for Manycore GPUs](http://mgarland.org/files/papers/gpusort-ipdps09.pdf)
 
-</div>
+    

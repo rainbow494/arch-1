@@ -1,8 +1,8 @@
 ## [Product: dbShards - Share Nothing. Shard Everything.](/blog/2010/6/23/product-dbshards-share-nothing-shard-everything.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, June 23, 2010 at 7:37AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://www.codefutures.com/img/dbshards-shardit.gif)
 
@@ -16,4 +16,4 @@ You may find dbShards interesting if you are looking to keep SQL, need scale ou
 
 [Click to read more ...](/blog/2010/6/23/product-dbshards-share-nothing-shard-everything.html)
 
-</div>
+    

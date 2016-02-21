@@ -1,8 +1,8 @@
 ## [PlentyOfFish Update - 6 Billion Pageviews and 32 Billion Images a Month](/blog/2011/12/27/plentyoffish-update-6-billion-pageviews-and-32-billion-image.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, December 27, 2011 at 11:26AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7158/6583212437_6520e459ee_m.jpg)
 
@@ -23,4 +23,4 @@ Markus has a short [update](http://plentyoffish.wordpress.com/2011/12/27/32-bil
 *   [On HackerNews](http://news.ycombinator.com/item?id=3400450)
 *   [32 Billion images a month](http://plentyoffish.wordpress.com/2011/12/27/32-billion-images-a-month/) by Markus Frind.
 
-</div>
+    

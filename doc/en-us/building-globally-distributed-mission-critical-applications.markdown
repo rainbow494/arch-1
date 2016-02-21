@@ -1,8 +1,8 @@
 ## [Building Globally Distributed, Mission Critical Applications: Lessons From the Trenches Part 1](/blog/2015/8/31/building-globally-distributed-mission-critical-applications.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 31, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm1.staticflickr.com/673/21015670451_fb1075527a_m.jpg)
 
@@ -10,55 +10,55 @@ _This is Part 1 of a guest post by [Kris Beevers](https://www.linkedin.com/pub/k
 
 Every tech company thinks about it: the unavoidable – in fact, enviable – challenge of scaling its applications and systems as the business grows. **How can you think about scaling from the beginning, and put your company on good footing, without optimizing prematurely?** What are some of the key challenges worth thinking about now, before they bite you later on? When you’re building mission critical technology, these are fundamental questions. And when you’re building a distributed infrastructure, whether for reliability or performance or both, they’re hard questions to answer.
 
-<span>Putting the right architecture and processes in place will enable your systems and company to withstand the common hiccups distributed, high traffic applications face. This enables you to stay ahead of scaling constraints, manage inevitable network and system failures, stay calm and debug production issues in real-time, and grow your company and product successfully.</span>
+    Putting the right architecture and processes in place will enable your systems and company to withstand the common hiccups distributed, high traffic applications face. This enables you to stay ahead of scaling constraints, manage inevitable network and system failures, stay calm and debug production issues in real-time, and grow your company and product successfully.    
 
-## <span>Who is this guy?</span>
+##     Who is this guy?    
 
-<span>I’ve been building globally distributed, large scale applications for a long time.  Way back in the first dot-com boom, I bailed on college classes for a year and built backend infrastructure for a file-sharing startup which grew to millions of users – until the RIAA’s lawyers caught wind and sent us packing back to our dorm rooms. The business went bust, but I was hooked on scale.</span>
+    I’ve been building globally distributed, large scale applications for a long time.  Way back in the first dot-com boom, I bailed on college classes for a year and built backend infrastructure for a file-sharing startup which grew to millions of users – until the RIAA’s lawyers caught wind and sent us packing back to our dorm rooms. The business went bust, but I was hooked on scale.    
 
-<span>More recently, at Voxel, an internet infrastructure provider that was acquired by Internap in 2011, I built global internet infrastructure used by many large web companies – we built globally distributed public cloud, bare metal as-a-service, content delivery networks, and much more. We learned a lot of scaling lessons, and we learned them the hard way.</span>
+    More recently, at Voxel, an internet infrastructure provider that was acquired by Internap in 2011, I built global internet infrastructure used by many large web companies – we built globally distributed public cloud, bare metal as-a-service, content delivery networks, and much more. We learned a lot of scaling lessons, and we learned them the hard way.    
 
-<span>Now, at NSONE, we’ve built a next-gen intelligent DNS and traffic management platform, which today services some of the largest properties on the Internet, including many companies who are themselves mission critical service providers.  This is truly globally distributed, mission critical infrastructure, and the lessons we learned at Voxel have served us well – and been reinforced time and again – as we’ve built and scaled the NSONE platform.</span>
+    Now, at NSONE, we’ve built a next-gen intelligent DNS and traffic management platform, which today services some of the largest properties on the Internet, including many companies who are themselves mission critical service providers.  This is truly globally distributed, mission critical infrastructure, and the lessons we learned at Voxel have served us well – and been reinforced time and again – as we’ve built and scaled the NSONE platform.    
 
-<span>It’s time to share some of what we’ve learned, and with luck, maybe you can apply some of these lessons in your own applications – instead of learning them the hard way!</span>
+    It’s time to share some of what we’ve learned, and with luck, maybe you can apply some of these lessons in your own applications – instead of learning them the hard way!    
 
-## <span>Architecture first</span>
+##     Architecture first    
 
-<span>When you’re writing code, it’s always tempting to focus on making it tight and super efficient, minimizing memory and CPU consumption, maximizing the “depth” of your software. Stop it.</span>
+    When you’re writing code, it’s always tempting to focus on making it tight and super efficient, minimizing memory and CPU consumption, maximizing the “depth” of your software. Stop it.    
 
 In a modern, heavily distributed system, your scaling constraints are hardly driven by the vertical “depth” of your systems and optimization of code within specific roles – especially early on. Instead, they’re about managing the communication between interacting systems, and the horizontal scalability of each role in the architecture. **Don’t optimize your code, optimize your architecture.**
 
-[<span>Microservices</span>](https://en.wikipedia.org/wiki/Microservices) are a good idea. They decouple independent roles in your application and enable you to scale each role or layer independently. **Plan to scale roles horizontally before you worry about depth. Servers are fast and cheap, and they’re always getting faster and cheaper. Developer time isn’t.** So enable yourself to scale horizontally whenever you can, and worry about code optimization only when you find the places it’s really going to matter.
+[    Microservices    ](https://en.wikipedia.org/wiki/Microservices) are a good idea. They decouple independent roles in your application and enable you to scale each role or layer independently. **Plan to scale roles horizontally before you worry about depth. Servers are fast and cheap, and they’re always getting faster and cheaper. Developer time isn’t.** So enable yourself to scale horizontally whenever you can, and worry about code optimization only when you find the places it’s really going to matter.
 
-<span>Take the time to think about your architecture before you write a line of code.  Draw diagrams, think about communication and data constraints, and have a plan.</span>
+    Take the time to think about your architecture before you write a line of code.  Draw diagrams, think about communication and data constraints, and have a plan.    
 
-## <span>Think about your systems in terms of roles</span>
+##     Think about your systems in terms of roles    
 
 A microservices architecture more or less implies that you’re building an application composed of decoupled systems, each addressing a specific problem or acting in a particular role. But it bears repeating that you should think about your architecture this way. Not just b**ecause it decouples scaling constraints, but because it impacts the way you develop your code, deploy your systems, and grow your infrastructure**.
 
-<span>An application composed of decoupled, inter-communicating roles can live on a single server as collocated processes, VMs, or containers. This enables you to deploy your application in local development environments, small staging systems, and large production infrastructure.</span>
+    An application composed of decoupled, inter-communicating roles can live on a single server as collocated processes, VMs, or containers. This enables you to deploy your application in local development environments, small staging systems, and large production infrastructure.    
 
 **As you grow your application’s production infrastructure and scale with traffic and users, you can peel off roles that need dedicated systems or clusters of systems.**  But in your MVP, you can minimize costs and still be prepared to scale by collocating production roles. Our earliest alpha releases at NSONE were hosted on a single unicasted t2.small instance in AWS. Today, with essentially the same set of roles and subsystems with which we started (and many more we’ve added since), our production infrastructure spans hundreds of servers and nearly 30 different production facilities across every continent on the globe (except Antarctica – sorry guys). As we grew, we peeled key subsystems off to their own servers or clusters and added breadth and redundancy where we needed it.
 
-## <span>Communication across a globally distributed system is hard</span>
+##     Communication across a globally distributed system is hard    
 
-<span>It’s one thing to build and scale an application composed of subsystems collocated initially on a single server, and eventually, in a single datacenter. It’s another thing entirely to solve the challenge of multi-datacenter application delivery. The moment your subsystems need to communicate outside the LAN, the reliability of that communication is drastically diminished and you need to plan carefully not just for server failures, but for communication failures.</span>
+    It’s one thing to build and scale an application composed of subsystems collocated initially on a single server, and eventually, in a single datacenter. It’s another thing entirely to solve the challenge of multi-datacenter application delivery. The moment your subsystems need to communicate outside the LAN, the reliability of that communication is drastically diminished and you need to plan carefully not just for server failures, but for communication failures.    
 
-<span>Connectivity over the internet is fragile and unpredictable. At NSONE, we designed our architecture with the assumption that our edge DNS delivery facilities will lose connectivity with our core facilities frequently. This is especially the case in difficult markets like Africa, Brazil, and India. But we also needed to ensure rapid re-convergence when communication is restored. Careful consideration of command and control messaging and message queuing is key.</span>
+    Connectivity over the internet is fragile and unpredictable. At NSONE, we designed our architecture with the assumption that our edge DNS delivery facilities will lose connectivity with our core facilities frequently. This is especially the case in difficult markets like Africa, Brazil, and India. But we also needed to ensure rapid re-convergence when communication is restored. Careful consideration of command and control messaging and message queuing is key.    
 
 It’s also important to think about inter-facility communication differently for different communication patterns. **If you’re pushing latency sensitive critical command and control messages to one or more facilities, you’ll probably want to look at robust message queueing systems** (for example, we make heavy use of RabbitMQ). If you’re shipping non-critical telemetry back to a dashboarding system, you might **consider something lighter weight but less robust to network splits**. If you’re pushing persistent application data that needs to be closely synchronized across all your delivery locations, **modern databases with robust WAN replication are worth a look**. Use the right tool for the right job when it comes to moving bits between facilities.
 
-## <span>Consistent hashing is a killer tool for synchronization & sharding</span>
+##     Consistent hashing is a killer tool for synchronization & sharding    
 
-<span>It’s time to think about horizontal scaling. You’ve got a bunch of subsystems all communicating with each other both locally and across the Internet. Requests are flying into your systems and need to get distributed across backend nodes that can service them effectively, and you need a way to maximize “request locality”. All your servers in a particular role can’t be expected to service any request, maybe because the requisite data can’t all fit in RAM on a single box, or you need to stripe storage across servers effectively. How do you figure out which node in a horizontal layer should handle a request or task?</span>
+    It’s time to think about horizontal scaling. You’ve got a bunch of subsystems all communicating with each other both locally and across the Internet. Requests are flying into your systems and need to get distributed across backend nodes that can service them effectively, and you need a way to maximize “request locality”. All your servers in a particular role can’t be expected to service any request, maybe because the requisite data can’t all fit in RAM on a single box, or you need to stripe storage across servers effectively. How do you figure out which node in a horizontal layer should handle a request or task?    
 
-<span>Naively, you could preconfigure your request routing: maybe you’ve got a request id, and all request ids starting with A-M get striped to one server, and starting with N-Z to another server. That might work, but is painful to manage and scale.  You could hash the request id to a server: something like</span> <span>hash(id) mod N</span><span>, where N is the number of servers you’re striping across. That works well, until you add a new server and all your requests re-stripe, destroying data or cache locality and crushing your systems. You could implement some kind of complicated negotiation for distributed “agreement” – your various subsystems and servers communicating with each other to decide which requests should go where – and this is an approach that I’ve seen too often. It’s complex, and things will break.</span>
+    Naively, you could preconfigure your request routing: maybe you’ve got a request id, and all request ids starting with A-M get striped to one server, and starting with N-Z to another server. That might work, but is painful to manage and scale.  You could hash the request id to a server: something like         hash(id) mod N        , where N is the number of servers you’re striping across. That works well, until you add a new server and all your requests re-stripe, destroying data or cache locality and crushing your systems. You could implement some kind of complicated negotiation for distributed “agreement” – your various subsystems and servers communicating with each other to decide which requests should go where – and this is an approach that I’ve seen too often. It’s complex, and things will break.    
 
-[<span>Consistent hashing</span>](https://en.wikipedia.org/wiki/Consistent_hashing) <span>is a powerful way for distributed systems to agree on something like a mapping of requests to nodes, without needing to actually communicate. It’s easy to implement, and it scales gracefully with your infrastructure, minimizing re-striping as you add or remove nodes in a subsystem. In a complex architecture with many interacting roles, strategic use of consistent hashing to stripe messages and requests across sets of nodes can be a huge win.</span>
+[    Consistent hashing    ](https://en.wikipedia.org/wiki/Consistent_hashing)     is a powerful way for distributed systems to agree on something like a mapping of requests to nodes, without needing to actually communicate. It’s easy to implement, and it scales gracefully with your infrastructure, minimizing re-striping as you add or remove nodes in a subsystem. In a complex architecture with many interacting roles, strategic use of consistent hashing to stripe messages and requests across sets of nodes can be a huge win.    
 
 At NSONE, **we use consistent hashing across our stack in a host of ways, like routing DNS queries to specific CPU cores to maximize cache locality, negotiating tasking of our monitoring nodes without explicit communication, sharding of high volume data feeds across layers of aggregation nodes, and much more**.
 
-## <span>Measure and monitor everything</span>
+##     Measure and monitor everything    
 
 This is such a common piece of advice it almost seems cliché, but it always bears repeating. **What you don’t measure, you can’t understand**. Even when you’re far from encountering serious scaling challenges, building a deep understanding of the behavior of your systems and their interactions is critical to your knowledge of the scaling constraints you’ll face as you grow.
 
@@ -78,4 +78,4 @@ _Here's [Part 2](http://highscalability.com/blog/2015/9/2/building-globally-dist
 
 *   [On Hacker News](https://news.ycombinator.com/item?id=10147420)
 
-</div>
+    

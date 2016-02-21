@@ -1,8 +1,8 @@
 ## [Playfish's Social Gaming Architecture - 50 Million Monthly Users and Growing](/blog/2010/9/21/playfishs-social-gaming-architecture-50-million-monthly-user.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, September 21, 2010 at 10:30AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4127/5012099704_99903398f3_o.png) Ten million players a day and over fifty million players a month interact socially with friends using [Playfish](http://playfish.com) games on social platforms like The Facebook, MySpace, and the iPhone. Playfish was an early innovator in the fastest growing segment of the game industry: [social gaming](http://radoff.com/blog/2010/05/24/history-social-games/), which is the love child between casual gaming and social networking. Playfish was also an early adopter of the Amazon cloud, running their system entirely on 100s of cloud servers. Playfish finds itself at the nexus of some hot trends (which may by why EA bought them for [$300 million](http://mashable.com/2009/11/09/ea-acquires-playfish-2/) and they think a [$1 billion game](http://venturebeat.com/2010/04/20/ea-playfish-president-the-billion-dollar-social-game-is-achievable/) is possible): building games on social networks, build applications in the cloud, mobile gaming, leveraging data driven design to continuously evolve and improve systems, agile development and deployment, and [selling virtual good](http://blogs.forbes.com/velocity/2010/02/23/eas-playfish-big-real-world-sales-in-virtual-goods-game/) as a business model.
 
@@ -224,4 +224,4 @@ Playfish is looking for people. For career opportunities please see their [Jobs 
 10.  [Asynchronous Games](http://www.cs.vu.nl/~eliens/media/pattern-asynchronousgames.html).
 11.  [ASYNCHRONOUS MULTIPLAY: FUTURES FOR CASUAL MULTIPLAYER EXPERIENCE](http://www.bogost.com/writing/asynchronous_multiplay_futures.shtml) by Ian Bogost.
 
-</div>
+    

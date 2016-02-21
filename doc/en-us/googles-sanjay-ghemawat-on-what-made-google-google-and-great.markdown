@@ -1,8 +1,8 @@
 ## [Google's Sanjay Ghemawat on What Made Google Google and Great Big Data Career Advice](/blog/2013/10/21/googles-sanjay-ghemawat-on-what-made-google-google-and-great.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, October 21, 2013 at 9:00AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.staticflickr.com/5513/10329762265_b6a33a91be_m.jpg) In a [People of ACM](http://www.acm.org/membership/acm-bulletin-archive/poa-ghemawat) interview with [Sanjay Ghemawat](https://plus.google.com/105332691637769400620/posts), a Google Fellow in the Systems Infrastructure Group (MapReduce, BigTable, Spanner, GFS, etc), talks about a few interesting aspects of Google's culture.
 
@@ -40,4 +40,4 @@ A [maker culture](http://en.wikipedia.org/wiki/Maker_culture) ethic if ever ther
 *   [Google Pro Tip: Use Back-Of-The-Envelope-Calculations To Choose The Best Design](http://highscalability.com/blog/2011/1/26/google-pro-tip-use-back-of-the-envelope-calculations-to-choo.html)
 *   [More Numbers Every Awesome Programmer Must Know](http://highscalability.com/blog/2013/1/15/more-numbers-every-awesome-programmer-must-know.html)
 
-</div>
+    

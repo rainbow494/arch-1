@@ -1,8 +1,8 @@
 ## [The Clever Ways Chrome Hides Latency by Anticipating Your Every Need](/blog/2012/6/18/the-clever-ways-chrome-hides-latency-by-anticipating-your-ev.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, June 18, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7214/7167038895_1e80fc8d0f_m.jpg)
 
@@ -30,4 +30,4 @@ These obviously sophisticated tactics may not apply directly to your application
 
 For more examples of good anticipatory design take a look at: [3 Secrets To Lightning Fast Mobile Design At Instagram](http://highscalability.com/blog/2012/6/7/3-secrets-to-lightning-fast-mobile-design-at-instagram.html).
 
-</div>
+    

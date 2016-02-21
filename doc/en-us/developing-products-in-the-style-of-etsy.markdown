@@ -1,8 +1,8 @@
 ## [Developing Products in the Style of Etsy](/blog/2015/6/1/developing-products-in-the-style-of-etsy.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, June 1, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm9.staticflickr.com/8812/18245410766_7c1ea15a16_m.jpg)
 
@@ -47,9 +47,9 @@ Here are two competing views on the article from an informative discussion of th
 > 
 > I do know is, don't use "engineers are monkies" rules of thumb-- just hire human engineers.
 
-<div>[wdewind](https://news.ycombinator.com/item?id=9291630):</div>
+    [wdewind](https://news.ycombinator.com/item?id=9291630):    
 
-<div>
+    
 
 > Having come from Etsy and witnessed the success of this type of thinking first hand, I think you missed the point of the article and I think you are using a tiny engineering organization (4 people) in your thinking, instead of a medium to large one (120+ engineers).
 > 
@@ -65,6 +65,6 @@ The comparison of the Etsy style of product development with the Netflix style c
 
 Shipping is the common thread, but the path to shipping is very different. And since both Etsy and Netflix ship, we are arguing about style, not substance. 
 
-</div>
+    
 
-</div>
+    

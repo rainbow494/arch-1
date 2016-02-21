@@ -1,10 +1,10 @@
 ## [10 Common Server Setups For Your Web Application](/blog/2014/9/10/10-common-server-setups-for-your-web-application.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, September 10, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
-<span class="full-image-float-right ssNonEditable"><span>![](https://farm4.staticflickr.com/3854/15183294732_d929eb9489_m.jpg?__SQUARESPACE_CACHEVERSION=1410218596923)</span></span>
+        ![](https://farm4.staticflickr.com/3854/15183294732_d929eb9489_m.jpg?__SQUARESPACE_CACHEVERSION=1410218596923)        
 
 If you need a good overview of different ways to setup your web service then Mitchell Anicas has written a good article for you: [5 Common Server Setups For Your Web Application](https://www.digitalocean.com/community/tutorials/5-common-server-setups-for-your-web-application).
 
@@ -21,4 +21,4 @@ We've even included a few additional possibilities at no extra cost.
 9.  **Platform as a Service ([PaaS](http://en.wikipedia.org/wiki/Platform_as_a_service))**. Let someone else run most of your backend, but you get more flexibility than you have with BaaS to build your own application. Google App Engine, Heroku, and Salesforce are popular examples, but there are many more.
 10.  **Let Somone Else Do it**. Do you really need servers at all? If you have a store then a service like Etsy saves a lot of work for very little cost. Does someone already do what you need done? Can you leverage it?
 
-</div>
+    

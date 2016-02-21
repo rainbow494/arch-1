@@ -1,8 +1,8 @@
 ## [Instagram Improved their App's Performance. Here's How.](/blog/2014/9/29/instagram-improved-their-apps-performance-heres-how.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, September 29, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7011/6464246201_bddb8c499e_o.jpg)
 
@@ -127,4 +127,4 @@ How did flat design make all this possible? 
 *   [Instagram Architecture Update: What’s New With Instagram?](http://highscalability.com/blog/2012/4/16/instagram-architecture-update-whats-new-with-instagram.html)
 *   [Can someone articulate Google's material design vs Apple's flat design?](http://www.quora.com/Can-someone-articulate-Googles-material-design-vs-Apples-flat-design)
 
-</div>
+    

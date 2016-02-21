@@ -1,8 +1,8 @@
 ## [An Epic TripAdvisor Update: Why Not Run on the Cloud? The Grand Experiment.](/blog/2012/10/2/an-epic-tripadvisor-update-why-not-run-on-the-cloud-the-gran.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, October 2, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm3.static.flickr.com/2740/5860936154_c02d47fbe6_o.jpg)
 
@@ -26,11 +26,11 @@ A few months later, as our great experiment in the cloud comes to a close, **the
 
 ## Project Goals
 
-*   <span>Build an entire site using EC2 and demonstrate that we can take production level traffic</span>
-*   <span>Build a cost model for such an operation</span>
-*   <span>Identify architectural changes that can help reduce cost and increase scalability</span>
-*   <span>Use this move to a new platform to find possible improvements in our current architecture</span><span>  
-    </span>
+*       Build an entire site using EC2 and demonstrate that we can take production level traffic    
+*       Build a cost model for such an operation    
+*       Identify architectural changes that can help reduce cost and increase scalability    
+*       Use this move to a new platform to find possible improvements in our current architecture          
+        
 
 ## Architecture
 
@@ -112,19 +112,19 @@ As a side note, each Amazon AWS account starts with a 20 instance cap, and we ne
 
 **Lost Data** - EC2 provides a nice level of abstraction for data storage through EBS volumes. To extend  the storage of our database instances, we simply created 1 TB EBS volumes for each, attached them to the instance, and mounted them using the “mkfs” and “mount” Unix commands.  
 
-<span>We ran into a few problems using the EBS volumes. When we were remounting one EBS volume to another instance, the cloud somehow dropped all of our restored members data when transferring one EBS volume to another instance, and we had to spend half a day restoring the database on that instance. Also, we hit problems when trying to resize EBS volumes from snapshots, using commands like “tunefs” and “resize2fs”. The instances that used these resized volumes ran into instance reachability errors a day later, and we had to run “e2fsck” for several hours to clean them up.</span>  
+    We ran into a few problems using the EBS volumes. When we were remounting one EBS volume to another instance, the cloud somehow dropped all of our restored members data when transferring one EBS volume to another instance, and we had to spend half a day restoring the database on that instance. Also, we hit problems when trying to resize EBS volumes from snapshots, using commands like “tunefs” and “resize2fs”. The instances that used these resized volumes ran into instance reachability errors a day later, and we had to run “e2fsck” for several hours to clean them up.      
 
-<span>Of course, we could have made some critical mistake in mounting and resizing processes, and so are not overly concerned about this behavior from EC2\. We’ve found that, generally, the availability of AMIs and EBS snapshots helps us to spin up new database instances quickly. For example, if we wanted to split the data on dbs001x into two machines, we need only create an image of dbs001x, launch a new instance from that, and redirect traffic appropriately. Obviously, this capability is limited only to read-only databases, and creating an image of a 1 TB device is often an overnight job. We are still looking into other ways to improve database redundancy and scalability. Our current live-site uses heartbeat and DRDB for recovery purposes, and we’d be interested in seeing how that can be applied to EC2\.</span>
+    Of course, we could have made some critical mistake in mounting and resizing processes, and so are not overly concerned about this behavior from EC2\. We’ve found that, generally, the availability of AMIs and EBS snapshots helps us to spin up new database instances quickly. For example, if we wanted to split the data on dbs001x into two machines, we need only create an image of dbs001x, launch a new instance from that, and redirect traffic appropriately. Obviously, this capability is limited only to read-only databases, and creating an image of a 1 TB device is often an overnight job. We are still looking into other ways to improve database redundancy and scalability. Our current live-site uses heartbeat and DRDB for recovery purposes, and we’d be interested in seeing how that can be applied to EC2\.    
 
-**Unequal instances** - At one point, we tried to benchmark the CPU performance of our front and back end servers, all of which were m2.xlarge size. We timed a simple math operation, 2^2^20, using the command <span>bc</span> <span>and found that the times fell into two different groups, with statistical significance. We ran cpuid on the tested instances, and faster group was running on dual 2.40 GHz processors, while the slower group was running on dual 2.66 GHz processors. While this was not a major problem in our site’s functionality, it made it harder to determine what computing power was at our disposal.</span>  
+**Unequal instances** - At one point, we tried to benchmark the CPU performance of our front and back end servers, all of which were m2.xlarge size. We timed a simple math operation, 2^2^20, using the command     bc         and found that the times fell into two different groups, with statistical significance. We ran cpuid on the tested instances, and faster group was running on dual 2.40 GHz processors, while the slower group was running on dual 2.66 GHz processors. While this was not a major problem in our site’s functionality, it made it harder to determine what computing power was at our disposal.      
 
-<span>Also, about 10% of our front end machines would fail to bounce properly, even though they were all the same size and same AMI. Again, this may have been an unforeseen problem with our configuration, rather than Amazon’s.</span>
+    Also, about 10% of our front end machines would fail to bounce properly, even though they were all the same size and same AMI. Again, this may have been an unforeseen problem with our configuration, rather than Amazon’s.    
 
 **Negative Times** - Normally low times are a cause for celebration. But when we analyzed some recent timing logs, we found that some minimum service call times were negative. These timing statistics were calculated with calls to Java.currentTimeMillis(). We’re still investigating this, and would be interested in trying to replicate the problem with a simple Java app.
 
 **Steal Cycles** - When we run m2.xlarge instances, we expected to have steal cycles of 1 or 2%. However, we experience jitters of up to 7-8% for a minute or two when the front ends are under load. Our Amazon contact told us that this was just due to the load on each instance.  
 
-<span>Also, we ran an experiment on an m1.small instance where we took over its CPU usage with a math calculation. Running top showed that 98% of this was used for the math, and 2% was stolen. However, on Cloudwatch, Amazon’s monitoring service, the instance appeared to be running at 98% CPU utilization, rather than the full 100%. This can cause some problems with larger steal cycles, because it would be impossible to determine if an instance is maxed out due to steal cycles, or if it is “underutilized”. In general, we would’ve liked to see more guarantees on CPU performance.</span>
+    Also, we ran an experiment on an m1.small instance where we took over its CPU usage with a math calculation. Running top showed that 98% of this was used for the math, and 2% was stolen. However, on Cloudwatch, Amazon’s monitoring service, the instance appeared to be running at 98% CPU utilization, rather than the full 100%. This can cause some problems with larger steal cycles, because it would be impossible to determine if an instance is maxed out due to steal cycles, or if it is “underutilized”. In general, we would’ve liked to see more guarantees on CPU performance.    
 
 **Multi-cast** - Is not supported. We use JGroups and it depends on this to work. We were told to use either vCider, or vpncubed, to simulate multi-cast. vCider would require that we upgrade to CentOS 6, and vpncubed has a long setup time. This was lower on our priority list, but we would like to explore these options more in the future.
 
@@ -138,19 +138,19 @@ Our Amazon contact told us that ELBs may require pre-warming. We suspect that th
 
 There were a few issues with the original setup of the site. We couldn’t use Amazon’s ELBs on the front end because our front end instances were hidden in the private VPC. We discovered that some companies fixed this by keeping front end instances in the public EC2 network, but this architecture would nullify our VPC setup.  
 
-<span>We used a load test system that another engineer had earlier developed, which takes an archived log of real live-site traffic, and sends it at a certain reqs/min. Initially, we directed this traffic at the</span> <span>stage01x</span> <span>instance. However, by the time we reached 20k reqs/min, it became clear that we needed dedicated instances to handle traffic. We named these instances</span> <span>lod01x</span> <span>through</span> <span>lod04x</span><span>, which would be responsible for sending HTTP traffic to the six front end ELBs.</span>
+    We used a load test system that another engineer had earlier developed, which takes an archived log of real live-site traffic, and sends it at a certain reqs/min. Initially, we directed this traffic at the         stage01x         instance. However, by the time we reached 20k reqs/min, it became clear that we needed dedicated instances to handle traffic. We named these instances         lod01x         through         lod04x        , which would be responsible for sending HTTP traffic to the six front end ELBs.    
 
 **VPC Bandwidth Issue** - In our earlier stages of testing, we had instances outside of the VPC sending traffic into the VPC. However, we found that no matter how we scaled the site, the load test would be capped at 50k reqs/minute. With an average page size of 18KB, it appeared that the VPC was only accepting traffic at 100Mbps. Our Amazon contact reassured us that there was no such limit, but we kept all of the load testing within the VPC to be sure.
 
-**NGinx Issues** - In our earlier stages, we also installed each <span>lod</span> <span>instance with an NGinx load balancer. However, this later turned out to be a bottleneck for our testing, because the small instances weren’t capable of handling so many “open files”. We scraped this, and sent traffic directly to the load balancers, without the initial NGinx load balancing.</span>  
+**NGinx Issues** - In our earlier stages, we also installed each     lod         instance with an NGinx load balancer. However, this later turned out to be a bottleneck for our testing, because the small instances weren’t capable of handling so many “open files”. We scraped this, and sent traffic directly to the load balancers, without the initial NGinx load balancing.      
 
-<span>Here is the configuration of our site on our way up to 700k request/min.  We were not able to maintain the same user experience on our way to the higher request rates.  The request response statistics were deteriorating at higher requests rate, and we will discuss in more details later.</span>
+    Here is the configuration of our site on our way up to 700k request/min.  We were not able to maintain the same user experience on our way to the higher request rates.  The request response statistics were deteriorating at higher requests rate, and we will discuss in more details later.    
 
 ![](http://farm9.staticflickr.com/8458/8045287203_1e43a88e06_z.jpg)
 
-**Live-site Comparison** - Our live-site has 80 front ends and 52 back ends, each with 24 cores. This adds up to 3168 cores. At our highest AWS configuration, with 270 front ends and 70 back ends at 2 cores each, we only have 680 cores. This led to problems with garbage collection on the back ends, which we’ll discuss later. <span> </span>  
+**Live-site Comparison** - Our live-site has 80 front ends and 52 back ends, each with 24 cores. This adds up to 3168 cores. At our highest AWS configuration, with 270 front ends and 70 back ends at 2 cores each, we only have 680 cores. This led to problems with garbage collection on the back ends, which we’ll discuss later.            
 
-<span>Our Amazon memcache is performing fairly well. We benchmarked via the memslap utility that comes with libmemcached-tools, and found that our original 12 Amazon memcache instances performed at about 80-90% of our memcache cluster’s capacity using 12 moderate physical servers.</span>
+    Our Amazon memcache is performing fairly well. We benchmarked via the memslap utility that comes with libmemcached-tools, and found that our original 12 Amazon memcache instances performed at about 80-90% of our memcache cluster’s capacity using 12 moderate physical servers.    
 
 ![](http://farm9.staticflickr.com/8040/8044982214_89e08bb958_z.jpg)  
 ![](http://farm9.staticflickr.com/8313/8044967347_781e1b76ae_z.jpg)
@@ -169,7 +169,7 @@ These two charts show the timing statistics for the Hotel Reviews servlet as we 
 
 At the lower load, these latency numbers are comparable to our live site, as we scaled up to 150k requests per minute latency increased significantly. Timing for our main servlets, like Hotel Reviews or Typeahead, was almost 10x slower than that of our live-site, which operates at about twice this request level, and has been tested at over four times this request level before showing increased latency.  
 
-<span>The ELB is part of the issue, as mentioned before. However, we suspect that the underlying reason is that garbage collection overhead exceeds the amount of CPU that we have for the back end servers. With only two cores, our m2.xlarge instances does not have enough computational power to keep up with GC from high request rate, and this is insufficient for the high application throughput and low application latency. To fix this, we would most likely need to double the number of back ends, or use more powerful instances with more cores. In either case, the focus would be on bolstering the services that receive the higher request rates and perform more work.</span>
+    The ELB is part of the issue, as mentioned before. However, we suspect that the underlying reason is that garbage collection overhead exceeds the amount of CPU that we have for the back end servers. With only two cores, our m2.xlarge instances does not have enough computational power to keep up with GC from high request rate, and this is insufficient for the high application throughput and low application latency. To fix this, we would most likely need to double the number of back ends, or use more powerful instances with more cores. In either case, the focus would be on bolstering the services that receive the higher request rates and perform more work.    
 
 ## Cost
 
@@ -181,35 +181,35 @@ The payment for EC2 consists of three major parts: instance usage, EBS usage, an
 
 Initial setup of each of our colocated datacenter is about $2.2M, plus about $300K every year for upgrade and expansion.  The Capex is about $1M annually if we assume the initial setup cost is amortized over three years.  The Opex, including space, power and bandwidth, is about $300K annually.  Combined cost for each datacenter is about $1.3M per year.  We have over 200 machines in each data center to support our operations.  Each machine typically costs $7K.  
 
-<span>If we spent the $1.3M per year on a complete EC2 site instead, we could afford the following architecture, provided that we used one-year reserved instances.</span> 
+    If we spent the $1.3M per year on a complete EC2 site instead, we could afford the following architecture, provided that we used one-year reserved instances.     
 
-*   <span>550 Front and back ends</span>
-*   <span>64 Memcache</span>
-*   <span>10 Database</span>
+*       550 Front and back ends    
+*       64 Memcache    
+*       10 Database    
 
-<span>Costs $1,486,756.96</span>  
+    Costs $1,486,756.96      
 
-<span>This means that we could add more than 60% capacity our current configuration (340 front and backends, 32 memcache, 5 databases).</span>  
+    This means that we could add more than 60% capacity our current configuration (340 front and backends, 32 memcache, 5 databases).      
 
-<span>If we used the three-year reserved instance contract, then such a configuration would cost $0.88M per year. If we wanted to spend $3.9M over three years, we could afford such an architecture:</span>
+    If we used the three-year reserved instance contract, then such a configuration would cost $0.88M per year. If we wanted to spend $3.9M over three years, we could afford such an architecture:    
 
-*   <span>880 Front and back ends</span>
-*   <span>64 Memcache</span>
-*   <span>20 Database</span>
+*       880 Front and back ends    
+*       64 Memcache    
+*       20 Database    
 
 It is interesting to note that even with this number, we are only getting 1760 server cores (2 on each machine), while our live-site runs on 3500 cores. **Nevertheless, we are confident that with such resources would allow us to properly address the garbage collection and latency issues that we are currently encountering at production-level traffic**.
 
 ### General Cost Reduction
 
-*   <span>Reserved instances - We calculated that using reserved instances on just a 1-year contract would cut our total annual costs in half.   We also don’t need to reserve all instances for peak traffic and leverage either on-demand or lower utilization reserved instances to reduce our overall cost.</span>
-*   <span>Size instances only to their necessary capacity. Right now, this is done by just launching different proportions of back ends.</span>
-*   <span>Placement groups - get better performance between instance groups we know will always be there.</span>
+*       Reserved instances - We calculated that using reserved instances on just a 1-year contract would cut our total annual costs in half.   We also don’t need to reserve all instances for peak traffic and leverage either on-demand or lower utilization reserved instances to reduce our overall cost.    
+*       Size instances only to their necessary capacity. Right now, this is done by just launching different proportions of back ends.    
+*       Placement groups - get better performance between instance groups we know will always be there.    
 
 ## Points of Failure
 
-*   <span>Having some type of “BigIP-like” instance at the front. What do we do when this goes down?</span>
-*   <span>Our load balancers are managed by Amazon, what happens when they go down? The references to a full DNS name rather than an IP address is promising, but this is generally unknown.</span>
-*   <span>Auto-scaling helps with front and back end pools, ensuring that they all stay at a certain number. However, restoring memcache to its hit rate would be time-consuming, and we would need to rely on replicated hot standbys for databases.</span>
+*       Having some type of “BigIP-like” instance at the front. What do we do when this goes down?    
+*       Our load balancers are managed by Amazon, what happens when they go down? The references to a full DNS name rather than an IP address is promising, but this is generally unknown.    
+*       Auto-scaling helps with front and back end pools, ensuring that they all stay at a certain number. However, restoring memcache to its hit rate would be time-consuming, and we would need to rely on replicated hot standbys for databases.    
 
 ## Best Practices
 
@@ -227,4 +227,4 @@ It is interesting to note that even with this number, we are only getting 1760 s
 *   **ELBs are also a good way to monitor the instance status**, even if they aren’t actually used (we had them lying around after we had changed our architecture). Configure the healthchecks/thresholds appropriately.
 *   Lots of frustrating networking problems can be solved by **paying closer attention to the security group settings**.
 
-</div>
+    

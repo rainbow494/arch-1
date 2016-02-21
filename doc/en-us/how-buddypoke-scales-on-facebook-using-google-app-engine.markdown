@@ -1,8 +1,8 @@
 ## [How BuddyPoke Scales on Facebook Using Google App Engine](/blog/2010/1/22/how-buddypoke-scales-on-facebook-using-google-app-engine.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, January 22, 2010 at 7:47AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm4.static.flickr.com/3128/2391360922_ea7903b510.jpg) How do you scale a viral Facebook app that has skyrocketed to a mind boggling 65 million installs (the population of France)? That's the fortunate problem [BuddyPoke](http://www.buddypoke.com/) co-founder Dave Westwood has and he talked about his solution at Wednesday's [Facebook Meetup](http://www.meetup.com/facebookmeetup/calendar/12179578/). Slides for the complete talk are [here](http://www.slideshare.net/cschalk/google-app-engine-and-social-apps). For those not quite sure what BuddyPoke is, it's a social network application that lets users show their mood, hug, kiss, and poke their friends through on-line avatars.
 
@@ -43,4 +43,4 @@ On the surface BuddyPoke seems simple, but under hood there's some intricate str
 3.  [Google App Engine - A Second Look](http://highscalability.com/blog/2009/2/21/google-appengine-a-second-look.html)
 4.  [BuddyPoke on Google App Engine](http://www.youtube.com/watch?v=0zz-oSrWfj0)
 
-</div>
+    

@@ -1,16 +1,16 @@
 ## [Facebook and Site Failures Caused by Complex, Weakly Interacting, Layered Systems](/blog/2010/9/30/facebook-and-site-failures-caused-by-complex-weakly-interact.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, September 30, 2010 at 6:37AM</span></div>
+    
 
-<div class="body">
+    
 
-<span class="full-image-block ssNonEditable"><span>![](http://farm5.static.flickr.com/4090/5039142475_34c82ab04d_m.jpg)</span></span>
+        ![](http://farm5.static.flickr.com/4090/5039142475_34c82ab04d_m.jpg)        
 
 Facebook has been so reliable that when a site outage does occur it's a definite learning opportunity. Fortunately for us we can learn something because in [More Details on Today's Outage](http://www.facebook.com/notes/facebook-engineering/more-details-on-todays-outage/431441338919), Facebook's [Robert Johnson](http://www.facebook.com/profile.php?id=3501774) gave a pretty candid explanation of what caused a rare 2.5 hour period of down time for Facebook. It wasn't a simple problem. The root causes were feedback loops and transient spikes caused ultimately by the complexity of weakly interacting layers in modern systems. You know, the kind everyone is building these days. Problems like this are notoriously hard to fix and finding a real solution may send Facebook back to the whiteboard. There's a technical debt that must be paid. 
 
 The outline and my interpretation (reading between the lines) of what happened is:
 
-*   Remember that Facebook [caches everything](http://highscalability.com/blog/category/facebook). They have <span id="main"><span id="search">28 _terabytes_ of _memcached_ data on 800 servers. The database is the system of record, but memory is where the action is. So when a problem happens that involves the caching layer, it can and did take down the system.</span></span>
+*   Remember that Facebook [caches everything](http://highscalability.com/blog/category/facebook). They have         28 _terabytes_ of _memcached_ data on 800 servers. The database is the system of record, but memory is where the action is. So when a problem happens that involves the caching layer, it can and did take down the system.        
 *   Facebook has an **automated system** that checks for invalid configuration values in the cache and replaces them with updated values from the persistent store. We are not told what the configuration property was, but since configuration information is usually important centralized data that is widely shared by key subsystems, this helps explain why there would be an automated background check in the first place.
 *   A change was made to the **persistent copy** of the configuration value which then propagated to the cache.
 *   Production code thought this new value was invalid, which caused every client to delete the key from the cache and then try to **get a valid value from the database**. Hundreds of thousand of queries a second, that would have normally been served at the caching layer, went to the database, which crushed it utterly. This is an example of the [Dog Pile Problem](http://highscalability.com/blog/2009/8/7/strategy-break-up-the-memcache-dog-pile.html). It's also an example of the age old reason why having RAID is not the same as having a backup. On a RAID system when an invalid value is written or deleted, it's written everywhere, and only valid data can be restored from a backup.
@@ -30,4 +30,4 @@ Based on nothing but pure conjecture, what are some of the key issues here for s
 
 There are a lot of really interesting system design issues here. To what degree you want to handle these type of issues depends a lot on your SLAs, resources, and so on. But as systems grow in complexity there's a lot more infrastructure code that needs to be written to keep it all working together without killing each other. Much like a family :-)
 
-</div>
+    

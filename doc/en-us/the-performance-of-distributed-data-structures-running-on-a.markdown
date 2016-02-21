@@ -1,8 +1,8 @@
 ## [The Performance of Distributed Data-Structures Running on a "Cache-Coherent" In-Memory Data Grid](/blog/2012/8/20/the-performance-of-distributed-data-structures-running-on-a.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 20, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8301/7818735602_1e46a484c4_m.jpg)
 
@@ -105,4 +105,4 @@ Also, we have computed the _amortized_ cost of the insert operation, but, as we'
 *   [Paralell Universe Blog](http://blog.paralleluniverse.co/)
 *   [Parallel Universe open sources a novel in-memory data grid On Hacker News](http://news.ycombinator.com/item?id=4224637) 
 
-</div>
+    

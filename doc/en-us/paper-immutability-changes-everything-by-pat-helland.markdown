@@ -1,8 +1,8 @@
 ## [Paper: Immutability Changes Everything by Pat Helland](/blog/2015/1/26/paper-immutability-changes-everything-by-pat-helland.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, January 26, 2015 at 9:07AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm8.staticflickr.com/7286/16185984428_7c4253e309_m.jpg)
 
@@ -45,4 +45,4 @@ If that's of interest, then you'll like the paper.
 *   [irmin](http://openmirage.org/blog/introducing-irmin) - a distributed database that follows the same design principles as Git
 *   "I am the Lord, I change not; therefore ye sons of Jacob are not consumed."—Malachi 3:6
 
-</div>
+    

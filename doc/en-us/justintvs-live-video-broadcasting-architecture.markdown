@@ -1,8 +1,8 @@
 ## [Justin.tv's Live Video Broadcasting Architecture](/blog/2010/3/16/justintvs-live-video-broadcasting-architecture.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, March 16, 2010 at 8:55AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://s.justin.tv/jtv_user_pictures/hosted_images/dark-small.png)
 
@@ -109,8 +109,8 @@ Google is perhaps the perfect example of the change to real-time. When Google wa
     1.  Add geographical information.
     2.  Lookup a Twice cache key or a MemcacheDB key.
     3.  Automatically cache data like the user name without having to touching the application server.
-7.  Twice is custom made to fit their needs and environment. If starting a new Rails app one engineer thought using <span class="comment"><span style="color: #000000;">Varnish might be a better idea.  
-    </span></span>
+7.  Twice is custom made to fit their needs and environment. If starting a new Rails app one engineer thought using         Varnish might be a better idea.  
+            
 8.  Web traffic is served out of one datacenter. The other datacenters are there to serve video.
 9.  They have added monitoring to everything. Every click, page view, and action is measured to help improve service. Log messages from the front-end, web call, or from an application server are converted to syslog messages and forwarded through syslog-ngto a single log host. They scan through the data, load it into MongoDB, and run queries on MongoDB.
 10.  Their API is served from the same application servers as the website. It uses the same caching engine so scaling the API is accomplished by scaling the website.
@@ -136,7 +136,7 @@ Google is perhaps the perfect example of the change to real-time. When Google wa
 6.  Git is used for source code control. They like that you can write a branch, a 20 or 30 line feature, and it's merged in with everyone elses branches that are currently on production. Things are very separate and modular. You can easily pull back certain features as apposed to Subversion where you have to pull back entire commits and anyone who committed some non offending code is out of luck.
 7.  Every few days everyone tries to merge into the master branch in order to eliminate conflicts.
 8.  They release many small features: between 5 and 15 deployments a day to production! Range form 1 line bug fixes to a larger experiment.
-9.  Database schema upgrades are done by hand. <span class="comment"><span style="color: #000000;">A well-hacked version of ActiveRecord migrations works across their replicated databases. There are a number of different staging environments in which tests are conducted before deploying changes to production.</span></span>
+9.  Database schema upgrades are done by hand.         A well-hacked version of ActiveRecord migrations works across their replicated databases. There are a number of different staging environments in which tests are conducted before deploying changes to production.        
 10.  Configuration file changes are handled by Puppet.
 11.  Every feature is basically an experiment. They are tracking virality and retention on every major change they make. It's an experiment because they are trying to figure out which changes actually improve the metrics they care about.
 
@@ -175,8 +175,8 @@ Their goal is grow by an order of magnitude. To accomplish this they plan on mak
 1.  [YouTube Architecture](http://highscalability.com/youtube-architecture).
 2.  [Hot New Trend: Linking Clouds Through Cheap IP VPNs Instead of Private Lines](http://highscalability.com/blog/2009/6/30/hot-new-trend-linking-clouds-through-cheap-ip-vpns-instead-o.html)
 3.  [Peering at Data Center Knowledge](http://www.datacenterknowledge.com/archives/category/peering/)
-4.  [Internet Peering Knowledge Center](http://drpeering.net/a/Home.html) <span class="style" style="line-height: 17px;">- Really cool diagrams and papers on peering.  
-    </span>
-5.  <span class="style" style="line-height: 17px;">[Life at a Startup](http://abstractnonsense.com/life-at-a-startup/) by Bill Moorier.</span>
+4.  [Internet Peering Knowledge Center](http://drpeering.net/a/Home.html)     - Really cool diagrams and papers on peering.  
+        
+5.      [Life at a Startup](http://abstractnonsense.com/life-at-a-startup/) by Bill Moorier.    
 
-</div>
+    

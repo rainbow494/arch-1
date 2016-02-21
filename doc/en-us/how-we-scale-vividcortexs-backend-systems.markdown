@@ -1,8 +1,8 @@
 ## [How We Scale VividCortex's Backend Systems](/blog/2015/3/30/how-we-scale-vividcortexs-backend-systems.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, March 30, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm8.staticflickr.com/7585/16354200273_9d2bdc7058_o.png)
 
@@ -335,4 +335,4 @@ I'm continually impressed by the amazing team at VividCortex, who solve hard pro
 *   [Go database/sql tutorial](http://go-database-sql.org/)
 *   [VividCortex/dbcontrol](https://github.com/VividCortex/dbcontrol) - A wrapper around Go's database/sql package that provides connection pool limits 
 
-</div>
+    

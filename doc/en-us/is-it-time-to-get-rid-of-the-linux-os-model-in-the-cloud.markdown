@@ -1,14 +1,14 @@
 ## [Is it time to get rid of the Linux OS model in the cloud?](/blog/2012/1/19/is-it-time-to-get-rid-of-the-linux-os-model-in-the-cloud.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, January 19, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm2.static.flickr.com/1080/5099537351_26be8c6042.jpg)
 
 You program in a dynamic language, that runs on a JVM, that runs on a OS designed [40 years ago](http://en.wikipedia.org/wiki/Unix) for a completely different purpose, that runs on virtualized hardware. Does this make sense? We've talked about this idea before in [Machine VM + Cloud API - Rewriting The Cloud From Scratch](http://highscalability.com/blog/2010/10/21/machine-vm-cloud-api-rewriting-the-cloud-from-scratch.html), where the vision is to treat _cloud virtual hardware as a compiler target, and converting high-level language source code directly into kernels that run on it._
 
-As new technologies evolve the friction created by our old tool chains and architecture models becomes ever more obvious. Take, for example, what a [team](http://nvsl.ucsd.edu/moneta/) at <span>UCSD</span> is releasing: a [phase-change memory prototype](http://ucsdnews.ucsd.edu/newsrel/science/06-02-11data_frontier.asp)  - _a_ _solid state storage device that provides performance thousands of times faster than a conventional hard drive and up to seven times faster than current state-of-the-art solid-state drives (SSDs)._ However, PCM has access latencies several times slower than DRAM.
+As new technologies evolve the friction created by our old tool chains and architecture models becomes ever more obvious. Take, for example, what a [team](http://nvsl.ucsd.edu/moneta/) at     UCSD     is releasing: a [phase-change memory prototype](http://ucsdnews.ucsd.edu/newsrel/science/06-02-11data_frontier.asp)  - _a_ _solid state storage device that provides performance thousands of times faster than a conventional hard drive and up to seven times faster than current state-of-the-art solid-state drives (SSDs)._ However, PCM has access latencies several times slower than DRAM.
 
 This technology has obvious mind blowing implications, but an interesting not so obvious implication is what it says about our current standard datacenter stack. Gary Athens has written an excellent article, [Revamping storage performance](http://dl.acm.org/citation.cfm?id=2063183), spelling it all out in more detail:
 
@@ -57,4 +57,4 @@ You mission, should you choose to accept it, is to rethink everything. Do we nee
 *   [On Reddit](http://www.reddit.com/r/programming/comments/ophd3/is_it_time_to_get_rid_of_the_linux_os_model_in/)
 *   [Mirage](http://www.openmirage.org/) - an exokernel for constructing secure, high-performance network applications across a variety of cloud computing and mobile platforms. 
 
-</div>
+    

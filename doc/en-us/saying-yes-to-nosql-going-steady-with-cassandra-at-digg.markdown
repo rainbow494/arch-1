@@ -1,8 +1,8 @@
 ## [Saying Yes to NoSQL; Going Steady with Cassandra at Digg](/blog/2010/3/10/saying-yes-to-nosql-going-steady-with-cassandra-at-digg.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, March 10, 2010 at 4:42PM</span></div>
+    
 
-<div class="body">
+    
 
 The last six months have been exciting for Digg's engineering team. We're working on a soup-to-nuts rewrite. Not only are we rewriting all our application code, but we're also rolling out a new client and server architecture. And if that doesn't sound like a big enough challenge, we're replacing most of our infrastructure components and moving away from LAMP.
 
@@ -16,6 +16,6 @@ Relational database technology can be a blunt instrument and we're motivated to 
 
 As our system grows, it's important for us to span multiple data centers for redundancy and network performance and to add capacity or replace failed nodes with no downtime. We plan to continue using commodity hardware, and to continue assuming that it will fail regularly. All of this is increasingly difficult with MySQL.
 
-<div id="_mcePaste">[Read the Full Digg Blog](http://about.digg.com/node/564)</div>
+    [Read the Full Digg Blog](http://about.digg.com/node/564)    
 
-</div>
+    

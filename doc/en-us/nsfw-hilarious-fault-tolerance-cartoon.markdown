@@ -1,8 +1,8 @@
 ## [NSFW: Hilarious Fault-Tolerance Cartoon ](/blog/2009/7/31/nsfw-hilarious-fault-tolerance-cartoon.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, July 31, 2009 at 11:58AM</span></div>
+    
 
-<div class="body">
+    
 
 **Another fun one...** [Should I be Worried About Scaling?](http://shouldibeworriedaboutscaling.info/)  
 
@@ -18,4 +18,4 @@ Lest you think this just an old guard reactionary sentiment, Boxed Ice chose [Mo
 
 ## Related Articles
 
-*   [It Must be Crap on Relational Dabases Week](http://highscalability.com/it-must-be-crap-relational-dabases-week)*   [No to SQL? Anti-database movement gains steam](http://highscalability.com/no-sql-anti-database-movement-gains-steam-my-take)*   [Anti-RDBMS: A list of distributed key-value stores](http://highscalability.com/anti-rdbms-list-distributed-key-value-stores)</div>
+*   [It Must be Crap on Relational Dabases Week](http://highscalability.com/it-must-be-crap-relational-dabases-week)*   [No to SQL? Anti-database movement gains steam](http://highscalability.com/no-sql-anti-database-movement-gains-steam-my-take)*   [Anti-RDBMS: A list of distributed key-value stores](http://highscalability.com/anti-rdbms-list-distributed-key-value-stores)    

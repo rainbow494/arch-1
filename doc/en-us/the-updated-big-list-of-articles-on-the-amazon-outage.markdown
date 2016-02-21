@@ -1,8 +1,8 @@
 ## [The Updated Big List of Articles on the Amazon Outage](/blog/2011/5/2/the-updated-big-list-of-articles-on-the-amazon-outage.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, May 2, 2011 at 9:25AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.static.flickr.com/5190/5643644140_c73394b6ea_m.jpg)
 
@@ -44,33 +44,33 @@ A fascinating peek into the experiences of people who were dealing with the outa
 *   [Amazon Web Services Discussion Forum](https://forums.aws.amazon.com/forum.jspa?forumID=30&start=0) 
 *   [Cost-effective backup plan from now on?](https://forums.aws.amazon.com/thread.jspa?threadID=65860&tstart=0)
 *   [Life of our patients is at stake - I am desperately asking you to contact](https://forums.aws.amazon.com/thread.jspa?threadID=65649&tstart=0)
-*   [<span></span>Why did the EBS, RDS, Cloudformation, Cloudwatch and Beanstalk all fail?](https://forums.aws.amazon.com/thread.jspa?threadID=65897&tstart=0)
+*   [        Why did the EBS, RDS, Cloudformation, Cloudwatch and Beanstalk all fail?](https://forums.aws.amazon.com/thread.jspa?threadID=65897&tstart=0)
 *   [Moved all resources off of AWS](https://forums.aws.amazon.com/thread.jspa?threadID=65896&tstart=0)
 *   [Any success stories?](https://forums.aws.amazon.com/forum.jspa?forumID=30&start=300)
 *   [Is the mass exodus from East going to cause demand problems in the West?](https://forums.aws.amazon.com/thread.jspa?threadID=65784&tstart=25)
-*   [<span></span>Finally back online after about 71 hours](https://forums.aws.amazon.com/thread.jspa?threadID=65828&tstart=25)
+*   [        Finally back online after about 71 hours](https://forums.aws.amazon.com/thread.jspa?threadID=65828&tstart=25)
 *   [Amazon EC2 features vs windows azure](https://forums.aws.amazon.com/thread.jspa?threadID=65834&tstart=25)
-*   [<span></span>Aren't Availability Zones supposed to be "insulated from failures"?](https://forums.aws.amazon.com/thread.jspa?threadID=65221&tstart=25)
+*   [        Aren't Availability Zones supposed to be "insulated from failures"?](https://forums.aws.amazon.com/thread.jspa?threadID=65221&tstart=25)
 *   [What a lot of people aren't realizing about the downtime:](https://forums.aws.amazon.com/thread.jspa?threadID=65850&tstart=0)
 *   [ELB CNAME](https://forums.aws.amazon.com/thread.jspa?threadID=32044&tstart=50&start=150)
-*   [<span></span>Availability Zones were used in a misleading manner](https://forums.aws.amazon.com/thread.jspa?threadID=65457&tstart=425)
+*   [        Availability Zones were used in a misleading manner](https://forums.aws.amazon.com/thread.jspa?threadID=65457&tstart=425)
 *   [Tip: How to recover your instance](https://forums.aws.amazon.com/thread.jspa?threadID=65371&tstart=325)
 *   [Crying in Forum Gets Results, Silver-level AWS Premium Support Doesn't](https://forums.aws.amazon.com/thread.jspa?threadID=65617&tstart=325)
-*   [<span></span>Well-worth reading: "design for failure" cloud deployment strategy](https://forums.aws.amazon.com/thread.jspa?threadID=65780&tstart=25)
+*   [        Well-worth reading: "design for failure" cloud deployment strategy](https://forums.aws.amazon.com/thread.jspa?threadID=65780&tstart=25)
 *   [New best practice](https://forums.aws.amazon.com/thread.jspa?threadID=65749&tstart=25)
 *   [Don't bother with Premium Support](https://forums.aws.amazon.com/thread.jspa?threadID=65136&tstart=475)
 *   [Best practices for multi-region redundancy](https://forums.aws.amazon.com/thread.jspa?threadID=65185&tstart=450)
-*   <span></span>"[Postmortum](https://forums.aws.amazon.com/thread.jspa?threadID=65450&tstart=175)"
+*           "[Postmortum](https://forums.aws.amazon.com/thread.jspa?threadID=65450&tstart=175)"
 *   [Learning from this case](https://forums.aws.amazon.com/thread.jspa?threadID=65513&tstart=125)
-*   [<span></span>Amazon, still no instructions what to do?](https://forums.aws.amazon.com/thread.jspa?threadID=65388&tstart=525)
+*   [        Amazon, still no instructions what to do?](https://forums.aws.amazon.com/thread.jspa?threadID=65388&tstart=525)
 *   [Anyone else prepared for an all-nighter?](https://forums.aws.amazon.com/thread.jspa?threadID=65338&tstart=550)
 *   [Is Jeff Bezos going to give a public statement?](https://forums.aws.amazon.com/thread.jspa?threadID=65811&tstart=100)
-*   [<span></span>Rackspace, GoGrid, StormonDemand and Others](https://forums.aws.amazon.com/thread.jspa?threadID=65857&tstart=100)
+*   [        Rackspace, GoGrid, StormonDemand and Others](https://forums.aws.amazon.com/thread.jspa?threadID=65857&tstart=100)
 *   [Jeff Barr, Werner Vogels and other AWS persons - where have you been???](https://forums.aws.amazon.com/thread.jspa?threadID=65815&tstart=150)
 *   [After you guys fix EBS do I have do anything on my side?](https://forums.aws.amazon.com/thread.jspa?threadID=65168&tstart=175)
-*   [<span></span>Need Help!!! Lives of people and billions in revenue are at risk now!!!](https://forums.aws.amazon.com/thread.jspa?threadID=65765&tstart=225)
+*   [        Need Help!!! Lives of people and billions in revenue are at risk now!!!](https://forums.aws.amazon.com/thread.jspa?threadID=65765&tstart=225)
 *   [I've Got A Suspicion](https://forums.aws.amazon.com/thread.jspa?threadID=65678&tstart=275)
-*   [<span></span>Farewell EC2, Farewell](https://forums.aws.amazon.com/thread.jspa?threadID=65585&tstart=325)
+*   [        Farewell EC2, Farewell](https://forums.aws.amazon.com/thread.jspa?threadID=65585&tstart=325)
 
 There were also many many instances of support and help in the log. 
 
@@ -129,4 +129,4 @@ There were also many many instances of support and help in the log. 
 *   [An unofficial EC2 outage postmortem - the sky is not falling](http://cloudharmony.com/b/2011/04/unofficial-ec2-outage-postmortem-sky-is.html) from CloudHarmony
 *   [Cloudfail: Lessons Learned from AWS Outage](http://www.appdynamics.com/blog/2011/04/25/critical-applications-in-the-cloud/) by Jyoti Bansal 
 
-</div>
+    

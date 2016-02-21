@@ -1,8 +1,8 @@
 ## [How Shopify Scales to Handle Flash Sales from Kanye West and the Superbowl](/blog/2015/11/2/how-shopify-scales-to-handle-flash-sales-from-kanye-west-and.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, November 2, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://c2.staticflickr.com/6/5701/22686657356_45fa0ef0d2_o.jpg)
 
@@ -98,6 +98,6 @@ As it stands, they cannot failover an entire data center without temporarily tak
 
 ## Actions to Take
 
-<div id="_mcePaste">My goal with this article is to give you easily-digestible knowledge you can take action on. What action(s) can you take now? Well, you probably want to avoid sharding, so can you cache more? You may not be able to over-provision due to cost, but what about checking out the resiliency matrix? Even if you don't have the resources to pull this off right now, building one of these matrices or even just thinking about it can be helpful.</div>
+    My goal with this article is to give you easily-digestible knowledge you can take action on. What action(s) can you take now? Well, you probably want to avoid sharding, so can you cache more? You may not be able to over-provision due to cost, but what about checking out the resiliency matrix? Even if you don't have the resources to pull this off right now, building one of these matrices or even just thinking about it can be helpful.    
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [MocoSpace Architecture - 3 Billion Mobile Page Views a Month](/blog/2010/5/3/mocospace-architecture-3-billion-mobile-page-views-a-month.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, May 3, 2010 at 7:23AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://img.mocospace.com.edgesuite.net/html/images/logo_moco-alpha.png)
 
@@ -73,11 +73,11 @@ MocoSpace is a mobile social network, with 12 million members and 3 billion page
 10.  **Soft delete whenever possible**. Mark data for later deletion, rather than deleting immediately. Deletion can be costly, so queue up for after hours, plus if someone makes a mistake and deletes something they shouldn¿t have it¿s easy to rollback.
 11.  **N+1 design**. Never less than two of anything.
 
-I'd really like to thank Jamie for taking the time write this experience report. It's a really useful contribution for others to learn from. If you would like to share the architecture for your fablous system, please [<span>contact</span> me](../../contact/) and we'll get started.
+I'd really like to thank Jamie for taking the time write this experience report. It's a really useful contribution for others to learn from. If you would like to share the architecture for your fablous system, please [    contact     me](../../contact/) and we'll get started.
 
 ## Related Articles
 
 *   [Mobile Social Network MocoSpace Now 11 Million Members Strong](http://techcrunch.com/2010/03/17/mobile-social-network-mocospace-now-11-million-members-strong/ "Mobile Social Network MocoSpace Now 11 Million  Members Strong")
-*   [<span class="articleTitle">How MocoSpace Works</span>](http://computer.howstuffworks.com/internet/social-networking/networks/mocospace.htm)
+*   [    How MocoSpace Works    ](http://computer.howstuffworks.com/internet/social-networking/networks/mocospace.htm)
 
-</div>
+    

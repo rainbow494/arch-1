@@ -1,8 +1,8 @@
 ## [WAN Accelerate Your Way to Lightening Fast Transfers Between Data Centers](/blog/2007/10/10/wan-accelerate-your-way-to-lightening-fast-transfers-between.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, October 10, 2007 at 3:18PM</span></div>
+    
 
-<div class="body">How do you keep in sync a crescendo of data between data centers over a slow WAN? That's the question [Alberto](http://highscalability.com/sync-data-all-servers) posted a few weeks ago. Normally I'm not into all boy bands, but I was frustrated there wasn't a really good answer for his problem. It occurred to me later a WAN accelerator might help turn his slow WAN link into more of a LAN, so the overhead of copying files across the WAN wouldn't be so limiting. Many might not consider a WAN accelerator in this situation, but since my friend Damon Ennis works at the WAN accelerator vendor [Silver Peak](http://www.silver-peak.com), I thought I would ask him if their product would help. Not surprisingly his answer is yes! Potentially a lot, depending on the nature of your data. Here's a no BS overview of their product:  
+    How do you keep in sync a crescendo of data between data centers over a slow WAN? That's the question [Alberto](http://highscalability.com/sync-data-all-servers) posted a few weeks ago. Normally I'm not into all boy bands, but I was frustrated there wasn't a really good answer for his problem. It occurred to me later a WAN accelerator might help turn his slow WAN link into more of a LAN, so the overhead of copying files across the WAN wouldn't be so limiting. Many might not consider a WAN accelerator in this situation, but since my friend Damon Ennis works at the WAN accelerator vendor [Silver Peak](http://www.silver-peak.com), I thought I would ask him if their product would help. Not surprisingly his answer is yes! Potentially a lot, depending on the nature of your data. Here's a no BS overview of their product:  
 
 *   What is it?  
     - Scalable WAN Accelerator from Silver Peak (http://www.silver-peak.com)  
@@ -55,4 +55,4 @@
     *   Slow applications. Apps that could pump data at slow WAN speeds may not be able drive a faster WAN. You may need to take a look at your software architecture or storage network.  
     *   Underpowered server links. Accelerate a 2mbps link to a 20mbps link and your network infrastructure on the data center side may not be able to handle the truth.  
 
-    Obviously the cost of the solution means its targeted more for moderate sized companies or a service provider offering their customers a quality upsell. But if you are stuck wondering how the heck you are going to squeeze more bits between your data centers, it may be just the magic bullet you need.</div>
+    Obviously the cost of the solution means its targeted more for moderate sized companies or a service provider offering their customers a quality upsell. But if you are stuck wondering how the heck you are going to squeeze more bits between your data centers, it may be just the magic bullet you need.    

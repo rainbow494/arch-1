@@ -1,8 +1,8 @@
 ## [It Must be Crap on Relational Dabases Week ](/blog/2009/7/2/it-must-be-crap-on-relational-dabases-week.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, July 2, 2009 at 3:28AM</span></div>
+    
 
-<div class="body">
+    
 
 It's hard to be a relational database lately. After years of faithful service everywhere you look the world is turning against you:
 
@@ -12,4 +12,4 @@ It's hard to be a relational database lately. After years of faithful service ev
 
     But it's in the air. It's in the code. A revolution is coming. To what? That is what is not yet clear.  
 
-    See also:*   [NoSQL?](http://www.dbms2.com/2009/07/01/nosql-sql-alternative/) by Curt Monash.*   [CouchDB](http://jchrisa.net/drl/_design/sofa/_show/post/NoSQL-Slides) says BigTable clones are too complex.*   [Yahoo! Developer Network Blog](http://developer.yahoo.net/blog/archives/2009/06/nosql_meetup.html). Very nice summary of the different talks.</div>
+    See also:*   [NoSQL?](http://www.dbms2.com/2009/07/01/nosql-sql-alternative/) by Curt Monash.*   [CouchDB](http://jchrisa.net/drl/_design/sofa/_show/post/NoSQL-Slides) says BigTable clones are too complex.*   [Yahoo! Developer Network Blog](http://developer.yahoo.net/blog/archives/2009/06/nosql_meetup.html). Very nice summary of the different talks.    

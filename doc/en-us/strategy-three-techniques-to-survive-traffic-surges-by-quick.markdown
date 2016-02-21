@@ -1,8 +1,8 @@
 ## [Strategy: Three Techniques to Survive Traffic Surges by Quickly Scaling Your Site](/blog/2014/3/19/strategy-three-techniques-to-survive-traffic-surges-by-quick.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, March 19, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm4.staticflickr.com/3755/13254531933_f62ee7387c_m.jpg)
 
@@ -35,13 +35,13 @@ Some other ideas from comments made on the post: 
 
 ## Related Articles
 
-<div>
+    
 
 *   [Surviving a traffic surge: Three techniques to scale your site fast](http://matt.might.net/articles/how-to-emergency-web-scaling/) by Matthew Might
 *   [On Reddit](http://www.reddit.com/r/programming/comments/20288i/surviving_a_traffic_surge_three_techniques_to/) / [On Hacker News](https://news.ycombinator.com/item?id=2382185)
 *   [Bulletproof your blog: a guide for surviving traffic spikes](http://www.maxmasnick.com/articles/bulletproof_your_blog/)
 *   [Running Apache On A Memory-Constrained VPS](http://www.kalzumeus.com/2010/06/19/running-apache-on-a-memory-constrained-vps/)
 
-</div>
+    
 
-</div>
+    

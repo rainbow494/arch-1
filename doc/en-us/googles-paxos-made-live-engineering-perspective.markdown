@@ -1,8 +1,8 @@
 ## [Google's Paxos Made Live – An Engineering Perspective](/blog/2008/7/26/googles-paxos-made-live-an-engineering-perspective.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Saturday, July 26, 2008 at 1:31AM</span></div>
+    
 
-<div class="body">
+    
 
 This is an unusually well written and [useful paper](http://labs.google.com/papers/paxos_made_live.html). It talks in detail about experiences implementing a complex project, something we don't see very often. They shockingly even admit that creating a working implementation of Paxos was more difficult than just translating the pseudo code. Imagine that, programmers aren't merely typists! I particularly like the explanation of the Paxos algorithm and why anyone would care about it, working with disk corruption, using leases to support simultaneous reads, using epoch numbers to indicate a new master election, using snapshots to prevent unbounded logs, using MultiOp to implement database transactions, how they tested the system, and their openness with the various problems they had. A lot to learn here.  
 
@@ -30,4 +30,4 @@ _
 
 *   [ZooKeeper - A Reliable, Scalable Distributed Coordination System](http://highscalability.com/blog/2008/7/15/zookeeper-a-reliable-scalable-distributed-coordination-syste.html)  
 
-    </div>
+        

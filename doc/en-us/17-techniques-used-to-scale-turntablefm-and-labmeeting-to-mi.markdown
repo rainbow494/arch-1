@@ -1,8 +1,8 @@
 ## [17 Techniques Used to Scale Turntable.fm and Labmeeting to Millions of Users](/blog/2011/9/26/17-techniques-used-to-scale-turntablefm-and-labmeeting-to-mi.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, September 26, 2011 at 9:00AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.static.flickr.com/6172/6184266654_a613c1aa60_m.jpg)
 
@@ -30,4 +30,4 @@ In [How to launch in a month and scale to a million users](http://www.jperla.com
 
 *   [Hints for Computer System Design](http://research.microsoft.com/en-us/um/people/blampson/33-Hints/WebPage.html) by Butler W. Lampson
 
-</div>
+    

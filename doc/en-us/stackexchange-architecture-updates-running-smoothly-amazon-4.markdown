@@ -1,8 +1,8 @@
 ## [StackExchange Architecture Updates - Running Smoothly, Amazon 4x More Expensive](/blog/2011/10/24/stackexchange-architecture-updates-running-smoothly-amazon-4.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, October 24, 2011 at 9:01AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.static.flickr.com/6197/6148448748_ee8eedd346_m.jpg)
 
@@ -87,4 +87,4 @@ Here's what StackExchange has been up to:
 
 StackExchange is refreshingly open. They consciously try and make their issues public by posting in [their blog](http://blog.serverfault.com/) or asking questions on one of [their sites](http://serverfault.com/). Maybe your organization might want to follow their example? It's an awesome way to build awareness and trust.
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [The State of NoSQL in 2012](/blog/2012/1/24/the-state-of-nosql-in-2012.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, January 24, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7020/6755926085_02e4d454a6_m.jpg)
 
@@ -39,7 +39,7 @@ In making a decision, I’ll consider the following learnings:
 *   Any system that you pick will require 24-7 operational support. If it is not hosted (e.g. by AWS), be prepared to hire a fleet of ops folks to support it yourself. If you don’t have the manpower, I recommend AWS’ [DynamoDB](http://bit.ly/x74bvz)
 *   Just because the company got by with one big machine for Oracle, don’t be surprised if the equivalent NoSQL option results in 36 smaller machines. All complete solutions to fault-tolerance support “rebalancing”. Rebalancing speed is determined by data size of a shard. Hence, it’s better to keep the size per shard reasonable to minimize MTTR in times of disaster.
 *   Understand the limitations of your choice:
-    *   MongoDB, at the time of this writing, has a global write-lock. This means that only one write can proceed at a time in a node. If you require high write-throughput, consider something else<span></span>
+    *   MongoDB, at the time of this writing, has a global write-lock. This means that only one write can proceed at a time in a node. If you require high write-throughput, consider something else        
     *   Cassandra (similar to other Dynamo systems) offers great primary key-based access operations (e.g. get, put, delete), but doesn’t scale well for secondary-index lookups
     *   Cassandra, like some other systems, has a lot of tunables and a lot of internal processes. You are better off turning off some features (e.g. Anti-entropy repair, row cache, etc…) in production to safeguard consistent performance.
 
@@ -59,4 +59,4 @@ This brings me to another observation. In reviewing Voldemort code recently, I w
 
 In a similar vein, [Krati](http://bit.ly/yLMWr7), [Kafka](http://bit.ly/AjYojf), [Zookeeper](http://bit.ly/z8HtiO), and a few other notable open-source projects stick to clear design principles and simple contracts. As such, they become reusable infrastructure pieces that can be used to build an Distributed System that you need. Hence, the system we end up building might be composed of several specialty component systems that can be independently tuned, in some ways similar to HBase. As a counter example, to achieve predictable performance in Cassandra without a significant investment in tuning, it may be easier to turn off features. This is because multiple features in a single machine contend for resources — since each feature has a different DNA (or resource consumption profile), performance diagnosis and tuning can be a pain point.
 
-</div>
+    

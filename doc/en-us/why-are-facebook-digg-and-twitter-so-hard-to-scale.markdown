@@ -1,8 +1,8 @@
 ## [Why are Facebook, Digg, and Twitter so hard to scale?](/blog/2009/10/13/why-are-facebook-digg-and-twitter-so-hard-to-scale.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, October 13, 2009 at 7:35AM</span></div>
+    
 
-<div class="body">
+    
 
 Real-time social graphs (connectivity between people, places, and things). That's why scaling Facebook is hard [says Jeff Rothschild](/blog/2009/10/12/high-performance-at-massive-scale-lessons-learned-at-faceboo-1.html), Vice President of Technology at Facebook. Social networking sites like Facebook, Digg, and Twitter are simply harder than traditional websites to scale. Why is that? Why would social networking sites be any more difficult to scale than traditional web sites? Let's find out.
 
@@ -41,4 +41,4 @@ While all these consistency and duplications problems are interesting, Push on C
 
 The challenges will only grow as we get more and more people, more and deeper inter-connectivity, faster and faster change, and a greater desire to consume it all in real-time. We are a long way from being able to handle this brave new world.
 
-</div>
+    

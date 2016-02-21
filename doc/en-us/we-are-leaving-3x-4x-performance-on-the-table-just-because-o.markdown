@@ -1,8 +1,8 @@
 ## [We are leaving 3x-4x performance on the table just because of configuration.](/blog/2014/11/19/we-are-leaving-3x-4x-performance-on-the-table-just-because-o.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, November 19, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm6.staticflickr.com/5036/14028263590_848c224784_n.jpg)
 
@@ -32,4 +32,4 @@ So **know your OS network parameters and how to tune them**.
 *   [42 Monster Problems That Attack As Loads Increase](http://highscalability.com/blog/2013/2/27/42-monster-problems-that-attack-as-loads-increase.html)
 *   [9 Principles Of High Performance Programs](http://highscalability.com/blog/2014/5/21/9-principles-of-high-performance-programs.html)
 
-</div>
+    

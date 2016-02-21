@@ -1,8 +1,8 @@
 ## [5 Lessons and 8 Industry Changes Over 5 Years as Etsy CTO](/blog/2015/9/16/5-lessons-and-8-industry-changes-over-5-years-as-etsy-cto.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, September 16, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm1.staticflickr.com/623/21262760658_1319d68587_o.jpg)
 
@@ -12,11 +12,11 @@ This post is just a short gloss of the major points. He goes into more depth on 
 
 The **Five Lessons**:
 
-1.  <span>Nothing we “know” about software development should be assumed to be true.</span>
-2.  <span><span>Technology is the product of the culture that builds it.</span></span>
-3.  <span><span><span>Software development should be thought of as a cycle of continual learning and improvement rather a progression from start to finish, or a search for correctness.</span></span></span>
-4.  <span><span><span><span>You build a culture of learning by optimizing globally not locally.</span></span></span></span>
-5.  <span><span><span><span><span>If you want to build for the long term, the only guarantee is change.</span></span></span></span></span>
+1.      Nothing we “know” about software development should be assumed to be true.    
+2.          Technology is the product of the culture that builds it.        
+3.              Software development should be thought of as a cycle of continual learning and improvement rather a progression from start to finish, or a search for correctness.            
+4.                  You build a culture of learning by optimizing globally not locally.                
+5.                      If you want to build for the long term, the only guarantee is change.                    
 
 The **Eight Industry Changes**: 
 
@@ -26,9 +26,9 @@ The **Eight Industry Changes**: 
 4.  Five years ago, suggesting that better software is written by a diverse team of kind people who care about each other was antithetical to our self-image as an industry.
 5.  Five years ago, trusting not only our designers and product managers to code and deploy to production, but trusting everyone in the company to deploy to production.
 6.  Five years ago, rooms of people excitedly talking about their own contribution to a serious outage would have been a prelude to mass firings, rather than a path to profound learning.
-7.  <span>And five years ago no one was experimenting in public about how to do this stuff, sharing their findings, and open sourcing code to support this way of working.</span>
+7.      And five years ago no one was experimenting in public about how to do this stuff, sharing their findings, and open sourcing code to support this way of working.    
 8.  Five years ago, it would have seemed ludicrous to think a small team supporting a small site selling crafts could aspire to change how software is built and, in the process, cause us to rethink how the economy works.
 
 While many of these ideas were happening more than five years ago the point still stands, the industry has undergone a lot of changes recently, and sometimes it's worth taking a little time to reflect on that a bit. 
 
-</div>
+    

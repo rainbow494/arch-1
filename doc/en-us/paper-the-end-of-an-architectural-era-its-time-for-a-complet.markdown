@@ -1,8 +1,8 @@
 ## [Paper: The End of an Architectural Era (It’s Time for a Complete Rewrite)](/blog/2009/4/16/paper-the-end-of-an-architectural-era-its-time-for-a-complet.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, April 16, 2009 at 1:16AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 3**: [A Comparison of Approaches to Large-Scale Data Analysis: MapReduce vs. DBMS Benchmarks](http://database.cs.brown.edu/sigmod09/). _Although the process to load data into and tune the execution of parallel DBMSs took much longer than the MR system, the observed performance of these DBMSs was strikingly better._  
 **Update 2**: [H-Store: A Next Generation OLTP DBMS](http://db.cs.yale.edu/hstore/) is the project implementing the ideas in this paper: _The goal of the H-Store project is to investigate how these architectural and application shifts affect the performance of OLTP databases, and to study what performance benefits would be possible with a complete redesign of OLTP systems in light of these trends. Our early results show that a simple prototype built from scratch using modern assumptions can outperform current commercial DBMS offerings by around a factor of 80 on OLTP workloads._  
@@ -43,4 +43,4 @@ _
 
 The paper goes through how databases should be written with modern CPU, memory, and network resources. It's a fun an interesting read. Well worth your time.
 
-</div>
+    

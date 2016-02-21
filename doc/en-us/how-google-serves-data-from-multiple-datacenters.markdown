@@ -1,8 +1,8 @@
 ## [How Google Serves Data from Multiple Datacenters](/blog/2009/8/24/how-google-serves-data-from-multiple-datacenters.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 24, 2009 at 1:54PM</span></div>
+    
 
-<div class="body">
+    
 
 **Update:** [Streamy Explains CAP and HBase's Approach to CAP](http://devblog.streamy.com/2009/08/24/cap-theorem/#). _We plan to employ inter-cluster replication, with each cluster located in a single DC. Remote replication will introduce some eventual consistency into the system, but each cluster will continue to be strongly consistent._  
 
@@ -219,4 +219,4 @@ As multihoming is one of the most challenging tasks in all computing, Ryan's cle
 
     ## Related Articles
 
-    *   [Slides for the Talk](http://snarfed.org/space/transactions_across_datacenters_io.html)*   [ZooKeeper - A Reliable, Scalable Distributed Coordination System](http://highscalability.com/zookeeper-reliable-scalable-distributed-coordination-system)*   [Yahoo!'s PNUTS Database: Too Hot, Too Cold or Just Right?](http://highscalability.com/yahoo-s-pnuts-database-too-hot-too-cold-or-just-right)*   [Paper: Consensus Protocols: Paxos](http://highscalability.com/paper-consensus-protocols-paxos) by Henry Robinson*   [Paper: Consensus Protocols: Two-Phase Commit](http://highscalability.com/paper-consensus-protocols-two-phase-commit) by Henry Robinson*   [Paper: Dynamo: Amazon’s Highly Available Key-value Store](http://highscalability.com/paper-dynamo-amazon-s-highly-available-key-value-store)*   [Are Cloud Based Memory Architectures the Next Big Thing?](http://highscalability.com/are-cloud-based-memory-architectures-next-big-thing)</div>
+    *   [Slides for the Talk](http://snarfed.org/space/transactions_across_datacenters_io.html)*   [ZooKeeper - A Reliable, Scalable Distributed Coordination System](http://highscalability.com/zookeeper-reliable-scalable-distributed-coordination-system)*   [Yahoo!'s PNUTS Database: Too Hot, Too Cold or Just Right?](http://highscalability.com/yahoo-s-pnuts-database-too-hot-too-cold-or-just-right)*   [Paper: Consensus Protocols: Paxos](http://highscalability.com/paper-consensus-protocols-paxos) by Henry Robinson*   [Paper: Consensus Protocols: Two-Phase Commit](http://highscalability.com/paper-consensus-protocols-two-phase-commit) by Henry Robinson*   [Paper: Dynamo: Amazon’s Highly Available Key-value Store](http://highscalability.com/paper-dynamo-amazon-s-highly-available-key-value-store)*   [Are Cloud Based Memory Architectures the Next Big Thing?](http://highscalability.com/are-cloud-based-memory-architectures-next-big-thing)    

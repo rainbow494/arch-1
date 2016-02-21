@@ -1,8 +1,8 @@
 ## [It's the Fraking IOPS - 1 SSD is 44,000 IOPS, Hard Drive is 180](/blog/2011/6/22/its-the-fraking-iops-1-ssd-is-44000-iops-hard-drive-is-180.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, June 22, 2011 at 9:11AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.static.flickr.com/5061/5860539924_bb80dd7c5a_o.jpg)
 
@@ -26,8 +26,8 @@ Here's Artur's logic:
 
 Well worth watching. The simplicity of not having to fight IO can be a real win. Some people have claimed SSDs aren't reliable, others claim they are. And if you need a lot CPU processing you'll those machines anyway so centralizing storage on fast SSDs may not be that big a win. The point here is that's it probably high time to consider SSD based architectures.
 
-## Related Articles<span style="font-weight: normal;"> </span>
+## Related Articles         
 
 *   [Can flash SSDs be trusted?](http://storagemojo.com/2011/06/20/can-flash-ssds-be-trusted/) by Robin Harris. TL;DR: Yes.
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [Von Neumann had one piece of advice for us: not to originate anything.](/blog/2015/1/5/von-neumann-had-one-piece-of-advice-for-us-not-to-originate.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, January 5, 2015 at 9:05AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm9.staticflickr.com/8681/16151469986_ea26e4223c_o.jpg)
 
@@ -48,4 +48,4 @@ They did innovate on architecture by making it possible to store and run program
 
 *   [On reddit](http://www.reddit.com/r/programming/comments/2ryhvi/von_neumann_had_one_piece_of_advice_for_us_not_to/)
 
-</div>
+    

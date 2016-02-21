@@ -1,8 +1,8 @@
 ## [Product: Hibernate Shards](/blog/2007/7/24/product-hibernate-shards.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, July 24, 2007 at 3:23AM</span></div>
+    
 
-<div class="body">
+    
 
 If you want to adopt a shard architecture, but don't want to start from scratch, you may want to consider Hibernate's sharding system.
 
@@ -15,4 +15,4 @@ Hibernate Shards is a framework that is designed to encapsulate and minimize thi
 *   Support for virtual shards - Think your sharding strategy is never going to change? Think again. Adding new shards and redistributing your data is one of the toughest operational challenges you will face once you've deployed your shard-aware application. Hibernate Sharding supports virtual shards, a feature designed to simplify the process of resharding your data.
 *   Free/open source - Hibernate Shards is licensed under the LGPL (Lesser GNU Public License)
 
-</div>
+    

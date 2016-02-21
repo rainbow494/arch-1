@@ -1,12 +1,12 @@
 ## [10 eBay Secrets for Planet Wide Scaling](/blog/2009/11/17/10-ebay-secrets-for-planet-wide-scaling.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, November 17, 2009 at 11:27AM</span></div>
+    
 
-<div class="body">
+    
 
-<span>You don't even have to make a bid, Randy <span>Shoup</span>, an eBay Distinguished Architect, gives this</span> [presentation](http://www.hpts.ws/session9/shoup.pdf) on how eBay scales, for free. Randy has done a fabulous job in this presentation and in other talks listed at the end of this post getting at the heart of the principles behind scalability. It's more about ideas of how things work and fit together than a focusing on a particular technology stack.
+    You don't even have to make a bid, Randy     Shoup    , an eBay Distinguished Architect, gives this     [presentation](http://www.hpts.ws/session9/shoup.pdf) on how eBay scales, for free. Randy has done a fabulous job in this presentation and in other talks listed at the end of this post getting at the heart of the principles behind scalability. It's more about ideas of how things work and fit together than a focusing on a particular technology stack.
 
-### <span>Impressive <span>Stats</span></span>
+###     Impressive     Stats        
 
 In case you weren't sure, eBay is big, with lots of: users, data, features, and change...
 
@@ -25,4 +25,4 @@ In case you weren't sure, eBay is big, with lots of: users, data, features, and 
 
 [Click to read more ...](/blog/2009/11/17/10-ebay-secrets-for-planet-wide-scaling.html)
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [NoSQL Took Away the Relational Model and Gave Nothing Back](/blog/2010/10/28/nosql-took-away-the-relational-model-and-gave-nothing-back.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, October 28, 2010 at 12:40PM</span></div>
+    
 
-<div class="body">
+    
 
 **Update**: Benjamin Black said he was the source of the quote and also said I was wrong about what he meant. His real point: _The meaning of the statement was that NoSQL systems (really the various map-reduce systems) are lacking a standard model for describing and querying and that developing one should be a high priority task for them._
 
@@ -18,4 +18,4 @@ Relationships are very much in the same spirit. Managing relationships without e
 
 *   Interesting [Hacker News Thread](http://news.ycombinator.com/item?id=1847575), especially the commentary on state of the art IO subsystems.
 
-</div>
+    

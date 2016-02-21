@@ -1,8 +1,8 @@
 ## [Beyond Threads and Callbacks - Application Architecture Pros and Cons](/blog/2013/3/18/beyond-threads-and-callbacks-application-architecture-pros-a.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, March 18, 2013 at 12:37PM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8251/8534554068_6f95503f2f_o.jpg)
 
@@ -18,23 +18,23 @@ In the spirit of [Level Scalability Solutions - The Conditioning Collection](ht
 
 Here are some of the forces we are trying to harmonize when selecting an application architecture. 
 
-<div id="_mcePaste">
+    
 
 *   **Scheduling High Priority Work** - If high priority work comes in while lower priority work has the CPU, how do we make sure the high priority work gets handled in a bounded period of time?
 *   **Priority Inheritance** - is a way of getting out of priority inversion problems by assuring that a task which holds a resource will execute at the priority of the highest priority task blocked on that resource. In practice it means code you thought wasn't important can prevent other higher priority work from getting serviced.
-*   **Dead Lock** - What you get when you use locks to protect data and you have a cycle in your dependencies. This happens when all these conditions are true: <span style="color: #000000; font-family: sans-serif; font-size: 13px; line-height: 19.049999237060547px;">Blocking shared resources -</span> a shared resource is protected by some mechanism, typically a lock; No pre-emption - a process or thread cannot force another process or thread to drop a shared resource it is holding; Acquiring while holding - resources are acquired while holding locks; Circular wait - A cycle (schedule) exists such that the above three conditions all hold for a set of processes or threads accessing a shared resource.
-*   **OS Latency -** The gap between when a time-sensitive task needs to run and when the OS actually schedules it. Some factors: Timer Resolution, Scheduling Jitter, Non-<span><span>Preemptable</span></span> Portions. 
+*   **Dead Lock** - What you get when you use locks to protect data and you have a cycle in your dependencies. This happens when all these conditions are true:     Blocking shared resources -     a shared resource is protected by some mechanism, typically a lock; No pre-emption - a process or thread cannot force another process or thread to drop a shared resource it is holding; Acquiring while holding - resources are acquired while holding locks; Circular wait - A cycle (schedule) exists such that the above three conditions all hold for a set of processes or threads accessing a shared resource.
+*   **OS Latency -** The gap between when a time-sensitive task needs to run and when the OS actually schedules it. Some factors: Timer Resolution, Scheduling Jitter, Non-        Preemptable         Portions. 
 *   **Shared Locks** - When there's a shared lock anywhere we are back to potentially poor scheduling because the high priority task must wait on the low priority task. This requires anyone who shares the lock to know there is high priority work and never to take more time than the worst case performance needed for the high priority work. Of course, this changes dynamically as code changes and with different load scenarios.
 *   **Ease of Programming Model** - Programmers shouldn't be burdened with complicated hard to program schemes. Which I realize may invalidate everything we are talking about.
 *   **Robustness of Programming Model** - It should be hard for programmers to break the system through dead locks, poor performance, and other problems.
 *   **Minimizing Lock Scope** - Locks over operations that take an unexpectedly long time can really kill the performance of an entire system as many threads will be blocked or not get enough CPU. They'll stop making progress on their work, which is not what we want. 
 *   **Flow Control** - The general process of keeping message chatter to a minimum through back pressure on senders, removing retries, and other techniques.
-*   **Reasonable Use of Memory** - Memory management is a hidden killer in almost every long lived program. Over time memory becomes fragmented with lots of allocations and <span><span>deallocations</span></span> and everything becomes slower because of it. Garbage collection doesn't save you here. Message serialization/<span><span>deserialization</span></span> is often a big culprit. And calls to memory allocation will drop you into shared locks, which is a killer when components are cycling through a lot of memory.
+*   **Reasonable Use of Memory** - Memory management is a hidden killer in almost every long lived program. Over time memory becomes fragmented with lots of allocations and         deallocations         and everything becomes slower because of it. Garbage collection doesn't save you here. Message serialization/        deserialization         is often a big culprit. And calls to memory allocation will drop you into shared locks, which is a killer when components are cycling through a lot of memory.
 *   **Reasonable Use of Tasking** - Lots of threads, depending on the scheduler OS, can cause high scheduling overhead as naive scheduling algorithms don't perform well as the number of threads increase. Lots threads can also mean a lot of memory usage because each thread has allocated to it the maximum stack space. This is where [languages like Go](http://stackoverflow.com/questions/4226964/how-come-go-doesnt-have-stackoverflows) have a big lead over their C based cousins as it can minimize stack space while keeping many threads of control.
 *   **Time Slice** - The period of time for which a process is allowed to run uninterrupted in a pre-emptive multitasking operating system. Generally you want your program to use it's entire time slice and not do anything that gives up control of the CPU while you have it.
 *   **Starvation** -Priority is a harsh mistress. At first blush it's easy to think priority solves all your problems, but like money, mo' priority, more problems. This biggest problem is the surprise you feel when you see work in your system not getting done. You suffer from dead lock or priority inheritance or large lock scope, but after bugs are accounted for, it may simply be that you have higher priority tasks that are using up all the CPU time, so even medium priority tasks in your system end up not getting serviced. Higher priority tasks may have endless streams of work to do because of poor flow control and other methods of poor messaging hygiene, so you use techniques like batching to reduce CPU usage, but sometimes there's just a lot to do. Lower priority tasks need some CPU time so their state machines can make progress. Otherwise cascading failures can start as timeouts pile up. Another problem can be fault windows widen as it takes longer to process requests. 
 
-</div>
+    
 
 So you look at all these issues and think, well, there's a good reason not to expose all this complexity to programmers, and that's true. Playing it safe can be a good thing, but if you want to make full use of all your system resources, playing it safe won't work. 
 
@@ -65,15 +65,15 @@ A single application can:
 
 When different components share a process space nothing can can be guaranteed. Even bringing in code from other groups can ruin everything. A process has many hidden variables that different code components communicate through indirectly, even if they don't have and obvious direct dependencies. Think any shared resource like memory management, timers, socket buffers, kernel locks, and available CPU time at different priorities. It gets real complex real fast.
 
-## <span><span>Evented</span></span> Model
+##         Evented         Model
 
-This is "good enough" concurrency. Common examples are node.<span><span>js</span></span> and your browser. In an <span><span>Evented</span></span> architecture applications share a single threaded container where work runs to completion. Thus it's a cooperative tasking model, which makes for an asynchronous application architecture. Your application is essentially a collection of functions that get called when events happen. Locks and shared state aren't a problem as your code can't be preempted. It's a simple approach and can perform very well if applications are well behaved, especially if as in most web applications they spend a lot of time blocking on IO.
+This is "good enough" concurrency. Common examples are node.        js         and your browser. In an         Evented         architecture applications share a single threaded container where work runs to completion. Thus it's a cooperative tasking model, which makes for an asynchronous application architecture. Your application is essentially a collection of functions that get called when events happen. Locks and shared state aren't a problem as your code can't be preempted. It's a simple approach and can perform very well if applications are well behaved, especially if as in most web applications they spend a lot of time blocking on IO.
 
-Erlang, for example, supports a preemptive model where work in one process can be suspended and another process can start working. Internally Erlang uses <span><span>async</span></span> IO and its calls are non-blocking so the Erlang kernel doesn't interfere with process scheduling at the application level.
+Erlang, for example, supports a preemptive model where work in one process can be suspended and another process can start working. Internally Erlang uses         async         IO and its calls are non-blocking so the Erlang kernel doesn't interfere with process scheduling at the application level.
 
-Go is like Erlang in that it has lightweight processes, but it's like node.<span><span>js</span></span> in that preemptive scheduling is not supported. A <span><span>goroutine</span></span> runs to completion, so it never has to give up the CPU and if on a single CPU it's expected application code will insert yields to give the scheduler a chance to run. 
+Go is like Erlang in that it has lightweight processes, but it's like node.        js         in that preemptive scheduling is not supported. A         goroutine         runs to completion, so it never has to give up the CPU and if on a single CPU it's expected application code will insert yields to give the scheduler a chance to run. 
 
-A downside of the <span><span>evented</span></span> model, and even Erlang, is there's no concept of priority. When a high priority input comes in there's no way to bound the response latency. 
+A downside of the         evented         model, and even Erlang, is there's no concept of priority. When a high priority input comes in there's no way to bound the response latency. 
 
 Without preemption, CPU heavy workloads, as is common in a service architecture, can starve other work from making progress. This increases latency variance which is how [long tails](http://highscalability.com/blog/2012/6/18/google-on-latency-tolerant-systems-making-a-predictable-whol.html) are created at the architecture level. Bounding latency variance requires a more sophisticated application architecture.
 
@@ -93,7 +93,7 @@ There's no shared state in this model so it eliminates locks which eliminates pr
 
 We can expect an Actor to be asynchronous so it doesn't block the next message from processing for long.
 
-Or we can introduce the idea of cooperation by having a priority associated with each message. If a higher priority message comes in on the queue then a thread variable "<span><span>GiveUpWork</span></span>" is set. Code in a sensitive a place would check this flag a particular points in its code and stop what it is doing so the higher priority work can be scheduled. An implication is to change the Actor's priority accordingly with the highest priority work in its queue. This is another form cooperative multitasking. And its ugly. So we usually don't do it this way.
+Or we can introduce the idea of cooperation by having a priority associated with each message. If a higher priority message comes in on the queue then a thread variable "        GiveUpWork        " is set. Code in a sensitive a place would check this flag a particular points in its code and stop what it is doing so the higher priority work can be scheduled. An implication is to change the Actor's priority accordingly with the highest priority work in its queue. This is another form cooperative multitasking. And its ugly. So we usually don't do it this way.
 
 ## Actor With Thread Pool (1-N)
 
@@ -101,7 +101,7 @@ Like the Actor model but requests are served by a thread pool instead of just on
 
 ## Actor Arbitrary Thread Model
 
-A hybrid is where an application has an Actor, so it has a thread, but other threads access state in the Actor and even <span><span>cals</span></span> Actor methods directly. Shared locks are necessary to protect data. It's easy in practice for this architecture to evolve because not everyone is disciplined about using just message passing between Actors.
+A hybrid is where an application has an Actor, so it has a thread, but other threads access state in the Actor and even         cals         Actor methods directly. Shared locks are necessary to protect data. It's easy in practice for this architecture to evolve because not everyone is disciplined about using just message passing between Actors.
 
 This is in some ways the worse of all possible worlds. The Actor model is supposed to be a safe programming model, but instead it degenerates into a thread and lock nightmare. 
 
@@ -119,7 +119,7 @@ In this model work is represented by events. Events are queued up to one or more
 
 Deadlock and locking issues still apply. One thread is safer, but then we have priority and latency issues.
 
-This model is attractive when most of the work is of approximately equal and small size. This model has been used very well in state machine oriented computation (communicating finite state machines) where state transitions require deterministic and small times. Breaking down your system to make it suitable for this model is a big job. <span><span>Paybacks</span></span> are reduced complexity of implementation. Event priorities can be used in this model. This model is usually based on a run to completion kind of scheduling.
+This model is attractive when most of the work is of approximately equal and small size. This model has been used very well in state machine oriented computation (communicating finite state machines) where state transitions require deterministic and small times. Breaking down your system to make it suitable for this model is a big job.         Paybacks         are reduced complexity of implementation. Event priorities can be used in this model. This model is usually based on a run to completion kind of scheduling.
 
 If latency is an important issue then this model can't be used, at least everywhere as you'll never be able to guarantee latency. Attempts to guarantee latency basically require writing another level of scheduling.
 
@@ -139,9 +139,9 @@ The state machine is parallel in terms of the number of requests it can take. Fo
 
 Many applications can be implemented in a straight forward fashion in this model to achieve high throughput and low latency for high priority work.
 
-## <span><span>Dataflow</span></span> Model
+##         Dataflow         Model
 
-A technique used in functional languages. It allows users to dynamically create any number of sequential threads. The threads are <span><span>dataflow</span></span> threads in the sense that a thread executing an operation will suspend until all operands needed have a well-defined value.
+A technique used in functional languages. It allows users to dynamically create any number of sequential threads. The threads are         dataflow         threads in the sense that a thread executing an operation will suspend until all operands needed have a well-defined value.
 
 ## Erlang Model
 
@@ -149,17 +149,17 @@ A technique used in functional languages. It allows users to dynamically create 
 
 No shared memory, all interaction between processes is by asynchronous message passing. The distribution is location transparent. The program does not have to consider whether the recipient of a message is a local process or located on a remote Erlang virtual machine.
 
-The deficiency of <span><span>Erlang's</span></span> approach is that there's no way to control latency through priority. If certain events need to be serviced before others or if certain events need to be serviced quickly, Erlang doesn't give you the necessary control needed to shape message processing.
+The deficiency of         Erlang's         approach is that there's no way to control latency through priority. If certain events need to be serviced before others or if certain events need to be serviced quickly, Erlang doesn't give you the necessary control needed to shape message processing.
 
-## <span><span>SEDA</span></span> Model
+##         SEDA         Model
 
-<div>
+    
 
-<div>[<span><span>SEDA</span></span>](http://www.eecs.harvard.edu/~mdw/proj/seda/) is an acronym for staged event-driven architecture, and decomposes a complex, event-driven application into a set of stages connected by queues. Each queue has a thread pool to execute work from the queue.</div>
+    [        SEDA        ](http://www.eecs.harvard.edu/~mdw/proj/seda/) is an acronym for staged event-driven architecture, and decomposes a complex, event-driven application into a set of stages connected by queues. Each queue has a thread pool to execute work from the queue.    
 
-<div>This design avoids the high overhead associated with thread-based concurrency models, and decouples event and thread scheduling from application logic. By performing admission control on each event queue, the service can be well-conditioned to load, preventing resources from being <span><span>overcommitted</span></span> when demand exceeds service capacity. <span><span>SEDA</span></span> employs dynamic control to automatically tune runtime parameters (such as the scheduling parameters of each stage), as well as to manage load, for example, by performing adaptive load shedding. Decomposing services into a set of stages also enables modularity and code reuse, as well as the development of debugging tools for complex event-driven applications.</div>
+    This design avoids the high overhead associated with thread-based concurrency models, and decouples event and thread scheduling from application logic. By performing admission control on each event queue, the service can be well-conditioned to load, preventing resources from being         overcommitted         when demand exceeds service capacity.         SEDA         employs dynamic control to automatically tune runtime parameters (such as the scheduling parameters of each stage), as well as to manage load, for example, by performing adaptive load shedding. Decomposing services into a set of stages also enables modularity and code reuse, as well as the development of debugging tools for complex event-driven applications.    
 
-</div>
+    
 
 ## Multiple Application Thread Pool Model (M - N)
 
@@ -178,13 +178,13 @@ These are some of the issues to keep in mind when figuring out how to structure 
 ## Related Articles
 
 *   [The Pillars of Concurrency](http://www.drdobbs.com/parallel/the-pillars-of-concurrency/200001985) by Herb Sutter
-*   [Why Events Are A Bad Idea](http://www.stanford.edu/class/cs240/readings/vonbehren.pdf) by Rob von <span><span>Behren</span></span>, Jeremy <span><span>Condit</span></span> and Eric Brewer
-*   [A Note on Distributed Computing](http://labs.oracle.com/techrep/1994/smli_tr-94-29.pdf) by Jim Waldo, Geoff <span><span>Wyant</span></span>, Ann <span><span>Wollrath</span></span>, Sam Kendall
-*   [How to use priority inheritance](http://www.embedded.com/design/configurable-systems/4024970/How-to-use-priority-inheritance) by Kyle <span><span>Renwick</span></span> and Bill <span><span>Renwick</span></span>
+*   [Why Events Are A Bad Idea](http://www.stanford.edu/class/cs240/readings/vonbehren.pdf) by Rob von         Behren        , Jeremy         Condit         and Eric Brewer
+*   [A Note on Distributed Computing](http://labs.oracle.com/techrep/1994/smli_tr-94-29.pdf) by Jim Waldo, Geoff         Wyant        , Ann         Wollrath        , Sam Kendall
+*   [How to use priority inheritance](http://www.embedded.com/design/configurable-systems/4024970/How-to-use-priority-inheritance) by Kyle         Renwick         and Bill         Renwick        
 *   [Mission Planning and Execution Within the Mission Data System](http://www-aig.jpl.nasa.gov/public/planning/papers/barrett_iwpss2004_missionplanning.pdf)
-*   [<span><span>CLEaR</span></span>: Closed Loop Execution and Recovery High-Level Onboard Autonomy for Rover Operations](http://www-aig.jpl.nasa.gov/public/planning/papers/fy01_clear_demo_handout-short_version.pdf)
+*   [        CLEaR        : Closed Loop Execution and Recovery High-Level Onboard Autonomy for Rover Operations](http://www-aig.jpl.nasa.gov/public/planning/papers/fy01_clear_demo_handout-short_version.pdf)
 *   [42 Monster Problems That Attack As Loads Increase](http://highscalability.com/blog/2013/2/27/42-monster-problems-that-attack-as-loads-increase.html)
 *   [Low Level Scalability Solutions - The Aggregation Collection](http://highscalability.com/blog/2013/3/6/low-level-scalability-solutions-the-aggregation-collection.html)
 *   [Low Level Scalability Solutions - The Conditioning Collection](http://highscalability.com/blog/2013/3/11/low-level-scalability-solutions-the-conditioning-collection.html) 
 
-</div>
+    

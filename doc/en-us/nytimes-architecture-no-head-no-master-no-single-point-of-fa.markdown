@@ -1,14 +1,14 @@
 ## [NYTimes Architecture: No Head, No Master, No Single Point of Failure](/blog/2014/1/13/nytimes-architecture-no-head-no-master-no-single-point-of-fa.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, January 13, 2014 at 8:54AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7435/11844140264_1dd88baca3_m.jpg)
 
 Michael Laing, a Systems Architect at NYTimes, gave this [great decription](http://lists.rabbitmq.com/pipermail/rabbitmq-discuss/2014-January/032920.html) of their use of [RabbitMQ](http://www.rabbitmq.com/) and their overall architecture on the RabbitMQ mailing list. The closing sentiment marks this as definitely an architecture to learn from:
 
-> Although it may seem complex, <span>Fabrik</span> has simple components and is mostly principles and plumbing. The key point to grasp is that there is no head, no master, no single point of failure. As I write this I can see components failing (not RabbitMQ), and we are fixing them so they are more reliable. But the system doesn't fail, users can connect, and messages are delivered, regardless - all within design parameters.
+> Although it may seem complex,     Fabrik     has simple components and is mostly principles and plumbing. The key point to grasp is that there is no head, no master, no single point of failure. As I write this I can see components failing (not RabbitMQ), and we are fixing them so they are more reliable. But the system doesn't fail, users can connect, and messages are delivered, regardless - all within design parameters.
 
 Since it's short, to the point, and I couldn't say it better, I'll just reproduce several original sources here:
 
@@ -16,7 +16,7 @@ Since it's short, to the point, and I couldn't say it better, I'll just reproduc
 > 
 > Our premier online offering www.nytimes.com has a new look and new underpinnings, now including a messaging architecture implemented using RabbitMQ.
 > 
-> This architecture - <span>Fabrik</span> - has dozens of RabbitMQ instances spread across 6 AWS zones in Oregon and Dublin. The instances are organized into "wholesale" and "retail" layers. Connection to clients is via websockets/sockjs.
+> This architecture -     Fabrik     - has dozens of RabbitMQ instances spread across 6 AWS zones in Oregon and Dublin. The instances are organized into "wholesale" and "retail" layers. Connection to clients is via websockets/sockjs.
 > 
 > Upon launch today, the system autoscaled to ~500,000 users. Connection times remained flat at ~200ms.
 > 
@@ -44,10 +44,10 @@ Since it's short, to the point, and I couldn't say it better, I'll just reproduc
 > 
 > We have a 12-node Cassandra cluster across the 2 regions / 6 zones. It is used for persistence of messages and as cache. We do not use persistence in RabbitMQ. Our services are idempotent and important messages may be replicated multiple times creating intentional race conditions in which the fastest wins.
 > 
-> Although it may seem complex, <span>Fabrik</span> has simple components and is mostly principles and plumbing. The key point to grasp is that there is no head, no master, no single point of failure. As I write this I can see components failing (not RabbitMQ), and we are fixing them so they are more reliable. But the system doesn't fail, users can connect, and messages are delivered, regardless - all within design parameters.
+> Although it may seem complex,     Fabrik     has simple components and is mostly principles and plumbing. The key point to grasp is that there is no head, no master, no single point of failure. As I write this I can see components failing (not RabbitMQ), and we are fixing them so they are more reliable. But the system doesn't fail, users can connect, and messages are delivered, regardless - all within design parameters.
 
 ## Related Articles
 
 *   [On Reddit](http://www.reddit.com/r/programming/comments/1v4gzj/nytimes_architecture_system_doesnt_fail_users_can/)
 
-</div>
+    

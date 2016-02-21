@@ -1,8 +1,8 @@
 ## [How Does the Use of Docker Effect Latency?](/blog/2015/12/16/how-does-the-use-of-docker-effect-latency.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, December 16, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://c1.staticflickr.com/1/735/23495946660_7925a7a528_m.jpg)
 
@@ -49,4 +49,4 @@ The low latency thing then becomes a "does it hurt?" question. And Docker hurts 
 
 [On HackerNews](https://news.ycombinator.com/item?id=10747577)
 
-</div>
+    

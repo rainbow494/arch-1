@@ -1,8 +1,8 @@
 ## [Cloud Programming Directly Feeds Cost Allocation Back into Software Design](/blog/2009/3/6/cloud-programming-directly-feeds-cost-allocation-back-into-s.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, March 6, 2009 at 2:09AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 6**: [CARS = Cost Aware Runtimes and Services](https://williamlouth.wordpress.com/2010/10/04/cars-cost-aware-runtimes-and-services/) by William Louth.  
 **Update 5**: [Damn You Google, Damn You Yahoo! Why D'Ya Do This to Us?](http://search.sys-con.com/node/991015) Free accounts on a cloud platform are a constant drain of money.  
@@ -27,4 +27,4 @@ Different cloud architecture will force very different design decisions. Under A
 
 Don't be surprised if soon you go into an interview and they quiz you on Big $ notation and skip the dusty old relic that is Big O notation :-)
 
-</div>
+    

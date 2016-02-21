@@ -1,8 +1,8 @@
 ## [Problem: Mobbing the Least Used Resource Error](/blog/2008/3/14/problem-mobbing-the-least-used-resource-error.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, March 14, 2008 at 3:04AM</span></div>
+    
 
-<div class="body">
+    
 
 _A thoughtful reader recently suggested creating a series of posts based on real-life problems people have experienced and the solutions they've created to slay the little beasties. It's a great idea. Often we learn best from great trials and tribulations. I'll start off the new "Problem Report"  
 feature with a diabolical little problem I dubbed the "Mobbing the Least Used Resource Error." Please post your own. And if you know someone with an interesting problem report, please tag them too. It could be a lot of fun. Of course, feel free to scrub your posts of all embarrassing details, but be sure to keep the heroic parts in :-)_  
@@ -23,4 +23,4 @@ The solution depends of course on the resource in question. Butting knowing a po
 
 *   For filers migrate storage from existing filers to the new filers so storage is evened out. Then new storage will be allocated evenly across all the filers.*   For services have a life cycle state machine indicating when a service is up and ready for work. Simply being alive doesn't mean it's ready.*   [Consistent Hashing](http://www.spiteful.com/2008/03/17/programmers-toolbox-part-3-consistent-hashing/) to assign resources to a pool of servers in a scalable fashion.*   For servers use random or round-robin balancing when the load balancer can receive incorrect feedback from pool servers.  
 
-    The [Thundering Herd Problem](http://en.wikipedia.org/wiki/Thundering_herd_problem) is supposedly the same problem described here, but it doesn't seem the same to me.</div>
+    The [Thundering Herd Problem](http://en.wikipedia.org/wiki/Thundering_herd_problem) is supposedly the same problem described here, but it doesn't seem the same to me.    

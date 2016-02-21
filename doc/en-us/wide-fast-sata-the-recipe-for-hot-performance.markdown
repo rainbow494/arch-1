@@ -1,10 +1,10 @@
 ## [Wide Fast SATA: the Recipe for Hot Performance](/blog/2013/9/4/wide-fast-sata-the-recipe-for-hot-performance.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, September 4, 2013 at 8:50AM</span></div>
+    
 
-<div class="body">
+    
 
-![](http://farm9.staticflickr.com/8319/7952195310_8078e8c9df_m.jpg)<span style="font-style: italic;">This is a guest post by</span> [Brian Bulkowski](http://www.aerospike.com/brian-bulkowski/)<span style="font-style: italic;">, CTO and co-founder of</span> [Aerospike](http://www.aerospike.com/)<span style="font-style: italic;">, a leading clustered NoSQL database, has worked in the area of high performance commodity systems since 1989\.</span>
+![](http://farm9.staticflickr.com/8319/7952195310_8078e8c9df_m.jpg)    This is a guest post by     [Brian Bulkowski](http://www.aerospike.com/brian-bulkowski/)    , CTO and co-founder of     [Aerospike](http://www.aerospike.com/)    , a leading clustered NoSQL database, has worked in the area of high performance commodity systems since 1989\.    
 
 This blog post will tell you exactly how to build a multi-terabyte high throughput datacenter server. A fast, reliable multi-terrabyte data tier can be used for recent behavior (messages, tweets, plays, actions), or anywhere that today you use Redis or Memcache.
 
@@ -135,4 +135,4 @@ These speeds are available when using direct device access. When you go through 
 
 These tests also require a high level of parallelism. The software layer must be capable of a high level of parallelism – levels of 128 to 512 simultaneous IOs per device is required.
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [The Secret of Scaling: You Can't Linearly Scale Effort with Capacity](/blog/2014/6/4/the-secret-of-scaling-you-cant-linearly-scale-effort-with-ca.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, June 25, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm6.staticflickr.com/5572/14193665886_94f850f885_m.jpg)
 
@@ -26,4 +26,4 @@ Scaling effort with capacity is also a characteristic of a pre-industrial world.
 
 Monitoring effort against capacity is a good way of testing when something has entered a different phase. When you are in a flow it's hard to know when things have changed. If you or a machine or a process are going crazy, be a little mindful, ask yourself if you are scaling effort with capacity? If you are, what can you do differently? Look for force multipliers. Obviously automation is the major way of improving utilization and efficiency, but maybe there are other things you can do?
 
-</div>
+    

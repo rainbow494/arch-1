@@ -1,8 +1,8 @@
 ## [eBay Architecture](/blog/2008/5/27/ebay-architecture.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, May 27, 2008 at 8:13AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 2:** EBay's Randy Shoup spills the secrets of how to service hundreds of millions of users and over two billion page views a day in Scalability [Best Practices: Lessons from eBay](http://www.infoq.com/articles/ebay-scalability-best-practices) on InfoQ. The practices: Partition by Function, Split Horizontally, Avoid Distributed Transactions, Decouple Functions Asynchronously, Move Processing To Asynchronous Flows, Virtualize At All Levels, Cache Appropriately.  
 **Update:** [eBay Serves 5 Billion API Calls Each Month](http://blog.programmableweb.com/2007/11/19/ebay-serves-5-billion-api-calls-each-month/). Aren't we seeing more and more traffic driven by mashups composed on top of open APIs? APIs are no longer a bolt on, they are your application. Architecturally that argues for implementing your own application around the same APIs developers and users employ.  
@@ -63,4 +63,4 @@ Site: http://ebay.com
 
     *   **It's a mistake to worry too much about scalability from the start**. Don't suffer from paralysis by analysis and worrying about traffic that may never come.  
 
-    *   **It's also a mistake not to worry about scalability at all**. You need to develop an organization capable of dealing with architecture evolution. Understand you are never done. Your system will always evolve and change. Build those expectations and capabilities into your business from the start. Don't let people and organizations be why your site fails. Many people will think the system should be perfect from the start. It doesn't work that way. A good system is developed overtime in response to real issues and concerns. Expect change and adapt to change.</div>
+    *   **It's also a mistake not to worry about scalability at all**. You need to develop an organization capable of dealing with architecture evolution. Understand you are never done. Your system will always evolve and change. Build those expectations and capabilities into your business from the start. Don't let people and organizations be why your site fails. Many people will think the system should be perfect from the start. It doesn't work that way. A good system is developed overtime in response to real issues and concerns. Expect change and adapt to change.    

@@ -1,8 +1,8 @@
 ## [Strategy: Break Up the Memcache Dog Pile ](/blog/2009/8/7/strategy-break-up-the-memcache-dog-pile.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, August 7, 2009 at 1:44AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update:** Asynchronous [HTTP cache validations](http://www.igvita.com/2008/10/07/asynchronous-http-cache-validations/#). A proposed HTTP caching extension: _if your application can afford to show slightly out of date content, then stale-while-revalidate can guarantee that the user will always be served directly from the cache, hence guaranteeing a consistent response-time user-experience._  
 
@@ -44,4 +44,4 @@ In the memcached FAQ a one key approach is described:
 
     ## Related Articles
 
-    *   [Memcached Tag at High Scalability](http://highscalability.com/tags/memcached)*   [Caching Makes Your Brain Explode](http://blog.craigambrose.com/past/2007/11/13/caching_makes_your_brain_explode/) by Craig Ambrose.*   [The Secret to Memcached](http://blog.leetsoft.com/2007/5/22/the-secret-to-memcached) by Tobias Lütke.*   [Memcached FAQ](http://www.socialtext.net/memcached/index.cgi).*   [Dog-pile Effect and How to Avoid it with Ruby on Rails memcache-client Patch](http://blog.kovyrin.net/2008/03/10/dog-pile-effect-and-how-to-avoid-it-with-ruby-on-rails-memcache-client-patch) by Alexey Kovyrin.*   [MintCache](http://www.djangosnippets.org/snippets/155/) by Glenn Franxman.*   [Advanced Rails Caching.. on the Edge](http://revolutiononrails.blogspot.com/2007/08/advanced-rails-caching-on-edge.html) by Aaron Batalion.</div>
+    *   [Memcached Tag at High Scalability](http://highscalability.com/tags/memcached)*   [Caching Makes Your Brain Explode](http://blog.craigambrose.com/past/2007/11/13/caching_makes_your_brain_explode/) by Craig Ambrose.*   [The Secret to Memcached](http://blog.leetsoft.com/2007/5/22/the-secret-to-memcached) by Tobias Lütke.*   [Memcached FAQ](http://www.socialtext.net/memcached/index.cgi).*   [Dog-pile Effect and How to Avoid it with Ruby on Rails memcache-client Patch](http://blog.kovyrin.net/2008/03/10/dog-pile-effect-and-how-to-avoid-it-with-ruby-on-rails-memcache-client-patch) by Alexey Kovyrin.*   [MintCache](http://www.djangosnippets.org/snippets/155/) by Glenn Franxman.*   [Advanced Rails Caching.. on the Edge](http://revolutiononrails.blogspot.com/2007/08/advanced-rails-caching-on-edge.html) by Aaron Batalion.    

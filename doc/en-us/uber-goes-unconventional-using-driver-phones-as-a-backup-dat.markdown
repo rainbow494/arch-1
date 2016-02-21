@@ -1,8 +1,8 @@
 ## [Uber Goes Unconventional: Using Driver Phones as a Backup Datacenter](/blog/2015/9/21/uber-goes-unconventional-using-driver-phones-as-a-backup-dat.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, September 21, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://c2.staticflickr.com/6/5766/20975061403_7fa4e71579_m.jpg)
 
@@ -28,93 +28,93 @@ Uber also takes another trick from network management systems. They periodically
 
 Let's see how they do it...
 
-## <span>Motivation for Using Phones as Storage for Datacenter Failure</span>
+##     Motivation for Using Phones as Storage for Datacenter Failure    
 
-*   <span>Not long ago a failed datacenter would cause customer trips to be lost. That’s now fixed. On a datacenter failure the customer is right back on their trip with almost no noticeable downtime.</span>
+*       Not long ago a failed datacenter would cause customer trips to be lost. That’s now fixed. On a datacenter failure the customer is right back on their trip with almost no noticeable downtime.    
 
 *   The request of a trip, offering it to driver, the acceptance of a trip, picking up the rider, and ending the trip are called **state change transitions**. A trip transaction lasts as long as the trip lasts.
 
-*   <span>From the moment a trip is started trip data is created in a back-end datacenter. It appears there’s a designated datacenter per city.</span>
+*       From the moment a trip is started trip data is created in a back-end datacenter. It appears there’s a designated datacenter per city.    
 
 *   **The typical solution for datacenter failure**: replicate data from the active datacenter to the backup datacenter. Well understood and works pretty well depending on your database. Drawbacks:
 
-    *   <span>Gets complicated beyond two backup datacenters.</span>
+    *       Gets complicated beyond two backup datacenters.    
 
-    *   <span>Replication lag between datacenters.</span>
+    *       Replication lag between datacenters.    
 
-    *   <span>It requires a constant high bandwidth between datacenters, especially if you have a database that doesn’t have good support for datacenter replication or if you haven’t tuned your business model to optimize deltas.</span>
+    *       It requires a constant high bandwidth between datacenters, especially if you have a database that doesn’t have good support for datacenter replication or if you haven’t tuned your business model to optimize deltas.    
 
-    *   <span>(A benefit that's not talked about, that probably doesn't matter for Uber, but may matter for smaller players, is that the driver phone plan is subsidizing bandwidth costs by not having to pay as much for inter-datacenter bandwidth.)</span>
+    *       (A benefit that's not talked about, that probably doesn't matter for Uber, but may matter for smaller players, is that the driver phone plan is subsidizing bandwidth costs by not having to pay as much for inter-datacenter bandwidth.)    
 
 *   **The creative application aware solution**: since there’s constant communication with driver phones just save the data to driver phones. Advantages:
 
-    *   <span>Can failover to any datacenter.</span>
+    *       Can failover to any datacenter.    
 
-    *   <span>Sidesteps the problem of a phone failing over to the wrong datacenter, which would cause all the trips to be lost.</span>
+    *       Sidesteps the problem of a phone failing over to the wrong datacenter, which would cause all the trips to be lost.    
 
-*   <span>Using driver phones to hold datacenter backups requires a replication protocol.</span>
+*       Using driver phones to hold datacenter backups requires a replication protocol.    
 
-    *   <span>All the state transitions occur when communicating with the datacenter. There’s a Begin Trip or Begin Drive request, for example, which is the perfect opportunity to exchange state data with the phone and have a phone store data.</span>
+    *       All the state transitions occur when communicating with the datacenter. There’s a Begin Trip or Begin Drive request, for example, which is the perfect opportunity to exchange state data with the phone and have a phone store data.    
 
-    *   <span>On a datacenter failover when the phone pings the new datacenter the trip data is requested off of the phone. The downtime is very minimal. (no information on how datacenter maps are handled).</span>
+    *       On a datacenter failover when the phone pings the new datacenter the trip data is requested off of the phone. The downtime is very minimal. (no information on how datacenter maps are handled).    
 
-*   <span>Challenges:</span>
+*       Challenges:    
 
-    *   <span>Not all the saved trip information should be accessible to the driver. A trip has a lot of information on all the riders, for example, which should not be exposed.</span>
+    *       Not all the saved trip information should be accessible to the driver. A trip has a lot of information on all the riders, for example, which should not be exposed.    
 
-    *   <span>Have to assume driver phones can be compromised which means the data must be made tamper proof. So all the data is encrypted on the phone.</span>
+    *       Have to assume driver phones can be compromised which means the data must be made tamper proof. So all the data is encrypted on the phone.    
 
-    *   <span>Want to keep the replication protocol as simple as possible to make it easy to reason about and easy to debug.</span>
+    *       Want to keep the replication protocol as simple as possible to make it easy to reason about and easy to debug.    
 
-    *   <span>Minimize extra bandwidth. With a phone based approach it’s possible to tune what data is serialized and what deltas are kept in order to minimize traffic over the mobile network.</span>
+    *       Minimize extra bandwidth. With a phone based approach it’s possible to tune what data is serialized and what deltas are kept in order to minimize traffic over the mobile network.    
 
-*   <span>The Replication Protocol</span>
+*       The Replication Protocol    
 
-    *   <span>A simple key-value store model is used with get, set, delete, list of keys operations.</span>
+    *       A simple key-value store model is used with get, set, delete, list of keys operations.    
 
-    *   <span>A key can only be set once to prevent accidental overwrites and out of order message problems.</span>
+    *       A key can only be set once to prevent accidental overwrites and out of order message problems.    
 
-    *   <span>With the set once rule versioning had to move into the key space. Updating a stored trip happens like: set(“trip1, version2”, “yyu”); delete(“trip1, version1”). The advantage is if there’s a failure between the set and delete there will be two values stored instead of nothing stored.</span>
+    *       With the set once rule versioning had to move into the key space. Updating a stored trip happens like: set(“trip1, version2”, “yyu”); delete(“trip1, version1”). The advantage is if there’s a failure between the set and delete there will be two values stored instead of nothing stored.    
 
     *   Failover resolution just a matter of merging keys between the phone and the new datacenter by: comparing stored keys to any known ongoing trips for the driver; maybe sending one or more _get_ operations to the phone for any missing data.
 
-## <span>How They Got the Reliability of the System to Work at Scale</span>
+##     How They Got the Reliability of the System to Work at Scale    
 
-### <span>Goals</span>
+###     Goals    
 
 *   **Ensure the system is non-blocking while still providing eventual consistency**. Any back-end application in the system should be able to make progress, even when the system is down. The only tradeoff the application should be making is that it may take time for the data to be stored on the phone.
 
 *   **Be able to move between datacenters without having to worry about the data already there**. There needs to be a way to reconcile the data between the driver and the servers.
 
-    *   <span>When failing over to a datacenter that datacenter has a view of active drivers and trips, no service in the datacenter is aware a failure occurred.</span>
+    *       When failing over to a datacenter that datacenter has a view of active drivers and trips, no service in the datacenter is aware a failure occurred.    
 
-    *   <span>On failing back to the original datacenter the driver and trip data is stale, which makes for a bad customer experience.</span>
+    *       On failing back to the original datacenter the driver and trip data is stale, which makes for a bad customer experience.    
 
 *   **Make it testable**. Datacenter failures are rare, so it’s typically a hard feature to test. They want to be able to constantly measure the success of the system so they can be confident a failover will succeed when it happens.
 
-### <span>The Flow</span>
+###     The Flow    
 
-*   <span>A driver makes an update/state change, for example, picking up a passenger. That update comes as a request to the Dispatch Service.</span>
+*       A driver makes an update/state change, for example, picking up a passenger. That update comes as a request to the Dispatch Service.    
 
-*   <span>The Dispatch Service updates the trip model for the trip. The update is sent to the Replication Service.</span>
+*       The Dispatch Service updates the trip model for the trip. The update is sent to the Replication Service.    
 
-*   <span>The Replication Service queues the request and returns success.</span>
+*       The Replication Service queues the request and returns success.    
 
-*   <span>The Dispatch Service updates its own datastore and returns success to the mobile client. Other data might be returned as well, for example, if it’s an Uber Pool trip another passenger might need to be picked up.</span>
+*       The Dispatch Service updates its own datastore and returns success to the mobile client. Other data might be returned as well, for example, if it’s an Uber Pool trip another passenger might need to be picked up.    
 
-*   <span>In the background the Replication Service encrypts the data and sends it to the Messaging Service.</span>
+*       In the background the Replication Service encrypts the data and sends it to the Messaging Service.    
 
-*   <span>The Messaging Service maintains a bidirectional channel with all drivers. This channel is separate from the original request channel that drivers use to communicate with services. This ensures normal business operations are not impacted by the backup process.</span>
+*       The Messaging Service maintains a bidirectional channel with all drivers. This channel is separate from the original request channel that drivers use to communicate with services. This ensures normal business operations are not impacted by the backup process.    
 
-*   <span>The Messenger Service sends the backup to the phone.</span>
+*       The Messenger Service sends the backup to the phone.    
 
-*   <span>The benefits of this design:</span>
+*       The benefits of this design:    
 
     *   **Applications have been isolated from replication latencies and failures**. The Replication Service returns immediately. And the application only has to make an a cheap call (within the same datacenter) to have the data replicated.
 
     *   **The Messaging Service supports arbitrary querying of the phone without impacting normal business operations**. The phone can be treated as a basic key-value store.
 
-### <span>Moving Between Datacenters</span>
+###     Moving Between Datacenters    
 
 *   First approach was to **manually run scripts on failover** to clean up old states from the database. This approach had **operational pain** as someone had to do it. And since it’s possible to failover by city or multiple cities at a time, the scripts became way too complicated.
 
@@ -122,11 +122,11 @@ Let's see how they do it...
 
 *   Traditionally completed trips were deleted from the phone so replication data would not grow without bounds. The problem is that when failing back to the original datacenter that datacenter will have stale data, which can cause scheduling anomalies. The fix is on trip completion a special [tombstone](https://en.wikipedia.org/wiki/Tombstone_(data_store)) key is used. The version has a flag that says the trip has been completed. When the Replication Service sees the flag it can tell the Dispatch Service that the trip has completed.
 
-*   <span>Storing trip data is expensive because it’s a huge encrypted blob of JSON data. Completed trips require much less storage. A weeks worth of completed trips can be stored in the same space as one active trip.</span>
+*       Storing trip data is expensive because it’s a huge encrypted blob of JSON data. Completed trips require much less storage. A weeks worth of completed trips can be stored in the same space as one active trip.    
 
-### <span>Ensuring 99.99% Reliability</span>
+###     Ensuring 99.99% Reliability    
 
-*   <span>The failover system constantly tested to establish the confidence that it works and that a failover will be successful.</span>
+*       The failover system constantly tested to establish the confidence that it works and that a failover will be successful.    
 
 *   First approach was **manual failovers of individual cities**. Then look at the success rate of the restoration and debug problems by looking at the logs.
 
@@ -140,33 +140,33 @@ Let's see how they do it...
 
 *   To fix these problems they **looked at the key concepts** in the system they wanted to test.
 
-    *   <span>**Ensure all mutations in the Dispatching Service are actually stored on the phone**. For example, a driver right after picking up a passenger may lose connectivity so replication data may not be sent to the phone immediately. Need to ensure the data eventually makes it to the phone.</span>
+    *       **Ensure all mutations in the Dispatching Service are actually stored on the phone**. For example, a driver right after picking up a passenger may lose connectivity so replication data may not be sent to the phone immediately. Need to ensure the data eventually makes it to the phone.    
 
     *   **Ensure stored data can be used for replication**. Are there any encryption/decryption issues, for example. Are their any problems merging in the backup data?
 
     *   **Ensure the backup datacenter can handle the load**.
 
-*   <span>To monitor the health of the system a Monitoring Service was born.</span>
+*       To monitor the health of the system a Monitoring Service was born.    
 
-    *   <span>Every hour the service gets a list of all active drivers and trips from the dispatch service. For all drivers the Messaging Service is used to get the replication data.  </span>
+    *       Every hour the service gets a list of all active drivers and trips from the dispatch service. For all drivers the Messaging Service is used to get the replication data.      
 
-    *   <span>The data is then compared to see if the data is as expected. This yields a lot of good health metrics, like what percentage of failed.</span>
+    *       The data is then compared to see if the data is as expected. This yields a lot of good health metrics, like what percentage of failed.    
 
-    *   <span>Breaking down the metrics by region and app version was a big help in pinpointing problems.</span>
+    *       Breaking down the metrics by region and app version was a big help in pinpointing problems.    
 
 *   A **shadow restoration** is used to test the backup datacenter.
 
-    *   <span>Data collected by the Monitoring Service is sent to the backup datacenter for a shadow restoration.</span>
+    *       Data collected by the Monitoring Service is sent to the backup datacenter for a shadow restoration.    
 
     *   The **success rate** is calculated by using the Dispatch Service to query and compare a snapshot from the primary datacenter to the number of active drivers and trips from the backup datacenter.  
 
-    *   <span>Metrics around how well the backup datacenter handled the load are also calculated.</span>
+    *       Metrics around how well the backup datacenter handled the load are also calculated.    
 
-    *   <span>Any configuration issues in the backup datacenter can be caught by this approach.</span>
+    *       Any configuration issues in the backup datacenter can be caught by this approach.    
 
 ## Related Articles
 
 *   [On Hacker News 3](https://news.ycombinator.com/item?id=10446835) / [On HackerNews](https://news.ycombinator.com/item?id=10253158) / [On HackerNews 2](https://news.ycombinator.com/item?id=10271850)  / [On reddit](https://www.reddit.com/r/programming/comments/3mp4al/uber_goes_unconventional_using_driver_phones_as_a/)
 *   [Data Serving Taking Storage for a Ride with Uber](https://www.youtube.com/watch?v=Dg76cNaeB4s)
 
-</div>
+    

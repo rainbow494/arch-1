@@ -1,8 +1,8 @@
 ## [Anti-RDBMS: A list of distributed key-value stores](/blog/2009/8/5/anti-rdbms-a-list-of-distributed-key-value-stores.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, August 5, 2009 at 12:49AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 8:** [Introducing MongoDB](http://www.linux-mag.com/cache/7530/1.html) by [Eliot Horowit](http://www.linux-mag.com/author/734). 
 
@@ -20,4 +20,4 @@ Richard Jones has put together a [very nice list of various key-value stores](ht
 
 There's an excellent discussion in the comments of Paxos vs Vector Clock techniques for synchronizing writes in the face of network failures.
 
-</div>
+    

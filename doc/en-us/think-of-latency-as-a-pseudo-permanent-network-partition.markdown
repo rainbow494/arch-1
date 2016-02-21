@@ -1,8 +1,8 @@
 ## [Think of Latency as a Pseudo-permanent Network Partition](/blog/2010/8/12/think-of-latency-as-a-pseudo-permanent-network-partition.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, August 12, 2010 at 8:21AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4152/4831919243_4612be4d25_o.jpg)
 
@@ -28,4 +28,4 @@ Does this mean geographically disperse systems by their very nature must be even
 *   [Numbers Everyone Should Know](http://highscalability.com/blog/2009/2/18/numbers-everyone-should-know.html)
 *   [Latency is Everywhere and it Costs You Sales - How to Crush it](http://highscalability.com/blog/2009/7/25/latency-is-everywhere-and-it-costs-you-sales-how-to-crush-it.html)
 
-</div>
+    

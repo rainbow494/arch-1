@@ -1,8 +1,8 @@
 ## [10 Core Architecture Pattern Variations for Achieving Scalability](/blog/2011/11/7/10-core-architecture-pattern-variations-for-achieving-scalab.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, November 7, 2011 at 9:10AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.static.flickr.com/6039/6300004742_01772c950a_o.jpg)
 
@@ -21,4 +21,4 @@ Srinath Perera has put together a [strong list of architecture patterns](http://
 
 Please read the original article, [List of Known Scalable Architecture Templates](http://srinathsview.blogspot.com/2011/10/list-of-known-scalable-architecture.html), for more details.
 
-</div>
+    

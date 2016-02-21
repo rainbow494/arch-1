@@ -1,8 +1,8 @@
 ## [Must see: 5 Steps to Scaling MongoDB (Or Any DB) in 8 Minutes](/blog/2011/9/13/must-see-5-steps-to-scaling-mongodb-or-any-db-in-8-minutes.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, September 13, 2011 at 9:07AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.static.flickr.com/6204/6096403479_68626bb1ac_m.jpg) [Jared Rosoff](http://jaredrosoff.com/) concisely, effectively, entertainingly, and convincingly gives an [8 minute MongoDB tutorial](http://www.youtube.com/watch?v=lnY8D3TL_tM) on scaling MongoDB at [Scale Out Camp](http://www.scaleoutcamp.org). The ideas aren't just limited to MongoDB, they work for most any database: Optimize your queries; Know your working set size; Tune your file system; Choose the right disks; Shard. Here's an explanation of all 5 strategies:
 
@@ -16,4 +16,4 @@
 
 *   [Hilarious Video: Relational Database Vs NoSQL Fanbois](http://highscalability.com/blog/2010/9/5/hilarious-video-relational-database-vs-nosql-fanbois.html)
 
-</div>
+    

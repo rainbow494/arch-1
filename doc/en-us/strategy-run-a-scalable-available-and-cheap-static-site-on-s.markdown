@@ -1,12 +1,12 @@
 ## [Strategy: Run a Scalable, Available, and Cheap Static Site on S3 or GitHub](/blog/2011/8/22/strategy-run-a-scalable-available-and-cheap-static-site-on-s.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 22, 2011 at 9:10AM</span></div>
+    
 
-<div class="body">
+    
 
 One of the best projects I've ever worked on was creating a large scale web site publishing system that was almost entirely static. A large team of very talented creatives made the art work, writers penned the content, and designers generated templates. All assets were controlled in a database. Then all that was extracted, after applying many different filters, to a static site that was uploaded via ftp to dozens of web servers. It worked great. Reliable, fast, cheap, and simple. Updates were a bit of a pain as it required pushing a lot of files to a lot of servers, and that took time, but otherwise a solid system.
 
-<span>Alas, this elegant system was replaced with a new fangled dynamic database based system. Content was pulled from a database using a dynamic language generated front-end. With a recent series of posts from Amazon's Werner Vogels, chronicling his experience of transforming his</span> [All Things Distributed](http://www.allthingsdistributed.com/)<span> blog into a static site using S3's ability to serve web pages, I get the pleasure of asking: are we back to static sites again? </span> 
+    Alas, this elegant system was replaced with a new fangled dynamic database based system. Content was pulled from a database using a dynamic language generated front-end. With a recent series of posts from Amazon's Werner Vogels, chronicling his experience of transforming his     [All Things Distributed](http://www.allthingsdistributed.com/)     blog into a static site using S3's ability to serve web pages, I get the pleasure of asking: are we back to static sites again?      
 
 It's a pleasure to ask the question because in many ways a completely static site is the holly grail of content heavy sites. A static site is one in which files (html, images, sound, movies, etc) sit in a filesystem and a web server directly translates a URL to a file that is directly reads the file from the file system and spits it out to the browser via a HTTP request. **Not much can go wrong** in this path. Not much going wrong is a virtue. It means you don't need to worry about things. It will just work. And it will just keep on working over time, bit rot hits program and service heavy sites a lot harder than static sites.
 
@@ -72,4 +72,4 @@ So more links on creating static web sites:
 *   [jekyll vs. hyde - a comparison of two static site generators](http://www.reddit.com/r/programming/comments/hcxvc/jekyll_vs_hyde_a_comparison_of_two_static_site/)
 *   [jekyll-s3]( https://github.com/versapay/jekyll-s3) - Push your Jekyll Blog to Amazon S3!
 
-</div>
+    

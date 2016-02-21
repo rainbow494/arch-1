@@ -1,8 +1,8 @@
 ## [Cell Architectures](/blog/2012/5/9/cell-architectures.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, May 9, 2012 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8004/7159666952_1eebef3654_o.jpg)
 
@@ -32,4 +32,4 @@ The key to the cell is you are creating a scalable and robust MTBF friendly serv
 
 *   [Startups Are Creating A New System Of The World For IT](http://highscalability.com/blog/2012/5/7/startups-are-creating-a-new-system-of-the-world-for-it.html)
 
-</div>
+    

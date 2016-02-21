@@ -1,8 +1,8 @@
 ## [Strategy: Diagonal Scaling - Don't Forget to Scale Out AND Up](/blog/2007/11/5/strategy-diagonal-scaling-dont-forget-to-scale-out-and-up.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, November 5, 2007 at 2:35PM</span></div>
+    
 
-<div class="body">All the cool kids advocate scaling out as the secret sauce of scaling. And it is, but don't forget to serve some tasty "scaling up" as a side dish. Scaling up doesn't have to mean buying a jet propelled, liquid cooled, 128 core monster super computer. Scaling up can just mean buying at the high end of the commodity buffet by buying more cores, more memory and using a shared nothing architecture to take advantage of all that power without adding complexity. Scale out when you need to, but big beefy boxes can absorb a lot of load before it's necessary to hit up your data center for more rack space. Here are a few examples of scaling out and up:  
+    All the cool kids advocate scaling out as the secret sauce of scaling. And it is, but don't forget to serve some tasty "scaling up" as a side dish. Scaling up doesn't have to mean buying a jet propelled, liquid cooled, 128 core monster super computer. Scaling up can just mean buying at the high end of the commodity buffet by buying more cores, more memory and using a shared nothing architecture to take advantage of all that power without adding complexity. Scale out when you need to, but big beefy boxes can absorb a lot of load before it's necessary to hit up your data center for more rack space. Here are a few examples of scaling out and up:  
 
 *   [John Allspaw](http://www.kitchensoap.com), Flickr's operations manager, coined the term _diagonal scaling_ for this strategy. In [Making a site faster by removing machines](http://www.kitchensoap.com/2007/08/20/making-a-site-faster-by-removing-machines/) (and a comment on this post) John told how Flickr replaced 67 dual-cpu boxes with 18 dual quad-core machines and recovered almost 4x rack space and reduced costs by about 50 percent.  
 
@@ -24,4 +24,4 @@
     > Use commodity hardware. You often hear the term “commodity hardware” in reference to scale out. While crappy hardware is also commodity, what this means is that instead of getting stuck on the low-end $40k machine, with thoughts of upgrading to the $250k machine, and maybe later the $1M machine, you use data partitioning and any number of let’s say $5k machines. That doesn’t mean a $1k single-disk crappy machine as said above. What does it mean for the machine to be “commodity”? It means that the components are standardized, common, and the price is set by the market, not by a single corporation. Use commodity machines configured with a good balance of price vs. performance.  
     > _
 
-    </div>
+        

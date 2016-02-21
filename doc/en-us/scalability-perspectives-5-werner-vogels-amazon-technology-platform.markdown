@@ -1,8 +1,8 @@
 ## [Scalability Perspectives #5: Werner Vogels – The Amazon Technology Platform](/blog/2008/12/30/scalability-perspectives-5-werner-vogels-the-amazon-technolo.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, December 30, 2008 at 1:07AM</span></div>
+    
 
-<div class="body">_[Scalability Perspectives](http://highscalability.com/tags/perspectives) is a series of posts that highlights the ideas that will shape the next decade of IT architecture. Each post is dedicated to a thought leader of the information age and his vision of the future. Be warned though – the journey into the minds and perspectives of these people requires an open mind._  
+    _[Scalability Perspectives](http://highscalability.com/tags/perspectives) is a series of posts that highlights the ideas that will shape the next decade of IT architecture. Each post is dedicated to a thought leader of the information age and his vision of the future. Be warned though – the journey into the minds and perspectives of these people requires an open mind._  
 
 ### Werner Vogels
 
@@ -72,4 +72,4 @@ Werner provides interesting insights about these platforms in his presentation. 
 
 *   [Werner Vogels](http://twitter.com/Werner) on Twitter
 
-</div>
+    

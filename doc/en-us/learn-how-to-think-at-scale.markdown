@@ -1,8 +1,8 @@
 ## [Learn How to Think at Scale](/blog/2009/7/30/learn-how-to-think-at-scale.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, July 30, 2009 at 3:10PM</span></div>
+    
 
-<div class="body">
+    
 
 Aaron Kimball of Cloudera gives a wonderful 23 minute presentation titled _Cloudera Hadoop Training: Thinking at Scale Cloudera_ which talks about "common challenges and general best practices for scaling with your data." As a company Cloudera offers "enterprise-level support to users of Apache Hadoop." Part of that offering is a really useful series of [tutorial videos on the Hadoop ecosystem](http://www.cloudera.com/hadoop-training).  
 
@@ -40,4 +40,4 @@ Here's the video [Thinking at Scale](http://www.cloudera.com/content/www/en-us/r
 
     ## Related Articles
 
-    *   [Researchers: Databases still beat Google's MapReduce](http://www.computerworld.com/s/article/9131526/Researchers_Databases_still_beat_Google_s_MapReduce) by Eric Lai*   [Relational Database Experts Jump The MapReduce Shark](http://typicalprogrammer.com/programming/mapreduce/) by Greg Jorgensen*   [Hadoop and HBAse vs RDBMS](http://www.docstoc.com/docs/2996433/Hadoop-and-HBase-vs-RDBMS) by Jonathan Gray*   [Database Technology for the Web: Part 1 – The MapReduce Debate](http://www.b-eye-network.com/view/10786#) by Colin White</div>
+    *   [Researchers: Databases still beat Google's MapReduce](http://www.computerworld.com/s/article/9131526/Researchers_Databases_still_beat_Google_s_MapReduce) by Eric Lai*   [Relational Database Experts Jump The MapReduce Shark](http://typicalprogrammer.com/programming/mapreduce/) by Greg Jorgensen*   [Hadoop and HBAse vs RDBMS](http://www.docstoc.com/docs/2996433/Hadoop-and-HBase-vs-RDBMS) by Jonathan Gray*   [Database Technology for the Web: Part 1 – The MapReduce Debate](http://www.b-eye-network.com/view/10786#) by Colin White    

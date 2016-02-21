@@ -1,8 +1,8 @@
 ## [Using Gossip Protocols for Failure Detection, Monitoring, Messaging and Other Good Things](/blog/2011/11/14/using-gossip-protocols-for-failure-detection-monitoring-mess.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, November 14, 2011 at 9:15AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.static.flickr.com/5263/5634993443_e0140fc8f4_m.jpg)
 
@@ -57,7 +57,7 @@ In the meat world we are warned against gossiping, it's a sin, it can ruin lives
 *   [Gossip Girl](http://www.cwtv.com/shows/gossip-girl)
 *   [ACID versus BASE for database transactions](http://www.johndcook.com/blog/2009/07/06/brewer-cap-theorem-base/) by John D. Cook
 *   [Distributed Storage Systems](http://www.swaroopch.com/notes/Distributed_Storage_Systems) by Swaroop C H
-*   [The promise, and limitations, of gossip protocols](http://portal.acm.org/citation.cfm?doid=1317379.1317382&CFID=18710520&CFTOKEN=91888717) by <span></span>Ken Birman
+*   [The promise, and limitations, of gossip protocols](http://portal.acm.org/citation.cfm?doid=1317379.1317382&CFID=18710520&CFTOKEN=91888717) by         Ken Birman
 *   [Phi Accrual Failure Detection](http://ddg.jaist.ac.jp/pub/HDY+04.pdf) by Naohiro Hayashibara, Xavier Défago, Rami Yared and Takuya Katayam. _Accrual failure detection is based on two primary ideas: that failure detection should be flexible by being decoupled from the application being monitored, and that outputting a continuous level of "suspicion" regarding how confident the monitor is that a node has failed. _
 *   [Level-triggered and edge-triggered](http://gengnosis.blogspot.com/2007/01/level-triggered-and-edge-triggered.html#) by Mike Burr
 *   [A Gossip-Style Failure Detection Service](http://www.cs.cornell.edu/home/rvr/papers/GossipFD.pdf) by Robbert van Renesse, Yaron Minsky, and Mark Hayden
@@ -70,8 +70,8 @@ In the meat world we are warned against gossiping, it's a sin, it can ruin lives
 *   [Epidemic Computing at Cornell](http://www.allthingsdistributed.com/historical/archives/000456.html) by Werner Vogels
 *   [Cornell Paper Directory](http://www.cs.cornell.edu/projects/quicksilver/pubs.html) by someone who likes really small fonts
 *   [A Gossiping Protocol for Detecting Global Threshold Crossings](https://eeweb01.ee.kth.se/upload/publications/reports/2010/IR-EE-LCN_2010_003.pdf)
-*   <div id="_mcePaste">[Efﬁcient Reconciliation and Flow Control for Anti-Entropy Protocols](http://www.cs.cornell.edu/home/rvr/papers/flowgossip.pdf) by Robbert van Renesse, Dan Dumitriu, Valient Gough, and Chris Thomas. _Anti-entropy protocols can process only a limited rate of updates, and proposes and evaluates a new state reconciliation mechanism as well as a _</div>
+*       [Efﬁcient Reconciliation and Flow Control for Anti-Entropy Protocols](http://www.cs.cornell.edu/home/rvr/papers/flowgossip.pdf) by Robbert van Renesse, Dan Dumitriu, Valient Gough, and Chris Thomas. _Anti-entropy protocols can process only a limited rate of updates, and proposes and evaluates a new state reconciliation mechanism as well as a _    
 
-    <div id="_mcePaste">_ow control scheme for anti-entropy protocols._</div>
+        _ow control scheme for anti-entropy protocols._    
 
-</div>
+    

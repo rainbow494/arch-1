@@ -1,8 +1,8 @@
 ## [Numbers Everyone Should Know](/blog/2009/2/18/numbers-everyone-should-know.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, February 18, 2009 at 8:14AM</span></div>
+    
 
-<div class="body">
+    
 
 ## Google AppEngine Numbers
 
@@ -80,4 +80,4 @@ I certainly would have never thought of this approach. The idea of keeping per u
 *   [Google Pro Tip: Use Back-Of-The-Envelope-Calculations To Choose The Best Design](http://highscalability.com/blog/2011/1/26/google-pro-tip-use-back-of-the-envelope-calculations-to-choo.html)
 *   [Peter Norvig's Home Page](http://norvig.com/)
 
-</div>
+    

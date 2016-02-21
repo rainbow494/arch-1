@@ -1,8 +1,8 @@
 ## [Mailinator Architecture](/blog/2008/1/24/mailinator-architecture.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, January 24, 2008 at 3:52AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update:** A fun exploration of applied searching in [How to search for the word "pen1s" in 185 emails every second](http://mailinator.blogspot.com/2008/01/how-to-search-for-word-pen1s-in-185.html). When indexOf doesn't cut it you just trie harder.  
 
@@ -120,4 +120,4 @@ Site: http://mailinator.com/
 
     ## Related Articles
 
-    *   [PlentyOfFish](http://highscalability.com/plentyoffish-architecture) champions straight forward bare bones simplicity.*   [Varnish](http://highscalability.com/links/goto/117/) smartly uses OS features to find incredible performance.*   [ThemBid](http://highscalability.com/thembid-architecture) gracefully pieces together open source components.</div>
+    *   [PlentyOfFish](http://highscalability.com/plentyoffish-architecture) champions straight forward bare bones simplicity.*   [Varnish](http://highscalability.com/links/goto/117/) smartly uses OS features to find incredible performance.*   [ThemBid](http://highscalability.com/thembid-architecture) gracefully pieces together open source components.    

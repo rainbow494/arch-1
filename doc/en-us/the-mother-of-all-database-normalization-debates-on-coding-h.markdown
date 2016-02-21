@@ -1,8 +1,8 @@
 ## [The Mother of All Database Normalization Debates on Coding Horror](/blog/2008/7/16/the-mother-of-all-database-normalization-debates-on-coding-h.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, July 16, 2008 at 5:59AM</span></div>
+    
 
-<div class="body">Jeff Atwood started a barn burner of a conversation in [Maybe Normalizing Isn't Normal](http://www.codinghorror.com/blog/archives/001152.html) on how to create a fast scalable tagging system. Jeff eventually asks that terrible question: _which is better -- a normalized database, or a denormalized database?_ And all hell breaks loose. I know, it's hard to imagine database debates becoming contentious, but it does happen :-) It's lucky developers don't have temporal power or rivers of blood would flow.  
+    Jeff Atwood started a barn burner of a conversation in [Maybe Normalizing Isn't Normal](http://www.codinghorror.com/blog/archives/001152.html) on how to create a fast scalable tagging system. Jeff eventually asks that terrible question: _which is better -- a normalized database, or a denormalized database?_ And all hell breaks loose. I know, it's hard to imagine database debates becoming contentious, but it does happen :-) It's lucky developers don't have temporal power or rivers of blood would flow.  
 
 Here are a few of the pithier points (summarized):  
 
@@ -65,4 +65,4 @@ Here are a few of the pithier points (summarized):
     *   [Denormalization Patterns](http://database-programmer.blogspot.com/2008/04/denormalization-patterns.html) by Kenneth Downs  
     *   [When Databases Lie: Consistency vs. Availability in Distributed Systems](http://www.25hoursaday.com/weblog/2007/10/10/WhenDatabasesLieConsistencyVsAvailabilityInDistributedSystems.aspx) by Dare Obasanjo  
     *   [Stored procedure reporting & scalability](http://www.ytechie.com/2008/05/stored-procedure-reporting-scalability.html) by Jason Young  
-    *   [When Not to Normalize your SQL Database](http://www.25hoursaday.com/weblog/CommentView.aspx?guid=cc0e740c-a828-4b9d-b244-4ee96e2fad4b) by Dare Obasanjo</div>
+    *   [When Not to Normalize your SQL Database](http://www.25hoursaday.com/weblog/CommentView.aspx?guid=cc0e740c-a828-4b9d-b244-4ee96e2fad4b) by Dare Obasanjo    

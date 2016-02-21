@@ -1,8 +1,8 @@
 ## [Facebook Mobile Drops Pull For Push-based Snapshot + Delta Model](/blog/2014/10/20/facebook-mobile-drops-pull-for-push-based-snapshot-delta-mod.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, October 20, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm4.staticflickr.com/3954/15340556948_f2df0cf4b7_m.jpg)
 
@@ -32,4 +32,4 @@ Delta based syncing strategies are very common in Network Management systems whe
 
 It's also good to see Facebook got rid of JSON. The amount of energy and bandwidth wasted on moving and parsing fat JSON packets is almost criminal.
 
-</div>
+    

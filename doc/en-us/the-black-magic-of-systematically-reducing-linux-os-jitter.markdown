@@ -1,8 +1,8 @@
 ## [The Black Magic of Systematically Reducing Linux OS Jitter](/blog/2015/4/8/the-black-magic-of-systematically-reducing-linux-os-jitter.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, April 8, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm9.staticflickr.com/8718/17052576726_47212284bf_m.jpg)
 
@@ -48,4 +48,4 @@ Isolcpus are somewhat (but not entirely) different. With isolcpus you get the be
 *   [Is It Time To Get Rid Of The Linux OS Model In The Cloud?](http://highscalability.com/blog/2012/1/19/is-it-time-to-get-rid-of-the-linux-os-model-in-the-cloud.html)
 *   [The Secret To 10 Million Concurrent Connections -The Kernel Is The Problem, Not The Solution](http://highscalability.com/blog/2013/5/13/the-secret-to-10-million-concurrent-connections-the-kernel-i.html)
 
-</div>
+    

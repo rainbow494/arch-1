@@ -1,8 +1,8 @@
 ## [Product: Yslow to speed up your web pages](/blog/2007/7/30/product-yslow-to-speed-up-your-web-pages.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, July 30, 2007 at 2:09PM</span></div>
+    
 
-<div class="body">
+    
 
 **Update**: _[Speed up Apache - how I went from F to A in YSlow](http://www.jaisenmathai.com/blog/2008/02/27/speed-up-apache-how-i-went-from-f-to-a-in-yslow/)._ Good example of using YSlow to speed up a website with solid code examples.  
 
@@ -17,4 +17,4 @@ YSlow gives you:
 *   List of components in the page
 *   Tools including JSLint
 
-</div>
+    

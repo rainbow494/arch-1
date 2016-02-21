@@ -1,8 +1,8 @@
 ## [PlentyOfFish Architecture](/blog/2009/6/26/plentyoffish-architecture.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, June 26, 2009 at 3:58PM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 5**: [PlentyOfFish Update - 6 Billion Pageviews And 32 Billion Images A Month](http://highscalability.com/blog/2011/12/27/plentyoffish-update-6-billion-pageviews-and-32-billion-image.html)  
 [](http://highscalability.com/blog/2011/12/27/plentyoffish-update-6-billion-pageviews-and-32-billion-image.html)**Update 4**: [Jeff Atwood](http://www.codinghorror.com/blog/archives/001279.html) costs out Markus' scale up approach against a scale out approach and finds scale up wanting. The discussion in the comments is as interesting as the article. My guess is Markus doesn't want to rewrite his software to work across a scale out cluster so even if it's more expensive scale up works better for his needs.  
@@ -54,4 +54,4 @@ Site: http://www.plentyoffish.com/
 
     *   [MySpace](http://highscalability.com/myspace-architecture) also uses Windows to run their site.*   Markus Frind's posts on [Webmaster World](http://www.webmasterworld.com/profilev4.cgi?action=view&member=markus007).*   [And the Money Comes Rolling In](http://www.inc.com/magazine/20090101/and-the-money-comes-rolling-in.html) by Max Chafkin*   [How I started A Dating Empire](http://plentyoffish.wordpress.com/2006/06/14/how-i-started-an-empire/) by Markus Frind  
 
-    Thanks to Erik Osterman for recommending profiling PlentyOfFish.</div>
+    Thanks to Erik Osterman for recommending profiling PlentyOfFish.    

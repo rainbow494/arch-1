@@ -1,8 +1,8 @@
 ## [Scaling Spam Eradication Using Purposeful Games: Die Spammer Die!](/blog/2008/10/17/scaling-spam-eradication-using-purposeful-games-die-spammer.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, October 17, 2008 at 1:01AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update:** As expected I'm undergoing a massive spam attack for speaking truth to dark powers. This is the time to be strong. Together we can make a change. What change you may ask? I can't say, just change and lots more change. Let's link arms together and bravely stand against the forces of chaos for a better yesterday and a better tomorrow.  
 
@@ -58,4 +58,4 @@ With the basic ideas in place let's create a game for identifying and filtering 
 
     ## Related Articles
 
-    *   [GWAP Home](http://www.gwap.com/gwap/)*   [Designing games with a purpose](http://portal.acm.org/citation.cfm?id=1378719)*   [Inside India’s CAPTCHA solving economy](http://blogs.zdnet.com/security/?p=1835)*   [Spammers Choose GMail](http://www.allspammedup.com/2008/07/spammers-choose-gmail/)*   [Google's Image Labeler](http://images.google.com/imagelabeler/)*   [Google Crashing](http://www.jimschrempp.com/features/computer/googleimagelabeler.htm)</div>
+    *   [GWAP Home](http://www.gwap.com/gwap/)*   [Designing games with a purpose](http://portal.acm.org/citation.cfm?id=1378719)*   [Inside India’s CAPTCHA solving economy](http://blogs.zdnet.com/security/?p=1835)*   [Spammers Choose GMail](http://www.allspammedup.com/2008/07/spammers-choose-gmail/)*   [Google's Image Labeler](http://images.google.com/imagelabeler/)*   [Google Crashing](http://www.jimschrempp.com/features/computer/googleimagelabeler.htm)    

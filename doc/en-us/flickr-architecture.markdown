@@ -1,8 +1,8 @@
 ## [Flickr Architecture](/blog/2007/11/13/flickr-architecture.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, November 13, 2007 at 6:04PM</span></div>
+    
 
-<div class="body">
+    
 
 **Update:** Flickr hits [2 Billion photos](http://www.webware.com/8301-1_109-9816461-2.htm) served. That's a lot of hamburgers.  
 
@@ -112,4 +112,4 @@ Site: http://www.flickr.com
 
     *   **Be sensitive to the demands of exponential growth**. More users means more content, more content means more connections, more connections mean more usage.  
 
-    *   **Plan for peaks**. Be able to handle peak loads up and down the stack.</div>
+    *   **Plan for peaks**. Be able to handle peak loads up and down the stack.    

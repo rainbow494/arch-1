@@ -1,8 +1,8 @@
 ## [Strategy: Use Linux Taskset to Pin Processes or Let the OS Schedule It?](/blog/2013/10/23/strategy-use-linux-taskset-to-pin-processes-or-let-the-os-sc.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, October 23, 2013 at 9:00AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7438/10441462903_1309678940_m.jpg)
 
@@ -33,6 +33,6 @@ Mike (I'm assuming Michael Barker, but I don't know for sure) gave a really gre
 
 > We currently use taskset at LMAX, the biggest win is not in locality, but simply separation of the cores used for the application and the cores use for handling OS interrupt requests.  We use irqbalance and the IRQBALANCE_BANNED_CPUS option, others advocate disabling irqbalance to configuring the affinity via the /proc filesystem.  Also you can use taskset in the init process to move all of the system daemons to a different set of cores too.
 > 
-> <div>Taskset is a fairly blunt tool, thread affinity will give you finer grained control and will probably be more useful if you are trying to exploit memory locality.  As Peter himself also points out (http://vanillajava.blogspot.co.nz/2013/07/micro-jitter-busy-waiting-and-binding.html), if your goal is to eliminate latency jitter, thread affinity is best combined with isolcpus.  While using thread affinity will prevent your thread from being scheduled elsewhere, it doesn't preclude the OS from scheduling something else on the bound CPU potentially introducing jitter.</div>
+>     Taskset is a fairly blunt tool, thread affinity will give you finer grained control and will probably be more useful if you are trying to exploit memory locality.  As Peter himself also points out (http://vanillajava.blogspot.co.nz/2013/07/micro-jitter-busy-waiting-and-binding.html), if your goal is to eliminate latency jitter, thread affinity is best combined with isolcpus.  While using thread affinity will prevent your thread from being scheduled elsewhere, it doesn't preclude the OS from scheduling something else on the bound CPU potentially introducing jitter.    
 
-</div>
+    

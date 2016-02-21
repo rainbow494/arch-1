@@ -1,8 +1,8 @@
 ## [Microservices - Not a free lunch!](/blog/2014/4/8/microservices-not-a-free-lunch.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, April 8, 2014 at 8:54AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm4.staticflickr.com/3697/13651792713_817bfe2010_m.jpg)
 
@@ -118,4 +118,4 @@ However, when considering Microservice like architectures, it's really important
 
 *   [On Hacker News](https://news.ycombinator.com/item?id=8805260)
 
-</div>
+    

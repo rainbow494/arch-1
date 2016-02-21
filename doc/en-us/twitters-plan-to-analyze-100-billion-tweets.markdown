@@ -1,8 +1,8 @@
 ## [Twitter’s Plan to Analyze 100 Billion Tweets](/blog/2010/2/19/twitters-plan-to-analyze-100-billion-tweets.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, February 19, 2010 at 7:41AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4057/4370730318_4beb5e645c_m.jpg) If Twitter is the “nervous system of the web” as some people think, then what is the brain that makes sense of all those signals (tweets) from the nervous system? That brain is the Twitter Analytics System and Kevin Weil, as Analytics Lead at Twitter, is the homunculus within in charge of figuring out what those over 100 billion tweets (approximately the number of neurons in the human brain) mean.
 
@@ -64,4 +64,4 @@ Overall it was a very interesting and useful talk. I like seeing the careful eva
 5.  [Hadoop Bay Area User Group - Feb 17th at Yahoo! - RECAP](http://developer.yahoo.net/blogs/hadoop/2010/02/hadoop_bay_area_user_group_feb.html)
 6.  [Twitter says](http://blog.twitter.com/2010/02/measuring-tweets.html) "Today, we are seeing 50 million tweets per day—that's an average of 600 tweets per second."
 
-</div>
+    

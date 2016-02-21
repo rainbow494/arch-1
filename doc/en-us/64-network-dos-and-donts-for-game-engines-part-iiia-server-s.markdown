@@ -1,8 +1,8 @@
 ## [64 Network DO’s and DON’Ts for Game Engines. Part IIIa: Server-Side ](/blog/2015/7/15/64-network-dos-and-donts-for-game-engines-part-iiia-server-s.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, July 15, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://ithare.com/wp-content/uploads/BB_part39_v1-640x465.png)
 
@@ -59,19 +59,19 @@ class MyNode : public Node { //game-specific one
 
 This model is simple and efficient, and enforces a very-well-defined message-based interface. How to divide the system into nodes – depends on the game, but in practice it can be either different-parts-of-the-same-game-world, or casino tables, or stock exchange floor, or whatever else you can think of (as long as it is loosely coupled and doesn’t require to be absolutely synchronous with the rest of the system). We’ve named this architecture Store-Process-and-Forward (see below why). Each of the nodes in Store-Process-and-Forward system is capable of doing only one single thing – processing incoming messages, and the processing is performed as follows:
 
-<div class="rabbit-centerpiece-outer">
+    
 
-<div class="rabbit-centerpiece-inner">
+    
 
-**<span class="rabbit-nowrap">incoming-message</span> -> <span class="rabbit-nowrap">incoming-queue</span> -> <span class="rabbit-nowrap">processing (node logic)</span> -> <span class="rabbit-nowrap">outgoing-queue(s)</span> -> <span class="rabbit-nowrap">outgoing-message(s)</span>**
+**    incoming-message     ->     incoming-queue     ->     processing (node logic)     ->     outgoing-queue(s)     ->     outgoing-message(s)    **
 
-</div>
+    
 
-</div>
+    
 
 For those into patterns, each of our nodes can be seen as implementing “Reactor” pattern [[Schmidt2000]](#rabbitref-Schmidt2000).
 
-<span class="rabbit-wikiquote-right-outer rabbit-wikiquote-top-p"><span class="rabbit-wikiquote-right-inner"><span class="rabbit-wikiquote-body"><span class="rabbit-wikiquote-name">[Store and forward](https://en.wikipedia.org/wiki/Store_and_forward)</span> <span class="rabbit-wikiquote-definition">is a telecommunications technique in which information is sent to an intermediate station where it is kept and sent at a later time to the final destination or to another intermediate station.</span></span><span class="rabbit-wikiquote-ref">— Wikipedia —</span></span></span>
+                [Store and forward](https://en.wikipedia.org/wiki/Store_and_forward)         is a telecommunications technique in which information is sent to an intermediate station where it is kept and sent at a later time to the final destination or to another intermediate station.            — Wikipedia —            
 
 In a sense, Store-Process-and-Forward architecture is quite similar to store-and-forward processing model as it is used in backbone Internet routers (and which is known to be extremely efficient). With classical store-and-forward model, each node receives an incoming packet, and puts it to an incoming queue; and on the other hand, as long as there is something in incoming queue – the node takes it out, makes a decision where to route it, and pushes the packet to outgoing queue(s). What we’re adding to classical store-and-forward model, is that between taking out a message from incoming queue and sending it out, we’re processing it. Hence, the Store-Process-and-Forward name.
 
@@ -81,9 +81,9 @@ For our purposes, receiving-incoming-message-and-putting-it-to-incoming-queue ca
 
 In general, if you can split your system into reasonably small nodes – you SHOULD use Store-Process-and-Forward architecture (it has numerous advantages which are discussed in the [item #19d](#item19d) below). So, the question is: **can you split your system or not?** Let’s consider it in a bit more detail.
 
-> <span class="rabbit-pullquote-left-outer rabbit-pullquote-top-p"><span class="full-image-block ssNonEditable"><span>![](http://ithare.com/wp-content/uploads/BB_emotionM_0012.png?__SQUARESPACE_CACHEVERSION=1436802619196)</span></span><span class="rabbit-pullquote-left-inner"><span class="rabbit-pullquote-quote">“</span>Node can represent pretty much everything out there - from game-logic-node to database-handling-node, and from payment-processing-node to an SMS-sending-node.</span></span>
+>             ![](http://ithare.com/wp-content/uploads/BB_emotionM_0012.png?__SQUARESPACE_CACHEVERSION=1436802619196)                “    Node can represent pretty much everything out there - from game-logic-node to database-handling-node, and from payment-processing-node to an SMS-sending-node.        
 
-<span class="rabbit-pullquote-left-outer rabbit-pullquote-top-p"><span class="rabbit-pullquote-left-inner"> </span></span>First of all, let’s see what can be represented by a node? We have quite a bit of good news in this regard. Node can represent pretty much everything out there – from game-logic-node to database-handling-node, and from payment-processing-node to an SMS-sending-node. In general, peripheral nodes (such as two latter ones) rarely cause any problems, it is game-logic-nodes and database-handling-nodes (if you need the latter) which may be a bit tricky to separate.
+                 First of all, let’s see what can be represented by a node? We have quite a bit of good news in this regard. Node can represent pretty much everything out there – from game-logic-node to database-handling-node, and from payment-processing-node to an SMS-sending-node. In general, peripheral nodes (such as two latter ones) rarely cause any problems, it is game-logic-nodes and database-handling-nodes (if you need the latter) which may be a bit tricky to separate.
 
 When it comes to splitting your game into game-logic-nodes, think: what is the smallest isolated unit in your game (and/or game engine)? Very often you will find out that you do have isolated units with lots of action within, and very few communications in-between. For a world simulator such a unit can be a cell or a scene (usually the latter), for a casino it can be a table/lobby (note: you don’t need to have all the game nodes to be the same – you can and should make them specific, so it is perfectly fine to have a separate table node and a lobby node, and instantiate them as necessary). You will be surprised how many systems you will be able to split into the small-and-relatively-isolated nodes, if you think about it for 5 minutes.
 
@@ -93,42 +93,42 @@ A word of caution: the best split is usually a “natural” one (like those des
 
 In most over-the-Internet games you will need some kind of a database (or some other persistent storage) – at least to keep user database, logins, high scores, etc. etc. On the other hand, in many games you don’t really need to care about splitting database nodes, and one single node will do it all for you. Otherwise, splitting database-handling nodes may become tricky. I know of three approaches for such a split. First is “quick-and-dirty but not exactly scalable”, the second one is “somewhat scalable”, and the third one is “really scalable”.
 
-> <span class="rabbit-pullquote-right-outer rabbit-pullquote-top-p"><span class="full-image-block ssNonEditable"><span>![](http://ithare.com/wp-content/uploads/BB_emotion_0023.png?__SQUARESPACE_CACHEVERSION=1436802701962)</span></span><span class="rabbit-pullquote-right-inner"><span class="rabbit-pullquote-quote">“</span>I've seen a system which had managed to process 30'000'000 non-trivial database transactions a day on a single DB-handling node, running over a single DB connection.</span></span>
+>             ![](http://ithare.com/wp-content/uploads/BB_emotion_0023.png?__SQUARESPACE_CACHEVERSION=1436802701962)                “    I've seen a system which had managed to process 30'000'000 non-trivial database transactions a day on a single DB-handling node, running over a single DB connection.        
 
-<span class="rabbit-pullquote-right-outer rabbit-pullquote-top-p"><span class="rabbit-pullquote-right-inner"> </span></span>**“Quick-and-dirty”** approach is actually delaying DB node split for a while. You have one single DB-handling node (with a single underlying DB); it greatly simplifies both development and deployment (including DBA work). On the negative side, obviously, “quick-and-dirty” approach is not really scalable. However, surprisingly, a “quick-and-dirty” system can work for quite a long time (provided that your DB programmers are good); I’ve seen a system which had managed to process 30’000’000 non-trivial database transactions a day on a single DB node, running over a single DB connection. And if the game is successful enough to exceed these numbers, this model can be changed to the “really scalable” one without rewriting the whole thing (though with significant effort on DB-node side).
+                 **“Quick-and-dirty”** approach is actually delaying DB node split for a while. You have one single DB-handling node (with a single underlying DB); it greatly simplifies both development and deployment (including DBA work). On the negative side, obviously, “quick-and-dirty” approach is not really scalable. However, surprisingly, a “quick-and-dirty” system can work for quite a long time (provided that your DB programmers are good); I’ve seen a system which had managed to process 30’000’000 non-trivial database transactions a day on a single DB node, running over a single DB connection. And if the game is successful enough to exceed these numbers, this model can be changed to the “really scalable” one without rewriting the whole thing (though with significant effort on DB-node side).
 
 Very roughly, “quick-and-dirty” model can be described as follows:
 
-<div class="rabbit-centerpiece-outer">
+    
 
-<div class="rabbit-centerpiece-inner" style="padding-left: 90px;">**<span class="rabbit-nowrap">lots of game nodes</span> -> <span class="rabbit-nowrap">single DB-handling node</span> -> <span class="rabbit-nowrap">single DB connection</span> -> <span class="rabbit-nowrap">single DB</span>**</div>
+    **    lots of game nodes     ->     single DB-handling node     ->     single DB connection     ->     single DB    **    
 
-</div>
+    
 
 **“Somewhat scalable”** approach is to have multiple DB-handling nodes over a single underlying DB, while sharing different objects stored in DB, between nodes (if objects are not shared, it is really a version of “really scalable” approach, see below). In general, I don’t really like this “somewhat scalable” thing; one big problem with this approach is object sharing, which creates high risks of running into race conditions (in the worst case leading to game items – or even money – lost in transit), very-difficult-to-track locks (affecting performance in unpredictable ways), and deadlocks (ouch!), making the whole thing tantamount to inter-thread races (which, as discussed above and in [[NoBugs2010]](#rabbitref-NoBugs2010), are a Really Bad Thing). For some systems, “somewhat scalable” approach might be reasonable, but in general I’d suggest to avoid it, unless you’re 200% sure that (a) it is what you need, and even more importantly, (b) that you’re not going to ask me to fix resulting problems ![:-)](http://ithare.com/wp-includes/images/smilies/simple-smile.png) .
 
 Very roughly, “somewhat scalable” model can be described as follows:
 
-<div class="rabbit-centerpiece-outer">
+    
 
-<div class="rabbit-centerpiece-inner" style="padding-left: 90px;">**<span class="rabbit-nowrap">lots of game nodes</span> -> <span class="rabbit-nowrap">many DB-handling nodes</span> -> <span class="rabbit-nowrap">multiple DB connections</span> -> <span class="rabbit-nowrap">single DB with data objects shared between DB-handling nodes</span>**</div>
+    **    lots of game nodes     ->     many DB-handling nodes     ->     multiple DB connections     ->     single DB with data objects shared between DB-handling nodes    **    
 
-</div>
+    
 
-<span class="rabbit-wikiquote-left-outer rabbit-wikiquote-top-p"><span class="rabbit-wikiquote-left-inner"><span class="rabbit-wikiquote-ref"> </span></span></span>It is worth noting that in books and lectures, this “somewhat scalable” approach will by far the most popular and the most recommended one (and often they will also tell you that it is the only way to achieve real scalability). However, in practice (a) it appears not to be linearly scalable (due to intra-database interactions and locks on shared objects), (b) it causes pretty bad problems due to inherent synchronization issues, and (c) among real-world reasonably-large (like “multi-million transactions per day”) systems, at the very least, it is not universal; I’ve seen quite a few architects that admitted using “quick and dirty” or “really scalable” implementations, always feeling uneasy about it because they went against the current teachings. IMNSHO, it is one of those cases when the books are wrong, and practice is right.
+                         It is worth noting that in books and lectures, this “somewhat scalable” approach will by far the most popular and the most recommended one (and often they will also tell you that it is the only way to achieve real scalability). However, in practice (a) it appears not to be linearly scalable (due to intra-database interactions and locks on shared objects), (b) it causes pretty bad problems due to inherent synchronization issues, and (c) among real-world reasonably-large (like “multi-million transactions per day”) systems, at the very least, it is not universal; I’ve seen quite a few architects that admitted using “quick and dirty” or “really scalable” implementations, always feeling uneasy about it because they went against the current teachings. IMNSHO, it is one of those cases when the books are wrong, and practice is right.
 
 **“Really scalable”** approach usually means that for M gaming nodes you can have N+1 database-handling nodes, (where M is usually much larger than N). Here, each of N database-handling nodes will support a bunch of gaming nodes, and 1 database-handling node will support central user database. Each of database-handling nodes has it’s own database (or it’s own set of tables in the database) where nobody except for this database-handling node is allowed to access. To deal with inter-database-node interactions, you’ll certainly need to provide “guaranteed inter-DB transactions” (implementing them is beyond the scope of this article, but it is doable with or without explicit DB support for distributed transactions). This approach is perfectly free from races, and is scalable beyond the wildest dreams (all the nodes are completely independent, which ensures linear scaling without any risk of unexpected slowdowns, N can be increased easily, and single central user database_handling_node+associated_database pair can be split too quite easily if it becomes necessary). It has been seen to work extremely well even for the largest systems. However, it is a bit cumbersome, so at first you might want to settle for 1+1 database-handling nodes (or even for a single one, making it a “quick-and-dirty” system at first).
 
 Very roughly, “really scalable” model can be described as follows:
 
-<div class="rabbit-centerpiece-outer">
+    
 
-<div class="rabbit-centerpiece-inner" style="padding-left: 90px;">**<span class="rabbit-nowrap">lots of game nodes</span> -> <span class="rabbit-nowrap">N+1 DB-handling nodes</span> -> <span class="rabbit-nowrap">single DB connection per DB-handling node</span> -> <span class="rabbit-nowrap">DB(s) with each data object exclusively owned by some DB-handling node</span>**</div>
+    **    lots of game nodes     ->     N+1 DB-handling nodes     ->     single DB connection per DB-handling node     ->     DB(s) with each data object exclusively owned by some DB-handling node    **    
 
-<div class="rabbit-centerpiece-inner"><span class="rabbit-nowrap">  
-</span></div>
+          
+        
 
-</div>
+    
 
 As noted above, one could stay within “really scalable” model while keeping data from several database-handling nodes within one database; one database doesn’t make much difference as long as there is no possible locking between the objects stored there. An ideal way to achieve separation is to have each node exclusively “own” a set of it’s own tables; if each node accesses only it’s own tables – using one database for multiple nodes shouldn’t cause any problems (unless you manage to overload DB log, which is usually difficult unless you’re storing multimedia in your database), but it simplifies deployment and work of DBAs quite a lot. On the other hand, while implementing DB-handling node separation at row level (with different DB-handling nodes sharing the same DB tables, but exclusively “owning” rows with a certain key field), is possible, you should keep in mind that even while objects are separated, nodes will still occasionally compete for index locks (because index scans tend to lock not only current row, but also previous/next ones); whether this would cause problems in practice – depends heavily on a lot of factors, including nature of DB interaction, DB load, and specific database (and index type) in use.
 
@@ -136,15 +136,15 @@ A variation of “really scalable” approach (with M~=N) is to say that there a
 
 Very roughly, this variation of “really scalable” model can be described as follows:
 
-<div class="rabbit-centerpiece-outer">
+    
 
-<div class="rabbit-centerpiece-inner" style="padding-left: 120px;">**<span class="rabbit-nowrap">lots of game nodes each implementing DB-handling</span> -> <span class="rabbit-nowrap">single DB connection per DB-handling node</span> -> <span class="rabbit-nowrap">DB(s) with each data object exclusively owned by some DB-handling node</span>**</div>
+    **    lots of game nodes each implementing DB-handling     ->     single DB connection per DB-handling node     ->     DB(s) with each data object exclusively owned by some DB-handling node    **    
 
-</div>
+    
 
-> <span class="rabbit-pullquote-right-outer rabbit-pullquote-top-p"><span class="full-image-block ssNonEditable"><span>![](http://ithare.com/wp-content/uploads/BB_emotion_0007.png?__SQUARESPACE_CACHEVERSION=1436802867450)</span></span><span class="rabbit-pullquote-right-inner"><span class="rabbit-pullquote-quote">“</span>Both these cases allow to have DB processing synchronization-, race- and lock-free</span></span>
+>             ![](http://ithare.com/wp-content/uploads/BB_emotion_0007.png?__SQUARESPACE_CACHEVERSION=1436802867450)                “    Both these cases allow to have DB processing synchronization-, race- and lock-free        
 
-<span class="rabbit-pullquote-right-outer rabbit-pullquote-top-p"> </span>Overall, when you start your development, as a very rough rule of thumb, I’d suggest to consider one of two opportunities:
+         Overall, when you start your development, as a very rough rule of thumb, I’d suggest to consider one of two opportunities:
 
 *   “Quick and Dirty” approach, planning to migrate to “Really Scalable” one if the project is vastly successful
 *   Each-Node-is-DB-Handling-Node (M~=N) variation of “Really Scalable” model.
@@ -157,7 +157,7 @@ In general, the database-handling issue is way too large to fit into one single 
 
 One thing which you need to keep in mind when writing a server-side distributed system, is that when you send a message to another node asking to do something, it can end up in three different states: “success”, “failure”, and “I have no idea whether it has even been delivered”. It is the last state which causes most of the problems: for example, in case when part of server-side nodes fails, and another part stays alive, or when you have some of your inter-node links temporarily failed, what is especially important for inter-datacenter deployments, but does happen within a single datacenter and has been observed even on one single server.
 
-> <span class="rabbit-pullquote-left-outer rabbit-pullquote-top-p"><span class="full-image-block ssNonEditable"><span>![](http://ithare.com/wp-content/uploads/BB_emotionM_0005.png?__SQUARESPACE_CACHEVERSION=1436802922327)</span></span><span class="rabbit-pullquote-left-inner"><span class="rabbit-pullquote-quote">“</span>For inter-datacenter interactions this 'I Have no Idea' state is clearly one of the worst problems"</span></span>
+>             ![](http://ithare.com/wp-content/uploads/BB_emotionM_0005.png?__SQUARESPACE_CACHEVERSION=1436802922327)                “    For inter-datacenter interactions this 'I Have no Idea' state is clearly one of the worst problems"        
 
 This “I Have no Idea” state is not specific to our Store-Process-and-Forward architecture, but appears inevitably as soon as server-side becomes distributed (it also appears for communications between client and server, but this is beyond the scope now).
 
@@ -167,9 +167,9 @@ In practice, these “I have no idea whether it has been delivered” scenarios 
 
 ### 19c1\. DO Consider implementing Explicit Support for Idempotence
 
-> <span class="rabbit-wikiquote-right-outer rabbit-wikiquote-top-p"><span class="rabbit-wikiquote-right-inner"><span class="rabbit-wikiquote-body"><span class="rabbit-wikiquote-name">[Idempotence](https://en.wikipedia.org/wiki/Idempotence)</span> <span class="rabbit-wikiquote-definition">is the property of certain operations in mathematics and computer science, that can be applied multiple times without changing the result beyond the initial application.</span></span><span class="rabbit-wikiquote-ref">— Wikipedia —</span></span></span>
+>                 [Idempotence](https://en.wikipedia.org/wiki/Idempotence)         is the property of certain operations in mathematics and computer science, that can be applied multiple times without changing the result beyond the initial application.            — Wikipedia —            
 
-<span class="rabbit-wikiquote-right-outer rabbit-wikiquote-top-p"> </span>One of the approaches to deal with “I have no Idea” state is to have all the messages (or at least all the messages which may cause some kind of trouble) in the system as idempotent ones; idempotence means that the message can be applied many times without any problems (with any number of duplicate messages causing the same result as one single message).
+         One of the approaches to deal with “I have no Idea” state is to have all the messages (or at least all the messages which may cause some kind of trouble) in the system as idempotent ones; idempotence means that the message can be applied many times without any problems (with any number of duplicate messages causing the same result as one single message).
 
 In many cases, it is easy to support idempotence on a case-by-case basis, but the issue is so important that it is better to think about generic support for idempotence. One way to support idempotence for certtain classes of messages, is related to two observations:
 
@@ -185,7 +185,7 @@ In addition, if timing is not that important, engine can provide support for all
 *   receiving nodes storing received IDs (for example, one option is to store maximum processed ID if IDs are known to be monotonous)
 *   receiving nodes checking if the ID has already been received, and handling request differently depending on request being original one or a duplicate one (but providing exactly the same reply in any case).
 
-> <span class="rabbit-pullquote-right-outer rabbit-pullquote-top-p"><span class="full-image-block ssNonEditable"><span>![](http://ithare.com/wp-content/uploads/BB_emotion_0008.png?__SQUARESPACE_CACHEVERSION=1436803067858)</span></span><span class="rabbit-pullquote-right-inner"><span class="rabbit-pullquote-quote">“</span>If you know that the message is idempotent, and you ended up in a 'I Have no Idea' state, you can always repeat sending your message, while being sure that it will work without side-effects regardless of the message being previously received or not.</span></span>
+>             ![](http://ithare.com/wp-content/uploads/BB_emotion_0008.png?__SQUARESPACE_CACHEVERSION=1436803067858)                “    If you know that the message is idempotent, and you ended up in a 'I Have no Idea' state, you can always repeat sending your message, while being sure that it will work without side-effects regardless of the message being previously received or not.        
 
 No, as we’ve discussed _how_ to implement idempotency, let’s think _why_ idempotency is so important? (ok, it is a bit late to raise this question, but better late, then never). The answer is: idempotency is important because if you know that the message is idempotent, and you ended up in a “I Have no Idea” state, you can always repeat sending your message, while being sure that it will work without side effects regardless of the message being previously received or not. This resending may be handled by application (and there are cases when it is a good idea, especially in real-time scenarios), or can be implemented at game engine level.
 
@@ -205,7 +205,7 @@ As soon as you have your system split into nodes, and implemented your system as
 *   As soon as you know node state and incoming message, processing is deterministic
     *   which means that automated testing can be implemented easily
 
-> <span class="rabbit-pullquote-right-outer rabbit-pullquote-top-p"><span class="full-image-block ssNonEditable">![](http://ithare.com/wp-content/uploads/BB_emotion_0010.png?__SQUARESPACE_CACHEVERSION=1436803101777)</span><span class="rabbit-pullquote-right-inner"><span class="rabbit-pullquote-quote">“</span>With proper logging, in most cases bug can be found from one single crash/malfunction.</span></span>
+>         ![](http://ithare.com/wp-content/uploads/BB_emotion_0010.png?__SQUARESPACE_CACHEVERSION=1436803101777)            “    With proper logging, in most cases bug can be found from one single crash/malfunction.        
 
 *   It has been observed to simplify debugging and even post-mortem analysis greatly (that is, if you have enough logging of incoming messages). With proper logging, in most cases bug can be found from one single crash/malfunction.
 *   As game developers have no idea about the way inter-node communication is implemented, game engine framework can allow admins to deploy it as they wish (without any changes to game logic):
@@ -228,4 +228,4 @@ Bottom line: you certainly SHOULD use Store-Process-and-Forward – that is, if 
 
 *   [On Reddit](http://www.reddit.com/r/programming/comments/3comix/64_network_dos_and_donts_for_multiplayer_game/)
 
-</div>
+    

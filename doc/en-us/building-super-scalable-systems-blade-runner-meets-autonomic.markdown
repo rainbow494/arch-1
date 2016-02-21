@@ -1,8 +1,8 @@
 ## [Building Super Scalable Systems: Blade Runner Meets Autonomic Computing in the Ambient Cloud](/blog/2009/12/16/building-super-scalable-systems-blade-runner-meets-autonomic.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, December 16, 2009 at 9:28AM</span></div>
+    
 
-<div class="body">
+    
 
 [![](http://farm3.static.flickr.com/2661/4188985841_8a7dd5671e.jpg)](http://whatisthematrix.warnerbros.com/)"But it is not complicated. [There's] just a lot of it."   
 -- [Richard Feynman](http://www.cosmolearning.com/documentaries/richard-feynman-take-the-world-from-another-point-of-view/) on how the immense variety of the world arises from simple rules.
@@ -149,7 +149,7 @@ One way to play the game is to pick a platform, stick with it, and figure out ho
 
 ### The Rise of Ambient Cloud Enabled Markets
 
-<span class="full-image-block ssNonEditable"><span>![](http://farm3.static.flickr.com/2680/4189828427_807905b47d.jpg?__SQUARESPACE_CACHEVERSION=1260978717144)</span></span>
+        ![](http://farm3.static.flickr.com/2680/4189828427_807905b47d.jpg?__SQUARESPACE_CACHEVERSION=1260978717144)        
 
 This image shows what a compute resource market might look like. It is taken from [Market-based Resource Allocation for Distributed Computing](http://www.alab.ip.titech.ac.jp/papers/swopp2009-fujiwara.pdf).
 
@@ -855,19 +855,19 @@ Why not emigrate instead? Don't we always look for a new land of opportunity? Le
 70.  [Simple RFID tags evolve into complex ultra-low-power SoCs, NXP expects](http://www.edn.com/blog/1690000169/post/540051254.html)
 71.  [Makers ](http://craphound.com/makers/Cory_Doctorow_-_Makers_Letter.pdf) by Cory Doctorow. “A book about people who hack hardware, business-models, and living arrangements to discover ways of staying alive and happy.” 
 72.  [Trading Shares in Milliseconds](http://www.technologyreview.com/computing/24167/). _The profits go to the company with the fastest hardware and the best algorithms--advantages that enable it to spot and exploit subtle market patterns ahead of everyone else. _
-73.  _<span style="font-style: normal;">[Community Cloud Computing](http://arxiv.org/PS_cache/arxiv/pdf/0907/0907.2485v3.pdf). _Community Cloud Computing (C3) offers an alternative architecture,_
+73.  _    [Community Cloud Computing](http://arxiv.org/PS_cache/arxiv/pdf/0907/0907.2485v3.pdf). _Community Cloud Computing (C3) offers an alternative architecture,_
 
-    <div id="_mcePaste">_created by combing the Cloud with paradigms from Grid Computing, principles from Digital Ecosystems, and sustainability from Green Computing, while remaining true to the original vision of the Internet.  
-    _</div>
+        _created by combing the Cloud with paradigms from Grid Computing, principles from Digital Ecosystems, and sustainability from Green Computing, while remaining true to the original vision of the Internet.  
+    _    
 
-    </span>_
-74.  <span style="font-style: normal;">[3D Printing](http://en.wikipedia.org/wiki/3D_printing)</span>_<span style="font-style: normal;">_._ </span>_A form of [additive manufacturing](http://en.wikipedia.org/wiki/Additive_manufacturing "Additive manufacturing") technology where a [three dimensional](http://en.wikipedia.org/wiki/Three_dimensional "Three dimensional") object is created by successive layers of material.
+        _
+74.      [3D Printing](http://en.wikipedia.org/wiki/3D_printing)    _    _._     _A form of [additive manufacturing](http://en.wikipedia.org/wiki/Additive_manufacturing "Additive manufacturing") technology where a [three dimensional](http://en.wikipedia.org/wiki/Three_dimensional "Three dimensional") object is created by successive layers of material.
 75.  [Bots and Automated Tyranny](http://globalguerrillas.typepad.com/globalguerrillas/2010/01/bots-and-automated-tyranny.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+typepad%2FrzYD+%28Global+Guerrillas%29&utm_content=Google+Reader). _Here's a [brilliant video presentation](http://fora.tv/2008/08/08/Daniel_Suarez_Daemon_Bot-Mediated_Reality) by the author Daniel Suarez ([Daemon](http://www.amazon.com/exec/obidos/ASIN/0525951113/ref=nosim/globalguerril-20) and [Freedom](http://www.amazon.com/exec/obidos/ASIN/0525951571/ref=nosim/globalguerril-20)) on the rapid proliferation of computer automated decision making._
 76.  [Daniel Suarez - Daemon: Bot-Mediated Reality](http://fora.tv/2008/08/08/Daniel_Suarez_Daemon_Bot-Mediated_Reality#)_._ Narrow AI _bots power the modern world, which gives them so much power as we live in a data rich environment._
 77.  _[Neil Gershenfeld: The beckoning promise of personal fabrication](http://www.youtube.com/watch?v=5n-APFrlXDs)_
-78.  <span>[Asankya RAPID Protocol](http://www.asankya.com/how-we-do-it/rapid-protocol). Multipathing TCP/IP sessions</span> increases bandwidth and cuts latency. One can imagine utilizing mutltiple cell phone towers and wifi to increase mobile netwoking perfomance.
+78.      [Asankya RAPID Protocol](http://www.asankya.com/how-we-do-it/rapid-protocol). Multipathing TCP/IP sessions     increases bandwidth and cuts latency. One can imagine utilizing mutltiple cell phone towers and wifi to increase mobile netwoking perfomance.
 79.  [Storing and Accessing Live Mashup Content in the Cloud](http://www.cs.cornell.edu/projects/ladis2009/papers/ostrowski-ladis2009.pdf) by Krzysztof Ostrowski (Cornell University) and Ken Birman (Cornell University).
 80.  [Using a Market Economy to Provision Compute Resources Across Planet-wide Clusters](http://www.stokely.org/papers/google-cluster-auctions.pdf) by Murray Stokely, Jim Winget, Ed Keyes, Carrie Grimes, Benjamin Yolken.
 81.  [Misco: A MapReduce Framework for Mobile Systems](http://www.cs.ucr.edu/~jdou/papers/dou-PETRA10.pdf)
 
-</div>
+    

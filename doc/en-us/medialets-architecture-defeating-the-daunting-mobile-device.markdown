@@ -1,8 +1,8 @@
 ## [Medialets Architecture - Defeating the Daunting Mobile Device Data Deluge](/blog/2011/3/8/medialets-architecture-defeating-the-daunting-mobile-device.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, March 8, 2011 at 9:02AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.static.flickr.com/5293/5509030387_42b1682df0_o.jpg)
 
@@ -176,4 +176,4 @@ To see examples of their ads [go here](http://www.medialets.com/showcase). 
 *   [Hadoop, BigData and Cassandra with Jonathan Ellis](http://allthingshadoop.com/2010/05/17/hadoop-bigdata-cassandra-a-talk-with-jonathan-ellis/)  - HBase is to OLAP as Cassandra is to OLTP
 *   [Twitter’s Plan To Analyze 100 Billion Tweets](http://highscalability.com/blog/2010/2/19/twitters-plan-to-analyze-100-billion-tweets.html)
 
-</div>
+    

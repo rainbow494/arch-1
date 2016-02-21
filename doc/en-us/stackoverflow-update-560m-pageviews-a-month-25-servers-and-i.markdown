@@ -1,8 +1,8 @@
 ## [StackOverflow Update: 560M Pageviews a Month, 25 Servers, and It's All About Performance](/blog/2014/7/21/stackoverflow-update-560m-pageviews-a-month-25-servers-and-i.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, July 21, 2014 at 9:00AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm4.staticflickr.com/3873/14704918901_2b46d4dd3e_n.jpg)
 
@@ -12,9 +12,9 @@ The network of sites that make up [StackExchange](http://stackexchange.com/), wh
 
 This is with just 25 servers. For everything. That’s high availability, load balancing, caching, databases, searching, and utility functions. All with a relative handful of employees. Now that’s quality engineering.
 
-This update is based on [The architecture of StackOverflow](http://www.dev-metal.com/architecture-stackoverflow/) (video) by Marco Cecconi and [What it takes to run Stack Overflow](http://nickcraver.com/blog/2013/11/22/what-it-takes-to-run-stack-overflow/) (post) by Nick Craver. In addition, I’ve merged in comments from various sources. No doubt some of the details are out of date as I meant to write this article long ago, but it should still be representative.<span> </span>
+This update is based on [The architecture of StackOverflow](http://www.dev-metal.com/architecture-stackoverflow/) (video) by Marco Cecconi and [What it takes to run Stack Overflow](http://nickcraver.com/blog/2013/11/22/what-it-takes-to-run-stack-overflow/) (post) by Nick Craver. In addition, I’ve merged in comments from various sources. No doubt some of the details are out of date as I meant to write this article long ago, but it should still be representative.         
 
-Stack Overflow still uses Microsoft products. Microsoft infrastructure works and is cheap enough, so there’s no compelling reason to change. Yet SO is pragmatic. They use Linux where it makes sense. There’s no purity push to make everything Linux or keep everything Microsoft. That wouldn’t be efficient.<span style="font-size: 12px;"> </span>
+Stack Overflow still uses Microsoft products. Microsoft infrastructure works and is cheap enough, so there’s no compelling reason to change. Yet SO is pragmatic. They use Linux where it makes sense. There’s no purity push to make everything Linux or keep everything Microsoft. That wouldn’t be efficient.         
 
 Stack Overflow still uses a scale-up strategy. No clouds in site. With their SQL Servers loaded with 384 GB of RAM and 2TB of SSD, AWS would cost a fortune. The cloud would also slow them down, making it harder to optimize and troubleshoot system issues. Plus, SO doesn’t need a horizontal scaling strategy. Large peak loads, where scaling out makes sense, hasn’t  been a problem because they’ve been quite successful at sizing their system correctly.
 
@@ -22,7 +22,7 @@ So it appears Jeff Atwood’s quote: "Hardware is Cheap, Programmers are Expensi
 
 Marco Ceccon in his talk says when talking about architecture you need to answer this question first: what kind of problem is being solved?
 
-First the easy part. What does StackExchange do? It takes topics, creates communities around them, and creates awesome question and answer sites.<span style="font-size: 12px;"> </span>
+First the easy part. What does StackExchange do? It takes topics, creates communities around them, and creates awesome question and answer sites.         
 
 The second part relates to scale. As we’ll see next StackExchange is growing quite fast and handles a lot of traffic. How does it do that? Let’s take a look and see….
 
@@ -76,7 +76,7 @@ The second part relates to scale. As we’ll see next StackExchange is growing q
 
 *   2 read-only SQL Servers for used mainly for the Stack Exchange API
 
-*   VMs also perform functions like deployments, domain controllers, monitoring, ops database for sysadmin goodies, etc.<span style="font-size: 12px;"> </span>
+*   VMs also perform functions like deployments, domain controllers, monitoring, ops database for sysadmin goodies, etc.         
 
 ## Platform
 
@@ -96,7 +96,7 @@ The second part relates to scale. As we’ll see next StackExchange is growing q
 
 *   [Dapper](https://code.google.com/p/dapper-dot-net/) - a micro ORM.
 
-## UI<span style="font-size: 12px;"> </span>
+## UI         
 
 *   The UI has message inbox that is sent a message when you get a new badge, receive a message, significant event, etc. Done using WebSockets and is powered by redis.
 
@@ -106,7 +106,7 @@ The second part relates to scale. As we’ll see next StackExchange is growing q
 
 *   Server side templating is used to generate pages.
 
-## Servers<span style="font-size: 12px;"> </span>
+## Servers         
 
 *   The 25 servers are not doing much, that is the CPU load is low. It’s calculated SO could run on only 5 servers.
 
@@ -126,7 +126,7 @@ The second part relates to scale. As we’ll see next StackExchange is growing q
 
 *   Load is really almost all over 9 servers, because 10 and 11 are only for meta.stackexchange.com, meta.stackoverflow.com, and the development tier. Those servers also run around 10-20% CPU which means we have quite a bit of headroom available.
 
-## SSDs<span style="font-size: 12px;"> </span>
+## SSDs         
 
 *   Intel 330 as the default (web tier, etc.)
 
@@ -142,7 +142,7 @@ The second part relates to scale. As we’ll see next StackExchange is growing q
 
 *   The only scale-up problems so far is SSD space on the SQL boxes due to the growth pattern of reliability vs. space in the non-consumer space, that isdrives that have capacitors for power loss and such.
 
-## High Availability<span style="font-size: 12px;"> </span>
+## High Availability         
 
 *   The main datacenter is in New York and the backup datacenter is in Oregon.
 
@@ -154,7 +154,7 @@ The second part relates to scale. As we’ll see next StackExchange is growing q
 
 *   Total HTTP traffic sent is only about 77% of the total traffic sent. This is because replication is happening to the secondary data center in Oregon as well as other VPN traffic. The majority of this traffic is the data replication to SQL replicas and redis slaves in Oregon.
 
-## Databasing<span style="font-size: 12px;"> </span>
+## Databasing         
 
 *   MS SQL Server.
 
@@ -172,13 +172,13 @@ The second part relates to scale. As we’ll see next StackExchange is growing q
 
 *   Votes are in 1 table per item, for example 1 table for post votes, 1 table for comment votes. Most pages we render real-time, caching only for anonymous users. Given that, there's no cache to update, it’s just a re-query.
 
-*   Scores are denormalized, so querying is often needed. It's all IDs and dates, the post votes table just has 56,454,478 rows currently. Most queries are just a few milliseconds due to indexing.<span style="font-size: 12px;"> </span>
+*   Scores are denormalized, so querying is often needed. It's all IDs and dates, the post votes table just has 56,454,478 rows currently. Most queries are just a few milliseconds due to indexing.         
 
 *   The Tag Engine is entirely self-contained, which means not having to depend on an external service for very, very core functionality. It's a huge in-memory struct array structure that is optimized for SO use cases and precomputed results for heavily hit combinations. It's a simple windows service running on a few boxes working in a redundant team. CPU is about 2-5% almost always. Three boxes are not needed for load, just redundancy. If all those do fail at once, the local web servers will load the tag engine in memory and keep on going. 
 
 *   On Dapper's lack of a compiler checking queries compared to traditional ORM. The compiler is checking against what you told it the database looks like. This can help with lots of things, but still has the fundamental disconnect problem you'll get at runtime. A huge problem with the tradeoff is the generated SQL is nasty, and finding the original code it came from is often non-trivial. Lack of ability to hint queries, control parameterization, etc. is also a big issue when trying to optimize queries. For example. literal replacement was added to Dapper to help with query parameterization which allows the use of things like filtered indexes. Dapper also intercepts the SQL calls to dapper and add add exactly where it came from. It saves so much time tracking things down.
 
-## Coding<span style="font-size: 12px;"> </span>
+## Coding         
 
 *   The process:
 
@@ -232,7 +232,7 @@ The second part relates to scale. As we’ll see next StackExchange is growing q
 
 *   A CDN is not used for CPU or I/O load, but to help users find answers faster.
 
-## Deploying<span style="font-size: 12px;"> </span>
+## Deploying         
 
 *   Want to deploy 5 times a day. Don’t build grand gigantic things and then put then live. Important because:
 
@@ -288,7 +288,7 @@ The second part relates to scale. As we’ll see next StackExchange is growing q
 
 *   Hire from Stack Overflow community. They looks for a passion for coding, a passion for helping others, and a passion for communicating.
 
-## Budgeting<span style="font-size: 12px;"> </span>
+## Budgeting         
 
 *   Budgets are pretty much project based. Money is only spent as infrastructure is added for new projects. The web servers that have such low utilization are the same ones purchased 3 years ago when the data center was built.
 
@@ -318,11 +318,11 @@ The second part relates to scale. As we’ll see next StackExchange is growing q
 
 ## Clouding
 
-*   <div id="_mcePaste">Hardware is cheaper than developers and efficient code. You are only as fast as your slowest bottleneck and all the current cloud solutions have fundamental performance or capacity limits.<span style="font-size: 12px;"> </span></div>
+*       Hardware is cheaper than developers and efficient code. You are only as fast as your slowest bottleneck and all the current cloud solutions have fundamental performance or capacity limits.             
 
 *   Could you build SO well if building for the cloud from day one? Mostl likely. Could you consistency render all your pages performing several up to date queries and cache fetches across that cloud network you don't control and getting sub 50ms render times? That's another matter. Unless you're talking about substantially higher cost (at least 3-4x), the answer is no - it's still more economical for SO to host in their own servers.
 
-## Performance as a Feature<span style="font-size: 12px;"> </span>
+## Performance as a Feature         
 
 *   StackOverflow puts a [heavy emphasis on performance](http://blog.codinghorror.com/performance-is-a-feature/). The goal for the main page  is to load in less than 50ms, but can be as low as 28ms.
 
@@ -332,7 +332,7 @@ The second part relates to scale. As we’ll see next StackExchange is growing q
 
 *   The primary reason their servers run at such low utilization is efficient code. Web servers average between 5-15% CPU, 15.5 GB of RAM used and 20-40 Mb/s network traffic.  The SQL servers average around 5-10% CPU, 365 GB of RAM used, and 100-200 Mb/s of network traffic. This has three major benefits: general room to grow before and upgrade is necessary; headroom to stay online for when things go crazy (bad query, bad code, attacks, whatever it may be); and the ability to clock back on power if needed.
 
-## Lessons Learned<span style="font-size: 12px;"> </span>
+## Lessons Learned         
 
 *   **Why use Redis if you use MS products?** [gabeech](http://www.reddit.com/r/programming/comments/1r83x7/what_it_takes_to_run_stack_overflow/cdkpv7w): It's not about OS evangelism. We run things on the platform they run best on. Period. C# runs best on a windows machine, we use IIS. Redis runs best on a *nix machine we use *nix.
 
@@ -386,4 +386,4 @@ The second part relates to scale. As we’ll see next StackExchange is growing q
 
 *   Over the years HighScalability has had several articles on StackOverflow: [Stack Overflow Architecture](http://highscalability.com/blog/2009/8/5/stack-overflow-architecture.html), [Scaling Ambition At StackOverflow](http://highscalability.com/blog/2010/2/15/scaling-ambition-at-stackoverflow.html), [Stack Overflow Architecture Update](http://highscalability.com/blog/2011/3/3/stack-overflow-architecture-update-now-at-95-million-page-vi.html), [StackExchange Architecture Updates](http://highscalability.com/blog/2011/10/24/stackexchange-architecture-updates-running-smoothly-amazon-4.html).
 
-</div>
+    

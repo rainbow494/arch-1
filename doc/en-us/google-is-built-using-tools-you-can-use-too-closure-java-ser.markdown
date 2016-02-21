@@ -1,8 +1,8 @@
 ## [Google+ is Built Using Tools You Can Use Too: Closure, Java Servlets, JavaScript, BigTable, Colossus, Quick Turnaround](/blog/2011/7/12/google-is-built-using-tools-you-can-use-too-closure-java-ser.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, July 12, 2011 at 8:55AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.static.flickr.com/6140/5930590540_0ae729b8f5_o.png)
 
@@ -40,4 +40,4 @@ That's Google in a box. Then again, an ex-Googler thinks [you can do better](ht
 
 *   [Learning From The Google+ Experiment: Operating System, Platform, Apps](http://www.stoweboyd.com/post/8129714757/learning-from-the-google-experiment-operating-system) by Stowe Boyd. _But we are moving toward a world where most of the foundational elements of Google+ will be part of a next generation version of Android, and the things that feel like apps on Google+ will be, in fact, apps running on that future social OS._
 
-</div>
+    

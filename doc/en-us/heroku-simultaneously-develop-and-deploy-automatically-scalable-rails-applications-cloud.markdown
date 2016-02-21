@@ -1,8 +1,8 @@
 ## [Heroku - Simultaneously Develop and Deploy Automatically Scalable Rails Applications in the Cloud](/blog/2009/4/24/heroku-simultaneously-develop-and-deploy-automatically-scala.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, April 24, 2009 at 2:09AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 4:** [Heroku versus GAE & GAE/J](http://rrees.wordpress.com/2009/10/08/heroku-versus-gae-gaej/)
 
@@ -50,4 +50,4 @@ One concern is that pricing isn't nailed down yet, but my gut says it will be fa
 
 ## Related Articles
 
-*   [Heroku Rails Podcast](http://podcast.rubyonrails.org/programs/1/episodes/heroku)*   [Heroku Open Source Plugins etc](http://opensource.heroku.com/)</div>
+*   [Heroku Rails Podcast](http://podcast.rubyonrails.org/programs/1/episodes/heroku)*   [Heroku Open Source Plugins etc](http://opensource.heroku.com/)    

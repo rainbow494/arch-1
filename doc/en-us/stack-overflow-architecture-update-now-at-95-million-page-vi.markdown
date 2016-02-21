@@ -1,8 +1,8 @@
 ## [Stack Overflow Architecture Update - Now at 95 Million Page Views a Month](/blog/2011/3/3/stack-overflow-architecture-update-now-at-95-million-page-vi.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, March 3, 2011 at 9:02AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm6.static.flickr.com/5052/5488952221_77f2126053_o.jpg)
 
@@ -77,14 +77,14 @@ Unfortunately, I couldn't find any coverage on some of the open questions I had 
 ### Dev Tools
 
 *   **C#**: Language
-*   **Visual Studio 2010 Team Suite**<span style="font-weight: normal;">: </span>IDE
-*   **Microsoft ASP.NET (version 4.0)**<span style="font-weight: normal;">: </span>Framework
-*   **ASP.NET MVC 3**<span style="font-weight: normal;">: </span>Web Framework
-*   **Razor**<span style="font-weight: normal;">: </span>View Engine
-*   **jQuery 1.4.2**<span style="font-weight: normal;">: </span>Browser Framework:
-*   **LINQ to SQL, some raw SQL**<span style="font-weight: normal;">: </span>Data Access Layer
-*   **Mercurial and Kiln**<span style="font-weight: normal;">: </span>Source Control
-*   **Beyond Compare 3**<span style="font-weight: normal;">:</span> Compare Tool
+*   **Visual Studio 2010 Team Suite**    :     IDE
+*   **Microsoft ASP.NET (version 4.0)**    :     Framework
+*   **ASP.NET MVC 3**    :     Web Framework
+*   **Razor**    :     View Engine
+*   **jQuery 1.4.2**    :     Browser Framework:
+*   **LINQ to SQL, some raw SQL**    :     Data Access Layer
+*   **Mercurial and Kiln**    :     Source Control
+*   **Beyond Compare 3**    :     Compare Tool
 
 ### Software and Technologies Used
 
@@ -108,7 +108,7 @@ Unfortunately, I couldn't find any coverage on some of the open questions I had 
 
 ### External Bits
 
-<span style="border-collapse: collapse; font-family: Arial, 'Liberation Sans', 'DejaVu Sans', sans-serif; font-size: 14px; line-height: 18px; color: #000000;">Code that is not included as part of the development tools:</span>
+    Code that is not included as part of the development tools:    
 
 *   reCAPTCHA
 *   DotNetOpenId
@@ -170,7 +170,7 @@ Unfortunately, I couldn't find any coverage on some of the open questions I had 
 
 *   [Hacker News Thread on this Post](http://news.ycombinator.com/item?id=2284900) / [Reddit Thread](http://www.reddit.com/r/programming/comments/fwpik/stackoverflow_scales_using_a_mixture_of_linux_and/)
 *   [Stack Exchange’s Architecture in Bullet Points](http://blog.serverfault.com/post/stack-exchanges-architecture-in-bullet-points/) / [HackerNews Thread](http://news.ycombinator.com/item?id=2207789)
-*   [Stack Overflow’s New York Data Center](http://blog.serverfault.com/post/1432571770/) - <span style="font-family: 'Trebuchet MS', Arial, 'Bitstream Vera Sans', sans-serif; line-height: 17px; color: #000000;">hardware of the various machines?</span>
+*   [Stack Overflow’s New York Data Center](http://blog.serverfault.com/post/1432571770/) -     hardware of the various machines?    
 *   [Designing For Scalability of Management and Fault Tolerance](http://blog.serverfault.com/post/1097492931/)
 *   [Stack Overflow Blog](http://blog.stackoverflow.com/)
 *   [Stack Overflow Search — Now 81% Less Crappy](http://blog.stackoverflow.com/2011/01/stack-overflow-search-now-81-less-crappy/) - Lucene is now running on an underused cluster.
@@ -189,4 +189,4 @@ Unfortunately, I couldn't find any coverage on some of the open questions I had 
 *   [C# Redis Client](https://github.com/ServiceStack/ServiceStack.Redis)
 *   [Broadcom, Die Mutha](http://blog.serverfault.com/post/broadcom-die-mutha/)
 
-</div>
+    

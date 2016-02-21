@@ -1,8 +1,8 @@
 ## [Digg: 4000% Performance Increase by Sorting in PHP Rather than MySQL](/blog/2010/3/23/digg-4000-performance-increase-by-sorting-in-php-rather-than.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, March 23, 2010 at 11:57AM</span></div>
+    
 
-<div class="body">
+    
 
 O'Reilly Radar's James Turner conducted a [very informative interview](http://radar.oreilly.com/2010/03/joe-stump-talks-location-and-n.html) with Joe Stump, current CTO of [SimpleGeo](http://simplegeo.com/) and former lead architect at [Digg](http://digg.com/), in which Joe makes some of his usually insightful comments on his experience using Cassandra vs MySQL. As Digg started out with a [MySQL oriented architecture](http://highscalability.com/blog/2009/4/4/digg-architecture.html) and has recently been [moving full speed](http://highscalability.com/blog/2010/3/10/saying-yes-to-nosql-going-steady-with-cassandra-at-digg.html) to Cassandra, his observations on some of their lessons learned and the motivation for the move are especially valuable. Here are some of the key takeaways you find useful:
 
@@ -18,4 +18,4 @@ O'Reilly Radar's James Turner conducted a [very informative interview](http://ra
 
 *   [Digg Related Content on HighScalability](http://highscalability.com/display/Search?searchQuery=digg)
 
-</div>
+    

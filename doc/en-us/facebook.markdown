@@ -1,8 +1,8 @@
 ## [Facebook Timeline: Brought to You by the Power of Denormalization](/blog/2012/1/23/facebook-timeline-brought-to-you-by-the-power-of-denormaliza.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, January 23, 2012 at 9:14AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7164/6749666161_e362edc633_m.jpg)
 
@@ -14,4 +14,4 @@ Five big takeaways from the article are:
 
 [Click to read more ...](/blog/2012/1/23/facebook-timeline-brought-to-you-by-the-power-of-denormaliza.html)
 
-</div>
+    

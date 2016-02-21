@@ -1,8 +1,8 @@
 ## [Paper: Spamalytics: An Empirical Analysisof Spam Marketing Conversion](/blog/2008/12/29/paper-spamalytics-an-empirical-analysisof-spam-marketing-con.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, December 29, 2008 at 1:39AM</span></div>
+    
 
-<div class="body">
+    
 
 Under the philosophy that _the best method to analyse spam is to become a spammer_, this absolutely fascinating paper recounts how a team of UC Berkely researchers went under cover to infiltrate a spam network. Part CSI, part Mission Impossible, and part MacGyver, the team hijacked the botnet so that their code was actually part of the dark network itself. Once inside they figured out the architecture and protocols of the botnet and how many sales they were able to tally. Truly elegant work.  
 
@@ -27,4 +27,4 @@ As fascinating as all the spamonomics are, the explanation of the botnet archite
 
     ## Related Articles
 
-    *   [On the Spam Campaign Trail](http://www.icir.org/christian/publications/2008-leet-spamtrail/index.html)*   [Scaling Spam Eradication Using Purposeful Games: Die Spammer Die!](http://highscalability.com/scaling-spam-eradication-using-purposeful-games-die-spammer-die)*   [Can cloud computing smite down evil zombie botnet armies?](http://highscalability.com/can-cloud-computing-smite-down-evil-zombie-botnet-armies)*   [Inside the Storm: Protocols and Encryption of the Storm Botnet](http://www.blackhat.com/presentations/bh-usa-08/Stewart/BH_US_08_Stewart_Protocols_of_the_Storm.pdf) by Joe Stewart, GCIG Director of Malware Research, SecureWorks*   [Exposing Stormworm](http://noh.ucsd.edu/~bmenrigh/exposing_storm.ppt) by Brandon Enright. A lot of excellent low level protocol details.*   [Storm Botnet](http://en.wikipedia.org/wiki/Storm_botnet)*   [Global Guerrillas](http://globalguerrillas.typepad.com/) by John Robb - Networked tribes, systems disruption, and the emerging bazaar of violence. Resilient Communities, decentralized platforms, and self-organizing futures.</div>
+    *   [On the Spam Campaign Trail](http://www.icir.org/christian/publications/2008-leet-spamtrail/index.html)*   [Scaling Spam Eradication Using Purposeful Games: Die Spammer Die!](http://highscalability.com/scaling-spam-eradication-using-purposeful-games-die-spammer-die)*   [Can cloud computing smite down evil zombie botnet armies?](http://highscalability.com/can-cloud-computing-smite-down-evil-zombie-botnet-armies)*   [Inside the Storm: Protocols and Encryption of the Storm Botnet](http://www.blackhat.com/presentations/bh-usa-08/Stewart/BH_US_08_Stewart_Protocols_of_the_Storm.pdf) by Joe Stewart, GCIG Director of Malware Research, SecureWorks*   [Exposing Stormworm](http://noh.ucsd.edu/~bmenrigh/exposing_storm.ppt) by Brandon Enright. A lot of excellent low level protocol details.*   [Storm Botnet](http://en.wikipedia.org/wiki/Storm_botnet)*   [Global Guerrillas](http://globalguerrillas.typepad.com/) by John Robb - Networked tribes, systems disruption, and the emerging bazaar of violence. Resilient Communities, decentralized platforms, and self-organizing futures.    

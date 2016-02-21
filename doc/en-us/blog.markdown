@@ -1,8 +1,8 @@
 ## [4 New Podcasts for Scalable Summertime Reading](/blog/2010/7/24/4-new-podcasts-for-scalable-summertime-reading.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Saturday, July 24, 2010 at 9:08AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4102/4824273846_c5c489a971_o.jpg)
 
@@ -15,4 +15,4 @@ If you would like to be a part of random chance, here are a few new podcasts/blo
 
 [Click to read more ...](/blog/2010/7/24/4-new-podcasts-for-scalable-summertime-reading.html)
 
-</div>
+    

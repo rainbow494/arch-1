@@ -1,8 +1,8 @@
 ## [When all the Program's a Graph - Prismatic's Plumbing Library](/blog/2013/2/14/when-all-the-programs-a-graph-prismatics-plumbing-library.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, February 14, 2013 at 11:35AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8516/8474378252_642e845366_m.jpg)
 
@@ -32,7 +32,7 @@ Hacking the same thing in the same old way is the minimally viable ethic. Perhap
 
 ## Related Articles
 
-<div>
+    
 
 *   [Prismatic's "Graph" at Strange Loop](http://blog.getprismatic.com/blog/2012/10/1/prismatics-graph-at-strange-loop.html)
 *   [Graph: Composable Production Systems in Clojure](http://www.infoq.com/presentations/Graph-Clojure-Prismatic)
@@ -40,6 +40,6 @@ Hacking the same thing in the same old way is the minimally viable ethic. Perhap
 *   [Introduction to Behavior Trees](http://www.altdevblogaday.com/2011/02/24/introduction-to-behavior-trees/)
 *   [Linking Data and Actions on the Web](http://vimeo.com/50215125)
 
-</div>
+    
 
-</div>
+    

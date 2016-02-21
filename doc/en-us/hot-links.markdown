@@ -1,11 +1,11 @@
 ## [Stuff The Internet Says On Scalability For February 19th, 2016](/blog/2016/2/19/stuff-the-internet-says-on-scalability-for-february-19th-201.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, February 19, 2016 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
-<div align="center">![](https://c2.staticflickr.com/2/1632/25054765165_d80d13e3dd_o.jpg)  
-JPL is firing up their [Exoplanet Travel Bureau](http://www.jpl.nasa.gov/news/news.php?feature=5052). Reserve your space now.</div>
+    ![](https://c2.staticflickr.com/2/1632/25054765165_d80d13e3dd_o.jpg)  
+JPL is firing up their [Exoplanet Travel Bureau](http://www.jpl.nasa.gov/news/news.php?feature=5052). Reserve your space now.    
 
 *   [200K](https://daringfireball.net/thetalkshow/2016/02/12/ep-146): msgs send per second through iMessage; [750 million](https://daringfireball.net/thetalkshow/2016/02/12/ep-146): xactions per week in App and iTunes store; [11 million](https://daringfireball.net/thetalkshow/2016/02/12/ep-146): Apple Music subscribers; [.7c](https://vimeo.com/155635184): speed of light in silicon; [1.125Tpbs](http://gizmodo.com/researchers-achieve-fastest-ever-data-transmission-at-b-1758452054): fastest ever data transmission; [360TB](http://www.extremetech.com/extreme/223144-researchers-develop-superman-memory-crystal-that-could-store-360tb-of-data): Superman memory crystal stores data forever;
 
@@ -39,4 +39,4 @@ JPL is firing up their [Exoplanet Travel Bureau](http://www.jpl.nasa.gov/news/ne
 
 [Click to read more ...](/blog/2016/2/19/stuff-the-internet-says-on-scalability-for-february-19th-201.html)
 
-</div>
+    

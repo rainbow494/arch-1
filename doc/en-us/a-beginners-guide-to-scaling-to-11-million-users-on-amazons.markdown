@@ -1,14 +1,14 @@
 ## [A Beginner's Guide to Scaling to 11 Million+ Users on Amazon's AWS](/blog/2016/1/11/a-beginners-guide-to-scaling-to-11-million-users-on-amazons.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, January 11, 2016 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://c2.staticflickr.com/2/1546/23690555693_2aa3c8c0f1_o.png)
 
 How do you scale a system from one user to more than 11 million users? [Joel Williams](https://www.linkedin.com/in/joel-williams-70257b7), Amazon Web Services Solutions Architect, gives an excellent talk on just that subject: [AWS re:Invent 2015 Scaling Up to Your First 10 Million Users](https://www.youtube.com/watch?v=vg5onp8TU6Q&list=PLhr1KZpdzukdRxs_pGJm-qSy5LayL6W_Y).
 
-<span>If you are an advanced AWS user this talk is not for you, but it’s a great way to get started if you are new to AWS, new to the cloud, or if</span> you haven’t kept up with with constant stream of new features Amazon keeps pumping out.
+    If you are an advanced AWS user this talk is not for you, but it’s a great way to get started if you are new to AWS, new to the cloud, or if     you haven’t kept up with with constant stream of new features Amazon keeps pumping out.
 
 As you might expect since this is a talk by Amazon that Amazon services are always front and center as the solution to any problem. Their platform play is impressive and instructive. It's obvious by how the pieces all fit together Amazon has done a great job of mapping out what users need and then making sure they have a product in that space. 
 
@@ -20,440 +20,440 @@ Some of the interesting takeaways:
 *   Scalability and redundancy are not two separate concepts, you can often do both at the same time.
 *   There's no mention of costs. That would be a good addition to the talk as that is one of the major criticisms of AWS solutions.
 
-## <span>The Basics</span>
+##     The Basics    
 
-*   <span>AWS is in 12 regions around the world.</span>
+*       AWS is in 12 regions around the world.    
 
-    *   <span>A Region is a physical location in the world where Amazon has multiple Availability Zones. There are</span> [<span>regions in</span>](https://aws.amazon.com/about-aws/global-infrastructure/)<span>: North America; South America; Europe; Middle East; Africa; Asia Pacific.</span>
+    *       A Region is a physical location in the world where Amazon has multiple Availability Zones. There are     [    regions in    ](https://aws.amazon.com/about-aws/global-infrastructure/)    : North America; South America; Europe; Middle East; Africa; Asia Pacific.    
 
-    *   <span>An Availability Zone (AZ) is generally a single datacenter, though they can be constructed out of multiple datacenters.</span>
+    *       An Availability Zone (AZ) is generally a single datacenter, though they can be constructed out of multiple datacenters.    
 
-    *   <span>Each AZ is separate enough that they have separate power and Internet connectivity.</span>
+    *       Each AZ is separate enough that they have separate power and Internet connectivity.    
 
-    *   <span>The only connection between AZs is a low latency network. AZs can be 5 or 15 miles apart, for example. The network is fast enough that your application can act like all AZs are in the same datacenter.</span>
+    *       The only connection between AZs is a low latency network. AZs can be 5 or 15 miles apart, for example. The network is fast enough that your application can act like all AZs are in the same datacenter.    
 
-    *   <span>Each Region has at least two Availability Zones. There are 32 AZs total.</span>
+    *       Each Region has at least two Availability Zones. There are 32 AZs total.    
 
-    *   <span>Using AZs it’s possible to create a high availability architecture for your application.</span>
+    *       Using AZs it’s possible to create a high availability architecture for your application.    
 
-    *   <span>At least 9 more Availability Zones and 4 more Regions are coming in 2016.</span>
+    *       At least 9 more Availability Zones and 4 more Regions are coming in 2016.    
 
-*   <span>AWS has 53 edge locations around the world.</span>
+*       AWS has 53 edge locations around the world.    
 
-    *   <span>Edge locations are used by CloudFront, Amazon’s Content Distribution Network (CDN) and Route53, Amazon’s managed DNS server.</span>
+    *       Edge locations are used by CloudFront, Amazon’s Content Distribution Network (CDN) and Route53, Amazon’s managed DNS server.    
 
-    *   <span>Edge locations enable users to access content with a very low latency no matter where they are in the world.</span>
+    *       Edge locations enable users to access content with a very low latency no matter where they are in the world.    
 
-*   <span>Building Block Services</span>
+*       Building Block Services    
 
-    *   <span>AWS has created a number of services that use multiple AZs internally to be highly available and fault tolerant. Here </span>[<span>is a list</span>](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/) <span>of what services are</span> [<span>available where</span>](http://docs.aws.amazon.com/general/latest/gr/rande.html)<span>.</span>
+    *       AWS has created a number of services that use multiple AZs internally to be highly available and fault tolerant. Here     [    is a list    ](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)     of what services are     [    available where    ](http://docs.aws.amazon.com/general/latest/gr/rande.html)    .    
 
-    *   <span>You can use these services in your application, for a fee, without having to worry about making them highly available yourself.</span>
+    *       You can use these services in your application, for a fee, without having to worry about making them highly available yourself.    
 
-    *   <span>Some services that exist within an AZ: CloudFront, Route 53, S3, DynamoDB, Elastic Load Balancing, EFS, Lambda, SQS, SNS, SES, SWF.</span>
+    *       Some services that exist within an AZ: CloudFront, Route 53, S3, DynamoDB, Elastic Load Balancing, EFS, Lambda, SQS, SNS, SES, SWF.    
 
-    *   <span>A highly available architecture can be created using services even though they exist within a single AZ.</span>
+    *       A highly available architecture can be created using services even though they exist within a single AZ.    
 
-## <span>1 User</span>
+##     1 User    
 
-*   <span>In this scenario you are the only user and you want to get a website running.</span>
+*       In this scenario you are the only user and you want to get a website running.    
 
-*   <span>Your architecture will look something like:</span>
+*       Your architecture will look something like:    
 
-    *   <span>Run on a single instance, maybe a type</span> [<span>t2.micro</span>](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/t2-instances.html)<span>. Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and give you the flexibility to choose the appropriate mix of resources for your applications.</span>
+    *       Run on a single instance, maybe a type     [    t2.micro    ](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/t2-instances.html)    . Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and give you the flexibility to choose the appropriate mix of resources for your applications.    
 
-    *   <span>The one instance would run the entire</span> [<span>web stack</span>]( http://whatis.techtarget.com/definition/Web-stack)<span>, for example: web app, database, management, etc.</span>
+    *       The one instance would run the entire     [    web stack    ]( http://whatis.techtarget.com/definition/Web-stack)    , for example: web app, database, management, etc.    
 
-    *   <span>Use Amazon</span> [<span>Route 53</span>](https://aws.amazon.com/route53/) <span>for the DNS.</span>
+    *       Use Amazon     [    Route 53    ](https://aws.amazon.com/route53/)     for the DNS.    
 
-    *   <span>Attach a single</span> [<span>Elastic IP</span>](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) <span>address to the instance.</span>
+    *       Attach a single     [    Elastic IP    ](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html)     address to the instance.    
 
-    *   <span>Works great, for a while.</span>
+    *       Works great, for a while.    
 
-## <span>Vertical Scaling</span>
+##     Vertical Scaling    
 
-*   <span>You need a bigger box. Simplest approach to scaling is choose a larger instance type. Maybe a</span> [<span>c4.8xlarge</span>](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/c4-instances.html) <span>or</span> [<span>m3.2xlarge</span>](https://aws.amazon.com/ec2/instance-types/)<span>, for example.</span>
+*       You need a bigger box. Simplest approach to scaling is choose a larger instance type. Maybe a     [    c4.8xlarge    ](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/c4-instances.html)     or     [    m3.2xlarge    ](https://aws.amazon.com/ec2/instance-types/)    , for example.    
 
-*   <span>This approach is called</span> [<span>vertical scaling</span>](https://en.wikipedia.org/wiki/Scalability)<span>.</span>
+*       This approach is called     [    vertical scaling    ](https://en.wikipedia.org/wiki/Scalability)    .    
 
-*   <span>Just stop your instance and choose a new instance type and you’re running with more power.</span>
+*       Just stop your instance and choose a new instance type and you’re running with more power.    
 
-*   <span>There is a wide mix of different hardware configurations to choose from. You can have a system with 244 gigs of RAM (2TB of RAM types are coming soon). Or one with 40 cores. There are High I/O instances, High CPU Instances, High storage instances.</span>
+*       There is a wide mix of different hardware configurations to choose from. You can have a system with 244 gigs of RAM (2TB of RAM types are coming soon). Or one with 40 cores. There are High I/O instances, High CPU Instances, High storage instances.    
 
-*   <span>Some Amazon services come with a</span> [<span>Provisioned IOPS</span>](http://serverfault.com/questions/580568/amazon-how-do-i-know-if-i-need-provisioned-iops) <span>option to guarantee performance. The idea is you can perhaps use a smaller instance type for your service and make use of Amazon services like DynamoDB that can deliver scalable services so you don’t have to.</span>
+*       Some Amazon services come with a     [    Provisioned IOPS    ](http://serverfault.com/questions/580568/amazon-how-do-i-know-if-i-need-provisioned-iops)     option to guarantee performance. The idea is you can perhaps use a smaller instance type for your service and make use of Amazon services like DynamoDB that can deliver scalable services so you don’t have to.    
 
-*   <span>Vertical scaling has a big problem: there’s no failover, no redundancy. If the instance has a problem your website will die. All your eggs are in one basket.</span>
+*       Vertical scaling has a big problem: there’s no failover, no redundancy. If the instance has a problem your website will die. All your eggs are in one basket.    
 
-*   <span>Eventually a single instances can only get so big. You need to do something else.</span>
+*       Eventually a single instances can only get so big. You need to do something else.    
 
-## <span>Users > 10</span>
+##     Users > 10    
 
-*   <span>Separate out a single</span> <span>host into multiple hosts</span>
+*       Separate out a single         host into multiple hosts    
 
-    *   <span>One host for the web site.</span>
+    *       One host for the web site.    
 
-    *   <span>One host for the database. Run any database you want, but you are on the hook for the database administration.</span>
+    *       One host for the database. Run any database you want, but you are on the hook for the database administration.    
 
-    *   <span>Using separate hosts allows the web site and the database to be scaled independently of each other. Perhaps your database will need a bigger machine than your web site, for example.</span>
+    *       Using separate hosts allows the web site and the database to be scaled independently of each other. Perhaps your database will need a bigger machine than your web site, for example.    
 
-*   <span>Or instead of running your own database you could use a database service.</span>
+*       Or instead of running your own database you could use a database service.    
 
-    *   <span>Are you a database admin? Do your really want to worry about backups? High availability? Patches? Operating systems?</span>
+    *       Are you a database admin? Do your really want to worry about backups? High availability? Patches? Operating systems?    
 
-    *   <span>A big advantage of using a service is you can have a multi Availability Zone database setup with a single click. You won’t have to worry about replication or any of that sort of thing. Your database will be highly available and reliable.</span>
+    *       A big advantage of using a service is you can have a multi Availability Zone database setup with a single click. You won’t have to worry about replication or any of that sort of thing. Your database will be highly available and reliable.    
 
-*   <span>As you might imagine Amazon has several  fully managed database services to sell you:</span>
+*       As you might imagine Amazon has several  fully managed database services to sell you:    
 
-    *   [<span>Amazon RDS</span>](https://aws.amazon.com/rds/) <span>(Relational Database Service). There are many options: Microsoft SQL Server, Oracle, MySQL, PostgreSQL, MariaDB, Amazon Aurora.</span>
+    *   [    Amazon RDS    ](https://aws.amazon.com/rds/)     (Relational Database Service). There are many options: Microsoft SQL Server, Oracle, MySQL, PostgreSQL, MariaDB, Amazon Aurora.    
 
-    *   [<span>Amazon DynamoDB</span>](https://aws.amazon.com/dynamodb/)<span>. A NoSQL managed database.</span>
+    *   [    Amazon DynamoDB    ](https://aws.amazon.com/dynamodb/)    . A NoSQL managed database.    
 
-    *   [<span>Amazon Redshift</span>](https://aws.amazon.com/redshift/)<span>. A petabyte scale data warehouse system.</span>
+    *   [    Amazon Redshift    ](https://aws.amazon.com/redshift/)    . A petabyte scale data warehouse system.    
 
-*   <span>More</span> [<span>Amazon Aurora</span>](https://aws.amazon.com/rds/aurora/)<span>:</span>
+*       More     [    Amazon Aurora    ](https://aws.amazon.com/rds/aurora/)    :    
 
-    *   <span>Automatic storage scaling up to 64TB. You no longer have to provision the storage for your data.</span>
+    *       Automatic storage scaling up to 64TB. You no longer have to provision the storage for your data.    
 
-    *   <span>Up to 15 read read-replicas</span>
+    *       Up to 15 read read-replicas    
 
-    *   <span>Continuous (incremental) backups to S3.</span>
+    *       Continuous (incremental) backups to S3.    
 
-    *   <span>6-way replication across 3 AZs. This helps you handle failure.</span>
+    *       6-way replication across 3 AZs. This helps you handle failure.    
 
-    *   <span>MySQL compatible.</span>
+    *       MySQL compatible.    
 
-*   <span>Start with a SQL database instead of a NoSQL database.</span>
+*       Start with a SQL database instead of a NoSQL database.    
 
-    *   <span>The suggestion is to start with a SQL database.</span>
+    *       The suggestion is to start with a SQL database.    
 
-    *   <span>The technology is established.</span>
+    *       The technology is established.    
 
-    *   <span>There’s lots of existing code, communities, support groups, books, and tools.</span>
+    *       There’s lots of existing code, communities, support groups, books, and tools.    
 
-    *   <span>You aren’t going to break a SQL database with your first 10 million users. Not even close. (unless your data is huge).</span>
+    *       You aren’t going to break a SQL database with your first 10 million users. Not even close. (unless your data is huge).    
 
-    *   <span>Clear patterns to scalability.</span>
+    *       Clear patterns to scalability.    
 
-*   <span>When might you need start with a NoSQL database?</span>
+*       When might you need start with a NoSQL database?    
 
-    *   <span>If you need to store > 5 TB of data in year one or you have an incredibly data intensive workload.</span>
+    *       If you need to store > 5 TB of data in year one or you have an incredibly data intensive workload.    
 
-    *   <span>Your application has super low-latency requirements.</span>
+    *       Your application has super low-latency requirements.    
 
-    *   <span>You need really high throughput. You need to really tweak the IOs you are getting both on the reads and the writes.</span>
+    *       You need really high throughput. You need to really tweak the IOs you are getting both on the reads and the writes.    
 
-    *   <span>You don’t have any relational data.</span>
+    *       You don’t have any relational data.    
 
-## <span>Users > 100</span>
+##     Users > 100    
 
-*   <span>Use a</span> <span>separate host for the web tier</span><span>.</span>
+*       Use a         separate host for the web tier        .    
 
-*   <span>Store the</span> <span>database on Amazon RDS</span><span>. It takes care of everything.</span>
+*       Store the         database on Amazon RDS        . It takes care of everything.    
 
-*   <span>That’s all you have to do.</span>
+*       That’s all you have to do.    
 
-## <span>Users > 1000</span>
+##     Users > 1000    
 
-*   <span>As architected your application has availability issues. If the host for your web service fails then your web site goes down.</span>
+*       As architected your application has availability issues. If the host for your web service fails then your web site goes down.    
 
-*   <span>So you</span> <span>need another web instance in another Availability Zone</span><span>. That’s OK because the latency between the AZs is in the low single digit milliseconds, almost like they right next to each other.</span>
+*       So you         need another web instance in another Availability Zone        . That’s OK because the latency between the AZs is in the low single digit milliseconds, almost like they right next to each other.    
 
-*   <span>You also need to a</span> <span>slave database to RDS</span> <span>that runs in another AZ. If there’s a problem with the master your application will automatically switch over to the slave. There are no application changes necessary on the failover because your application always uses the same endpoint.</span>
+*       You also need to a         slave database to RDS         that runs in another AZ. If there’s a problem with the master your application will automatically switch over to the slave. There are no application changes necessary on the failover because your application always uses the same endpoint.    
 
-*   <span>An Elastic Load Balancer (ELB) is added to the configuration to load balance users between your two web host instances in the two AZs.</span>
+*       An Elastic Load Balancer (ELB) is added to the configuration to load balance users between your two web host instances in the two AZs.    
 
-*   <span>Elastic Load Balancer (ELB):</span>
+*       Elastic Load Balancer (ELB):    
 
-    *   <span>ELB is a highly available managed load balancer. The ELB exists in all AZs. It’s a single DNS endpoint for your application. Just put it in Route 53 and it will load balance across your web host instances.</span>
+    *       ELB is a highly available managed load balancer. The ELB exists in all AZs. It’s a single DNS endpoint for your application. Just put it in Route 53 and it will load balance across your web host instances.    
 
-    *   <span>The ELB has Health Checks that make sure traffic doesn’t flow to failed hosts.</span>
+    *       The ELB has Health Checks that make sure traffic doesn’t flow to failed hosts.    
 
-    *   <span>It scales without your doing anything. If it sees additional traffic it scales behind the scenes both horizontally and vertically. You don’t have to manage it. As your applications scales so is the ELB.</span>
+    *       It scales without your doing anything. If it sees additional traffic it scales behind the scenes both horizontally and vertically. You don’t have to manage it. As your applications scales so is the ELB.    
 
-## <span>Users > 10,000s - 100,000s</span>
+##     Users > 10,000s - 100,000s    
 
-*   <span>The previous configuration has 2 instances behind the ELB, in practice you can have 1000s of instances behind the ELB. This is</span> [<span>horizontal scaling</span>](https://en.wikipedia.org/wiki/Scalability)<span>.</span>
+*       The previous configuration has 2 instances behind the ELB, in practice you can have 1000s of instances behind the ELB. This is     [    horizontal scaling    ](https://en.wikipedia.org/wiki/Scalability)    .    
 
-*   <span>You’ll need to add more read replicas to the database, to RDS. This will take load off the write master.</span>
+*       You’ll need to add more read replicas to the database, to RDS. This will take load off the write master.    
 
-*   <span>Consider performance and efficiency by</span> <span>lightening the load off your web tier</span> <span>servers by moving some of the traffic elsewhere. Move static content in your web app to Amazon S3 and Amazon CloudFront. CloudFront is the Amazon’s CDN that stores your data in the 53 edge locations across the world.</span>
+*       Consider performance and efficiency by         lightening the load off your web tier         servers by moving some of the traffic elsewhere. Move static content in your web app to Amazon S3 and Amazon CloudFront. CloudFront is the Amazon’s CDN that stores your data in the 53 edge locations across the world.    
 
-*   <span>Amazon S3 is an object base store.</span>
+*       Amazon S3 is an object base store.    
 
-    *   <span>It’s not like EBS, it’s not storage that’s attached to an EC2 instance, it’s an object store, not a block store.</span>
+    *       It’s not like EBS, it’s not storage that’s attached to an EC2 instance, it’s an object store, not a block store.    
 
-    *   <span>It’s a great place to store static content, like javascript, css, images, videos. This sort of content does not need to sit on an EC2 instance.</span>
+    *       It’s a great place to store static content, like javascript, css, images, videos. This sort of content does not need to sit on an EC2 instance.    
 
-    *   <span>Highly durable, 11 9’s of reliability.</span>
+    *       Highly durable, 11 9’s of reliability.    
 
-    *   <span>Infinitely scalable, throw as much data as it as you want. Customers store multiple petabytes of data in S3\.</span>
+    *       Infinitely scalable, throw as much data as it as you want. Customers store multiple petabytes of data in S3\.    
 
-    *   <span>Objects of up to 5TB in size are supported.</span>
+    *       Objects of up to 5TB in size are supported.    
 
-    *   <span>Encryption is supported. You can use Amazon’s encryption, your encryption, or an encryption service.</span>
+    *       Encryption is supported. You can use Amazon’s encryption, your encryption, or an encryption service.    
 
-*   <span>Amazon CloudFront  is cache for your content.</span>
+*       Amazon CloudFront  is cache for your content.    
 
-    *   <span>It caches content at the edge locations to provide your users the lowest latency access possible.</span>
+    *       It caches content at the edge locations to provide your users the lowest latency access possible.    
 
-    *   <span>Without a CDN your users will experience higher latency access to your content. Your servers will also be under higher load as they are serving the content as well as handling the web requests.</span>
+    *       Without a CDN your users will experience higher latency access to your content. Your servers will also be under higher load as they are serving the content as well as handling the web requests.    
 
-    *   <span>One customer needed to serve content at 60 Gbps. The web tier didn’t even know that was going on, CloudFront handled it all.</span>
+    *       One customer needed to serve content at 60 Gbps. The web tier didn’t even know that was going on, CloudFront handled it all.    
 
-*   <span>You can also lighten the load by shifting session state off your web tier.</span>
+*       You can also lighten the load by shifting session state off your web tier.    
 
-    *   <span>Store the session state in</span> [<span>ElastiCache</span>](https://aws.amazon.com/elasticache/) <span>or DynamoDB.</span>
+    *       Store the session state in     [    ElastiCache    ](https://aws.amazon.com/elasticache/)     or DynamoDB.    
 
-    *   <span>This approach also sets your system up to support auto scaling in the future.</span>
+    *       This approach also sets your system up to support auto scaling in the future.    
 
-*   <span>You can also lighten the load by caching data from your database into ElastiCache.</span>
+*       You can also lighten the load by caching data from your database into ElastiCache.    
 
-    *   <span>Your database doesn’t need to handle all the gets for data. A cache can handle a lot of that work and leaves the database to handle more important traffic.</span>
+    *       Your database doesn’t need to handle all the gets for data. A cache can handle a lot of that work and leaves the database to handle more important traffic.    
 
-*   <span>Amazon DynamoDB - A managed NoSQL database</span>
+*       Amazon DynamoDB - A managed NoSQL database    
 
-    *   <span>You provision the throughput you want. You dial up the read and write performance you want to pay for.</span>
+    *       You provision the throughput you want. You dial up the read and write performance you want to pay for.    
 
-    *   <span>Supports fast, predictable performance.</span>
+    *       Supports fast, predictable performance.    
 
-    *   <span>Fully distributed and fault tolerant. It exists in multiple Availability Zones.</span>
+    *       Fully distributed and fault tolerant. It exists in multiple Availability Zones.    
 
-    *   <span>It’s a key-value store. JSON is supported.</span>
+    *       It’s a key-value store. JSON is supported.    
 
-    *   <span>Documents up to 400KB in size are supported.</span>
+    *       Documents up to 400KB in size are supported.    
 
-*   <span>Amazon Elasticache - a managed Memcached or Redis</span>
+*       Amazon Elasticache - a managed Memcached or Redis    
 
-    *   <span>Managing a memcached cluster isn’t making you more money so let Amazon do that for you. That’s the pitch.</span>
+    *       Managing a memcached cluster isn’t making you more money so let Amazon do that for you. That’s the pitch.    
 
-    *   <span>The clusters are automatically scaled for you. It’s a self-healing infrastructure, if nodes fail new nodes are started automatically.</span>
+    *       The clusters are automatically scaled for you. It’s a self-healing infrastructure, if nodes fail new nodes are started automatically.    
 
-*   <span>You can also lighten the load by shifting dynamic content to CloudFront.</span>
+*       You can also lighten the load by shifting dynamic content to CloudFront.    
 
-    *   <span>A lot of people know CloudFront can handle static content, like files, but it can also handle some dynamic content. This topic is not discussed further in the talk, but here’s</span> [<span>a link</span>](https://aws.amazon.com/cloudfront/dynamic-content/)<span>.</span>
+    *       A lot of people know CloudFront can handle static content, like files, but it can also handle some dynamic content. This topic is not discussed further in the talk, but here’s     [    a link    ](https://aws.amazon.com/cloudfront/dynamic-content/)    .    
 
-## [<span>Auto Scaling</span>](https://aws.amazon.com/autoscaling/)
+## [    Auto Scaling    ](https://aws.amazon.com/autoscaling/)
 
-*   <span>If you provision enough capacity to always handle your peak traffic load, Black Friday, for example, you are wasting money. It would be better to match compute power with demand. That’s what Auto Scaling let’s you do, the automatic resizing of compute clusters.</span>
+*       If you provision enough capacity to always handle your peak traffic load, Black Friday, for example, you are wasting money. It would be better to match compute power with demand. That’s what Auto Scaling let’s you do, the automatic resizing of compute clusters.    
 
-*   <span>You can define the minimum and maximum size of your pools. As a user you decide what’s the smallest number of instances in your cluster and the largest number of instances.</span>
+*       You can define the minimum and maximum size of your pools. As a user you decide what’s the smallest number of instances in your cluster and the largest number of instances.    
 
-*   [<span>CloudWatch</span>](https://aws.amazon.com/cloudwatch/) <span>is a management service that’s embedded into all applications.</span>
+*   [    CloudWatch    ](https://aws.amazon.com/cloudwatch/)     is a management service that’s embedded into all applications.    
 
-    *   <span>CloudWatch events drive scaling.</span>
+    *       CloudWatch events drive scaling.    
 
-    *   <span>Are you going to scale on CPU utilization? Are you going to scale on latency? On network traffic?</span>
+    *       Are you going to scale on CPU utilization? Are you going to scale on latency? On network traffic?    
 
-    *   <span>You can also push your own custom metrics into CloudWatch. If you want to scale on something application specific you can push that metric into CloudWatch and then tell Auto Scaling you want to scale on that metric.</span>
+    *       You can also push your own custom metrics into CloudWatch. If you want to scale on something application specific you can push that metric into CloudWatch and then tell Auto Scaling you want to scale on that metric.    
 
-## <span>Users > 500,000+</span>
+##     Users > 500,000+    
 
-*   <span>The addition from the previous configuration is</span> [<span>auto scaling groups</span>](http://docs.aws.amazon.com/gettingstarted/latest/wah/getting-started-create-as.html) <span>are added to the web tier</span><span>. The auto scaling group includes the two AZs, but can expand to 3 AZs, up to as many as are in the same region. Instances can pop up in multiple AZs not just for scalability, but for availability.</span>
+*       The addition from the previous configuration is     [    auto scaling groups    ](http://docs.aws.amazon.com/gettingstarted/latest/wah/getting-started-create-as.html)     are added to the web tier        . The auto scaling group includes the two AZs, but can expand to 3 AZs, up to as many as are in the same region. Instances can pop up in multiple AZs not just for scalability, but for availability.    
 
-*   <span>The example has 3 web tier instances in each AZ, but it could be thousands of instances. You could say you want a minimum of 10 instances and a maximum of a 1000.</span>
+*       The example has 3 web tier instances in each AZ, but it could be thousands of instances. You could say you want a minimum of 10 instances and a maximum of a 1000.    
 
-*   <span>ElastiCache is used to offload popular reads from the database.</span>
+*       ElastiCache is used to offload popular reads from the database.    
 
-*   <span>DynamoDB is used to offload Session data.</span>
+*       DynamoDB is used to offload Session data.    
 
-*   <span>You need to add monitoring, metrics and logging.</span>
+*       You need to add monitoring, metrics and logging.    
 
-    *   <span>Host level metrics. Look at a single CPU instance within an autoscaling group and figure out what’s going wrong.</span>
+    *       Host level metrics. Look at a single CPU instance within an autoscaling group and figure out what’s going wrong.    
 
-    *   <span>Aggregate level metrics. Look at metrics on the Elastic Load Balancer to get feel for performance of the entire set of instances.</span>
+    *       Aggregate level metrics. Look at metrics on the Elastic Load Balancer to get feel for performance of the entire set of instances.    
 
-    *   <span>Log analysis. Look at what the application is telling you using</span> [<span>CloudWatch</span>](https://aws.amazon.com/about-aws/whats-new/2014/07/10/introducing-amazon-cloudwatch-logs/) <span>logs.</span> [<span>CloudTrail</span>](https://aws.amazon.com/cloudtrail/) <span>helps you analyze and manage logs.</span>
+    *       Log analysis. Look at what the application is telling you using     [    CloudWatch    ](https://aws.amazon.com/about-aws/whats-new/2014/07/10/introducing-amazon-cloudwatch-logs/)     logs.     [    CloudTrail    ](https://aws.amazon.com/cloudtrail/)     helps you analyze and manage logs.    
 
-    *   <span>External Site Performance. Know what your customers are seeing as end users. Use a service like New Relic or Pingdom.</span>
+    *       External Site Performance. Know what your customers are seeing as end users. Use a service like New Relic or Pingdom.    
 
-*   <span>You need to know what your customers are saying. Is their latency bad? Are they getting an error when they go to your web page?</span>
+*       You need to know what your customers are saying. Is their latency bad? Are they getting an error when they go to your web page?    
 
-*   <span>Squeeze as much performance as you can from your configuration. Auto Scaling can help with that. You don’t want systems that are at 20% CPU utilization.</span>
+*       Squeeze as much performance as you can from your configuration. Auto Scaling can help with that. You don’t want systems that are at 20% CPU utilization.    
 
-## <span>Automation</span>
+##     Automation    
 
-*   <span>The infrastructure is getting big, it can scale to 1000s of instances. We have read replicas, we have horizontal scaling, but we need some automation to help manage it all, we don’t want to manage each individual instance.</span>
+*       The infrastructure is getting big, it can scale to 1000s of instances. We have read replicas, we have horizontal scaling, but we need some automation to help manage it all, we don’t want to manage each individual instance.    
 
-*   <span>There’s a hierarchy of automation tools.</span>
+*       There’s a hierarchy of automation tools.    
 
-    *   <span>Do it yourself</span><span>: Amazon EC2, AWS CloudFormation.</span>
+    *       Do it yourself        : Amazon EC2, AWS CloudFormation.    
 
-    *   <span>Higher-level services</span><span>: AWS Elastic Beanstalk, AWS OpsWorks</span>
+    *       Higher-level services        : AWS Elastic Beanstalk, AWS OpsWorks    
 
-*   [<span>AWS Elastic Beanstalk</span>](https://aws.amazon.com/elasticbeanstalk/)<span>: manages the infrastructure for your application automatically. It’s convenient but there’s not a lot of control.</span>
+*   [    AWS Elastic Beanstalk    ](https://aws.amazon.com/elasticbeanstalk/)    : manages the infrastructure for your application automatically. It’s convenient but there’s not a lot of control.    
 
-*   [<span>AWS OpsWorks</span>](https://aws.amazon.com/opsworks/)<span>: an environment where you build your application in layers, you use Chef recipes to manage the layers of your application.</span>
+*   [    AWS OpsWorks    ](https://aws.amazon.com/opsworks/)    : an environment where you build your application in layers, you use Chef recipes to manage the layers of your application.    
 
-    *   <span>Also enables the ability to do Continuous Integration and deployment.</span>
+    *       Also enables the ability to do Continuous Integration and deployment.    
 
-*   [<span>AWS CloudFormation</span>](https://aws.amazon.com/cloudformation/)<span>: been around the longest.</span>
+*   [    AWS CloudFormation    ](https://aws.amazon.com/cloudformation/)    : been around the longest.    
 
-    *   <span>Offers the most flexibility because it offers a templatized view of your stack. It can be used to build your entire stack or just components of the stack.</span>
+    *       Offers the most flexibility because it offers a templatized view of your stack. It can be used to build your entire stack or just components of the stack.    
 
-    *   <span>If you want to update your stack you update the Cloud Formation template it will update just that one piece of your application.</span>
+    *       If you want to update your stack you update the Cloud Formation template it will update just that one piece of your application.    
 
-    *   <span>Lots of control, but less convenient.</span>
+    *       Lots of control, but less convenient.    
 
-*   [<span>AWS CodeDeploy</span>](https://aws.amazon.com/codedeploy/)<span>: Deploys your code to a fleet of EC2 instances.</span>
+*   [    AWS CodeDeploy    ](https://aws.amazon.com/codedeploy/)    : Deploys your code to a fleet of EC2 instances.    
 
-    *   <span>Can deploy to one or thousands of instances.</span>
+    *       Can deploy to one or thousands of instances.    
 
-    *   <span>Code Deploy can point to an auto scaling configuration so code is deployed to a group of instances.</span>
+    *       Code Deploy can point to an auto scaling configuration so code is deployed to a group of instances.    
 
-    *   <span>Can also be used in conjunction with Chef and Puppet.</span>
+    *       Can also be used in conjunction with Chef and Puppet.    
 
-## <span>Decouple Infrastructure</span>
+##     Decouple Infrastructure    
 
-*   <span>Use</span> [<span>SOA</span>](https://en.wikipedia.org/wiki/Service-oriented_architecture)<span>/</span>[<span>microservices</span>](http://techblog.netflix.com/2015/02/a-microscope-on-microservices.html)<span>.  Take components from your tiers and separate them out.</span> <span>Create separate services</span> <span>like when you separated the web tier from the database tier.</span>
+*       Use     [    SOA    ](https://en.wikipedia.org/wiki/Service-oriented_architecture)    /    [    microservices    ](http://techblog.netflix.com/2015/02/a-microscope-on-microservices.html)    .  Take components from your tiers and separate them out.         Create separate services         like when you separated the web tier from the database tier.    
 
-*   <span>The individual services can then be scaled independently. This gives you a lot of flexibility for scaling and high availability.</span>
+*       The individual services can then be scaled independently. This gives you a lot of flexibility for scaling and high availability.    
 
-*   <span>SOA is a key component of the architectures built by Amazon.</span>
+*       SOA is a key component of the architectures built by Amazon.    
 
-*   <span>Loose coupling sets you free.</span>
+*       Loose coupling sets you free.    
 
-    *   <span>You can scale and fail components independently.</span>
+    *       You can scale and fail components independently.    
 
-    *   <span>If a worker node fails in pulling work from SQS does it matter? No, just start another one. Things are going to fail, let’s build an architecture that handles failure.</span>
+    *       If a worker node fails in pulling work from SQS does it matter? No, just start another one. Things are going to fail, let’s build an architecture that handles failure.    
 
-    *   <span>Design everything as a black box.</span>
+    *       Design everything as a black box.    
 
-    *   <span>Decouple interactions.</span>
+    *       Decouple interactions.    
 
-    *   <span>Favor services with built-in redundancy and scalability rather than building your own.</span>
+    *       Favor services with built-in redundancy and scalability rather than building your own.    
 
-## <span>Don’t Reinvent the Wheel</span>
+##     Don’t Reinvent the Wheel    
 
-*   <span>Only invest in tasks that differentiate you as a business.</span>
+*       Only invest in tasks that differentiate you as a business.    
 
-*   <span>Amazon has a lot of services that are inherently fault tolerant because they span multiple AZs. For example: queuing, email, transcoding, search, databases, monitoring, metrics, logging, compute. You don’t have to build these yourself.</span>
+*       Amazon has a lot of services that are inherently fault tolerant because they span multiple AZs. For example: queuing, email, transcoding, search, databases, monitoring, metrics, logging, compute. You don’t have to build these yourself.    
 
-*   [<span>SQS</span>](https://aws.amazon.com/sqs/)<span>: queueing service.</span>
+*   [    SQS    ](https://aws.amazon.com/sqs/)    : queueing service.    
 
-    *   <span>The first Amazon service offered.</span>
+    *       The first Amazon service offered.    
 
-    *   <span>It spans multiple AZs so it’s fault tolerant.</span>
+    *       It spans multiple AZs so it’s fault tolerant.    
 
-    *   <span>It’s scalable, secure, and simple.</span>
+    *       It’s scalable, secure, and simple.    
 
-    *   <span>Queuing can help your infrastructure by helping you pass messages between different components of your infrastructure.</span>
+    *       Queuing can help your infrastructure by helping you pass messages between different components of your infrastructure.    
 
-    *   <span>Take for example a Photo CMS. The systems that collects the photos and processes them should be two different systems. They should be able to scale independently. They should be loosely coupled. Ingest a photo, put it in queue, and workers can pull photos off the queue and do something with them.</span>
+    *       Take for example a Photo CMS. The systems that collects the photos and processes them should be two different systems. They should be able to scale independently. They should be loosely coupled. Ingest a photo, put it in queue, and workers can pull photos off the queue and do something with them.    
 
-*   [<span>AWS Lambda</span>](https://aws.amazon.com/lambda/)<span>: lets you run code without provisioning or managing servers.</span>
+*   [    AWS Lambda    ](https://aws.amazon.com/lambda/)    : lets you run code without provisioning or managing servers.    
 
-    *   <span>Great tool for allowing you to decouple your application.</span>
+    *       Great tool for allowing you to decouple your application.    
 
-    *   <span>In the Photo CMS example Lambda can respond to S3 events so when a S3 file is added the Lambda function to process is automatically triggered.</span>
+    *       In the Photo CMS example Lambda can respond to S3 events so when a S3 file is added the Lambda function to process is automatically triggered.    
 
-    *   <span>We’ve done away with EC2\. It scales out for you and there’s no OS to manage.</span>
+    *       We’ve done away with EC2\. It scales out for you and there’s no OS to manage.    
 
-## <span>Users > 1,000,000+</span>
+##     Users > 1,000,000+    
 
-*   <span>Reaching a million users and above requires bits of all the previous points:</span>
+*       Reaching a million users and above requires bits of all the previous points:    
 
-    *   <span>Multi-AZ</span>
+    *       Multi-AZ    
 
-    *   <span>Elastic Load Balancing between tiers. Not just on the web tier, but also on the application tier, data tier, and any other tier you have.</span>
+    *       Elastic Load Balancing between tiers. Not just on the web tier, but also on the application tier, data tier, and any other tier you have.    
 
-    *   <span>Auto Scaling</span>
+    *       Auto Scaling    
 
-    *   <span>Service Oriented Architecture</span>
+    *       Service Oriented Architecture    
 
-    *   <span>Serve Content Smartly with S3 and CloudFront</span>
+    *       Serve Content Smartly with S3 and CloudFront    
 
-    *   <span>Put caching in front of the DB</span>
+    *       Put caching in front of the DB    
 
-    *   <span>Move state off the web tier.</span>
+    *       Move state off the web tier.    
 
-*   <span>Use</span> [<span>Amazon SES</span>](https://aws.amazon.com/ses/) <span>to send email.</span>
+*       Use     [    Amazon SES    ](https://aws.amazon.com/ses/)     to send email.    
 
-*   <span>Use CloudWatch for monitoring.</span>
+*       Use CloudWatch for monitoring.    
 
-## <span>Users > 10,000,000+</span>
+##     Users > 10,000,000+    
 
-*   <span>As we get bigger we’ll hit issues in the data tier. You will potentially start to run into issues with your database around contention with the</span> [<span>write master</span>](https://en.wikipedia.org/wiki/Multi-master_replication)<span>, which basically means you can only send so much write traffic to one server.</span>
+*       As we get bigger we’ll hit issues in the data tier. You will potentially start to run into issues with your database around contention with the     [    write master    ](https://en.wikipedia.org/wiki/Multi-master_replication)    , which basically means you can only send so much write traffic to one server.    
 
-*   <span>How do you solve it?</span>
+*       How do you solve it?    
 
-    *   <span>Federation</span>
+    *       Federation    
 
-    *   <span>Sharding</span>
+    *       Sharding    
 
-    *   <span>Moving some functionality to other types of DBs (NoSQL, graph, etc)</span>
+    *       Moving some functionality to other types of DBs (NoSQL, graph, etc)    
 
-*   <span>Federation - splitting into multiple DBs based on function</span>
+*       Federation - splitting into multiple DBs based on function    
 
-    *   <span>For example, create a Forums Database, a User Database, a Products Database. You might have had these in a single database before, now spread them out.</span>
+    *       For example, create a Forums Database, a User Database, a Products Database. You might have had these in a single database before, now spread them out.    
 
-    *   <span>The different databases can be scaled independently of each other.</span>
+    *       The different databases can be scaled independently of each other.    
 
-    *   <span>The downsides: you can’t do cross database queries; it delays getting to the next strategy, which is sharding.</span>
+    *       The downsides: you can’t do cross database queries; it delays getting to the next strategy, which is sharding.    
 
-*   <span>Sharding -  splitting one dataset across multiple hosts</span>
+*       Sharding -  splitting one dataset across multiple hosts    
 
-    *   <span>More complex at the application layer, but there’s no practical limit on scalability.</span>
+    *       More complex at the application layer, but there’s no practical limit on scalability.    
 
-    *   <span>For example, in a Users Database ⅓ of the users might be sent to one shard, and the last third to another shard, and another shard to another third.</span>
+    *       For example, in a Users Database ⅓ of the users might be sent to one shard, and the last third to another shard, and another shard to another third.    
 
-*   <span>Moving some functionality to other types of DBs</span>
+*       Moving some functionality to other types of DBs    
 
-    *   <span>Start thinking about a NoSQL database.</span>
+    *       Start thinking about a NoSQL database.    
 
-    *   <span>If you have data that doesn’t require complex joins, like say a leaderboard, rapid ingest of clickstream/log data, temporary data, hot tables, metadata/lookup tables, then consider moving it to a NoSQL database.</span>
+    *       If you have data that doesn’t require complex joins, like say a leaderboard, rapid ingest of clickstream/log data, temporary data, hot tables, metadata/lookup tables, then consider moving it to a NoSQL database.    
 
-    *   <span>This means they can be scaled independently of each other.</span>
+    *       This means they can be scaled independently of each other.    
 
-## <span>Users > 11 Million</span>
+##     Users > 11 Million    
 
-*   <span>Scaling is an iterative process. As you get bigger there's always more you can do.</span>
+*       Scaling is an iterative process. As you get bigger there's always more you can do.    
 
-*   <span>Fine tune your application.</span>
+*       Fine tune your application.    
 
-*   <span>More SOA of features/functionality.</span>
+*       More SOA of features/functionality.    
 
-*   <span>Go from Multi-AZ to multi-region.</span>
+*       Go from Multi-AZ to multi-region.    
 
-*   <span>Start to build custom solutions to solve your particular problem that nobody has ever done before. If you need to serve a billion customers you may need custom solutions.</span>
+*       Start to build custom solutions to solve your particular problem that nobody has ever done before. If you need to serve a billion customers you may need custom solutions.    
 
-*   <span>Deep analysis of your entire stack.</span>
+*       Deep analysis of your entire stack.    
 
-## <span>In Review</span>
+##     In Review    
 
-*   <span>Use a multi-AZ infrastructure for reliability.</span>
+*       Use a multi-AZ infrastructure for reliability.    
 
-*   <span>Make use of self-scaling services like ELB, S3, SQS, SNS, DynamoDB, etc.</span>
+*       Make use of self-scaling services like ELB, S3, SQS, SNS, DynamoDB, etc.    
 
-*   <span>Build in redundancy at every level. Scalability and redundancy are not two separate concepts, you can often do both at the same time.</span>
+*       Build in redundancy at every level. Scalability and redundancy are not two separate concepts, you can often do both at the same time.    
 
-*   <span>Start with a traditional relational SQL database.</span>
+*       Start with a traditional relational SQL database.    
 
-*   <span>Cache data both inside and outside your infrastructure.</span>
+*       Cache data both inside and outside your infrastructure.    
 
-*   <span>Use automation tools in your infrastructure.</span>
+*       Use automation tools in your infrastructure.    
 
-*   <span>Make sure you have good metrics/monitoring/logging in place. Make sure you are finding out what your customers experience with your application.</span>
+*       Make sure you have good metrics/monitoring/logging in place. Make sure you are finding out what your customers experience with your application.    
 
-*   <span>Split tiers into individual services (SOA) so they can scale and fail independently of each other.</span>
+*       Split tiers into individual services (SOA) so they can scale and fail independently of each other.    
 
-*   <span>Use Auto Scaling once you’re ready for it.</span>
+*       Use Auto Scaling once you’re ready for it.    
 
-*   <span>Don’t reinvent the wheel, use a managed service instead of coding your own, unless it’s absolutely necessary.</span>
+*       Don’t reinvent the wheel, use a managed service instead of coding your own, unless it’s absolutely necessary.    
 
-*   <span>Move to NoSQL if and when it makes sense.</span>
+*       Move to NoSQL if and when it makes sense.    
 
-## <span>Further Reading</span>
+##     Further Reading    
 
 *   [On HackerNews](https://news.ycombinator.com/item?id=10885727) / [On Reddit](https://www.reddit.com/r/sysadmin/comments/40hon7/a_beginners_guide_to_scaling_to_11_million_users/)
 
-*   <span>[http://aws.amazon.com/documentation](http://aws.amazon.com/documentation/)</span>
+*       [http://aws.amazon.com/documentation](http://aws.amazon.com/documentation/)    
 
-*   [<span>http://aws.amazon.com/architecture</span>](http://aws.amazon.com/architecture/)
+*   [    http://aws.amazon.com/architecture    ](http://aws.amazon.com/architecture/)
 
-*   [<span>http://aws.amazon.com/start-ups</span>](http://aws.amazon.com/start-ups)
+*   [    http://aws.amazon.com/start-ups    ](http://aws.amazon.com/start-ups)
 
-*   <span>[http://aws.amazon.com/free](http://aws.amazon.com/free)</span>
+*       [http://aws.amazon.com/free](http://aws.amazon.com/free)    
 
 *   From 2007: [Amazon Architecture](http://highscalability.com/blog/2007/9/18/amazon-architecture.html)
 
-</div>
+    

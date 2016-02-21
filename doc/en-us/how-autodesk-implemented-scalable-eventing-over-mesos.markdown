@@ -1,8 +1,8 @@
 ## [How Autodesk Implemented Scalable Eventing over Mesos](/blog/2015/8/17/how-autodesk-implemented-scalable-eventing-over-mesos.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, August 17, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm1.staticflickr.com/700/20605921095_b31535e553_m.jpg)
 
@@ -62,4 +62,4 @@ So overall it was a lot of fun designing and coding the whole thing, plus it is 
 *   [Ochopod + Kubernetes = Ochonetes](http://cloudengineering.autodesk.com/blog/2015/05/ochopod_plus_kubernetes.html)
 *   [Return of the finite state machine!](http://cloudengineering.autodesk.com/blog/2015/07/fsm.html)
 
-</div>
+    

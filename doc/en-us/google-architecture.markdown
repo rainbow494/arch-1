@@ -1,8 +1,8 @@
 ## [Google Architecture](/blog/2008/11/22/google-architecture.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Saturday, November 22, 2008 at 10:01AM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 2:** [Sorting 1 PB with MapReduce](http://googleblog.blogspot.com/2008/11/sorting-1pb-with-mapreduce.html). PB is not peanut-butter-and-jelly misspelled. It's 1 petabyte or 1000 terabytes or 1,000,000 gigabytes. _It took six hours and two minutes to sort 1PB (10 trillion 100-byte records) on 4,000 computers_ and the results were replicated thrice on 48,000 disks.  
 **Update:** [Greg Linden](http://glinden.blogspot.com/2008/01/mapreducing-20-petabytes-per-day.html) points to a new Google article [MapReduce: simplified data processing on large clusters](http://labs.google.com/papers/mapreduce-osdi04.pdf). Some interesting stats: 100k MapReduce jobs are executed each day; more than 20 petabytes of data are processed per day; more than 10k MapReduce programs have been implemented; machines are dual processor with gigabit ethernet and 4-8 GB of memory.  
@@ -129,7 +129,7 @@ Google visualizes their infrastructure as a three layer stack:
 
 1.  **Infrastructure can be a competitive advantage**. It certainly is for Google. They can roll out new internet services faster, cheaper, and at scale at few others can compete with. Many companies take a completely different approach. Many companies treat infrastructure as an expense. Each group will use completely different technologies and their will be little planning and commonality of how to build systems. Google thinks of themselves as a systems engineering company, which is a very refreshing way to look at building software.
 2.  **Spanning multiple data centers is still an unsolved problem**. Most websites are in one and at most two data centers. How to fully distribute a website across a set of data centers is, shall we say, tricky.
-3.  **Take a look at Hadoop**<span style="font-weight: normal;"> if you don't have the time to rebuild all this infrastructure from scratch yourself. Hadoop is an open source implementation of many of the same ideas presented here.</span>****
+3.  **Take a look at Hadoop**     if you don't have the time to rebuild all this infrastructure from scratch yourself. Hadoop is an open source implementation of many of the same ideas presented here.    ****
 4.  **An under appreciated advantage** of a platform approach is junior developers can quickly and confidently create robust applications on top of the platform. If every project needs to create the same distributed infrastructure wheel you'll run into difficulty because the people who know how to do this are relatively rare.
 5.  **Synergy isn't always crap**. By making all parts of a system work together an improvement in one helps them all. Improve the file system and everyone benefits immediately and transparently. If every project uses a different file system then there's no continual incremental improvement across the entire stack.
 6.  **Build self-managing systems that work without having to take the system down**. This allows you to more easily rebalance resources across servers, add more capacity dynamically, bring machines off line, and gracefully handle upgrades.
@@ -137,4 +137,4 @@ Google visualizes their infrastructure as a three layer stack:
 8.  **Don't ignore the Academy**. Academia has a lot of good ideas that don't get translated into production environments. Most of what Google has done has prior art, just not prior large scale deployment.
 9.  **Consider compression**. Compression is a good option when you have a lot of CPU to throw around and limited IO.
 
-</div>
+    

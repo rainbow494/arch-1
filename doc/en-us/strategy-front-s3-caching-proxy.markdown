@@ -1,8 +1,8 @@
 ## [Strategy: Front S3 with a Caching Proxy](/blog/2008/7/20/strategy-front-s3-with-a-caching-proxy.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Sunday, July 20, 2008 at 11:08AM</span></div>
+    
 
-<div class="body">
+    
 
 Given S3's [recent failure](http://developer.amazonwebservices.com/connect/thread.jspa?threadID=19714&tstart=0) ([Cloud Status](http://www.cloudstatus.com/) tells the tale) [Kevin Burton](http://feedblog.org/2008/07/20/twitter-screws-up-again/) makes the [excellent suggestion of fronting S3](http://feedblog.org/2008/07/20/twitter-screws-up-again/) with a [caching proxy server](http://en.wikipedia.org/wiki/Proxy_server).  
 
@@ -16,4 +16,4 @@ Some proxy options are: [Squid](http://www.squid-cache.org/), [Nginx](http://ngi
 
 Planaroo shares [how a small startup responds to an S3 outage](http://webspeed.typepad.com/planaroo/2008/07/rethinking-what.html) (summarized):
 
-*   **Up-to-date backups are a good thing.** Keep current backups such that you can switch to a new URL for your assets. Easier said than done I think.*   **Switch it, don't fix it.** Switch to your backup rather than wait for the system to come up quickly, because it may not.*   **Serve CSS, JavaScript, icons, and Google AJAX libraries** from alternate sources. Don't rely S3 or Google to always be able to server your crown jewels.</div>
+*   **Up-to-date backups are a good thing.** Keep current backups such that you can switch to a new URL for your assets. Easier said than done I think.*   **Switch it, don't fix it.** Switch to your backup rather than wait for the system to come up quickly, because it may not.*   **Serve CSS, JavaScript, icons, and Google AJAX libraries** from alternate sources. Don't rely S3 or Google to always be able to server your crown jewels.    

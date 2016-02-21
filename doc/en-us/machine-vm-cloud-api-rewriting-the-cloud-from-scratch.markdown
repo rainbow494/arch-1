@@ -1,8 +1,8 @@
 ## [Machine VM + Cloud API - Rewriting the Cloud from Scratch](/blog/2010/10/21/machine-vm-cloud-api-rewriting-the-cloud-from-scratch.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, October 21, 2010 at 8:26AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm2.static.flickr.com/1080/5099537351_26be8c6042.jpg)
 
@@ -31,4 +31,4 @@ The return for switching to this new model should be much better performance as 
 *   [Papers related to Mirage](http://www.openmirage.org/resources/)
 *   [Mesos](http://mesos.berkeley.edu/) - a platform for running multiple diverse cluster computing frameworks, such as Hadoop, MPI, and web services, on commodity clusters.
 
-</div>
+    

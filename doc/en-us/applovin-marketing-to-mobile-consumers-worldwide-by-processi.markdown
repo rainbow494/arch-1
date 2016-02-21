@@ -1,375 +1,375 @@
 ## [AppLovin: Marketing to Mobile Consumers Worldwide by Processing 30 Billion Requests a Day](/blog/2015/3/9/applovin-marketing-to-mobile-consumers-worldwide-by-processi.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, March 9, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm9.staticflickr.com/8570/16442530119_470a4487ee_m.jpg)
 
 _This is a guest post from [AppLovin](http://www.applovin.com/)'s VP of engineering, [Basil Shikin](https://www.linkedin.com/in/basilshikin), on the infrastructure of its mobile marketing platform. Major brands like Uber, Disney, Yelp and Hotels.com use AppLovin's mobile marketing platform. It processes 30 billion requests a day and 60 terabytes of data a day._
 
-<span>AppLovin's marketing platform provides marketing automation and analytics for brands who want to reach their consumers on mobile. The platform enables brands to use real-time data signals to make effective marketing decisions across one billion mobile consumers worldwide.</span>
+    AppLovin's marketing platform provides marketing automation and analytics for brands who want to reach their consumers on mobile. The platform enables brands to use real-time data signals to make effective marketing decisions across one billion mobile consumers worldwide.    
 
-# <span>Core Stats</span>
+#     Core Stats    
 
-*   <span>30 Billion ad requests per day</span>
+*       30 Billion ad requests per day    
 
-*   <span>300,000 ad requests per second, peaking at 500,000 ad requests per second</span>
+*       300,000 ad requests per second, peaking at 500,000 ad requests per second    
 
-*   <span>5ms average response latency</span>
+*       5ms average response latency    
 
-*   <span>3 Million events per second</span>
+*       3 Million events per second    
 
-*   <span>60TB of data processed daily</span>
+*       60TB of data processed daily    
 
-*   <span>~1000 servers</span>
+*       ~1000 servers    
 
-*   <span>9 data centers</span>
+*       9 data centers    
 
-*   <span>~40 reporting dimensions</span>
+*       ~40 reporting dimensions    
 
-*   <span>500,000 metrics data points per minute</span>
+*       500,000 metrics data points per minute    
 
-*   <span>1 Pb Spark cluster</span>
+*       1 Pb Spark cluster    
 
-*   <span>15GB/s peak disk writes across all servers</span>
+*       15GB/s peak disk writes across all servers    
 
-*   <span>9GB/s peak disk reads across all servers</span>
+*       9GB/s peak disk reads across all servers    
 
-*   <span>Founded in 2012, AppLovin is headquartered in Palo Alto, with offices in San Francisco, New York, London and Berlin.</span>
+*       Founded in 2012, AppLovin is headquartered in Palo Alto, with offices in San Francisco, New York, London and Berlin.    
 
-# <span>Technology Stack</span>
+#     Technology Stack    
 
-## <span>Third Party Services</span>
+##     Third Party Services    
 
-*   [<span>Github</span>](https://github.com/) <span>for code</span>
+*   [    Github    ](https://github.com/)     for code    
 
-*   [<span>Asana</span>](https://asana.com/) <span>for project management</span>
+*   [    Asana    ](https://asana.com/)     for project management    
 
-*   [<span>HipChat</span>](https://www.hipchat.com/) <span>for communication</span>
+*   [    HipChat    ](https://www.hipchat.com/)     for communication    
 
-## <span>Data Storage</span>
+##     Data Storage    
 
-*   [<span>Aerospike</span>](http://www.aerospike.com/) <span>for user profile storage</span>
+*   [    Aerospike    ](http://www.aerospike.com/)     for user profile storage    
 
-*   [<span>Vertica</span>](http://www.vertica.com/) <span>for aggregated statistics and real-time reporting</span>
+*   [    Vertica    ](http://www.vertica.com/)     for aggregated statistics and real-time reporting    
 
-*   <span>Aggregating 350,000 rows per second and writing to Vertica at 34,000 rows per second</span>
+*       Aggregating 350,000 rows per second and writing to Vertica at 34,000 rows per second    
 
-*   <span>Peak 12,000 user profiles per second written to Aerospike</span>
+*       Peak 12,000 user profiles per second written to Aerospike    
 
-*   <span>MySQL for ad data</span>
+*       MySQL for ad data    
 
-*   [<span>Spark</span>](https://spark.apache.org/) <span>for offline processing and deep data analysis</span>
+*   [    Spark    ](https://spark.apache.org/)     for offline processing and deep data analysis    
 
-*   [<span>Redis</span>](http://redis.io/) <span>for basic caching</span>
+*   [    Redis    ](http://redis.io/)     for basic caching    
 
-*   [<span>Thrift</span>](https://thrift.apache.org/) <span>for all data storage and transfers</span>
+*   [    Thrift    ](https://thrift.apache.org/)     for all data storage and transfers    
 
-*   <span>Each data point replicated in 4 data centers</span>
+*       Each data point replicated in 4 data centers    
 
-*   <span>Each service is replicated at least in 2 data centers (at most in 8)</span>
+*       Each service is replicated at least in 2 data centers (at most in 8)    
 
-*   <span>Amazon Web Services used for long term data storage and backups</span>
+*       Amazon Web Services used for long term data storage and backups    
 
-## <span>Core App And Services</span>
+##     Core App And Services    
 
-*   <span>Custom C/C++ Nginx module for high performance ad serving</span>
+*       Custom C/C++ Nginx module for high performance ad serving    
 
-*   <span>Java for data processing and auxiliary services</span>
+*       Java for data processing and auxiliary services    
 
-*   <span>PHP / Javascript for UI</span>
+*       PHP / Javascript for UI    
 
-*   [<span>Jenkins</span>](http://jenkins-ci.org/) <span>for continuous integration and deployment</span>
+*   [    Jenkins    ](http://jenkins-ci.org/)     for continuous integration and deployment    
 
-*   <span>Zookeeper for distributed locking</span>
+*       Zookeeper for distributed locking    
 
-*   <span>HAProxy and IPVS for high availability</span>
+*       HAProxy and IPVS for high availability    
 
-*   <span>Coverity for Java/C++ static code analysis</span>
+*       Coverity for Java/C++ static code analysis    
 
-*   <span>Checkstyle and PMD for PHP static code analysis</span>
+*       Checkstyle and PMD for PHP static code analysis    
 
-*   <span>Syslog for DC-centralized log server</span>
+*       Syslog for DC-centralized log server    
 
-*   <span>Hibernate for transaction-based services</span>
+*       Hibernate for transaction-based services    
 
-## <span>Servers and Provisioning</span>
+##     Servers and Provisioning    
 
-*   <span>Ubuntu</span>
+*       Ubuntu    
 
-*   <span>Cobbler for bare metal provisioning</span>
+*       Cobbler for bare metal provisioning    
 
-*   <span>Chef for configuring servers</span>
+*       Chef for configuring servers    
 
-*   <span>Berkshelf for Chef dependencies</span>
+*       Berkshelf for Chef dependencies    
 
-*   <span>Docker with Test Kitchen for running infrastructure tests</span>
+*       Docker with Test Kitchen for running infrastructure tests    
 
-*   <span><span>A combination of software (ipvs, haproxy) and hardware load balancers. Plan to gradually move away from traditional hardware load balancers.</span></span>
+*           A combination of software (ipvs, haproxy) and hardware load balancers. Plan to gradually move away from traditional hardware load balancers.        
 
-# <span>Monitoring Stack</span>
+#     Monitoring Stack    
 
-## <span>Server Monitoring</span>
+##     Server Monitoring    
 
-*   [<span>Icinga</span>](https://www.icinga.org/) <span>for all servers</span>
+*   [    Icinga    ](https://www.icinga.org/)     for all servers    
 
-*   <span>~100 custom Nagios plugins for deep server monitoring</span>
+*       ~100 custom Nagios plugins for deep server monitoring    
 
-*   <span>550 various probes per server</span>
+*       550 various probes per server    
 
-*   [<span>Graphite</span>](http://graphite.wikidot.com/) <span>as data format</span>
+*   [    Graphite    ](http://graphite.wikidot.com/)     as data format    
 
-*   [<span>Grafana</span>](http://grafana.org/) <span>for displaying all graphs</span>
+*   [    Grafana    ](http://grafana.org/)     for displaying all graphs    
 
-*   [<span>PagerDuty</span>](http://www.pagerduty.com/) <span>for issue escalation</span>
+*   [    PagerDuty    ](http://www.pagerduty.com/)     for issue escalation    
 
-*   [<span>Smokeping</span>](http://oss.oetiker.ch/smokeping/) <span>for network mesh monitoring</span>
+*   [    Smokeping    ](http://oss.oetiker.ch/smokeping/)     for network mesh monitoring    
 
-## <span>Application Monitoring</span>
+##     Application Monitoring    
 
-*   [<span>VividCortex</span>](https://vividcortex.com/) <span>for MySQL monitoring</span>
+*   [    VividCortex    ](https://vividcortex.com/)     for MySQL monitoring    
 
-*   <span>JSON /health endpoint on each service</span>
+*       JSON /health endpoint on each service    
 
-*   <span>Cross-DC database consistency monitoring</span>
+*       Cross-DC database consistency monitoring    
 
-*   <span>9 4K 65” TVs for showing all graphs across the office</span>
+*       9 4K 65” TVs for showing all graphs across the office    
 
-*   <span>Statistical deviation monitoring</span>
+*       Statistical deviation monitoring    
 
-*   <span>Fraudulent users monitoring</span>
+*       Fraudulent users monitoring    
 
-*   <span>Third-party systems monitoring</span>
+*       Third-party systems monitoring    
 
-*   <span>Deployments are recorded in all graphs</span>
+*       Deployments are recorded in all graphs    
 
-## <span>Intelligent Monitoring</span>
+##     Intelligent Monitoring    
 
-*   <span>Intelligent alerting system with a feedback loop: a system that can introspect anything can learn anything</span>
+*       Intelligent alerting system with a feedback loop: a system that can introspect anything can learn anything    
 
-*   <span>Third-party stats about AppLovin are also monitored</span>
+*       Third-party stats about AppLovin are also monitored    
 
-*   <span>Alerting is a cross-team exercise: developers, ops, business, data scientists are involved</span>
+*       Alerting is a cross-team exercise: developers, ops, business, data scientists are involved    
 
-# <span>Architecture Overview</span>
+#     Architecture Overview    
 
-## <span>General Considerations</span>
+##     General Considerations    
 
-*   <span>Store everything in RAM</span>
+*       Store everything in RAM    
 
-*   <span>If it does not fit, save it to SSD</span>
+*       If it does not fit, save it to SSD    
 
-*   <span>L2 cache level optimizations matter</span>
+*       L2 cache level optimizations matter    
 
-*   <span>Use right tool for the right job</span>
+*       Use right tool for the right job    
 
-*   <span>Architecture allows swapping any component</span>
+*       Architecture allows swapping any component    
 
-*   <span>Upgrade only if an alternative is 10x better</span>
+*       Upgrade only if an alternative is 10x better    
 
-*   <span>Write your own components if there is nothing suitable out there</span>
+*       Write your own components if there is nothing suitable out there    
 
-*   <span>Replicate important data at least 3x</span>
+*       Replicate important data at least 3x    
 
-*   <span>Make sure every message can be re-played without data corruption</span>
+*       Make sure every message can be re-played without data corruption    
 
-*   <span>Automate everything</span>
+*       Automate everything    
 
-*   <span>Zero-copy message passing</span>
+*       Zero-copy message passing    
 
-## <span>Message Processing</span>
+##     Message Processing    
 
-*   <span>Custom message processing system that guarantees message delivery</span>
+*       Custom message processing system that guarantees message delivery    
 
-*   <span>3x replication for each message</span>
+*       3x replication for each message    
 
-*   <span>Sending a message = writing to disk</span>
+*       Sending a message = writing to disk    
 
-*   <span>Any service may fail, but no data are lost</span>
+*       Any service may fail, but no data are lost    
 
-*   <span>Message dispatching system connects all components together, provides isolation and extensibility of the system</span>
+*       Message dispatching system connects all components together, provides isolation and extensibility of the system    
 
-*   <span>Cross-DC failure tolerance</span>
+*       Cross-DC failure tolerance    
 
-## <span>Ad Serving</span>
+##     Ad Serving    
 
-*   <span>Nginx is really fast: can serve an ad in less than a millisecond</span>
+*       Nginx is really fast: can serve an ad in less than a millisecond    
 
-*   <span>Keep all ad serving data in memory: read only</span>
+*       Keep all ad serving data in memory: read only    
 
-*   <span>jemalloc gave a 30% speed improvement</span>
+*       jemalloc gave a 30% speed improvement    
 
-*   <span>Use Aerospike for user profiles: less than 1ms to fetch a profile</span>
+*       Use Aerospike for user profiles: less than 1ms to fetch a profile    
 
-*   <span>Pre-compute all ad serving data on one box and dispatch across all servers</span>
+*       Pre-compute all ad serving data on one box and dispatch across all servers    
 
-*   <span>Torrents are used to propagate serving data across all servers. Using Torrents resulted in 83% network load drop on the originating server compared to HTTP-based distribution.</span>
+*       Torrents are used to propagate serving data across all servers. Using Torrents resulted in 83% network load drop on the originating server compared to HTTP-based distribution.    
 
-*   <span>mmap is used to share ad serving data across nginx processes</span>
+*       mmap is used to share ad serving data across nginx processes    
 
-*   <span>XXHash is the fastest hash function with a low collision rate. 75x faster than SHA-1 for computing checksums</span>
+*       XXHash is the fastest hash function with a low collision rate. 75x faster than SHA-1 for computing checksums    
 
-*   <span>5% of real traffic goes to staging environment</span>
+*       5% of real traffic goes to staging environment    
 
-*   <span>Ability to run 3 A/B tests at once (20%/20%/10% of traffic for three separate tests, 50% for control)</span>
+*       Ability to run 3 A/B tests at once (20%/20%/10% of traffic for three separate tests, 50% for control)    
 
-*   <span>A/B test results are available in regular reporting</span>
+*       A/B test results are available in regular reporting    
 
-# <span>Data Warehouse</span>
+#     Data Warehouse    
 
-*   <span>All data are replicated</span>
+*       All data are replicated    
 
-*   <span>Running most reports takes under 2 seconds</span>
+*       Running most reports takes under 2 seconds    
 
-*   <span>Aggregation is key to allow fast reports on large amounts of data</span>
+*       Aggregation is key to allow fast reports on large amounts of data    
 
-*   <span>Non-aggregated data for the last 48 hours is usually to resolve most issues</span>
+*       Non-aggregated data for the last 48 hours is usually to resolve most issues    
 
-*   <span>7 days of raw logs is usually enough for debug</span>
+*       7 days of raw logs is usually enough for debug    
 
-*   <span>Some reports must be pre-computed</span>
+*       Some reports must be pre-computed    
 
-*   <span>Always think multiple data centers: every data point goes to a multiple locations</span>
+*       Always think multiple data centers: every data point goes to a multiple locations    
 
-*   <span>Backup in S3 for catastrophic failures</span>
+*       Backup in S3 for catastrophic failures    
 
-*   <span>All raw data are stored in Spark cluster</span>
+*       All raw data are stored in Spark cluster    
 
-# <span>Team</span>
+#     Team    
 
-## <span>Structure</span>
+##     Structure    
 
-*   <span>70 full-time employees</span>
+*       70 full-time employees    
 
-*   <span>15 developers (platform, ad serving, frontend, mobile)</span>
+*       15 developers (platform, ad serving, frontend, mobile)    
 
-*   <span>4 data scientists</span>
+*       4 data scientists    
 
-*   <span>5 dev. ops.</span>
+*       5 dev. ops.    
 
-*   <span>Engineers in Palo Alto, CA</span>
+*       Engineers in Palo Alto, CA    
 
-*   <span>Business in San Francisco, CA</span>
+*       Business in San Francisco, CA    
 
-*   <span>Offices in New York, London and Berlin</span>
+*       Offices in New York, London and Berlin    
 
-## <span>Interaction</span>
+##     Interaction    
 
-*   <span>HipChat to discuss most issues</span>
+*       HipChat to discuss most issues    
 
-*   <span>Asana for project-based communication</span>
+*       Asana for project-based communication    
 
-*   <span>All code is reviewed</span>
+*       All code is reviewed    
 
-*   <span>Frequent group code reviews</span>
+*       Frequent group code reviews    
 
-*   <span>Quarterly company outings</span>
+*       Quarterly company outings    
 
-*   <span>Regular town hall meetings with CEO</span>
+*       Regular town hall meetings with CEO    
 
-*   <span>All engineers (junior to CTO) write code</span>
+*       All engineers (junior to CTO) write code    
 
-*   <span>Interviews are tough: offers are really rare</span>
+*       Interviews are tough: offers are really rare    
 
-## <span>Development Cycle</span>
+##     Development Cycle    
 
-*   <span>Developers, business side or data science team comes up with an idea</span>
+*       Developers, business side or data science team comes up with an idea    
 
-*   <span>Idea is reviewed and scheduled to be executed on a Monday meeting</span>
+*       Idea is reviewed and scheduled to be executed on a Monday meeting    
 
-*   <span>Feature is implemented in a branch; development environment is used for basic testing</span>
+*       Feature is implemented in a branch; development environment is used for basic testing    
 
-*   <span>A pull request is created</span>
+*       A pull request is created    
 
-*   <span>Code is reviewed and iterated upon</span>
+*       Code is reviewed and iterated upon    
 
-*   <span>For big features group code reviews are common</span>
+*       For big features group code reviews are common    
 
-*   <span>The feature gets merged to master</span>
+*       The feature gets merged to master    
 
-*   <span>The feature gets deployed to staging with the next build</span>
+*       The feature gets deployed to staging with the next build    
 
-*   <span>The feature gets tested on 5% real traffic</span>
+*       The feature gets tested on 5% real traffic    
 
-*   <span>Statistics are examined</span>
+*       Statistics are examined    
 
-*   <span>If the feature is successful it graduates to production</span>
+*       If the feature is successful it graduates to production    
 
-*   <span>Feature is closely monitored for couple days</span>
+*       Feature is closely monitored for couple days    
 
-## <span>Avoiding Issues</span>
+##     Avoiding Issues    
 
-*   <span>The system is designed to handle failure of any component</span>
+*       The system is designed to handle failure of any component    
 
-*   <span>No failure of a single component can harm ad serving or data consistency</span>
+*       No failure of a single component can harm ad serving or data consistency    
 
-*   <span>Omniscient monitoring</span>
+*       Omniscient monitoring    
 
-*   <span>Engineers watch and analyze key business reports</span>
+*       Engineers watch and analyze key business reports    
 
-*   <span>High quality of code is essential</span>
+*       High quality of code is essential    
 
-*   <span>Some features take multiple code reviews and iterations before graduating</span>
+*       Some features take multiple code reviews and iterations before graduating    
 
-*   <span>Alarms are triggered when:</span>
+*       Alarms are triggered when:    
 
-    *   <span>Stats for staging are different from production</span>
+    *       Stats for staging are different from production    
 
-    *   <span>FATAL errors on critical services</span>
+    *       FATAL errors on critical services    
 
-    *   <span>Error rate exceeds threshold</span>
+    *       Error rate exceeds threshold    
 
-    *   <span>Any irregular activity is detected</span>
+    *       Any irregular activity is detected    
 
-*   <span>data are never dropped</span>
+*       data are never dropped    
 
-*   <span>Most log lines can be easily parsed</span>
+*       Most log lines can be easily parsed    
 
-*   <span>Rolling back of any change is easy by design</span>
+*       Rolling back of any change is easy by design    
 
-*   <span>After every failure: fix, make sure same thing does not happen in the future, and add monitoring</span>
+*       After every failure: fix, make sure same thing does not happen in the future, and add monitoring    
 
-# <span>Lessons Learned</span>
+#     Lessons Learned    
 
-## <span>Product Development</span>
+##     Product Development    
 
-*   <span>Being able to swap any component easily is key to growth</span>
+*       Being able to swap any component easily is key to growth    
 
-*   <span>Failures drive innovative solutions</span>
+*       Failures drive innovative solutions    
 
-*   <span>Staging environment is essential: always be ready to loose 5%</span>
+*       Staging environment is essential: always be ready to loose 5%    
 
-*   <span>A/B testing is essential</span>
+*       A/B testing is essential    
 
-*   <span>Monitor everything</span>
+*       Monitor everything    
 
-*   <span>Build intelligent alerting system</span>
+*       Build intelligent alerting system    
 
-*   <span>Engineers should be aware of business goals</span>
+*       Engineers should be aware of business goals    
 
-*   <span>Business people should be aware of limitations of engineering</span>
+*       Business people should be aware of limitations of engineering    
 
-*   <span>Make builds and continuous integration fast. Jenkins run on a 2 bare metal servers with 32 CPU, 128G RAM and SSD drives</span>
+*       Make builds and continuous integration fast. Jenkins run on a 2 bare metal servers with 32 CPU, 128G RAM and SSD drives    
 
-## <span>Infrastructure</span>
+##     Infrastructure    
 
-*   <span>Monitoring all data points is critical</span>
+*       Monitoring all data points is critical    
 
-*   <span>Automation is important</span>
+*       Automation is important    
 
-*   <span>Every component should support HA by design</span>
+*       Every component should support HA by design    
 
-*   <span>Kernel optimizations can have up to 25% performance improvement</span>
+*       Kernel optimizations can have up to 25% performance improvement    
 
-*   <span>Process and IRQ balancing lead to another 20% performance improvement</span>
+*       Process and IRQ balancing lead to another 20% performance improvement    
 
-*   <span>Power saving features impact performance</span>
+*       Power saving features impact performance    
 
-*   <span>Use SSDs as much as possible</span>
+*       Use SSDs as much as possible    
 
-*   <span>When optimizing, profile everything. Flame graphs are great!</span>
+*       When optimizing, profile everything. Flame graphs are great!    
 
 [On Hacker News](https://news.ycombinator.com/item?id=9171871)
 
-</div>
+    

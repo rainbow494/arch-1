@@ -1,8 +1,8 @@
 ## [At Some Point the Cost of Servers Outweighs the Cost of Programmers](/blog/2009/4/5/at-some-point-the-cost-of-servers-outweighs-the-cost-of-prog.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Sunday, April 5, 2009 at 7:12AM</span></div>
+    
 
-<div class="body">![](http://www.celebritylatestgossip.com/wp-content/uploads/2009/03/lindsay_lohan_samantha_ronson.jpg)  
+    ![](http://www.celebritylatestgossip.com/wp-content/uploads/2009/03/lindsay_lohan_samantha_ronson.jpg)  
 
 This is the intriguing quote by Bill Venners in an interview with Twitter's Alex Payne on Twitter's heretical switch from a pure Ruby stack to a Ruby on Rails stack on the front-end and JVM/Scala on the back-end:  
 
@@ -43,4 +43,4 @@ Well, that's not how this post started at least. It started with Bill's refreshi
     *   [Hacker News Thread on Message Queue Options](http://news.ycombinator.com/item?id=546275)  
     *   [The Secret Behind Twitter's Growth](http://www.technologyreview.com/blog/editors/23282/?nlid=1908) by Kate Greene  
     *   [Why Scala for Web 2.0?](http://www.slideshare.net/al3x/why-scala-for-web-20) by Alex Payne  
-    *   [Mending The Bitter Absence of Reasoned Technical Discussion](http://al3x.net/2009/04/04/reasoned-technical-discussion.html) by Alex Payne</div>
+    *   [Mending The Bitter Absence of Reasoned Technical Discussion](http://al3x.net/2009/04/04/reasoned-technical-discussion.html) by Alex Payne    

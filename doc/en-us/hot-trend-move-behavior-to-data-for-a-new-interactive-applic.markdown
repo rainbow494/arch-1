@@ -1,8 +1,8 @@
 ## [Hot Trend: Move Behavior to Data for a New Interactive Application Architecture](/blog/2010/11/1/hot-trend-move-behavior-to-data-for-a-new-interactive-applic.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, November 1, 2010 at 8:07AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm2.static.flickr.com/1246/5128361941_c91a63104d_m.jpg)
 
@@ -56,4 +56,4 @@ The next generation cloud enabled, interactive application architecture may be:
 
 Or maybe that's just "_Silly me. Silly, silly me._"
 
-</div>
+    

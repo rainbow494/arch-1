@@ -1,8 +1,8 @@
 ## [Facebook at 13 Million Queries Per Second Recommends: Minimize Request Variance](/blog/2010/11/4/facebook-at-13-million-queries-per-second-recommends-minimiz.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Thursday, November 4, 2010 at 8:48AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm5.static.flickr.com/4145/5038714561_34183a0639_m.jpg)
 
@@ -46,4 +46,4 @@ Please watch the [MySQL Tech Talk](http://www.livestream.com/facebookevents/vide
 
 *   Good [Hacker News](http://news.ycombinator.com/item?id=1869404) Thread
 
-</div>
+    

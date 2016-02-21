@@ -1,8 +1,8 @@
 ## [Deep Lessons from Google and eBay on Building Ecosystems of Microservices](/blog/2015/12/1/deep-lessons-from-google-and-ebay-on-building-ecosystems-of.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, December 1, 2015 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://c1.staticflickr.com/1/643/23152040780_56b8058e8a_o.gif)
 
@@ -22,49 +22,49 @@ My takeaway is **the deliberate aligning of incentives is how you scale both a l
 
 Let's see how large scale systems are built in the modern era...
 
-## <span>Polyglot Microservices are the End Game</span>
+##     Polyglot Microservices are the End Game    
 
-*   <span>Large scale systems end up evolving into something that looks very similar:</span> <span>**a set of polyglot microservices**</span><span>. Polyglot means microservices are can be written in more than one language.</span>
+*       Large scale systems end up evolving into something that looks very similar:         **a set of polyglot microservices**        . Polyglot means microservices are can be written in more than one language.    
 
 *   **eBay** started in 1995\. Depending on how you count they are on the 5th generation of their architecture.
 
-    *   <span>Started as a monolithic Perl application that the founder wrote over a Labor Day weekend in 1995.</span>
+    *       Started as a monolithic Perl application that the founder wrote over a Labor Day weekend in 1995.    
 
-    *   <span>Then it moved to a monolithic C++ application which ended up with 3.4 million lines of code in a single DLL.</span>
+    *       Then it moved to a monolithic C++ application which ended up with 3.4 million lines of code in a single DLL.    
 
-    *   <span>The previous experience spurred the move to a far more distributed partitioned system in Java.</span>
+    *       The previous experience spurred the move to a far more distributed partitioned system in Java.    
 
-    *   <span>The eBay of today has quite a bit of Java, but a polyglot set of microservices.</span>
+    *       The eBay of today has quite a bit of Java, but a polyglot set of microservices.    
 
 *   **Twitter**’s evolution looks very similar. Depending on how you count they are on the third generation of their architecture.
 
-    *   <span>Started as a monolithic Ruby on Rails application.</span>
+    *       Started as a monolithic Ruby on Rails application.    
 
-    *   <span>Moved to a combination of Javascript and Rails on the frontend with a lot of Scala on the backend.</span>
+    *       Moved to a combination of Javascript and Rails on the frontend with a lot of Scala on the backend.    
 
-    *   <span>Ultimately they’ve moved to what we’d call today a set of polyglot microservices.</span>
+    *       Ultimately they’ve moved to what we’d call today a set of polyglot microservices.    
 
 *   **Amazon** followed a similar path.
 
-    *   <span>Started with a monolithic C++ application.</span>
+    *       Started with a monolithic C++ application.    
 
-    *   <span>Then services written in Java and Scala.</span>
+    *       Then services written in Java and Scala.    
 
-    *   <span>Ending up with a set of polyglot microservices.</span>
+    *       Ending up with a set of polyglot microservices.    
 
-## <span>Ecosystem of Services</span>
+##     Ecosystem of Services    
 
-*   <span>What does it look like to have a large scale ecosystem of polyglot microservices?</span>
+*       What does it look like to have a large scale ecosystem of polyglot microservices?    
 
-*   <span>At eBay and Google hundreds to thousands of independent services all work together.</span>
+*       At eBay and Google hundreds to thousands of independent services all work together.    
 
-    *   <span>Modern large scale systems compose services in a graph of relationships, not a hierarchy or set of tiers.</span>
+    *       Modern large scale systems compose services in a graph of relationships, not a hierarchy or set of tiers.    
 
-    *   <span>Services depend on many other services while being depended on by many services.</span>
+    *       Services depend on many other services while being depended on by many services.    
 
-    *   <span>Older large scale systems were typically organized in strict tiers.</span>
+    *       Older large scale systems were typically organized in strict tiers.    
 
-### <span>How is an ecosystem of services created?</span>
+###     How is an ecosystem of services created?    
 
 *   These best performing systems are more the **product of evolution than intelligent design**. At Google, for example, there never has been a centralized top down design of the system. It has evolved and grown over time in a very organic way.
 
@@ -72,27 +72,27 @@ Let's see how large scale systems are built in the modern era...
 
 *   These large scale systems **develop from the bottom up**. **Clean design can be an emergent property rather than a product of top down design**.
 
-*   <span>As an example consider some of the service layering for Google App Engine.</span>
+*       As an example consider some of the service layering for Google App Engine.    
 
-    *   <span>The Cloud Datastore (a NoSQL service) is built on the Megastore (a geo-scale structured database) which is built on Bigtable (a cluster-level structured service) which is built on Colossus (a next-generation clustered file system) which is built on Borg (the cluster management infrastructure).</span>
+    *       The Cloud Datastore (a NoSQL service) is built on the Megastore (a geo-scale structured database) which is built on Bigtable (a cluster-level structured service) which is built on Colossus (a next-generation clustered file system) which is built on Borg (the cluster management infrastructure).    
 
-    *   <span>The layering is clean. Each layer adds something that didn’t belong in the layer below. It was not the product of top down design.</span>
+    *       The layering is clean. Each layer adds something that didn’t belong in the layer below. It was not the product of top down design.    
 
-    *   <span>It was built from the bottom up. Colossus, the Google file system was built first. Several years later Bigtable was built. Several years later Megastore was built. And several years later Cloud Database migrated onto Megastore.</span>
+    *       It was built from the bottom up. Colossus, the Google file system was built first. Several years later Bigtable was built. Several years later Megastore was built. And several years later Cloud Database migrated onto Megastore.    
 
-    *   <span>You can have this wonderful separation of concerns without a top down architecture.</span>
+    *       You can have this wonderful separation of concerns without a top down architecture.    
 
 *   **This is architecture without an architect**. Nobody at Google has the title of Architect. There is no central approval for technology decisions.  Most technology decisions are made by individual teams locally for their own purposes, they are not made globally.
 
-*   <span>Contrast with the eBay of 2004\. There was an architecture review board, which had to approve all large-scale projects.</span>
+*       Contrast with the eBay of 2004\. There was an architecture review board, which had to approve all large-scale projects.    
 
-    *   <span>Usually they only got involved in projects when it was far too late to change them.</span>
+    *       Usually they only got involved in projects when it was far too late to change them.    
 
-    *   <span>The centralized approval body became a bottleneck. Often its only influence was to say no at the last minute.</span>
+    *       The centralized approval body became a bottleneck. Often its only influence was to say no at the last minute.    
 
 *   A better way for eBay to have handled the situation was to **encode the knowledge** of the smart experienced people in the review board and **put it into something that’s reusable** by individual teams. Encode that experience into a library or a service or even a set of guidelines that people can use on their own rather only coming into the process at the last moment.
 
-### <span>How do standards evolve without architects?</span>
+###     How do standards evolve without architects?    
 
 *   It is possible with **no central control to end up with standardization**.
 
@@ -100,29 +100,29 @@ Let's see how large scale systems are built in the modern era...
 
     *   Standards become standards because they are **fitter than the alternative**s.
 
-*   <span>The parts of communication that are usually standardized:</span>
+*       The parts of communication that are usually standardized:    
 
-    *   **Network protocols**. Google uses a proprietary protocol called [<span>Stubby</span>](https://www.quora.com/What-functionality-does-Google-have-around-Protocol-Buffers-that-isnt-included-in-the-current-public-release). eBay uses REST.
+    *   **Network protocols**. Google uses a proprietary protocol called [    Stubby    ](https://www.quora.com/What-functionality-does-Google-have-around-Protocol-Buffers-that-isnt-included-in-the-current-public-release). eBay uses REST.
 
     *   **Data formats**. Google uses Protocol Buffers. eBay tends to use JSON.
 
     *   **Interface schema standard**. Google uses Protocol Buffers. For JSON there’s JSON schema.
 
-*   <span>The pieces of common infrastructure that are usually standardized:</span>
+*       The pieces of common infrastructure that are usually standardized:    
 
-    *   <span>Source code control.</span>
+    *       Source code control.    
 
-    *   <span>Configuration management.</span>
+    *       Configuration management.    
 
-    *   <span>Cluster manager.</span>
+    *       Cluster manager.    
 
-    *   <span>Monitoring systems.</span>
+    *       Monitoring systems.    
 
-    *   <span>Alerting systems.</span>
+    *       Alerting systems.    
 
-    *   <span>Diagnostic tools.</span>
+    *       Diagnostic tools.    
 
-    *   <span>All these components can evolve out of conventions.</span>
+    *       All these components can evolve out of conventions.    
 
 *   In an evolutionary environment **standards are enforced through**: code, encouragement, code reviews, and code search.
 
@@ -130,7 +130,7 @@ Let's see how large scale systems are built in the modern era...
 
     *   Encouragement is through **teams providing a library**.
 
-    *   <span>Encouragement is also through the services you want to depend on supporting X protocol or Y protocol.</span>
+    *       Encouragement is also through the services you want to depend on supporting X protocol or Y protocol.    
 
     *   Google is famous for **every line of code** that is checked-in to source code control **being reviewed** by at least one other programmer. This is a good way of communicating common practices.
 
@@ -142,51 +142,51 @@ Let's see how large scale systems are built in the modern era...
 
     *   At Google there’s **no standardization of the internals of services**. Services are a black box to the outside.
 
-    *   <span>There are conventions and common libraries, but there are no programming language requirements. Four languages are used commonly: C++, Go, Java, Python. Lots of different services are written in various languages.</span>
+    *       There are conventions and common libraries, but there are no programming language requirements. Four languages are used commonly: C++, Go, Java, Python. Lots of different services are written in various languages.    
 
-    *   <span>There’s no standardization around frameworks or persistence mechanisms.</span>
+    *       There’s no standardization around frameworks or persistence mechanisms.    
 
 *   **In a mature ecosystem of services we standardize the arcs of the graph, not the nodes themselves.** Define a common shape, not a common implementation.
 
-### <span>Creating New Services</span>
+###     Creating New Services    
 
-*   <span>New services are created when their use has already been proven.</span>
+*       New services are created when their use has already been proven.    
 
-*   <span>Often a capability has been built for one particular use case. Then it’s discovered that capability is general and useful.</span>
+*       Often a capability has been built for one particular use case. Then it’s discovered that capability is general and useful.    
 
-    *   <span>A team is formed and the service is spun out to its own standalone unit.</span>
+    *       A team is formed and the service is spun out to its own standalone unit.    
 
-    *   <span>This happens only when a capability is successful and fits many different use cases.</span>
+    *       This happens only when a capability is successful and fits many different use cases.    
 
 *   These **architectures grow through pragmatism**. Nobody is sitting on high and saying a service should be added.
 
-*   <span>Google File System supported the search engine. No surprise that a distributed file system was more generally usable.</span>
+*       Google File System supported the search engine. No surprise that a distributed file system was more generally usable.    
 
-*   <span>Bigtable initially supported the search engine, but was much more broadly useful.</span>
+*       Bigtable initially supported the search engine, but was much more broadly useful.    
 
-*   <span>Megastore was built as the storage mechanism for Google applications, but was more broadly useful.</span>
+*       Megastore was built as the storage mechanism for Google applications, but was more broadly useful.    
 
-*   <span>Google App Engine itself was started by a small group of engineers who recognized the need for help building web sites.</span>
+*       Google App Engine itself was started by a small group of engineers who recognized the need for help building web sites.    
 
-*   <span>Gmail came out of a side project that was extremely useful internally and then was externalized for other people.</span>
+*       Gmail came out of a side project that was extremely useful internally and then was externalized for other people.    
 
-### <span>Deprecating Old Services</span>
+###     Deprecating Old Services    
 
-*   <span>What happens if a service is not used anymore?</span>
+*       What happens if a service is not used anymore?    
 
-*   <span>Technologies that can be repurposed are reused.</span>
+*       Technologies that can be repurposed are reused.    
 
-*   <span>People can be fired or redeployed to other teams.</span>
+*       People can be fired or redeployed to other teams.    
 
-*   <span>Google Wave was not a market success, but some of the technologies ended up in Google Apps. For example, the ability for multiple people to edit documents comes from Wave.</span>
+*       Google Wave was not a market success, but some of the technologies ended up in Google Apps. For example, the ability for multiple people to edit documents comes from Wave.    
 
-*   <span>The more common case is for core services to go through multiple generations and the old generations are deprecated. This happens a lot at Google. There’s so much change it often seem like every service inside Google is either deprecated or not ready yet.</span>
+*       The more common case is for core services to go through multiple generations and the old generations are deprecated. This happens a lot at Google. There’s so much change it often seem like every service inside Google is either deprecated or not ready yet.    
 
-## <span>Building a Service</span>
+##     Building a Service    
 
-*   <span>When you are service owner what does it look like when you are building a service in a large scale system of polyglot microservices?</span>
+*       When you are service owner what does it look like when you are building a service in a large scale system of polyglot microservices?    
 
-*   <span>A well performing service in a large scale architecture is:</span>
+*       A well performing service in a large scale architecture is:    
 
     *   **Single-purpose**. It will have a simple well defined interface.
 
@@ -194,59 +194,59 @@ Let's see how large scale systems are built in the modern era...
 
     *   **Does not share a persistence layer**. More on this later.
 
-### <span>What are the goals of the service owner?</span>
+###     What are the goals of the service owner?    
 
-*   <span>**Meet the needs of your clients**</span><span>. Provide the necessary functionality, at the proper quality level, while meeting the negotiated performance levels, while maintaining stability and reliability, while constantly improving the service over time.</span>
+*       **Meet the needs of your clients**        . Provide the necessary functionality, at the proper quality level, while meeting the negotiated performance levels, while maintaining stability and reliability, while constantly improving the service over time.    
 
-*   <span>**Meet the needs at a minimum cost and effort**</span><span>.</span>
+*       **Meet the needs at a minimum cost and effort**        .    
 
     *   This **goal aligns incentives** in a way that encourages the **use of common infrastructure**.
 
-    *   <span>Each team has a limited set of resources so it’s in their interest to leverage common battle tested tools, processes, components, and services.</span>
+    *       Each team has a limited set of resources so it’s in their interest to leverage common battle tested tools, processes, components, and services.    
 
-    *   <span>It also incents good operational behavior. Automate the building and deploying of your service.</span>
+    *       It also incents good operational behavior. Automate the building and deploying of your service.    
 
-    *   <span>It also incents optimizing for the efficient use of resources.</span>
+    *       It also incents optimizing for the efficient use of resources.    
 
-### <span>What are the responsibilities of the service owner?</span>
+###     What are the responsibilities of the service owner?    
 
 *   **You build it you run it**.
 
-    *   <span>The team, typically a small teams, owns the service from design, through development, and deployment, all the way through to retirement.</span>
+    *       The team, typically a small teams, owns the service from design, through development, and deployment, all the way through to retirement.    
 
-    *   <span>There’s no separate maintenance or sustaining engineering team.</span>
+    *       There’s no separate maintenance or sustaining engineering team.    
 
-    *   <span>Teams have the freedom to make their own technology choices, methodologies, and working environment.</span>
+    *       Teams have the freedom to make their own technology choices, methodologies, and working environment.    
 
-    *   <span>Teams are accountable for the choices they make.</span>
+    *       Teams are accountable for the choices they make.    
 
 *   **Service as a bounded context**.
 
     *   The **cognitive load on a team is bounded**.
 
-    *   <span>There’s no need to understand all the other services in the ecosystem.</span>
+    *       There’s no need to understand all the other services in the ecosystem.    
 
-    *   <span>A team needs to understand their service in depth and the services they depend on.</span>
+    *       A team needs to understand their service in depth and the services they depend on.    
 
-    *   This means **teams can be extremely small and nimble**. A typical team is 3-5 people. (As an aside a US Marine Corps [<span>fireteam</span>](https://en.wikipedia.org/wiki/Fireteam) has four people.)
+    *   This means **teams can be extremely small and nimble**. A typical team is 3-5 people. (As an aside a US Marine Corps [    fireteam    ](https://en.wikipedia.org/wiki/Fireteam) has four people.)
 
-    *   <span>The small team size means communication within the team is at a really high bandwidth and quality.</span>
+    *       The small team size means communication within the team is at a really high bandwidth and quality.    
 
-    *   <span>Conway’s Law used to your advantage. By organizing in small teams you’ll end up with small individual components.  </span>
+    *       Conway’s Law used to your advantage. By organizing in small teams you’ll end up with small individual components.      
 
-### <span>What is the relationship between services?</span>
+###     What is the relationship between services?    
 
 *   Think about **relationships between services as vendor-customer relationships**, even though you are at the same company.
 
-*   <span>Be very friendly and cooperative, but be very structured in the relationship.</span>
+*       Be very friendly and cooperative, but be very structured in the relationship.    
 
-*   <span>Be very clear about ownership.</span>
+*       Be very clear about ownership.    
 
-*   <span>Be very clear how about who is responsible for what. In large part this is about defining a clear interface and maintaining it.</span>
+*       Be very clear how about who is responsible for what. In large part this is about defining a clear interface and maintaining it.    
 
 *   **Incentives are aligned because customer can choose to use a service or not**. This encourages services to do right by their customers. This is one of the ways new services end up being built.
 
-*   <span>Define SLAs. As service provider promise a certain level of service to their customers so customers can rely on the service.</span>
+*       Define SLAs. As service provider promise a certain level of service to their customers so customers can rely on the service.    
 
 *   **Customer teams pay for services**.
 
@@ -254,9 +254,9 @@ Let's see how large scale systems are built in the modern era...
 
     *   When things are f**ree we tend not to value them and tend not to optimize them**.
 
-    *   <span>For example, an internal customer was using Google App Engine for free and they were using a lot of resources. Begging them to be more efficient about their use of resources turned out not to be a good strategy. A week after chargebacks kicked-in they were able to reduce their consumption of GAE resources by 90% with one or two simple changes.</span>
+    *       For example, an internal customer was using Google App Engine for free and they were using a lot of resources. Begging them to be more efficient about their use of resources turned out not to be a good strategy. A week after chargebacks kicked-in they were able to reduce their consumption of GAE resources by 90% with one or two simple changes.    
 
-    *   <span>It’s not that the team using GAE was evil, they just had other priorities, so there was no incentive for them to optimize their use of GAE. It turns out they actually got better response times with the more efficient architecture.</span>
+    *       It’s not that the team using GAE was evil, they just had other priorities, so there was no incentive for them to optimize their use of GAE. It turns out they actually got better response times with the more efficient architecture.    
 
     *   **Charging also incents a service provider to keep quality high**, otherwise an internal customer may go elsewhere. This directly incentivizes good development and management practices. Code reviews are one example. Google’s very large scale build and test system is another. Google runs millions of automated tests every day. Acceptance tests for all dependent code is run every time code is accepted into the repository, which helps all the small teams maintain the quality of their services.
 
@@ -264,17 +264,17 @@ Let's see how large scale systems are built in the modern era...
 
 *   **Maintain full backward / forward compatibility of interfaces**.
 
-    *   <span>Never break client code.</span>
+    *       Never break client code.    
 
-    *   <span>This means maintaining multiple interface versions. In some nasty situations it means maintaining multiple deployments, one for the new version and others for older versions.</span>
+    *       This means maintaining multiple interface versions. In some nasty situations it means maintaining multiple deployments, one for the new version and others for older versions.    
 
-    *   <span>Usually because of the small incremental change model interfaces are not changed.</span>
+    *       Usually because of the small incremental change model interfaces are not changed.    
 
-*   <span>Have an explicit deprecation policy. Then the service provider is strongly incented to moved all clients off version N and over to version N+1.</span>
+*       Have an explicit deprecation policy. Then the service provider is strongly incented to moved all clients off version N and over to version N+1.    
 
-## <span>Operating Services at Scale</span>
+##     Operating Services at Scale    
 
-*   <span>As a service provider what does it feel like to operate a service in a large scale system of  polyglot microservices?</span>
+*       As a service provider what does it feel like to operate a service in a large scale system of  polyglot microservices?    
 
 *   **Predictable performance is a requirement**.
 
@@ -282,57 +282,57 @@ Let's see how large scale systems are built in the modern era...
 
     *   **Predictability in performance is much more important** than average performance.
 
-    *   <span>Low latency with inconsistent performance is actually not low latency at all.</span>
+    *       Low latency with inconsistent performance is actually not low latency at all.    
 
-    *   <span>It’s far easier for clients to program against a service when it provides consistent performance.</span>
+    *       It’s far easier for clients to program against a service when it provides consistent performance.    
 
-    *   <span>Tail latencies dominate performance as services use many other services to carry out their work.</span>
+    *       Tail latencies dominate performance as services use many other services to carry out their work.    
 
-    *   <span>Imagine a service that has 1ms latency at the median and at the 99.999%ile (1 in 10,000) the latency is one second.</span>
+    *       Imagine a service that has 1ms latency at the median and at the 99.999%ile (1 in 10,000) the latency is one second.    
 
-    *   <span>Making one call means you are slow .01% of the time.</span>
+    *       Making one call means you are slow .01% of the time.    
 
-    *   <span>If you are using 5,000 machines, as many large scale services at Google do, then you are slow 50% of the time.</span>
+    *       If you are using 5,000 machines, as many large scale services at Google do, then you are slow 50% of the time.    
 
-    *   <span>For example, a one in a million problem with memcached was tracked down to a low level data structure reallocation event. This rare problem surfaced as at a higher level as latency spikes. Low level details like this turn out to be extremely important in a large scale system.</span>
+    *       For example, a one in a million problem with memcached was tracked down to a low level data structure reallocation event. This rare problem surfaced as at a higher level as latency spikes. Low level details like this turn out to be extremely important in a large scale system.    
 
-*   <span>Resilience in depth.</span>
+*       Resilience in depth.    
 
-    *   <span>Service disruptions are far more likely to occur from a mistake by a person rather than a hardware or software failure.</span>
+    *       Service disruptions are far more likely to occur from a mistake by a person rather than a hardware or software failure.    
 
-    *   <span>Be resilient to machine, cluster and datacenter failures.</span>
+    *       Be resilient to machine, cluster and datacenter failures.    
 
-    *   <span>Load balance and provide flow control when invoking other services.</span>
+    *       Load balance and provide flow control when invoking other services.    
 
-    *   <span>Be able to rapidly roll back changes.</span>
+    *       Be able to rapidly roll back changes.    
 
-*   <span>Incremental deployment.</span>
+*       Incremental deployment.    
 
     *   **Use a canary system**. Don’t deploy to all machines at once. Choose a system, put the new version of that software on that system, and see how it behaves in the new world.
 
     *   If it works **begin a staged rollout**. Start of with 10% of the machines, move to 20%, and so on through the rest of the fleet.
 
-    *   <span>If a problem happens at the 50% point in the deploy then you should be able to rollback.</span>
+    *       If a problem happens at the 50% point in the deploy then you should be able to rollback.    
 
     *   eBay made use of **feature flags to decouple code deployment from feature deployment**. Typically code is deployed with a feature turned off, then it can be turned on or off. This makes sure the code can be properly deployed before a new feature is turned on. It also means if the new feature has a bug, a performance issue, or a business failure, then the feature can be turned off without having to deploy new code.
 
-*   <span>You can have too much alerting you can never have too much monitoring.</span>
+*       You can have too much alerting you can never have too much monitoring.    
 
-## <span>Service Anti-Patterns</span>
+##     Service Anti-Patterns    
 
-*   <span>**The Mega-Service**</span>
+*       **The Mega-Service**    
 
-    *   <span>A service that does too much. What you want is an ecosystem of very small clean services.</span>
+    *       A service that does too much. What you want is an ecosystem of very small clean services.    
 
     *   A service that does too much is a **just another monolith**. It’s hard to reason about, it’s hard to scale, it’s hard to change, and it also creates more upstream and downstream dependencies than you want.
 
-*   <span>**Shared Persistence**</span>
+*       **Shared Persistence**    
 
-    *   <span>In the tiered model services are put in the application tier and the persistence layer is provided as a common service to the applications.</span>
+    *       In the tiered model services are put in the application tier and the persistence layer is provided as a common service to the applications.    
 
     *   They did this at eBay and **it didn’t work**. It **breaks the encapsulation** of the service. Applications can **back-door into your service** by updating the database. It ends up reintroducing coupling of services. Shared databases don't allow for loosely coupled services.
 
-    *   <span>Microservices prevent this problem by being small, isolated, and independent, which is how you keep your ecosystem healthy and growing.</span>
+    *       Microservices prevent this problem by being small, isolated, and independent, which is how you keep your ecosystem healthy and growing.    
 
 ## Related Articles
 
@@ -342,4 +342,4 @@ Let's see how large scale systems are built in the modern era...
 *   [Google On Latency Tolerant Systems: Making A Predictable Whole Out Of Unpredictable Parts](http://highscalability.com/blog/2012/6/18/google-on-latency-tolerant-systems-making-a-predictable-whol.html)
 *   [10 EBay Secrets For Planet Wide Scaling](http://highscalability.com/blog/2009/11/17/10-ebay-secrets-for-planet-wide-scaling.html) (2009)
 
-</div>
+    

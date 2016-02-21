@@ -1,8 +1,8 @@
 ## [Robert Scoble's Rules for Successfully Scaling Startups](/blog/2008/7/18/robert-scobles-rules-for-successfully-scaling-startups.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Friday, July 18, 2008 at 5:39AM</span></div>
+    
 
-<div class="body">Robert Scoble in an often poignant [FriendFeed thread](http://friendfeed.com/e/a93cccce-3e9c-e544-a0a8-f45303d7cbd7/PodTech-Sells-For-Less-Than-500k/) commiserating PodTech's unfortunate end, shared what he learned about creating a successful startup. Here's a summary of a Robert's rules and why Machiavelli just may agree with them:  
+    Robert Scoble in an often poignant [FriendFeed thread](http://friendfeed.com/e/a93cccce-3e9c-e544-a0a8-f45303d7cbd7/PodTech-Sells-For-Less-Than-500k/) commiserating PodTech's unfortunate end, shared what he learned about creating a successful startup. Here's a summary of a Robert's rules and why Machiavelli just may agree with them:  
 
 *   Have a story.  
     *   Have everyone on board with that story.  
@@ -32,4 +32,4 @@
 
     Kevin Burton share's [seven deadly sins](http://feedblog.org/2008/07/19/monitor110-spinn3r-spam-and-blog-analysis-post-mortem/) startups should avoid and makes an inspiring case how his company stronger and better able to compete by not taking VC funds. Really interesting.  
 
-    [Diary of a Failed Startup](http://diffle-history.blogspot.com/) says solve a problem, not a platform to solve a class of problems. Truer words were never spoken.</div>
+    [Diary of a Failed Startup](http://diffle-history.blogspot.com/) says solve a problem, not a platform to solve a class of problems. Truer words were never spoken.    

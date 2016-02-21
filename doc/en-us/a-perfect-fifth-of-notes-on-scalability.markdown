@@ -1,8 +1,8 @@
 ## [A Perfect Fifth of Notes on Scalability](/blog/2012/1/10/a-perfect-fifth-of-notes-on-scalability.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, January 10, 2012 at 9:16AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7008/6670257609_7533d978fb_t.jpg)
 
@@ -16,4 +16,4 @@ Jeremiah Peschka with a great a set of [Notes on Scalability](http://www.brento
 
 Please read the [original article](http://www.brentozar.com/archive/2012/01/notes-on-scalability/) for a much more expansive treatment. 
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [Google Says Cloud Prices Will Follow Moore’s Law: Are We All Renters Now?](/blog/2014/5/14/google-says-cloud-prices-will-follow-moores-law-are-we-all-r.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, May 14, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](https://farm6.staticflickr.com/5073/13994943028_c93913855e_n.jpg)
 
@@ -20,7 +20,7 @@ Amazon on the other hand has been reaping the higher margins earned from recurri
 
 But there's a floor to how low prices can go. Alen Peacock, [co-founder](https://www.linkedin.com/pub/alen-peacock/1/451/627) of Space Monkey has an interesting graphic telling the story. This is Amazon's historical pricing for 1TB of storage in S3, graphed as a multiple of the historical pricing for 1TB of local hard disk:
 
-<span class="full-image-block ssNonEditable"><span>![](https://farm3.staticflickr.com/2937/13994799530_f39da84013_c.jpg?__SQUARESPACE_CACHEVERSION=1400030714419)</span></span>Alen explains it this way:
+        ![](https://farm3.staticflickr.com/2937/13994799530_f39da84013_c.jpg?__SQUARESPACE_CACHEVERSION=1400030714419)        Alen explains it this way:
 
 > Cloud prices do decrease over time, and have dropped significantly over the timespan shown in the graph, but this graph shows cloud storage prices as a multiple of hard disk prices. In other words, hard disk prices are dropping much faster than datacenter prices. This is because, right, datacenters have costs other than hard disks (power, cooling, bandwidth, building infrastructure, diesel backup generators, battery backup systems, fire suppression, staffing, etc). Most of those costs do not follow Moore's Law -- in fact energy costs are on a long trend upwards. So over time, the gap shown by the graph should continue to widen.
 > 
@@ -34,10 +34,10 @@ As the size of cloud market is still growing there will still be a fight for mar
 
 Until then it seems the economics indicate we are in a rent, not a buy world.
 
-## Related Articles<span style="font-size: 12px;"> </span>
+## Related Articles         
 
 *   [IaaS Series: Cloud Storage Pricing – How Low Can They Go?](http://blog.architecting.it/2014/04/18/iaas-series-cloud-storage-pricing-how-low-can-they-go/) - "For now it seems we can assume we’ve not seen the last of the big price reductions."
 *   [The Cloud Is Not Green](http://recode.net/2014/01/22/the-cloud-is-not-green/)
 *   [Brad Stone](https://www.goodreads.com/author/quotes/219908.Brad_Stone): “Bill Miller, the chief investment officer at Legg Mason Capital Management and a major Amazon shareholder, asked Bezos at the time about the profitability prospects for AWS. Bezos predicted they would be good over the long term but said that he didn’t want to repeat “Steve Jobs’s mistake” of pricing the iPhone in a way that was so fantastically profitable that the smartphone market became a magnet for competition.” 
 
-</div>
+    

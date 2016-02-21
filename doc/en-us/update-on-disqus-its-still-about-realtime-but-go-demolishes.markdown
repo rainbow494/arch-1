@@ -1,8 +1,8 @@
 ## [Update on Disqus: It's Still About Realtime, But Go Demolishes Python](/blog/2014/5/7/update-on-disqus-its-still-about-realtime-but-go-demolishes.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, May 7, 2014 at 8:56AM</span></div>
+    
 
-<div class="body">
+    
 
 [![](https://farm3.staticflickr.com/2937/14110625651_9ccec7d022_n.jpg)](https://farm3.staticflickr.com/2937/14110625651_4d66420224_o.png)Our last article on Disqus: [How Disqus Went Realtime With 165K Messages Per Second And Less Than .2 Seconds Latency](http://highscalability.com/blog/2014/4/28/how-disqus-went-realtime-with-165k-messages-per-second-and-l.html), was a little out of date, but the folks at Disqus have been busy implementing, not talking, so we don't know a lot about what they are doing now, but we do have a short update in [C1MM and NGINX](https://www.youtube.com/watch?v=yL4Q7D4ynxU) by John Watson and an article [Trying out this Go thing](http://blog.disqus.com/post/51155103801/trying-out-this-go-thing).
 
@@ -42,4 +42,4 @@ They are still all about realtime, but Go replaced Python in their Realtime syst
 
 *   [On Hacker News](https://news.ycombinator.com/item?id=7711110)  / [On Reddit](http://www.reddit.com/r/Python/comments/2504ni/update_on_disqus_its_still_about_realtime_but_go/)
 
-</div>
+    

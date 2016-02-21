@@ -1,8 +1,8 @@
 ## [Awesome List of Advanced Distributed Systems Papers](/blog/2011/5/31/awesome-list-of-advanced-distributed-systems-papers.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, May 31, 2011 at 9:14AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm4.static.flickr.com/3409/5782054366_19d7e33927_o.jpg)
 
@@ -14,6 +14,6 @@ That's just the list of topics! For every topic there's the slide deck used to t
 
 ## Related Articles
 
-*   <div id="_mcePaste">[Advanced Distributed SystemsSpring 2011](http://www.cs.uiuc.edu/class/sp11/cs525/L1.sp11.ppt) </div>
+*       [Advanced Distributed SystemsSpring 2011](http://www.cs.uiuc.edu/class/sp11/cs525/L1.sp11.ppt)     
 
-</div>
+    

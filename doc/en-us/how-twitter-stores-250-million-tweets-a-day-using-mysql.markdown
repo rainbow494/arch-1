@@ -1,8 +1,8 @@
 ## [How Twitter Stores 250 Million Tweets a Day Using MySQL](/blog/2011/12/19/how-twitter-stores-250-million-tweets-a-day-using-mysql.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, December 19, 2011 at 9:05AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm8.staticflickr.com/7159/6521206371_78cb79868e_m.jpg) [Jeremy Cole](http://www.linkedin.com/in/jeremycole), a DBA Team Lead/Database Architect at Twitter, gave a really good talk at the O'Reilly MySQL conference: [Big and Small Data at @Twitter](http://www.youtube.com/watch?v=5cKTP36HVgI), where the topic was thinking of Twitter from the data perspective.
 
@@ -51,4 +51,4 @@ Great job Jeremy!
 
 *   [An Unorthodox Approach To Database Design : The Coming Of The Shard](http://highscalability.com/unorthodox-approach-database-design-coming-shard) 
 
-</div>
+    

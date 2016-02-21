@@ -1,8 +1,8 @@
 ## [Ten Lessons from GitHub’s First Year in 2008](/blog/2013/9/11/ten-lessons-from-githubs-first-year-in-2008.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Wednesday, September 11, 2013 at 8:45AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm4.staticflickr.com/3707/9713469388_66b6c66a08_m.jpg)
 
@@ -19,4 +19,4 @@
 9.  **You Don't Need Venture Capital -** "One of the reasons I left my last job was so that I could say 'the buck stops here.' If we’d taken money, I would no longer be able to say that."
 10.  **Open Source Whatever You Can **
 
-</div>
+    

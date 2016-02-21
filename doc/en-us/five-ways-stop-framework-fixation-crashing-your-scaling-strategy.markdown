@@ -1,8 +1,8 @@
 ## [Five Ways to Stop Framework Fixation from Crashing Your Scaling Strategy](/blog/2008/7/7/five-ways-to-stop-framework-fixation-from-crashing-your-scal.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, July 7, 2008 at 6:51AM</span></div>
+    
 
-<div class="body">![](http://farm4.static.flickr.com/3056/2646487230_03ca41231d.jpg?v=0)
+    ![](http://farm4.static.flickr.com/3056/2646487230_03ca41231d.jpg?v=0)
 
 If you've wondered why I haven't been posting lately it's because I've been on an amazing [Beach's motorcycle tour](http://www.bmca.com/) of the [Alps](http://flickr.com/photos/13733851@N00/2627578186/in/set-72157605936689614/) ([and](http://flickr.com/photos/13733851@N00/2627806498/in/set-72157605936689614/), [and](http://flickr.com/photos/13733851@N00/2627030765/in/set-72157605936689614/), [and](http://flickr.com/photos/13733851@N00/2627514580/in/set-72157605936689614/), [and](http://flickr.com/photos/13733851@N00/2626705441/in/set-72157605936689614/), [and](http://flickr.com/photos/13733851@N00/2627528876/in/set-72157605936689614/), [and](http://flickr.com/photos/13733851@N00/2627534726/in/set-72157605936689614/), [and](http://flickr.com/photos/13733851@N00/2626816555/in/set-72157605936689614/), [and](http://flickr.com/photos/13733851@N00/2627509852/in/set-72157605936689614/)). My wife (Linda) and I rode two-up on a BMW 1200 GS through the alps in Germany, Austria, Switzerland, Italy, Slovenia, and Lichtenstein.  
 
@@ -31,4 +31,4 @@ How can you avoid the framework fixation crash?
     ## Related Articles
 
     *   [Target Fixation](http://www.paraglidingforum.com/viewtopic.php?t=16479) for Paragliders by Joe Bosworth.*   [Driving Review: Target Fixation ... Something Worth Looking At! by Mick Farmer  
-    ](http://www.theeye.co.ug/driving_review_target_fixation.php)</div>
+    ](http://www.theeye.co.ug/driving_review_target_fixation.php)    

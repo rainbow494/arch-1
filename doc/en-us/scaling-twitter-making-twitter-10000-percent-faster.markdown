@@ -1,8 +1,8 @@
 ## [Scaling Twitter: Making Twitter 10000 Percent Faster](/blog/2009/6/27/scaling-twitter-making-twitter-10000-percent-faster.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Saturday, June 27, 2009 at 11:46PM</span></div>
+    
 
-<div class="body">
+    
 
 **Update 6:** Some interesting changes from Twitter's [Evan Weaver](http://blog.evanweaver.com/articles/2009/03/13/qcon-presentation/): everything in RAM now, database is a backup; peaks at 300 tweets/second; every tweet followed by average 126 people; vector cache of tweet IDs; row cache; fragment cache; page cache; keep separate caches; GC makes Ruby optimization resistant so went with Scala; Thrift and HTTP are used internally; 100s internal requests for every external request; rewrote MQ but kept interface the same; 3 queues are used to load balance requests; extensive A/B testing for backwards capability; switched to C memcached client for speed; optimize critical path; faster to get the cached results from the network memory than recompute them locally.  
 **Update 5:** [Twitter on Scala](http://www.artima.com/scalazine/articles/twitter_on_scala.html). A Conversation with Steve Jenson, Alex Payne, and Robey Pointer by Bill Venners. A fascinating discussion of why Twitter moved to the Java JVM for their server infrastructure (long lived processes) and why they moved to [Scala](http://www.scala-lang.org/) to program against it (high level language, static typing, functional). Ruby is used on the front-end but wasn't performant or reliable enough for the back-end.  
@@ -74,4 +74,4 @@ Site: http://twitter.com
 
     ## Related Articles
 
-    *   For a discussion of partitioning take a look at [Amazon Architecture](http://highscalability.com/amazon-architecture), [An Unorthodox Approach to Database Design : The Coming of the Shard](http://highscalability.com/unorthodox-approach-database-design-coming-shard), [Flickr Architecture](http://highscalability.com/flickr-architecture)*   The [Mailinator Architecture](http://highscalability.com/mailinator-architecture) has good strategies for abuse protection.*   [GoogleTalk Architecture](http://highscalability.com/googletalk-architecture) addresses some interesting issues when scaling social networking sites.</div>
+    *   For a discussion of partitioning take a look at [Amazon Architecture](http://highscalability.com/amazon-architecture), [An Unorthodox Approach to Database Design : The Coming of the Shard](http://highscalability.com/unorthodox-approach-database-design-coming-shard), [Flickr Architecture](http://highscalability.com/flickr-architecture)*   The [Mailinator Architecture](http://highscalability.com/mailinator-architecture) has good strategies for abuse protection.*   [GoogleTalk Architecture](http://highscalability.com/googletalk-architecture) addresses some interesting issues when scaling social networking sites.    

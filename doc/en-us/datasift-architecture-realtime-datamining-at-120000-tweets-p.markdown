@@ -1,8 +1,8 @@
 ## [DataSift Architecture: Realtime Datamining at 120,000 Tweets Per Second](/blog/2011/11/29/datasift-architecture-realtime-datamining-at-120000-tweets-p.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, November 29, 2011 at 9:12AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm7.staticflickr.com/6114/6408745209_cf48317880_m.jpg)
 
@@ -24,7 +24,7 @@ DataSift's real innovation is in creating an Internet scale filtering system th
 
 How are they making all this magic happen? Let's see...
 
-<div id="_mcePaste">Site: [http://DataSift.com](http://DataSift.com)</div>
+    Site: [http://DataSift.com](http://DataSift.com)    
 
 ## Information Sources
 
@@ -33,7 +33,7 @@ How are they making all this magic happen? Let's see...
 
 ## Stats
 
-<div id="_mcePaste">
+    
 
 *   You can’t get the entire Twitter firehose. If you did it would cost 10 cents per 1000 tweets. The firehose is at 250 million tweets a day. That’s 25K a day in licensing costs. 
 *   936 CPU Cores 
@@ -48,9 +48,9 @@ How are they making all this magic happen? Let's see...
 *   Staff of 30 people
 *   4 years of development
 
-</div>
+    
 
-## Platform<span style="font-weight: normal;"> </span>
+## Platform         
 
 ### Languages Used
 
@@ -66,11 +66,11 @@ How are they making all this magic happen? Let's see...
 *   Memcached (cache)
 *   Redis (still used for some internal queues, but probably going to be dismissed soon)
 
-<div>
+    
 
 ### Message Queues
 
-<div>
+    
 
 *   0mq (custom build from latest alpha branch, with some stability fixes, to use publisher-side filtering), used in different configurations:
     *   PUB-SUB for replication / message broadcasting;
@@ -79,7 +79,7 @@ How are they making all this magic happen? Let's see...
 *   Kafka (LinkedIN's persistent and distributed message queue) for high-performance persistent queues. 
 *   In both cases they're working with the developers and contributing bug reports / traces / fixes / client libraries.
 
-</div>
+    
 
 ### CI / Deployments
 
@@ -92,13 +92,13 @@ How are they making all this magic happen? Let's see...
 
 *   All services emit StatsD events, which are combined with other system-level checks, added to Zenoss and displayed with Graphite.
 
-</div>
+    
 
 ## Architecture in a Picture
 
 DataSift has created an awesome picture of their overall architecture. Here's a small version, for the full sized version please go [here](http://farm8.staticflickr.com/7159/6408735793_0fa14eedf6_o.png).
 
-<span class="full-image-block ssNonEditable"><span>![](http://farm8.staticflickr.com/7159/6408735793_4b22bc102c.jpg?__SQUARESPACE_CACHEVERSION=1322416739329)</span></span>
+        ![](http://farm8.staticflickr.com/7159/6408735793_4b22bc102c.jpg?__SQUARESPACE_CACHEVERSION=1322416739329)        
 
 *   The diagram has two halves: everything on the left is data processing and everything on the right is data delivery. 40+ services run in the system, these include: license service, monitoring service, limit service, etc.
 *   The system as a whole has a number of different scaling challenges that must be solved nearly simultaneously: handling the firehose, low latency natural language processing and entity extraction on tweets, low latency in-line augmentation of tweets, low latency handling very large individual filters, low latency evaluation of a large number of complex filters from a large population of customers, link resolution and caching, keeping a history of the firehose by persisting the 1TB of data it sends each day, allowing analytics to be run on the history of the firehose, real-time billing, real-time authentication and authorization, a dashboard to let customers know the status of their streams, streaming filter results to 1000s of clients, monitoring every machine every filter and every subsystem, load and performance testing, handling high network traffic, and messaging between services in a low-latency fault tolerant manner.
@@ -194,8 +194,8 @@ What can you do? Evaluate large filters. Fast.  More on this in the next sectio
 
 ### **Filtering Engine**
 
-*   **<span style="font-weight: normal;">When people think of filters they may have in mind SQL select statements where large "where" clauses are discouraged for performance reasons. DataSift takes the opposite approach, they assume very large sets of filter criteria and have made the evaluation scalable and efficient. Their target examples include monitoring every tweet from every Starbucks in the world or loading Lady Gaga's follower list into a filter. That could be millions terms in a filter, evaluated in real-time.</span>**
-*   **<span style="font-weight: normal;">Filtering at this scale requires a different approach. They </span>**started with work they did at TweetMeme. The core filter engine is in C++ and is called the Pickle Matrix. 
+*   **    When people think of filters they may have in mind SQL select statements where large "where" clauses are discouraged for performance reasons. DataSift takes the opposite approach, they assume very large sets of filter criteria and have made the evaluation scalable and efficient. Their target examples include monitoring every tweet from every Starbucks in the world or loading Lady Gaga's follower list into a filter. That could be millions terms in a filter, evaluated in real-time.    **
+*   **    Filtering at this scale requires a different approach. They     **started with work they did at TweetMeme. The core filter engine is in C++ and is called the Pickle Matrix. 
 *   Over three years they've developed a compiler and their own virtual machine. We don't know what their technology is exactly, but it might be something like [Distributed Complex Event Processing with Query Rewriting](http://www.doc.ic.ac.uk/~migliava/papers/09-debs-next.pdf).
 *   A compiler takes filters and targets a cluster with a Manager and Node servers. The Manager’s job is to determine that if a rule is loaded anywhere else and if can be put somewhere that is highly optimized, like close to someone else that is running a similar stream. Node's job is throw tweets at rules, get a list of matches, and push the matches down the pipeline.
 *   They have clever algorithms for deduping workloads so rules are shared as much as possible. Each filter is not run in isolation. The filters form a shared space. If there's a filter that filters only for Lady Gaga references then, to the greatest degree possible, that filter is run on each tweet once and the result is shared between all rules using the same filter. It takes a very clever compiler and scheduling algorithm to make this work. The payoff is amazing. Instead of continually running duplicate filters they are only run once.
@@ -323,4 +323,4 @@ From my interview, reading, and viewing a dozen or so other interviews,  I've b
 *   [Ways to use Pusher at the Mozilla Festival](http://blog.pusher.com/2011/11/3/ways-to-use-pusher-at-the-mozilla-festival) by Phil Leggetter
 *   [Video of IPTraf stats for 10 high volume streams](http://www.twitvid.com/QQK7M) - This was testing using 10 streams - and throughput was around 3Mb/s on one server. 
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [How to Succeed at Capacity Planning Without Really Trying : An Interview with Flickr's John Allspaw on His New Book](/blog/2009/6/29/how-to-succeed-at-capacity-planning-without-really-trying-an.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, June 29, 2009 at 3:08AM</span></div>
+    
 
-<div class="body">
+    
 
 [![](http://ecx.images-amazon.com/images/I/51pvp8tgZiL._SL160_AA115_.jpg)](http://astore.amazon.com/possiboutpos-20/detail/0596518579)  
 **Update 2:** [Velocity 09: John Allspaw, 10+ Deploys Per Day: Dev and Ops Cooperation at Flickr](http://velocityconference.blip.tv/file/2284377/). Insightful talk. Some highlights: Change is good if you can build tools and culture to lower the risk of change. Operations and developers need to become of one mind and respect each other. An automated infrastructure is the one tool you need most. Common source control. One step build. One step deploy. Don't be a pussy, deploy. Always ship trunk. Feature flags - don't branch code, make features runtime configurable in code. Dark launch - release data paths early without UI component. Shared metrics. Adaptive feedback to prioritize important features. IRC for communication for human context. Best solutions occur when dev and op work together and trust each other. Trust is earned by helping each other solve their problems. Look at what new features imply for operations, what can go wrong, and how to recover. Provide knobs and levers to help operations. Devs should have access to production machines. Fire drills to train. No finger pointing - fix stuff first. Design like you'll get woken up first when there's a problem. Say you're sorry. Not easy - like any relationship.  
@@ -122,4 +122,4 @@ Eat. Sleep. Pay attention to my family. ☺
 
 *   [Capacity Management for Web Operations](http://www.slideshare.net/jallspaw/velocity2008-capacity-management1-484676) by John Allspaw  
 
-    </div>
+        

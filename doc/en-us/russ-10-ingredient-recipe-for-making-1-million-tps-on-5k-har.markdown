@@ -1,29 +1,29 @@
 ## [Russ’ 10 Ingredient Recipe for Making 1 Million TPS on $5K Hardware](/blog/2012/9/10/russ-10-ingredient-recipe-for-making-1-million-tps-on-5k-har.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Monday, September 10, 2012 at 9:20AM</span></div>
+    
 
-<div class="body">
+    
 
 ![](http://farm9.staticflickr.com/8319/7952195310_8078e8c9df_m.jpg)
 
 My name is [Russell Sullivan](https://twitter.com/jaksprats), I am the author of AlchemyDB: a highly flexible NoSQL/SQL/DocumentStore/GraphDB-datastore built on top of redis. I have spent the last several years trying to find a way to sanely house multiple datastore-genres under one roof while (almost paradoxically) pushing performance to its limits.  
 
-<span>I recently joined the NoSQL company</span> [<span>Aerospike</span>](http://www.aerospike.com/) <span>(formerly Citrusleaf) with the goal of incrementally grafting AlchemyDB’s flexible data-modeling capabilities onto Aerospike’s high-velocity horizontally-scalable key-value data-fabric. We recently completed a peak-performance</span> [<span>TPS optimization project</span>](http://www.aerospike.com/blog/all-about-speed/)<span>: starting at 200K TPS, pushing to the recent community edition launch at 500K TPS, and finally arriving at our 2012 goal:</span> <span>**1M TPS on $5K hardware**</span><span>.</span>  
+    I recently joined the NoSQL company     [    Aerospike    ](http://www.aerospike.com/)     (formerly Citrusleaf) with the goal of incrementally grafting AlchemyDB’s flexible data-modeling capabilities onto Aerospike’s high-velocity horizontally-scalable key-value data-fabric. We recently completed a peak-performance     [    TPS optimization project    ](http://www.aerospike.com/blog/all-about-speed/)    : starting at 200K TPS, pushing to the recent community edition launch at 500K TPS, and finally arriving at our 2012 goal:         **1M TPS on $5K hardware**        .      
 
-<span>Getting to one million over-the-wire client-server database-requests per-second on a single machine costing $5K is a balance between trimming overhead on many axes and using a shared nothing architecture to</span> <span>isolate</span> <span>the paths taken by unique requests.</span>
+    Getting to one million over-the-wire client-server database-requests per-second on a single machine costing $5K is a balance between trimming overhead on many axes and using a shared nothing architecture to         isolate         the paths taken by unique requests.    
 
 Even if you aren't building a database server the techniques described in this post might be interesting as they are not database server specific. They could be applied to a ftp server, a static web server, and even to a dynamic web server.
 
-<span>Here is my personal recipe for getting to this TPS per dollar.</span>
+    Here is my personal recipe for getting to this TPS per dollar.    
 
 ## The Hardware
 
-<span>Hardware is important, but pretty cheap at 200 TPS per dollar spent:</span>
+    Hardware is important, but pretty cheap at 200 TPS per dollar spent:    
 
-1.  <span>Dual Socket Intel motherboard</span>
-2.  <span>2*Intel</span> <span>X5690</span> <span>Hexacore @3.47GHz</span>
-3.  <span>32GB DRAM 1333</span>
-4.  <span>2 NIC ports of an Intel quad-port NIC (each NIC has 8 queues)</span>
+1.      Dual Socket Intel motherboard    
+2.      2*Intel         X5690         Hexacore @3.47GHz    
+3.      32GB DRAM 1333    
+4.      2 NIC ports of an Intel quad-port NIC (each NIC has 8 queues)    
 
 ## Select the Right Ingredients
 
@@ -61,7 +61,7 @@ Next, make sure your operating system, programming language, and libraries are t
 
 ### Tweak and Taste Until Everything is Just Right
 
-<span>Finally, use the features of the system you have designed. Tweak the Hardware & OS to</span> <span>**isolate**</span> <span>performance critical paths:</span>
+    Finally, use the features of the system you have designed. Tweak the Hardware & OS to         **isolate**         performance critical paths:    
 
 **8**. **Thread-Core-Pinning**. Event loop threads reading and writing tcp packets should each be pinned to their own core and no other threads should be allowed on these cores. These threads are so critical to performance; any context switching on their designated cores will degrade peak-performance significantly.
 
@@ -77,7 +77,7 @@ Next, make sure your operating system, programming language, and libraries are t
 
 This technique isolates CPU/NIC pairs; when the client respects this, a Dual-CPU-socket machine works like 2 single-CPU-socket machines (at a much lower TCO).
 
-That is it. The 10 ingredients are fairly straightforward, but putting them all together, and making your system really hum, turns out to be a pretty difficult balancing act in practice. The basic philosophy is to <span>isolate</span> <span>on all axis.</span>
+That is it. The 10 ingredients are fairly straightforward, but putting them all together, and making your system really hum, turns out to be a pretty difficult balancing act in practice. The basic philosophy is to     isolate         on all axis.    
 
 ## The Proof is Always in the Pudding
 
@@ -95,17 +95,17 @@ The connection from the client to ipY:portZ has previously been created, the req
 
 At Aerospike, **I knew I had it right** when I watched the output of the “top” command, (viewing all cores) and there was near zero idle % cpu and also a very uniform balance across cores. Each core had exactly the same signature, something like:** us%39 sy%35 id%0 wa%0 si%22**.
 
-<span>Which is to say software-interrupts from tcp packets were using 22% of the core, context switches passing tcp-packets back and forth from the operating system were taking up 35%, and our software was taking up 39% to do the database transaction.</span>
+    Which is to say software-interrupts from tcp packets were using 22% of the core, context switches passing tcp-packets back and forth from the operating system were taking up 35%, and our software was taking up 39% to do the database transaction.    
 
-<span>**When the perfect balance across cores was achieved optimal performance was achieved, from an architectural standpoint. We can still streamline our software but at least the flow of packets to & fro Aerospike is near optimal.**</span>
+    **When the perfect balance across cores was achieved optimal performance was achieved, from an architectural standpoint. We can still streamline our software but at least the flow of packets to & fro Aerospike is near optimal.**    
 
 ## Data is Served
 
-<span>Those are my 10 ingredients that got Aerospike’s server to one million over-the-wire database requests on a $5K commodity machine. Mixed correctly, they not only give you incredible raw speed, they give you stability/predictability/over-provisioning-for-spikes at lower speeds. Enjoy</span> <span>☺</span>
+    Those are my 10 ingredients that got Aerospike’s server to one million over-the-wire database requests on a $5K commodity machine. Mixed correctly, they not only give you incredible raw speed, they give you stability/predictability/over-provisioning-for-spikes at lower speeds. Enjoy         ☺    
 
-## <span>Related Articles</span>
+##     Related Articles    
 
 *   [Big List Of 20 Common Bottlenecks](http://highscalability.com/blog/2012/5/16/big-list-of-20-common-bottlenecks.html)
 *   [AeroSpike, the former Citrusleaf](http://www.dbms2.com/2012/08/27/aerospike-the-former-citrusleaf)
 
-</div>
+    

@@ -1,8 +1,8 @@
 ## [Drop ACID and Think About Data](/blog/2009/5/5/drop-acid-and-think-about-data.html)
 
-<div class="journal-entry-tag journal-entry-tag-post-title"><span class="posted-on">![Date](/universal/images/transparent.png "Date")Tuesday, May 5, 2009 at 5:08AM</span></div>
+    
 
-<div class="body">
+    
 
 The abstract for the talk given by Bob Ippolito, co-founder and CTO of Mochi Media, Inc:
 
@@ -223,4 +223,4 @@ Everyone who builds big applications builds them on CAP and BASE: Google, Yahoo,
 *   [BigTable Tag at High Scalability](http://highscalability.com/tags/bigtable)
 *   [Dynamo](http://highscalability.com/paper-dynamo-amazon-s-highly-available-key-value-store).
 
-</div>
+    
