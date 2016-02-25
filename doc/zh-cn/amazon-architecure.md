@@ -24,190 +24,189 @@ Amazon grew from a tiny online bookstore to one of the largest stores on earth. 
 ## 目前状态
 
 - More than 55 million active customer accounts.
-超过5500万个活跃账号
+- 超过5500万个活跃账号
 
 - More than 1 million active retail partners worldwide.
-超过100万个来自世界各地的零售合作伙伴
+- 超过100万个来自世界各地的零售合作伙伴
 
 - Between 100-150 services are accessed to build a page.
-接入100-150种左右的服务以构建页面
+- 接入100-150种左右的服务以构建页面
 
 ## 产品架构
 
 - What is it that we really mean by scalability? A service is said to be scalable if when we increase the resources in a system, it results in increased performance in a manner proportional to resources added. Increasing performance in general means serving more units of work, but it can also be to handle larger units of work, such as when datasets grow.
 
-可伸缩性真正的含义是什么？就服务而言，可伸缩性意味着，当我们为系统增加资源的时，系统性能获得相应比例的提升。而性能提升意味着能为更多客户提供服务，或者说能在客户不断成长时满足他们的需要。
+- 可伸缩性真正的含义是什么？就服务而言，可伸缩性意味着，当我们为系统增加资源的时，系统性能获得相应比例的提升。而性能提升意味着能为更多客户提供服务，或者说能在客户不断成长时满足他们的需要。
 
 - The big architectural change that Amazon made was to move from a two-tier monolith to a fully-distributed, decentralized, services platform serving many different applications.
 
-对于亚马逊而言，一个大的架构改动是将系统从二层架构转变为分布式服务，并让各个服务提供不同应用。
+- 对于亚马逊而言，一个大的架构改动是将系统从二层架构转变为分布式服务，并让各个服务提供不同应用。
 
 - Started as one application talking to a back end. Written in C++.
 让我们从一个由C++编写的后端应用开始讲起。
 
 - It grew. For years the scaling efforts at Amazon focused on making the back-end databases scale to hold more items, more customers, more orders, and to support multiple international sites. In 2001 it became clear that the front-end application couldn't scale anymore. The databases were split into small parts and around each part and created a services interface that was the only way to access the data.
 
-多年来，为了能够支持更多商品，更多客户，更多订单以及为更多国际站点提供服务，这个应用不断变大，于此同时亚马逊也将扩展系统的工作重点也被放在了扩展后台数据库上。但是到2001年，大家发现，这个后台应用已经无法进行任何扩展了。数据库已经被切割为多个部分，并且，各部分都建立了相应的服务接口来存取数据。
+- 多年来，为了能够支持更多商品，更多客户，更多订单以及为更多国际站点提供服务，这个应用不断变大，于此同时亚马逊也将扩展系统的工作重点也被放在了扩展后台数据库上。但是到2001年，大家发现，这个后台应用已经无法进行任何扩展了。数据库已经被切割为多个部分，并且，各部分都建立了相应的服务接口来存取数据。
 
 - The databases became a shared resource that made it hard to scale-out the overall business. The front-end and back-end processes were restricted in their evolution because they were shared by many different teams and processes.
 
-由于数据库是共享资源，因此很难再扩展业务。同时，由于修改业务流程会牵涉多个不同的团队，因此前后端的流程改进受到了严格的限制。
+- 由于数据库是共享资源，因此很难再扩展业务。同时，由于修改业务流程会牵涉多个不同的团队，因此前后端的流程改进受到了严格的限制。
 
 - Their architecture is loosely coupled and built around services. A service-oriented architecture gave them the isolation that would allow building many software components rapidly and independently.
 
-为了解决这个问题，他们基于服务建立了松耦合的架构。面向服务的架构使他们能保证各模块相互独立，从而允许快速独立的搭建更多软件组件。
+- 为了解决这个问题，他们基于服务建立了松耦合的架构。面向服务的架构使他们能保证各模块相互独立，从而允许快速独立的搭建更多软件组件。
 
 - Grew into hundreds of services and a number of application servers that aggregate the information from the services. The application that renders the Amazon.com Web pages is one such application server. So are the applications that serve the Web-services interface, the customer service application, and the seller interface.
 
-在此基础上，亚马逊开发了数以百计的服务和大量应用用来汇总信息。例如，绘制Amazon.com页面的就是其中一个应用。这些应用还提供了web服务接口，客户服务应用及销售接口
+- 在此基础上，亚马逊开发了数以百计的服务和大量应用用来汇总信息。例如，绘制Amazon.com页面的就是其中一个应用。这些应用还提供了web服务接口，客户服务应用及销售接口
 
 - Many third party technologies are hard to scale to Amazon size. Especially communication infrastructure technologies. They work well up to a certain scale and then fail. So they are forced to build their own.
 Not stuck with one particular approach. Some places they use jboss/java, but they use only servlets, not the rest of the J2EE stack.
 
-由于亚马逊巨大的规模，许多第三方技术难以扩展与之相适应。以通信设施的技术来说，系统扩展他到某种规模以后现有方案完全不能正常工作。因此亚马逊被建立自己的技术用以能满足各种应用场景。一些情况下他们使用jboss/java，但仅使用servlets,而不包括其他J2EE技术栈。
+- 由于亚马逊巨大的规模，许多第三方技术难以扩展与之相适应。以通信设施的技术来说，系统扩展他到某种规模以后现有方案完全不能正常工作。因此亚马逊被建立自己的技术用以能满足各种应用场景。一些情况下他们使用jboss/java，但仅使用servlets,而不包括其他J2EE技术栈。
 
 
 - C++ is uses to process requests. Perl/Mason is used to build content.
 Amazon doesn't like middleware because it tends to be framework and not a tool. If you use a middleware package you get lock-in around the software patterns they have chosen. You'll only be able to use their software. So if you want to use different packages you won't be able to. You're stuck. One event loop for messaging, data persistence,
 AJAX, etc. Too complex. If middleware was available in smaller components, more as a tool than a framework, they would be more interested.
 
-C++用来处理请求，Perl/Mason用来构建内容。亚马逊不喜欢中间件，因为它往往倾向于成为框架而不是工具。所以如果你使用中间件，你会发现自己被软件合作方绑住了手脚，你将只能使用他们的软件，而不能做出其他选择，总而言之，你会被困住。不过对于事件消息循环，数据持久化，AJAX等问题的处理技术太过复杂，因此，如果中间件对小型组建可用，更像工具而不是框架，那他们将会获得更多的关注。
+- C++用来处理请求，Perl/Mason用来构建内容。亚马逊不喜欢中间件，因为它往往倾向于成为框架而不是工具。所以如果你使用中间件，你会发现自己被软件合作方绑住了手脚，你将只能使用他们的软件，而不能做出其他选择，总而言之，你会被困住。不过对于事件消息循环，数据持久化，AJAX等问题的处理技术太过复杂，因此，如果中间件对小型组建可用，更像工具而不是框架，那他们将会获得更多的关注。
 
 - The SOAP web stack seems to want to solve all the same distributed systems problems all over again.
 Offer both SOAP and REST web services. 30% use SOAP. These tend to be Java and .NET users and use WSDL files to generate remote object interfaces. 70% use REST. These tend to be PHP or PERL users.
 In either SOAP or REST developers can get an object interface to Amazon. Developers just want to get job done. They don't care what goes over the wire.
 
-SOAP web栈看起想解决所有和分布式系统有关的问题。它同时提供SOAP和RESTweb服务。
+- SOAP web栈看起想解决所有和分布式系统有关的问题。它同时提供SOAP和RESTweb服务。
 30%使用SOAP，这部分倾向于Java或.NET使用者，因而使用WSDL文档去建立一个远程对象接口。
 70%使用REST，这部分倾向于PHP或PERL使用者。
 因此无论习惯于SOAP或REST服务的开发人员都能从亚马逊获取相应接口。要知道开发人员往往只想把工作搞定，他们才不关心电线里传输的是什么。
 
 - Amazon wanted to build an open community around their services. Web services were chosed because it's simple. But hat's only on the perimeter. Internally it's a service oriented architecture. You can only access the data via the interface. It's described in WSDL, but they use their own encapsulation and transport mechanisms.
 
-亚马逊希望能围绕他们的服务建立一个社区，而之所以采用Web服务仅仅是因为它足够简单。但帽子永远只能看到外沿，就内部而言，这是一个以服务为导向的架构。你能通过接口获取数据，接口通过WSDL描述，但他们使用用自己特有的封装和传输机制。
+- 亚马逊希望能围绕他们的服务建立一个社区，而之所以采用Web服务仅仅是因为它足够简单。但帽子永远只能看到外沿，就内部而言，这是一个以服务为导向的架构。你能通过接口获取数据，接口通过WSDL描述，但他们使用用自己特有的封装和传输机制。
 
 - Teams are Small and are Organized Around Services
   团队很小而且紧紧围绕服务组建
 
     - Services are the independent units delivering functionality within Amazon. It's also how Amazon is organized internally in terms of teams.
 
-    亚马逊内部，服务作为独立模块用来提供功能，同时这也是亚马逊内部组建团队的方式。
+    - 亚马逊内部，服务作为独立模块用来提供功能，同时这也是亚马逊内部组建团队的方式。
 
     - If you have a new business idea or problem you want to solve you form a team. Limit the team to 8-10 people because communication hard. They are called two pizza teams. The number of people you can feed off two pizzas.
 
-    例如，你想到一个新的商业计，同时你想组建一个团队，那么请把人数控制在8-10人左右，因为人数过多会导致沟通困难。这个团队又被称作2饼小组（two pizza teams），因为只要2张大饼（pizza）就能喂饱他们了：）
+    - 例如，你想到一个新的商业计，同时你想组建一个团队，那么请把人数控制在8-10人左右，因为人数过多会导致沟通困难。这个团队又被称作2饼小组（two pizza teams），因为只要2张大饼（pizza）就能喂饱他们了：）
 
     - Teams are small. They are assigned authority and empowered to solve a problem as a service in anyway they see fit.
-    因为团队很小，所以他们才能被授权去解决任何发现的问题
+
+    - 因为团队很小，所以他们才能被授权去解决任何发现的问题
 
     - As an example, they created a team to find phrases within a book that are unique to the text. This team built a separate service interface for that feature and they had authority to do what they needed.
 
-    举例来说，亚马逊建立一个团队去查找一本书中的特有短句。这个团队为实现这个功能搭建了一个独立的服务接口来保证他们拥有任何他们想要的权限
+    - 举例来说，亚马逊建立一个团队去查找一本书中的特有短句。这个团队为实现这个功能搭建了一个独立的服务接口来保证他们拥有任何他们想要的权限
 
     - Extensive A/B testing is used to integrate a new service . They see what the impact is and take extensive measurements.
 
-    大量的[A/B测试](http://baike.baidu.com/view/4357479.htm) 被用来集成新服务。这样他们才能通过广泛的观测了解他么的改动会产生何种影响。
+    - 大量的[A/B测试](http://baike.baidu.com/view/4357479.htm) 被用来集成新服务。这样他们才能通过广泛的观测了解他么的改动会产生何种影响。
 
 - Deployment
-部署
+- 部署
 
     - They create special infrastructure for managing dependencies and doing a deployment.
 
-    亚马逊建立了专用设施来管理依赖和执行部署。
+    - 亚马逊建立了专用设施来管理依赖和执行部署。
 
     - Goal is to have all right services to be deployed on a box. All application code, monitoring, licensing, etc should be on a box.
 
-    主要目标是能找到相应的服务并打包部署。所有的代码，监视器，授权许可等都会被打包。
+    - 主要目标是能找到相应的服务并打包部署。所有的代码，监视器，授权许可等都会被打包。
 
     - Everyone has a home grown system to solve these problems.
 
-    并而保证每个人都能有一个定制系统去解决这些问题。
+    - 并而保证每个人都能有一个定制系统去解决这些问题。
 
     - Output of deployment process is a virtual machine. You can use EC2 to run them.
 
-    部署流程改进后的最终产物是一台虚拟机。而现在，你能用EC2去运行它们
+    - 部署流程改进后的最终产物是一台虚拟机。而现在，你能用EC2去运行它们
 
 
 - Work From the Customer Backwards to Verify a New Service is Worth Doing
 
-以客户为导向从而确认新功能（服务）的价值
+- 以客户为导向从而确认新功能（服务）的价值
 
     - Work from the customer backward. Focus on value you want to deliver
     for the customer.
 
-    亚马逊提倡以客户为导向展开工作，专注于为客户提供价值
+    - 亚马逊提倡以客户为导向展开工作，专注于为客户提供价值
 
     - Force developers to focus on value delivered to the customer instead of building technology first and then figuring how to use it.
 
-    这意味着需要严格要求开发人员专注于为客户提供价值，而不是先考虑如何开发新技术，再考虑在哪些情况下使用它。
+    - 这意味着需要严格要求开发人员专注于为客户提供价值，而不是先考虑如何开发新技术，再考虑在哪些情况下使用它。
 
     - Start with a press release of what features the user will see and work backwards to check that you are building something valuable.
 
-    所有工作应该从一篇用户会得到何种功能的通讯稿开始，然后反向推导校验开发工作的价值
+    - 所有工作应该从一篇用户会得到何种功能的通讯稿开始，然后反向推导校验开发工作的价值
 
     - End up with a design that is as minimal as possible. Simplicity is the key if you really want to build large distributed systems.
 
-    同时完成的设计必须尽可能的简单的。如果你希望构建一个大型分布式系统，极简主义将成为成功的关键
+    - 同时完成的设计必须尽可能的简单的。如果你希望构建一个大型分布式系统，极简主义将成为成功的关键
 
 - State Management is the Core Problem for Large Scale Systems
 
-状态管理是大型可伸缩系统的核心问题
+- 状态管理是大型可伸缩系统的核心问题
 
     - Internally they can deliver infinite storage.
 
-    就系统内部而言，你或许能部署一个无限大的存储系统用来保存状态，但大部分情况并非如此。
+    - 就系统内部而言，你或许能部署一个无限大的存储系统用来保存状态，但大部分情况并非如此。
 
     - Not all that many operations are stateful. Checkout steps are stateful.
 
-    对于状态管理，首先要知道的一点是：不是所有的操作都是有状态的，请先找出那些包含状态的步骤。
+    - 对于状态管理，首先要知道的一点是：不是所有的操作都是有状态的，请先找出那些包含状态的步骤。
 
     - Most recent clicked web page service has recommendations based on session IDs.
 
-    举例来说：展示最近打开的页面（包含推荐页面）这一功能就基于session ID的
+    - 举例来说：展示最近打开的页面（包含推荐页面）这一功能就基于session ID的
 
     - They keep track of everything anyway so it's not a matter of keeping state. There's little separate state that needs to be kept for a session. The services will already be keeping the information so you just use the services.
 
-    因为想要保存这个状态，意味着要需要持续跟踪记录用户的所有动作，因此几乎无法在浏览器实现。所以这个状态就需要保存到session中。现在服务器已经保存了这个信息，如果有需要，你可以直接调用服务。
+    - 因为想要保存这个状态，意味着要需要持续跟踪记录用户的所有动作，因此几乎无法在浏览器实现。所以这个状态就需要保存到session中。现在服务器已经保存了这个信息，如果有需要，你可以直接调用服务。
 
 - Eric Brewer's CAP Theorem or the Three properties of Systems
-
-Eric Brewer的CAP理论
+- Eric Brewer的CAP理论
 
     - Three properties of a system: consistency, availability, tolerance to network partitions.
 
-    CAP中的三个属性分别为： 一致性，可用性，分区容错性
+    - CAP中的三个属性分别为： 一致性，可用性，分区容错性
 
     - Consistency: write a value and then you read the value you get the same value back. In a partitioned system there are windows where that's not true.
 
-    数据一致性：等同于所有节点访问同一份最新的数据副本
+    - 数据一致性：等同于所有节点访问同一份最新的数据副本
 
     - Availability: may not always be able to write or read. The system will say you can't write because it wants to keep the system consistent.
 
-    可用性：对数据更新具备高可用性
+    - 可用性：对数据更新具备高可用性
 
     - Partitionability: divide nodes into small groups that can see other groups, but they can't see everyone.
 
-    分区容错性：以实际效果而言，分区相当于对通信的时限要求。系统如果不能在时限内达成数据一致性，就意味着发生了分区的情况，必须就当前操作在C和A之间做出选择
+    - 分区容错性：以实际效果而言，分区相当于对通信的时限要求。系统如果不能在时限内达成数据一致性，就意味着发生了分区的情况，必须就当前操作在C和A之间做出选择
 
     - You can have at most two of these three properties for any shared-data system.
 
-    理论的核心是：在任何共享数据的系统中，你最多能完全满足其中两点
-    原因见[这里](https://www.zybuluo.com/jewes/note/68185)
+    - 理论的核心是：在任何共享数据的系统中，你最多能完全满足其中两点。原因见[这里](https://www.zybuluo.com/jewes/note/68185)
 
     - To scale you have to partition, so you are left with choosing either high consistency or high availability for a particular system. You must find the right overlap of availability and consistency.
 
-    就实际情况而言，为了满足可伸缩性，必须让系统支持分区，因此你必须为你的系统找到一个一致性和可用性平衡点
+    - 就实际情况而言，为了满足可伸缩性，必须让系统支持分区，因此你必须为你的系统找到一个一致性和可用性平衡点
 
     - Choose a specific approach based on the needs of the service.
 
-    简而言之，就是根据所需服务选择合适的方案
+    - 简而言之，就是根据所需服务选择合适的方案
 
     - For the checkout process you always want to honor requests to add items to a shopping cart because it's revenue producing. In this case you choose high availability. Errors are hidden from the customer and sorted out later.
 
-    对于结账流程为例：你经常会遇到这样的场景，购物车结算后发现满足奖励条件，于是用户打算将奖励商品添加到购物车中。在这个流程中，往往会选择高可用性。而数据一致性的问题会被推迟到客户完成商品挑选的流程之后再去解决。
+    - 对于结账流程为例：你经常会遇到这样的场景，购物车结算后发现满足奖励条件，于是用户打算将奖励商品添加到购物车中。在这个流程中，往往会选择高可用性。而数据一致性的问题会被推迟到客户完成商品挑选的流程之后再去解决。
 
     - When a customer submits an order you favor consistency because several services--credit card processing, shipping and handling, reporting--are simultaneously accessing the data.
-    而当客户提交订单后，你会希望保证数据的一致性，因为 信用卡处理，物流，报表等服务都对数据有严格要求
+    - 而当客户提交订单后，你会希望保证数据的一致性，因为 信用卡处理，物流，报表等服务都对数据有严格要求
 
 
 ## 新技能get
