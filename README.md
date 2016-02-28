@@ -14,3 +14,10 @@ Basically introduce the websites design and architecture from the following aspe
 - reference
 
 Contributions are welcomed.
+
+### Finished
+[amazon-architecure](https://github.com/aaronz/arch/blob/master/doc/zh-cn/amazon-architecure.md)
+[google-architecture](https://github.com/aaronz/arch/blob/master/doc/zh-cn/google-architecture.markdown)
+
+#### Panding
+[101-questions-to-ask-when-considering-a-nosql-database](https://github.com/aaronz/arch/blob/master/doc/en-us/101-questions-to-ask-when-considering-a-nosql-database.markdown)
