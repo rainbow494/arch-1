@@ -17,6 +17,7 @@ Contributions are welcomed.
 
 ### Finished
 [amazon-architecure](https://github.com/aaronz/arch/blob/master/doc/zh-cn/amazon-architecure.md)
+
 [google-architecture](https://github.com/aaronz/arch/blob/master/doc/zh-cn/google-architecture.markdown)
 
 #### Panding
