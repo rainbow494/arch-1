@@ -16,9 +16,10 @@ Basically introduce the websites design and architecture from the following aspe
 Contributions are welcomed.
 
 ### Finished
-[amazon-architecure](https://github.com/aaronz/arch/blob/master/doc/zh-cn/amazon-architecure.md)
+- [amazon-architecure](https://github.com/aaronz/arch/blob/master/doc/zh-cn/amazon-architecure.md)
+- [google-architecture](https://github.com/aaronz/arch/blob/master/doc/zh-cn/google-architecture.markdown)
+- [youtube-architecture](https://github.com/aaronz/arch/blob/master/doc/zh-cn/youtube-architecture.markdown)
 
-[google-architecture](https://github.com/aaronz/arch/blob/master/doc/zh-cn/google-architecture.markdown)
-
-#### Panding
-[101-questions-to-ask-when-considering-a-nosql-database](https://github.com/aaronz/arch/blob/master/doc/en-us/101-questions-to-ask-when-considering-a-nosql-database.markdown)
+#### In-Progress
+- [101-questions-to-ask-when-considering-a-nosql-database](https://github.com/aaronz/arch/blob/master/doc/en-us/101-questions-to-ask-when-considering-a-nosql-database.markdown)
+- stackoverflow architecture
