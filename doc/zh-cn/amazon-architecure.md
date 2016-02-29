@@ -1,8 +1,8 @@
-#亚马逊架构简介
+#亚马逊架构简介 （草稿）
 
 This is a wonderfully informative Amazon update based on Joachim Rohde's discovery of an interview with Amazon's CTO. You'll learn about how Amazon organizes their teams around services, the CAP theorem of building scalable systems, how they deploy software, and a lot more. Many new additions from the ACM Queue article have also been included.
 
-这是一篇关于亚马逊如何逐步升级的精彩短文，核心内容源自Joachim Rohde对亚马逊CTO的专访内容的分析
+本文深入介绍了亚马逊的近况，核心内容源自Joachim Rohde对亚马逊CTO的专访内容的分析
 通过本文你将知道亚马逊如何以服务为中心组建他们的团队，了解用来构建可伸缩系统的CAP理论，以及他们如何部署软件等等。许多来自[ACM Queue](http://queue.acm.org/)的内容也被收入文中。
 
 Amazon grew from a tiny online bookstore to one of the largest stores on earth. They did it while pioneering new and interesting ways to rate, review, and recommend products. Greg Linden shared is version of Amazon's birth pangs in a series of blog articles
@@ -261,7 +261,7 @@ reality, embrace it. For example, go more with a fast reboot and fast recover ap
 
 - Involve everyone in making dog food. Go out into the warehouse and pack books during the Christmas rush. That's teamwork.
 
-- 请大家吃个便饭，然后在黑五期间把书打包外出找个仓库围在一起，这才是真正的团队工作。
+- 请大家吃个便饭，黑五期间一起去折扣店买个书，这才是真正的团队工作。
 
 - Create a staging site where you can run thorough tests before releasing into the wild.
 
