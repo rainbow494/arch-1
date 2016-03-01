@@ -16,7 +16,7 @@ Basically introduce the websites design and architecture from the following aspe
 Contributions are welcomed.
 
 ### Finished
-- [amazon-architecure](https://github.com/aaronz/arch/blob/master/doc/zh-cn/amazon-architecure.md)
+- [amazon-architecure](https://github.com/aaronz/arch/blob/master/doc/zh-cn/amazon-architecure.markdown)
 - [google-architecture](https://github.com/aaronz/arch/blob/master/doc/zh-cn/google-architecture.markdown)
 - [youtube-architecture](https://github.com/aaronz/arch/blob/master/doc/zh-cn/youtube-architecture.markdown)
 
