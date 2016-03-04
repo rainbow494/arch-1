@@ -1,3 +1,8 @@
+---
+author: Aaron Zhang
+home: https://github.com/aaronz
+---
+
 #Youtube架构简介
 
 YouTube以令人难以置信增涨速度达到视频日播放超亿次的规模，而负责维护网站规模的却是少数几个人。他们是如何将所有视频成功交付给所有用户的？被Google收购后他们又有了怎样的演进？
