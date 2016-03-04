@@ -3,7 +3,7 @@ author: Paul Huang
 home: https://github.com/rainbow494
 ---
 
-#亚马逊架构简介 （草稿）
+#亚马逊架构简介
 
 This is a wonderfully informative Amazon update based on Joachim Rohde's discovery of an interview with Amazon's CTO. You'll learn about how Amazon organizes their teams around services, the CAP theorem of building scalable systems, how they deploy software, and a lot more. Many new additions from the ACM Queue article have also been included.
 
