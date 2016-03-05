@@ -22,7 +22,7 @@ Basically introduce the websites design and architecture from the following aspe
 ### In-Progress
 - [stackoverflow architecture](https://github.com/aaronz/arch/blob/master/doc/en-us/stack-overflow-architecture.markdown) - [Aaron Zhang](https://github.com/aaronz)
 - [1-Billion-Reasons-Why-Adobe-Chose-HBase] (https://github.com/chaoscn/chen/blob/master/1-Billion-Reasons-Why-Adobe-Chose-HBase.md) - [Chen Gao](https://github.com/chaoscn)
-- [what-the-heck-are-you-actually-using-nosql-for.markdown]() - [Paul Huang](https://github.com/rainbow494)
+- [what-the-heck-are-you-actually-using-nosql-for](https://github.com/aaronz/arch/blob/master/doc/en-us/what-the-heck-are-you-actually-using-nosql-for.markdown) - [Paul Huang](https://github.com/rainbow494)
 
 ### Contributions are welcomed.   
 - pick up an document in en-us queue
