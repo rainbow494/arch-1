@@ -1,16 +1,20 @@
 ## [What the heck are you actually using NoSQL for?](/blog/2010/12/6/what-the-heck-are-you-actually-using-nosql-for.html)
+## [使用NoSQL时会踩哪些坑?](/blog/2010/12/6/what-the-heck-are-you-actually-using-nosql-for.html)
 
-    
-
-    
 
 ![](http://farm5.static.flickr.com/4127/5188198566_3fe006d562_m.jpg)
 
 It's a truism that we should choose the _right tool for the job_. Everyone says that. And who can disagree? The problem is this is not helpful advice without being able to answer more specific questions like: What jobs are the tools good at? Will they work on jobs like mine? Is it worth the risk to try something new when all my people know something else and we have a deadline to meet? How can I make all the tools work together?
 
+众所周知，我们应该应该__为任务选择合适的工具__。每个人都这么说，谁说不是呢？但问题是就算知道这个道理，它也无法回到我们：对这个任务，是最合适的锤子是哪一把？别人用的趁手的锤子我也用得惯么？面对不断迫近的截止日，是不是应该冒风险去找把新锤子？特别是在小伙伴们也都没摸过这把锤子的时候？还有就是，我如何利用这把新锤子和我的老锯子，老斧子一起配合来完成任务？
+
 In the NoSQL space this kind of real-world data is still a bit vague. When asked, vendors tend to give very general answers like NoSQL is good for BigData or key-value access. What does that mean for for the developer in the trenches faced with the task of solving a specific problem and there are a dozen confusing choices and no obvious winner? Not a lot. It's often hard to take that next step and imagine how their specific problems could be solved in a way that's worth taking the trouble and risk.
 
+在NoSQL面前，真实事件的数据（类型、结构、模式）似乎不那么清晰可辨。每当被问起NoSQL是什么，方案服务商们总是倾向于给出一个抽象的答案：NoSQL对于大数据和键值类型的数据存取非常合适。但是，这回答到底是几个意思？因为对身处前线的开发者来说，他们有一堆问题要解决，商人们给的答案并不能在开发人员在遇到选择障碍时帮助他们指明道路。即便选择不多，这些回答也很难帮助开发者找出值得冒险（遇到新问题）一试的方案。
+
 Let's change that. What problems are you using NoSQL to solve? Which product are you using? How is it helping you? Yes, this is part the research for my [webinar on December 14th](https://www1.gotomeeting.com/register/154378825), but I'm a huge believer that people learn best by example, so if we can come up with real specific examples I think that will really help people visualize how they can make the best use of all these new product choices in their own systems.
+
+
 
 Here's a list of uses cases I came up with after some trolling of the interwebs. The sources are so varied I can't attribute every one, I'll put a list at the end of the post. Please feel free to add your own. I separated the use cases out for a few specific products simply because I had a lot of uses cases for them they were clearer out on their own. This is not meant as an endorsement of any sort. Here's a master list of all the [NoSQL products](http://nosql-database.org/). If you would like to provide a specific set of use cases for a product I'd be more than happy to add that in.
 
@@ -250,5 +254,3 @@ Kevin Weil at Twitter is great at providing Hadoop use cases. At Twitter this in
 *   [“One Size Fits All”: An Idea Whose Time Has Come and Gone](http://www.cs.brown.edu/~ugur/fits_all.pdf) by Michael Stonebraker and Uğur Çetintemel
 *   [Future of RDBMS is RAM Clouds & SSD](http://www.igvita.com/2009/12/07/future-of-rdbms-is-ram-clouds-ssd/) by Ilya Grigorik
 *       [To scale or not to scale: Key/Value, Document, SQL, JPA](http://www.slideshare.net/uri1803/to-scale-or-not-to-scale-keyvalue-document-sql-jpa-whats-right-for-my-app#)  by Uri Cohen    
-
-    
