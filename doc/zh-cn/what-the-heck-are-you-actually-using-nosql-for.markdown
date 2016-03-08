@@ -14,26 +14,39 @@ In the NoSQL space this kind of real-world data is still a bit vague. When asked
 
 Let's change that. What problems are you using NoSQL to solve? Which product are you using? How is it helping you? Yes, this is part the research for my [webinar on December 14th](https://www1.gotomeeting.com/register/154378825), but I'm a huge believer that people learn best by example, so if we can come up with real specific examples I think that will really help people visualize how they can make the best use of all these new product choices in their own systems.
 
-
+你用NoSQL来解决什么问题？你用哪款NoSQL数据库？它如何帮助你？上面几个问题是我12月14号在线会议讨论的部分内容[详见](https://www1.gotomeeting.com/register/154378825)，会议纪要或许对你有帮助，但我更相信眼见为实这个道理，如果开发一些看得见的代码实例，那会对开发人员如何为系统选择合适的产品更有帮助
 
 Here's a list of uses cases I came up with after some trolling of the interwebs. The sources are so varied I can't attribute every one, I'll put a list at the end of the post. Please feel free to add your own. I separated the use cases out for a few specific products simply because I had a lot of uses cases for them they were clearer out on their own. This is not meant as an endorsement of any sort. Here's a master list of all the [NoSQL products](http://nosql-database.org/). If you would like to provide a specific set of use cases for a product I'd be more than happy to add that in.
 
+下面的这些用例是我在interwebs上一直强调的东西。抱歉我不能指出每个案例的具体来源（因为来源太多），但在文章结尾我会有一个文章列表。请随意使用它们。我只是简单的把用例从产品中独立出来，因为我有许多关于这些问题的用例，而且它们一眼就能看懂。当然，这些用例出现的先后次序和产品间的好坏没有关系。下面是一份主流[NoSQL产品列表](http://nosql-database.org/)。当然，这里也欢迎大家提供关于某个产品特殊功能的用例
+
 ## **General Use Cases**
+## **基本用例**
 
 These are the general kinds of reasons people throw around for using NoSQL. Probably nothing all that surprising here.
+下面这些都是常见的使用NoSQL的理由。
 
-*   ****Bigness**.** NoSQL is seen as a key part of a new data stack supporting: big data, big numbers of users, big numbers of computers, big supply chains, big science, and so on. When something becomes so massive that it must become massively distributed, NoSQL is there, though not all NoSQL systems are targeting big. Bigness can be across many different dimensions, not just using a lot of disk space. 
+*   **Bigness** NoSQL is seen as a key part of a new data stack supporting: big data, big numbers of users, big numbers of computers, big supply chains, big science, and so on. When something becomes so massive that it must become massively distributed, NoSQL is there, though not all NoSQL systems are targeting big. Bigness can be across many different dimensions, not just using a lot of disk space. 
+
+*   **大** NoSQL常被当作支持新数据存放的主要部分：大数据，大量用户，大量计算机，大供应链，大量科学运算，等等。当某个系统成长后，它很可能衍变为大型分布架构，这种情况一般就会用上NoSQL，虽然不是所有的NoSQL系统的设计目标都是大型系统。而大这个概念也可以涵盖很多方面，不仅仅是指硬盘空间。
+
 *   **Massive write performance**. This is probably the canonical usage based on Google's influence. High volume. Facebook needs to store [135 billion messages a month](http://highscalability.com/blog/2010/11/16/facebooks-new-real-time-messaging-system-hbase-to-store-135.html). Twitter, for example, has the problem of storing [7 TB/data per day](http://www.slideshare.net/kevinweil/nosql-at-twitter-nosql-eu-2010) with the prospect of this requirement doubling multiple times per year. This is the data is too big to fit on one node problem. At 80 MB/s it takes a day to store 7TB so writes need to be distributed over a cluster, which implies key-value access, MapReduce, replication, fault tolerance, consistency issues, and all the rest. For faster writes in-memory systems can be used.
+
+*   
+
 *   **Fast key-value access**. This is probably the second most cited virtue of NoSQL in the general mind set.  When latency is important it's hard to beat hashing on a key and reading the value directly from memory or in as little as one disk seek. Not every NoSQL product is about fast access, some are more about reliability, for example. but what people have wanted for a long time was a better memcached and many NoSQL systems offer that.
-*   **Flexible schema** and **f****lexible datatypes**.  NoSQL products support a whole range of new data types, and this is a major area of innovation in NoSQL. We have: column-oriented, graph, advanced data structures, document-oriented, and key-value. Complex objects can be easily stored without a lot of mapping. Developers love avoiding complex schemas and ORM frameworks. Lack of structure allows for much more flexibility. We also have program and programmer friendly compatible datatypes likes JSON. 
+
+*   
+
+*   **Flexible schema** and **flexible datatypes**.  NoSQL products support a whole range of new data types, and this is a major area of innovation in NoSQL. We have: column-oriented, graph, advanced data structures, document-oriented, and key-value. Complex objects can be easily stored without a lot of mapping. Developers love avoiding complex schemas and ORM frameworks. Lack of structure allows for much more flexibility. We also have program and programmer friendly compatible datatypes likes JSON. 
 *   **Schema migration**. Schemalessness makes it easier to deal with schema migrations without so much worrying. Schemas are in a sense dynamic, because they are imposed by the application at run-time, so different parts of an application can have a different view of the schema.
 *   **Write availability**. Do your writes need to succeed no mater what? Then we can get into partitioning, CAP, eventual consistency and all that jazz.
-*   **Easier maintainability, ****administration and operations**. This is very product specific, but many NoSQL vendors are trying to gain adoption by making it easy for developers to adopt them. They are spending a lot of effort on ease of use, minimal administration, and automated operations. This can lead to lower operations costs as special code doesn't have to be written to scale a system that was never intended to be used that way.
+*   **Easier maintainability**, **administration and operations**. This is very product specific, but many NoSQL vendors are trying to gain adoption by making it easy for developers to adopt them. They are spending a lot of effort on ease of use, minimal administration, and automated operations. This can lead to lower operations costs as special code doesn't have to be written to scale a system that was never intended to be used that way.
 *   **No single point of failure**. Not every product is delivering on this, but we are seeing a definite convergence on relatively easy to configure and manage high availability with automatic load balancing and cluster sizing. A perfect cloud partner.
 *   **Generally available parallel computing.** We are seeing MapReduce baked into products, which makes parallel computing something that will be a normal part of development in the future.
 *   **Programmer ease of use**. Accessing your data should be easy. While the relational model is intuitive for end users, like accountants, it's not very intuitive for developers. Programmers grok keys, values, JSON, Javascript stored procedures, HTTP, and so on. NoSQL is for programmers. This is a developer led coup. The response to a database problem can't always be to hire a really knowledgeable DBA, get your schema right, denormalize a little, etc., programmers would prefer a system that they can make work for themselves. It shouldn't be so hard to make a product perform. Money is part of the issue. If it costs a lot to scale a product then won't you go with the cheaper product, that you control, that's easier to use, and that's easier to scale?
 *   **Use the right data model for the right problem**. Different data models are used to solve different problems. Much effort has been put into, for example, wedging graph operations into a relational model, but it doesn't work. Isn't it better to solve a graph problem in a graph database? We are now seeing a general strategy of trying find the best fit between a problem and solution.
-*   **[Avoid hitting](http://blog.hypertable.com/?p=79)****[ the wall](http://blog.hypertable.com/?p=79)**. Many projects hit some type of wall in their project. They've exhausted all options to make their system scale or perform properly and are wondering what next? It's comforting to select a product and an approach that can jump over the wall by linearly scaling using incrementally added resources.  At one time this wasn't possible. It took custom built everything, but that's changed. We are now seeing usable out-of-the-box products that a project can readily adopt.
+*   **[Avoid hitting the wall](http://blog.hypertable.com/?p=79)**. Many projects hit some type of wall in their project. They've exhausted all options to make their system scale or perform properly and are wondering what next? It's comforting to select a product and an approach that can jump over the wall by linearly scaling using incrementally added resources.  At one time this wasn't possible. It took custom built everything, but that's changed. We are now seeing usable out-of-the-box products that a project can readily adopt.
 *   [Distributed systems support](http://s3.amazonaws.com/cimlabs/Oredev-Enterprise-NoSQL.pdf). Not everyone is worried about scale or performance over and above that which can be achieved by non-NoSQL systems. What they need is a distributed system that can span datacenters while handling failure scenarios without a hiccup. NoSQL systems, because they have focussed on scale, tend to exploit partitions, tend not use heavy strict consistency protocols, and so are well positioned to operate in distributed scenarios.
 *   [Tunable CAP tradeoffs](http://dbmsmusings.blogspot.com/2010/04/problems-with-cap-and-yahoos-little.html). NoSQL systems are generally the only products with a "slider" for choosing where they want to land on the CAP spectrum. Relational databases pick strong consistency which means they can't tolerate a partition failure. In the end this is a business decision and should be decided on a case by case basis. Does your app even care about consistency? Are a few drops OK? Does your app need strong or weak consistency? Is availability more important or is consistency? Will being down be more costly than being wrong? It's nice to have products that give you a choice.
 
@@ -62,34 +75,34 @@ These are the general kinds of reasons people throw around for using NoSQL. Prob
 *   Working with [heterogenous types of data](http://brehaut.net/blog/2010/couch_impedance#), for example, different media types at a generic level.
 *   Embedded systems. They don’t want the overhead of SQL and servers, so they uses something simpler for storage.
 *   A "market" game, where you own buildings in a town. You want the building list of someone to pop up quickly, so you partition on the owner column of the building table, so that the select is single-partitioned. But when someone buys the building of someone else you update the owner column along with price.
-*               [JPL](http://qconsf.com/sf2010/presentation/Out+of+This+World+Cloud+Computing) is using SimpleDB to store rover plan attributes. References are kept to a full plan blob in S3.             
-*               Federal law enforcement agencies [tracking Americans in real-time](http://www.wired.com/threatlevel/2010/12/realtime/) using credit cards, loyalty cards and travel reservations.            
-*               [Fraud detection](http://www.slideshare.net/SparsityTechnologies/dex-introduction#) by comparing transactions to known patterns in real-time.            
-*               [Helping diagnose](http://www.slideshare.net/SparsityTechnologies/dex-introduction#) the typology of tumors by integrating the history of every patient.            
-*   In-memory database for high update situations, like a [web site](http://news.ycombinator.com/item?id=16430) that displays everyone's "last active" time (for chat maybe). If users are performing some activity once every 30 sec, then you will be pretty much be at your limit with about 5000 simultaneous users.
-*   Handling lower-frequency multi-partition queries using materialized views while continuing to process high-frequency streaming data.
-*   Priority queues.
-*   Running calculations on cached data, using a program friendly interface, without have to go through an ORM.
-*   [Unique a large dataset](http://wiki.apache.org/cassandra/UseCases) using simple key-value columns.
-*   To keep querying fast, values can be rolled-up into [different time slices](https://www.cloudkick.com/blog/2010/mar/02/4_months_with_cassandra/).
-*   [Computing the intersection](http://about.digg.com/blog/looking-future-cassandra) of two massive sets, where a join would be too slow.
-*   A [timeline ala Twitter](http://highscalability.com/scaling-twitter-making-twitter-10000-percent-faster). 
+*  [JPL](http://qconsf.com/sf2010/presentation/Out+of+This+World+Cloud+Computing) is using SimpleDB to store rover plan attributes. References are kept to a full plan blob in S3.             
+*  Federal law enforcement agencies [tracking Americans in real-time](http://www.wired.com/threatlevel/2010/12/realtime/) using credit cards, loyalty cards and travel reservations.            
+*  [Fraud detection](http://www.slideshare.net/SparsityTechnologies/dex-introduction#) by comparing transactions to known patterns in real-time.            
+*  [Helping diagnose](http://www.slideshare.net/SparsityTechnologies/dex-introduction#) the typology of tumors by integrating the history of every patient.            
+*  In-memory database for high update situations, like a [web site](http://news.ycombinator.com/item?id=16430) that displays everyone's "last active" time (for chat maybe). If users are performing some activity once every 30 sec, then you will be pretty much be at your limit with about 5000 simultaneous users.
+*  Handling lower-frequency multi-partition queries using materialized views while continuing to process high-frequency streaming data.
+*  Priority queues.
+*  Running calculations on cached data, using a program friendly interface, without have to go through an ORM.
+*  [Unique a large dataset](http://wiki.apache.org/cassandra/UseCases) using simple key-value columns.
+*  To keep querying fast, values can be rolled-up into [different time slices](https://www.cloudkick.com/blog/2010/mar/02/4_months_with_cassandra/).
+*  [Computing the intersection](http://about.digg.com/blog/looking-future-cassandra) of two massive sets, where a join would be too slow.
+*  A [timeline ala Twitter](http://highscalability.com/scaling-twitter-making-twitter-10000-percent-faster). 
 
 ## Redis Use Cases
 
 Redis is unique in the repertoire as it is a data structure server, with many fascinating use cases that [people are excited to share](http://simonwillison.net/static/2010/redis-tutorial/). 
 
-*   Calculating [whose friends are online](http://www.lukemelia.com/blog/archives/2010/01/17/redis-in-practice-whos-online/) using sets. 
-*   Memcached on steroids.
-*   Distributed lock manager for process coordination.
-*   Full text inverted index lookups.
-*   Tag clouds.
-*   Leaderboards. Sorted sets for maintaining high score tables.
-*   Circular log buffers.
-*   Database for university course availability information. If the set contains the course ID it has an open seat. Data is scraped and processed continuously and there are ~7200 courses.
-*   Server for backed sessions. A random cookie value which is then associated with a larger chunk of serialized data on the server) are a very poor fit for relational databases. They are often created for every visitor, even those who stumble in from Google and then leave, never to return again. They then hang around for weeks taking up valuable database space. They are never queried by anything other than their primary key.
-*   Fast, atomically incremented counters are a great fit for offering real-time statistics.
-*   Polling the database every few seconds. Cheap in a key-value store. If you're sharding your data you'll need a central lookup service for quickly determining which shard is being used for a specific user's data. A replicated Redis cluster is a great solution here - GitHub use exactly that to manage sharding their many repositories between different backend file servers.
+*  Calculating [whose friends are online](http://www.lukemelia.com/blog/archives/2010/01/17/redis-in-practice-whos-online/) using sets. 
+*  Memcached on steroids.
+*  Distributed lock manager for process coordination.
+*  Full text inverted index lookups.
+*  Tag clouds.
+*  Leaderboards. Sorted sets for maintaining high score tables.
+*  Circular log buffers.
+*  Database for university course availability information. If the set contains the course ID it has an open seat. Data is scraped and processed continuously and there are ~7200 courses.
+*  Server for backed sessions. A random cookie value which is then associated with a larger chunk of serialized data on the server) are a very poor fit for relational databases. They are often created for every visitor, even those who stumble in from Google and then leave, never to return again. They then hang around for weeks taking up valuable database space. They are never queried by anything other than their primary key.
+*  Fast, atomically incremented counters are a great fit for offering real-time statistics.
+*  Polling the database every few seconds. Cheap in a key-value store. If you're sharding your data you'll need a central lookup service for quickly determining which shard is being used for a specific user's data. A replicated Redis cluster is a great solution here - GitHub use exactly that to manage sharding their many repositories between different backend file servers.
 *   Transient data. Any transient data used by your application is also a good fit for Redis. [CSRF tokens](http://en.wikipedia.org/wiki/Cross-site_request_forgery#Prevention) (to prove a POST submission came from a form you served up, and not a form on a malicious third party site, need to be stored for a short while, as does handshake data for various security protocols. 
 *   Incredibly easy to set up and ridiculously fast (30,000 read or writes a second on a laptop with the default configuration)
 *   Share state between processes. Run a long running batch job in one Python interpreter (say loading a few million lines of CSV in to a Redis key/value lookup table) and run another interpreter to play with the data that’s already been collected, even as the first process is streaming data in. You can quit and restart my interpreters without losing any data. 
