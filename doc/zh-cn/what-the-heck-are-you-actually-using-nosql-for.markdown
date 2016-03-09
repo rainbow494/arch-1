@@ -32,17 +32,31 @@ These are the general kinds of reasons people throw around for using NoSQL. Prob
 
 *   **Massive write performance**. This is probably the canonical usage based on Google's influence. High volume. Facebook needs to store [135 billion messages a month](http://highscalability.com/blog/2010/11/16/facebooks-new-real-time-messaging-system-hbase-to-store-135.html). Twitter, for example, has the problem of storing [7 TB/data per day](http://www.slideshare.net/kevinweil/nosql-at-twitter-nosql-eu-2010) with the prospect of this requirement doubling multiple times per year. This is the data is too big to fit on one node problem. At 80 MB/s it takes a day to store 7TB so writes need to be distributed over a cluster, which implies key-value access, MapReduce, replication, fault tolerance, consistency issues, and all the rest. For faster writes in-memory systems can be used.
 
-*   
+*   **海量写操作** 这是在Google的影响下形成的一种规范。大容量：[Facebook每月需要存储1.35亿消息](http://highscalability.com/blog/2010/11/16/facebooks-new-real-time-messaging-system-hbase-to-store-135.html)， [Twitter每天需要存储 7TB的数据](http://www.slideshare.net/kevinweil/nosql-at-twitter-nosql-eu-2010)并且这个需求以每年两倍的速度不断增长。因为数据太过庞大，因此会遇到这样的问题，80MB/s的操作，需要在一天内写入7TB的数据，因此需要在集群内做分布式写入，需要考虑键值存取，MapReduce，响应，容错率，一致性等其他相关问题。为了更快的写入速度，还需要启用in memory系统。
 
 *   **Fast key-value access**. This is probably the second most cited virtue of NoSQL in the general mind set.  When latency is important it's hard to beat hashing on a key and reading the value directly from memory or in as little as one disk seek. Not every NoSQL product is about fast access, some are more about reliability, for example. but what people have wanted for a long time was a better memcached and many NoSQL systems offer that.
 
-*   
+*   **快速键值存取** 这可能是大部分人脑海中闪过的关于NoSQL的第二大优点，当延迟成为一个重要问题，比如很难通过哈希键从内存或某个位置很深的磁碟里读出值。不是所有NoSQL产品的设计目标都是快速存取，例如，有些会更关心可靠性。不过，越来越多的产品都开始提供更好的memcached以回应用户的呼声。
 
-*   **Flexible schema** and **flexible datatypes**.  NoSQL products support a whole range of new data types, and this is a major area of innovation in NoSQL. We have: column-oriented, graph, advanced data structures, document-oriented, and key-value. Complex objects can be easily stored without a lot of mapping. Developers love avoiding complex schemas and ORM frameworks. Lack of structure allows for much more flexibility. We also have program and programmer friendly compatible datatypes likes JSON. 
-*   **Schema migration**. Schemalessness makes it easier to deal with schema migrations without so much worrying. Schemas are in a sense dynamic, because they are imposed by the application at run-time, so different parts of an application can have a different view of the schema.
+*   **Flexible schema and flexible datatypes**.  NoSQL products support a whole range of new data types, and this is a major area of innovation in NoSQL. We have: column-oriented, graph, advanced data structures, document-oriented, and key-value. Complex objects can be easily stored without a lot of mapping. Developers love avoiding complex schemas and ORM frameworks. Lack of structure allows for much more flexibility. We also have program and programmer friendly compatible datatypes likes JSON. 
+
+* **可变架构和可变数据类型** NoSQL产品支持各种新的数据类型，这也是NoSQL带来的主要革新之一。它们包括：column-oriented, graph, advanced data structures, , document-oriented和key-value [参考]（http://www.csdn.net/article/2013-07-24/2816330-how-to-choose-nosql-db）。复杂对象能在不做很多关联的情况下被容易的存储下来。而开发人员也喜欢避免使用复杂的架构和ORM Frameworks。弱结构使得数据更容易调整。这一点和许多开发人员喜爱的数据结构，比如JSON十分相像。
+
+
+*   **Schema migration** Schemalessness makes it easier to deal with schema migrations without so much worrying. Schemas are in a sense dynamic, because they are imposed by the application at run-time, so different parts of an application can have a different view of the schema.
+
+*   **架构迁移** 弱架构性使得NoSQL数据库更容易处理架构迁移的问题。NoSQL的架构在某种程度上讲是动态的，因为它们都是在运行时生成的，所以一个应用的不同部分能有不同的架构视图。
+
 *   **Write availability**. Do your writes need to succeed no mater what? Then we can get into partitioning, CAP, eventual consistency and all that jazz.
-*   **Easier maintainability**, **administration and operations**. This is very product specific, but many NoSQL vendors are trying to gain adoption by making it easy for developers to adopt them. They are spending a lot of effort on ease of use, minimal administration, and automated operations. This can lead to lower operations costs as special code doesn't have to be written to scale a system that was never intended to be used that way.
+*   **可写入性** 你希望能在任何情况下都写入成功么？那我们就需要能处理分区，CAP，最终一致性等所有这些问题。
+
+*   **Easier maintainability, administration and operations**. This is very product specific, but many NoSQL vendors are trying to gain adoption by making it easy for developers to adopt them. They are spending a lot of effort on ease of use, minimal administration, and automated operations. This can lead to lower operations costs as special code doesn't have to be written to scale a system that was never intended to be used that way.
+
+*  **易维护，管理，操作** 这点其实依赖于指定产品的特性，但是许多NoSQL提供商都试图通过增加易用性来提高市场占有率。他们在提高易用性，精简管理和自动化操作上花了很多精力。比方说，用户可以不写代码，只通过少量的操作就实现系统的扩展
+
 *   **No single point of failure**. Not every product is delivering on this, but we are seeing a definite convergence on relatively easy to configure and manage high availability with automatic load balancing and cluster sizing. A perfect cloud partner.
+
+
 *   **Generally available parallel computing.** We are seeing MapReduce baked into products, which makes parallel computing something that will be a normal part of development in the future.
 *   **Programmer ease of use**. Accessing your data should be easy. While the relational model is intuitive for end users, like accountants, it's not very intuitive for developers. Programmers grok keys, values, JSON, Javascript stored procedures, HTTP, and so on. NoSQL is for programmers. This is a developer led coup. The response to a database problem can't always be to hire a really knowledgeable DBA, get your schema right, denormalize a little, etc., programmers would prefer a system that they can make work for themselves. It shouldn't be so hard to make a product perform. Money is part of the issue. If it costs a lot to scale a product then won't you go with the cheaper product, that you control, that's easier to use, and that's easier to scale?
 *   **Use the right data model for the right problem**. Different data models are used to solve different problems. Much effort has been put into, for example, wedging graph operations into a relational model, but it doesn't work. Isn't it better to solve a graph problem in a graph database? We are now seeing a general strategy of trying find the best fit between a problem and solution.
@@ -204,6 +218,7 @@ Kevin Weil at Twitter is great at providing Hadoop use cases. At Twitter this in
 *   How can we detect bots and other non-human tweeters?
 
 ## Poor Use Cases
+## 错误的应用场景
 
 *   **OLTP**. Outside VoltDB, complex multi-object transactions are generally not supported. Programmers are supposed to denormalize, use documents, or use other complex strategies like compensating transactions.
 *   **Data integrity**. Most of the NoSQL systems rely on applications to enforce data integrity where SQL uses a declarative approach. Relational databases are still the winner for data integrity.
@@ -214,6 +229,7 @@ Kevin Weil at Twitter is great at providing Hadoop use cases. At Twitter this in
 *   **Maturity and stability**. Relational databases still have the edge here. People are familiar with how they work, what they can do, and have confidence in their reliability. There are also more programmers and toolsets available for relational databases. So when in doubt, this is the road that will be traveled.
 
 ## Related Articles
+## 参考文章
 
 *   [Hacker News](http://news.ycombinator.com/item?id=1976429) and [Reddit](http://www.reddit.com/r/programming/comments/ehaeq/high_scalability_what_the_heck_are_you_actually/) thread on this Post. More use case suggestions there. 
 *   [List of NoSQL Systems](http://nosql-database.org/)
