@@ -21,7 +21,7 @@ Here's a list of uses cases I came up with after some trolling of the interwebs.
 下面的这些用例是我在interwebs上一直强调的东西。抱歉我不能指出每个案例的具体来源（因为来源太多），但在文章结尾我会有一个文章列表。请随意使用它们。我只是简单的把用例从产品中独立出来，因为我有许多关于这些问题的用例，而且它们一眼就能看懂。当然，这些用例出现的先后次序和产品间的好坏没有关系。下面是一份主流[NoSQL产品列表](http://nosql-database.org/)。当然，这里也欢迎大家提供关于某个产品特殊功能的用例
 
 ## **General Use Cases**
-## **基本用例**
+## **基本应用场景**
 
 These are the general kinds of reasons people throw around for using NoSQL. Probably nothing all that surprising here.
 下面这些都是常见的使用NoSQL的理由。
@@ -56,56 +56,111 @@ These are the general kinds of reasons people throw around for using NoSQL. Prob
 
 *   **No single point of failure**. Not every product is delivering on this, but we are seeing a definite convergence on relatively easy to configure and manage high availability with automatic load balancing and cluster sizing. A perfect cloud partner.
 
-*   **No single point of failure**  不是所有的产品都支持这个功能，
+*   **单点故障处理**  不是所有的产品都有这个功能，但我们可以看见的一个趋势是：管理高可用性，自动负载均衡和调整集群尺寸的相关的配置越来越容易，而云服务商的相关服务也相当完美。
 
 *   **Generally available parallel computing.** We are seeing MapReduce baked into products, which makes parallel computing something that will be a normal part of development in the future.
+
+*   **可通用并行计算** MapReduce正在被整合到越来越多的产品中，这使得并行计算在未来将越来越多的被应用到开发方案中
+
 *   **Programmer ease of use**. Accessing your data should be easy. While the relational model is intuitive for end users, like accountants, it's not very intuitive for developers. Programmers grok keys, values, JSON, Javascript stored procedures, HTTP, and so on. NoSQL is for programmers. This is a developer led coup. The response to a database problem can't always be to hire a really knowledgeable DBA, get your schema right, denormalize a little, etc., programmers would prefer a system that they can make work for themselves. It shouldn't be so hard to make a product perform. Money is part of the issue. If it costs a lot to scale a product then won't you go with the cheaper product, that you control, that's easier to use, and that's easier to scale?
+
+*   **编程易用性** 获取数据将变得更加简单，现有关系模型虽然很符合终端用户的认知模型（如个人账户），但在开发人员的角度来看却不那么容易明白。让程序员的思维模型里装的往往是键，值，JSON，JS存储过程，HTTP等。NoSQL是为程序员而生，一切以开发为导向，而且因为程序员常常喜欢搞一个只给自己用的系统，这种情况下预算肯定越小越好，因此也就不可能高薪雇用DBA来搞定所有数据库问题。所以NoSQL通常被设计的简单易用，易于扩展，易于维护。
+
+
 *   **Use the right data model for the right problem**. Different data models are used to solve different problems. Much effort has been put into, for example, wedging graph operations into a relational model, but it doesn't work. Isn't it better to solve a graph problem in a graph database? We are now seeing a general strategy of trying find the best fit between a problem and solution.
+
+*   **为正确的问题挑选正确的数据模型** 不同的数据模型用来解决不同的问题。更多的精力将被花在这件事上。举例来说: 关系模型中操作wedging graph可能不那么顺利，那为什么不用图形数据库来解决图形问题？而我们也正见到越来越多类似的事情不断发生。
+
 *   **[Avoid hitting the wall](http://blog.hypertable.com/?p=79)**. Many projects hit some type of wall in their project. They've exhausted all options to make their system scale or perform properly and are wondering what next? It's comforting to select a product and an approach that can jump over the wall by linearly scaling using incrementally added resources.  At one time this wasn't possible. It took custom built everything, but that's changed. We are now seeing usable out-of-the-box products that a project can readily adopt.
+
+*   **[避免撞墙](http://blog.hypertable.com/?p=79)** 许多项目都会触及某种类型的边界，在边界内他们会竭尽所能的扩展他们的系统或让其正常工作，那下一步呢？这时，最顺利的状况就是能找到一款产品，部署后就能轻易突破极限，然后只要添加硬件就能以线性函数的形式扩展资源。有时，这几乎是不可能的。因为这几乎要定制开发所有内容。但我们现在真的已经看到这样的的产品被成功使用的案例。
+
 *   [Distributed systems support](http://s3.amazonaws.com/cimlabs/Oredev-Enterprise-NoSQL.pdf). Not everyone is worried about scale or performance over and above that which can be achieved by non-NoSQL systems. What they need is a distributed system that can span datacenters while handling failure scenarios without a hiccup. NoSQL systems, because they have focussed on scale, tend to exploit partitions, tend not use heavy strict consistency protocols, and so are well positioned to operate in distributed scenarios.
+
+*   [分布式系统支持](http://s3.amazonaws.com/cimlabs/Oredev-Enterprise-NoSQL.pdf). 不是所有人都会去关心非NoSQL系统的扩展性和性能边界，他们要的只是一个能无缝实施故障转移的分布式系统。NoSQL系统，因为其设计焦点扩展性，倾向扩展分区，倾向使用不太严格繁杂的一致性协议，因此我们可以很容易的在分布式方案中使用
+
 *   [Tunable CAP tradeoffs](http://dbmsmusings.blogspot.com/2010/04/problems-with-cap-and-yahoos-little.html). NoSQL systems are generally the only products with a "slider" for choosing where they want to land on the CAP spectrum. Relational databases pick strong consistency which means they can't tolerate a partition failure. In the end this is a business decision and should be decided on a case by case basis. Does your app even care about consistency? Are a few drops OK? Does your app need strong or weak consistency? Is availability more important or is consistency? Will being down be more costly than being wrong? It's nice to have products that give you a choice.
 
+*   [Tunable CAP tradeoffs](http://dbmsmusings.blogspot.com/2010/04/problems-with-cap-and-yahoos-little.html) NoSQL系统一般都是偏向CAP光谱上某一端的产品。关系型数据库偏向强一致性，这也意味着不能容忍分区非一致性。说到底，这其实只是一个商业决定，你的app真的需要高一致性？丢几个包有问题么？可用性和一致性孰轻孰重？掉线比数据出错导致的损失更大？这都是开发一款好产品时你要面对的选择。
+
 ## More Specific Use Cases
+## 更多应用场景
 
 *   Managing large streams of non-transactional data: Apache logs, application logs, MySQL logs, clickstreams, etc.
+
 *   Syncing online and offline data. This is a niche [CouchDB has targeted](http://www.readwriteweb.com/enterprise/2010/07/nosql-database-couchdb.php). 
+
 *   Fast response times under all loads.
+
 *   Avoiding heavy joins for when the query load for complex joins become too large for a RDBMS.
+
 *   Soft real-time systems where low latency is critical. Games are one example.
+
 *   Applications where a wide variety of different write, read, query, and consistency patterns need to be supported. There are systems optimized for 50% reads 50% writes, 95% writes, or 95% reads. Read-only applications needing extreme speed and resiliency, simple queries, and can tolerate slightly stale data. Applications requiring moderate performance, read/write access, simple queries, completely authoritative data. Read-only application which complex query requirements.
+
 *   Load balance to accommodate data and usage concentrations and to help keep microprocessors busy.
+
 *   Real-time inserts, updates, and queries.
+
 *   Hierarchical data like threaded discussions and parts explosion.
+
 *   Dynamic table creation.
+
 *   Two tier applications where low latency data is made available through a fast NoSQL interface, but the data itself can be calculated and updated by high latency Hadoop apps or other low priority apps.
+
 *   Sequential data reading. The right underlying data storage model needs to be selected. A B-tree may not be the best model for sequential reads.
-*           Slicing off part of service that may need better performance/scalability onto it's own system. For example, user logins may need to be high performance and this feature could use a dedicated service to meet those goals.        
+
+*   Slicing off part of service that may need better performance/scalability onto it's own system. For example, user logins may need to be high performance and this feature could use a dedicated service to meet those goals.        
+
 *   Caching. A  high performance caching tier for web sites and other applications. Example is a cache for the Data Aggregation System used by the Large Hadron Collider.
+
 *   Voting.
+
 *   Real-time page view counters.
+
 *   User registration, profile, and session data.
+
 *   Document, catalog management  and content management systems. These are facilitated by the ability to store complex documents has a whole rather than organized as relational tables. Similar logic applies to inventory, shopping carts, and other structured data types.
+
 *   Archiving. Storing a large continual stream of data that is still accessible on-line. Document-oriented databases with a flexible schema that can handle schema changes over time.
+
 *   Analytics. Use MapReduce, Hive, or Pig to perform analytical queries and scale-out systems that support high write loads.
+
 *   Working with [heterogenous types of data](http://brehaut.net/blog/2010/couch_impedance#), for example, different media types at a generic level.
+
 *   Embedded systems. They don’t want the overhead of SQL and servers, so they uses something simpler for storage.
+
 *   A "market" game, where you own buildings in a town. You want the building list of someone to pop up quickly, so you partition on the owner column of the building table, so that the select is single-partitioned. But when someone buys the building of someone else you update the owner column along with price.
+
 *  [JPL](http://qconsf.com/sf2010/presentation/Out+of+This+World+Cloud+Computing) is using SimpleDB to store rover plan attributes. References are kept to a full plan blob in S3.             
+
 *  Federal law enforcement agencies [tracking Americans in real-time](http://www.wired.com/threatlevel/2010/12/realtime/) using credit cards, loyalty cards and travel reservations.            
+
 *  [Fraud detection](http://www.slideshare.net/SparsityTechnologies/dex-introduction#) by comparing transactions to known patterns in real-time.            
+
 *  [Helping diagnose](http://www.slideshare.net/SparsityTechnologies/dex-introduction#) the typology of tumors by integrating the history of every patient.            
+
 *  In-memory database for high update situations, like a [web site](http://news.ycombinator.com/item?id=16430) that displays everyone's "last active" time (for chat maybe). If users are performing some activity once every 30 sec, then you will be pretty much be at your limit with about 5000 simultaneous users.
+
 *  Handling lower-frequency multi-partition queries using materialized views while continuing to process high-frequency streaming data.
+
 *  Priority queues.
+
 *  Running calculations on cached data, using a program friendly interface, without have to go through an ORM.
+
 *  [Unique a large dataset](http://wiki.apache.org/cassandra/UseCases) using simple key-value columns.
+
 *  To keep querying fast, values can be rolled-up into [different time slices](https://www.cloudkick.com/blog/2010/mar/02/4_months_with_cassandra/).
+
 *  [Computing the intersection](http://about.digg.com/blog/looking-future-cassandra) of two massive sets, where a join would be too slow.
+
 *  A [timeline ala Twitter](http://highscalability.com/scaling-twitter-making-twitter-10000-percent-faster). 
 
 ## Redis Use Cases
+## Redis应用场景
 
 Redis is unique in the repertoire as it is a data structure server, with many fascinating use cases that [people are excited to share](http://simonwillison.net/static/2010/redis-tutorial/). 
+Redis是一个内存中的数据结构存储系统，更多内容详见这里[people are excited to share](http://simonwillison.net/static/2010/redis-tutorial/)
 
 *  Calculating [whose friends are online](http://www.lukemelia.com/blog/archives/2010/01/17/redis-in-practice-whos-online/) using sets. 
 *  Memcached on steroids.
@@ -142,8 +197,10 @@ Redis is unique in the repertoire as it is a data structure server, with many fa
 *   Reducing the impedance mismatch because the data model in the database can more closely match the data model in the application.
 
 ## VoltDB Use Cases
+## VoltDB 应用场景
 
 VoltDB as a relational database is not traditionally thought of as in the NoSQL camp, but I feel based on their [radical design perspective](http://highscalability.com/blog/2010/6/28/voltdb-decapitates-six-sql-urban-myths-and-delivers-internet.html) they are so far away from Oracle type systems that they are much more in the NoSQL tradition.
+VoltDB是一个关系型数据库而非传统意义的NoSQL数据库，但我觉得根据这篇文章 [radical design perspective](http://highscalability.com/blog/2010/6/28/voltdb-decapitates-six-sql-urban-myths-and-delivers-internet.html) 他们将看起来更像NoSQL而不是Orcal这样的数据库。
 
 *   Application: Financial trade monitoring
     1.  Data source: Real-time markets
@@ -188,8 +245,11 @@ VoltDB as a relational database is not traditionally thought of as in the NoSQL 
     4.  Lower-frequency operations: Seat availability/flight, flight schedule changes, passenger re-bookings on flight cancellations
 
 ## Analytics Use Cases
+## 数据分析应用场景
 
 Kevin Weil at Twitter is great at providing Hadoop use cases. At Twitter this includes counting big data with standard counts, min, max, std dev; correlating big data with probabilities, covariance, influence; and research on Big data. Hadoop is on the fringe of NoSQL, but it's very useful to see what kind of problems are being solved with it.
+
+供职于Twitter的Kevin Weil提供了Hadoop的应用场景。在Twitter，这包括了对大量数据进行技术、取最极值等运算，还包括根据相关度、方差、流行度关联数据，以及分析大数据。Hadoop虽然只跟NoSQL粘了一点边，但通过它很容易看清什么类型的问题适合用NoSQL解决
 
 *   How many request do we serve each day?
 *   What is the average latency? 95% latency?
@@ -222,12 +282,25 @@ Kevin Weil at Twitter is great at providing Hadoop use cases. At Twitter this in
 ## 错误的应用场景
 
 *   **OLTP**. Outside VoltDB, complex multi-object transactions are generally not supported. Programmers are supposed to denormalize, use documents, or use other complex strategies like compensating transactions.
+*   **OLTP** 除了VoltDB，NoSQL通常不支复杂的多对象事务处理。程序员应该假定流程非规范化，使用documents或使用其他复杂的策略（类似补偿性事务）
+
 *   **Data integrity**. Most of the NoSQL systems rely on applications to enforce data integrity where SQL uses a declarative approach. Relational databases are still the winner for data integrity.
+*   **数据完整性**  大部分NoSQL系统依赖应用程序来保证数据完整性而不是像SQL一样直接通过数据库定义来实现，这种情况最好用关系型数据库
+
 *   **Data independence**.  Data outlasts applications. In NoSQL applications drive everything about the data. One argument for the relational model is as a repository of facts that can last for the entire lifetime of the enterprise, far past the expected life-time of any individual application.
+*   **数据独立性** 当数据独立于程序时请用关系型数据库。使用NoSQL时通常是应用驱动一切，当然这也包括数据。但对关系模型来说一个数据实体的寿命拥有他们的企业几乎一样长，这个长度通常远超过任何独立的应用
+
 *   **SQL**. If you require SQL then very few NoSQL system will provide a SQL interface, but more systems are starting to provide SQLish interfaces.
+*   **SQL语句** 如果你需要支持SQL，那么请尽量用SQL数据库，不过现在原来越多的NoSQL产品开始提供SQL语法的接口
+
 *   **Ad-hoc queries**. If you need to answer real-time questions about your data that you can’t predict in advance, relational databases are generally still the winner. 
+*   **Ad-hoc queries** 当你需要预先对你无法预测的数据做出实时响应，这种情况最好用关系型数据库
+
 *   **Complex relationships**. Some NoSQL systems support relationships, but a relational database is still the winner at relating.
+*   **复杂关系** 一些NoSQL系统支持关系，但这种情况最好用关系型数据库
+
 *   **Maturity and stability**. Relational databases still have the edge here. People are familiar with how they work, what they can do, and have confidence in their reliability. There are also more programmers and toolsets available for relational databases. So when in doubt, this is the road that will be traveled.
+*   **成熟稳定** 关系型数据库这方面仍余威不减。人们更熟悉它们的工作原理和使用方法，对它们的可靠性更有信心，关系型数据库的开发人员和工具也更多
 
 ## Related Articles
 ## 参考文章
