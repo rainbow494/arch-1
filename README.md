@@ -22,6 +22,7 @@ Basically introduce the websites design and architecture from the following aspe
 
 ### In-Progress
 - [stackoverflow architecture](https://github.com/aaronz/arch/blob/master/doc/en-us/stack-overflow-architecture.markdown) - [Aaron Zhang](https://github.com/aaronz)
+- [11 common web use cases solved in redis](https://github.com/rainbow494/arch-translation/blob/master/doc/zh-cn/11-common-web-use-cases-solved-in-redis.markdown) - [Paul Huang](https://github.com/rainbow494)
 - [1-Billion-Reasons-Why-Adobe-Chose-HBase] (https://github.com/chaoscn/chen/blob/master/1-Billion-Reasons-Why-Adobe-Chose-HBase.md) - [Chen Gao](https://github.com/chaoscn)
 
 ### Contributions are welcomed.   
