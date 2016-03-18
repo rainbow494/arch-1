@@ -4,10 +4,25 @@
 
 In [How to take advantage of Redis just adding it to your stack](http://antirez.com/post/take-advantage-of-redis-adding-it-to-your-stack.html) Salvatore 'antirez' Sanfilippo shows how to solve some common problems in Redis by taking advantage of its unique data structure handling capabilities. Common Redis primitives like LPUSH, and LTRIM, and LREM are used to accomplish tasks programmers need to get done, but that can be hard or slow in more traditional stores. A very useful and practical article. How would you accomplish these tasks in your framework?
 
+[如何快速上手Redis](http://antirez.com/post/take-advantage-of-redis-adding-it-to-your-stack.html)是一篇相当实用的短文，文中Salvatore 'antirez' Sanfilippo 展示了如何利用Redis去解决一些常见问题，Redis提供的一些原生方法像LPUSH，LTRIM，LREM等可以用来解决传统数据仓库中较难处理的编程问题。那么在你的架构中，你是如何解决下面这些问题的呢？
+
 1.  **Show latest items listings in your home page**. This is a live in-memory cache and is very fast. [LPUSH](http://redis.io/commands/lpush) is used to insert a content ID at the head of the list stored at a key. [LTRIM](http://redis.io/commands/ltrim) is used to limit the number of items in the list to 5000\. If the user needs to page beyond this cache only then are they sent to the database.
+
+1. **在主页中展示最新的条目** 这里的限制是要求实时的in-momory的缓存并且速度必须要快。[LPUSH](http://redis.io/commands/lpush) 一般被用来在队列头部插入content ID. [LTRIM](http://redis.io/commands/ltrim) 被用来将条目数量控制在5000条。如果用户需要的内容不在缓存里，那么只要让他们发起数据库查询就可以了
+
 2.  **Deletion and filtering**. If a cached article is deleted it can be removed from the cache using [LREM](http://redis.io/commands/lrem).
+
+2. **删除和过滤** 如果一篇文章已经被删除，那么可以用[LREM](http://redis.io/commands/lrem)把他从内存中移出来
+
 3.  **Leaderboards and related problems**. A leader board is a set sorted by score. The [ZADD](http://redis.io/commands/zadd) commands implements this directly and the [ZREVRANGE](http://redis.io/commands/zrevrange) command can be used to get the top 100 users by score and [ZRANK](http://redis.io/commands/zrank) can be used to get a users rank. Very direct and easy.
-4.  **Order by user votes and time**. This is a leaderboard like Reddit where the score is formula the changes over time. LPUSH + LTRIM are used to add an article to a list. A background task polls the list and recomputes the order of the list and ZADD is used to populate the list in the new order. This list can be retrieved very fast by even a heavily loaded site. This should be easier, the need for the polling code isn't elegant.
+
+3.  **排行榜及相关问题** 排行榜是一个按分数排序的数据集。 [ZADD](http://redis.io/commands/zadd) 命令专门用来解决排序问题，[ZREVRANGE](http://redis.io/commands/zrevrange) 命令能用来找出得分排名前100的用户，[ZRANK](http://redis.io/commands/zrank)命令能用来获取用户评级，简单直接
+
+4. **Order by user votes and time**. This is a leaderboard like Reddit where the score is formula the changes over time. LPUSH + LTRIM are used to add an article to a list. A background task polls the list and recomputes the order of the list and ZADD is used to populate the list in the new order. This list can be retrieved very fast by even a heavily loaded site. This should be easier, the need for the polling code isn't elegant.
+
+4. **按用户投票及时间排序**  这是一个类似Reddit的排行榜。利用LPUSH + LTRIM向列表中添加文章。后台程序对列表投票并重新计算列表排名，ZADD用来按新的列表排名刷新列表。通过这种方式甚至能让负载相当重的网站快速更新排行榜。这个方法十分易于实现，虽然所需的投票代码并不够优雅
+
+
 5.  **Implement expires on items**. To keep a sorted list by time then use unix time as the key. The difficult task of expiring items is implemented by indexing current_time+time_to_live. Another background worker is used to make queries using ZRANGE ... with SCORES and delete timed out entries.
 6.  **Counting stuff**. Keeping stats of all kinds is common, say you want to know when to block an IP addresss. The [INCRBY](http://redis.io/commands/incrby) command makes it easy to atomically keep counters; [GETSET](http://redis.io/commands/getset) to atomically clear the counter; the _expire_ attribute can be used to tell when an key should be deleted.
 7.  **Unique N items in a given amount of time**. This is the unique visitors problem and can be solved using [SADD](http://redis.io/commands/sadd) for each pageview. SADD won't add a member to a set if it already exists.
