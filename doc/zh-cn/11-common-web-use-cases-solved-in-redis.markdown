@@ -22,11 +22,20 @@ In [How to take advantage of Redis just adding it to your stack](http://antirez
 
 4. **按用户投票及时间排序**  这是一个类似Reddit的排行榜。利用LPUSH + LTRIM向列表中添加文章。后台程序对列表投票并重新计算列表排名，ZADD用来按新的列表排名刷新列表。通过这种方式甚至能让负载相当重的网站快速更新排行榜。这个方法十分易于实现，虽然所需的投票代码并不够优雅
 
-
 5.  **Implement expires on items**. To keep a sorted list by time then use unix time as the key. The difficult task of expiring items is implemented by indexing current_time+time_to_live. Another background worker is used to make queries using ZRANGE ... with SCORES and delete timed out entries.
+
+5.  **项目超时** 用unix时间作为主键保存一个顺序列表。 不同任务的超时时间利用当前时间(current_time)+任务时长（time_to_live）来控制。另外一个后台线程使用ZRANGE生成队列... 同时打分并删除超时项目。
+
 6.  **Counting stuff**. Keeping stats of all kinds is common, say you want to know when to block an IP addresss. The [INCRBY](http://redis.io/commands/incrby) command makes it easy to atomically keep counters; [GETSET](http://redis.io/commands/getset) to atomically clear the counter; the _expire_ attribute can be used to tell when an key should be deleted.
+
+6.  **计数器** 保存各种状态是一个十分常见的需求，比方说你想禁止某个ip的访问。[INCRBY](http://redis.io/commands/incrby)命令能很方便的生成一个原子计数器（atomically keep counters）、 [GETSET](http://redis.io/commands/getset) 用来清除原子计数器、 _expire_ 属性用来确定超时时间
+
 7.  **Unique N items in a given amount of time**. This is the unique visitors problem and can be solved using [SADD](http://redis.io/commands/sadd) for each pageview. SADD won't add a member to a set if it already exists.
+
+7.  **给定时间内独立的N项目的计数** 这是一个独立访客(unique visitors)问题，能通过对每个pageview使用[SADD](http://redis.io/commands/sadd)命令实现. SADD不会对数据集中以存在的用户重复计数.
+
 8.  **Real time analysis of what is happening, for stats, anti spam, or whatever**. Using Redis primitives it's much simpler to implement a spam filtering system or other real-time tracking system.
+
 9.  **Pub/Sub**. Keeping a map of who is interested in updates to what data is a common task in systems. Redis has a [pub/sub](http://redis.io/topics/pubsub) feature to make this easy using commands like [SUBSCRIBE](http://redis.io/commands/subscribe), [UNSUBSCRIBE](http://redis.io/commands/unsubscribe), and [PUBLISH](http://redis.io/commands/publish). 
 10.  **Queues**. Queues are everywhere in programming. In addition to the push and pop type commands, Redis has [blocking queue](http://redis.io/commands/blpop) commands so a program can wait on work being added to the queue by another program. You can also do interesting things implement a rotating queue of RSS feeds to update.
 11.  **Caching**. Redis can be used in the same [manner as memcache](https://groups.google.com/forum/#!topic/redis-db/Iqrm5E87o9Y).
