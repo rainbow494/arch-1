@@ -19,11 +19,12 @@ Basically introduce the websites design and architecture from the following aspe
 - [youtube-architecture](https://github.com/aaronz/arch/blob/master/doc/zh-cn/youtube-architecture.markdown) - [Aaron Zhang](https://github.com/aaronz)
 - [101-questions-to-ask-when-considering-a-nosql-database](https://github.com/aaronz/arch/blob/master/doc/zh-cn/101-questions-to-ask-when-considering-a-nosql-database.markdown) - [Paul Huang](https://github.com/rainbow494)
 - [what-the-heck-are-you-actually-using-nosql-for](https://github.com/aaronz/arch/blob/master/doc/zh-cn/what-the-heck-are-you-actually-using-nosql-for.markdown) - [Paul Huang](https://github.com/rainbow494)
+- [11 common web use cases solved in redis](https://github.com/aaronz/arch/blob/master/doc/zh-cn/11-common-web-use-cases-solved-in-redis.markdown) - [Paul Huang](https://github.com/rainbow494)
 
 ### In-Progress
 - [stackoverflow architecture](https://github.com/aaronz/arch/blob/master/doc/en-us/stack-overflow-architecture.markdown) - [Aaron Zhang](https://github.com/aaronz)
-- [11 common web use cases solved in redis](https://github.com/rainbow494/arch-translation/blob/master/doc/zh-cn/11-common-web-use-cases-solved-in-redis.markdown) - [Paul Huang](https://github.com/rainbow494)
 - [1-Billion-Reasons-Why-Adobe-Chose-HBase] (https://github.com/chaoscn/chen/blob/master/1-Billion-Reasons-Why-Adobe-Chose-HBase.md) - [Chen Gao](https://github.com/chaoscn)
+- [must-see-5-steps-to-scaling-mongodb-or-any-db-in-8-minutes] (https://github.com/rainbow494/arch-translation/blob/master/doc/zh-cn/must-see-5-steps-to-scaling-mongodb-or-any-db-in-8-minutes.markdown)
 
 ### Contributions are welcomed.   
 - pick up an document in en-us queue
