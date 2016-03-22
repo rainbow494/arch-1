@@ -4,14 +4,16 @@
 
 
 
-![](http://farm7.static.flickr.com/6204/6096403479_68626bb1ac_m.jpg) 在[Scale Out Camp](http://www.scaleoutcamp.org)上[Jared Rosoff](http://jaredrosoff.com/) 发表了一篇有趣而实用的短文，[MongoDB 8分钟速成](http://www.youtube.com/watch?v=lnY8D3TL_tM) 文中的概念不止适用于MongoDB，它们几乎适用于任何数据库: 优化你的队列、了解你的工作集的大小、调整你的文件系统、 选择正确的磁盘、碎片（Shard）。下面是关于这5个策略的解释:
+![](http://farm7.static.flickr.com/6204/6096403479_68626bb1ac_m.jpg) 在[Scale Out Camp](http://www.scaleoutcamp.org)上[Jared Rosoff](http://jaredrosoff.com/) 发表了一篇有趣而实用的短文，[MongoDB 8分钟速成](http://www.youtube.com/watch?v=lnY8D3TL_tM) 文中的概念不止适用于MongoDB，它们几乎适用于任何数据库: 优化你的队列、了解你的工作集的大小、调整你的文件系统、 选择正确的磁盘、分片（Shard）。下面是关于这5个策略的解释:
 
 
 1.  **Optimize your queries**. Computer science works. Complexity analysis works. A btree search is faster than a table scan. So analyze your queries. Use explain to see what your query is doing. If it is saying it's using a cursor then it's doing a table scan. That's slow. Look at the number of documents it looks at to satisfy a query. Look at how long it takes. Fix: add indexes. It doesn't matter if you are running on 1 or 100 servers.
 
-1.  **优化你的查询** 科学计算任务、复杂的分析任务、b树查询比表扫描（table scan）要快。所以分析你的查询语句，利用解释器查看你的执行过程，So analyze your queries. Use explain to see what your query is doing. If it is saying it's using a cursor then it's doing a table scan. That's slow. Look at the number of documents it looks at to satisfy a query. Look at how long it takes. Fix: add indexes. It doesn't matter if you are running on 1 or 100 servers.
+1.  **优化你的查询** 科学计算任务、复杂的分析任务、b树查询比表扫描（table scan）要快。所以分析你的查询语句，利用解释器查看你的查询的执行过程，如果结果显示过程中使用了游标或者有全表扫描，那么查询速度一定很慢。检查完成一个查询语句需要的文档数（Look at the number of documents it looks at to satisfy a query），查看每一步的所需时间，然后通过添加索引来解决问题。
 
 2.  **Know your working set size**. Sticking memcache in front of your database is silly. You have lots of RAM, use it. Embed your cache in the database, which is how MongoDB works. Working set = Active Documents + Used Indexes. Hitting something in RAM is fast, disk is slow. If you have a billion users and only 100K are active at a time then 100K is your working set. You want to have enough RAM for those 100K so operations are in RAM on not on disk. Remember indexes take memory too. It doesn't matter if you are running on 1 or 100 servers.
+
+2.  **了解工作集的大小** 在数据库前增加一层高速缓存（memcache）是十分愚蠢的。你已经有了内存，那就用了它们。把缓存（cache）与数据库整合在一起，这正是MongoDB的工作方式。 工作集（Working set）= 活动文档（Active Documents）+ 已用索引（Used Indexes）。在内存中查找资料比在硬盘中快得多。如果你有100万个用户但当前只有10万个活跃用户那么10万就是你的工作集的大小。假如你有内存放下这十万条记录那么你当然可以在内存里而不是硬盘上操作他们，不过记得，索引同样消耗内存
 
 3.  **Tune your file system**. Performance problems often traced to the filesystem. EXT3 is ancient. Use EXT4, XFS, or some other well performing file system. Turn off access time tracking, for a database there's no need to update a file every time a file is accessed, this is another write. Preallocating 2GB of files on EXT3 must actually write those bytes, it's slow.
 
