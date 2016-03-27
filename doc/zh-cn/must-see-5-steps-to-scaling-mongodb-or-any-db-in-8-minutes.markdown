@@ -17,9 +17,15 @@
 
 3.  **Tune your file system**. Performance problems often traced to the filesystem. EXT3 is ancient. Use EXT4, XFS, or some other well performing file system. Turn off access time tracking, for a database there's no need to update a file every time a file is accessed, this is another write. Preallocating 2GB of files on EXT3 must actually write those bytes, it's slow.
 
+3.  **调校你的文件系统** 性能问题常和文件系统有关。比如，如果你还在用古老的EXT3，那么请改用EXT4，XFS，或其它性能更好的文件系统。 关闭访问时间记录（access time tracking），对于数据库，没有必要再每次访问文件时更新文件，因为这其实是另一种写入
+
+4.  **Choose the right disks**. Seek time is what matters. Most of what you are doing is random IO. Seek time is governed by a mechanical arm that has to swing over the disk. The average disk drive can do 200 seeks a second. Faster drives will move data off the disk faster, that is they have higher bandwidth, but their seek times will be the same. Single disk: you can do 200 queries a second. RAID 0 (stripe across multiple disks): 3 disks means 600 queries a second. RAID 10 (mirror and stripe): 6 disks means 1200 seeks a second. Choose the right disks. RAID matters. SSDs are awesome: .1 ms for a seek vs 5 ms for a disk seek. Great for random access.
+
 4.  **Choose the right disks**. Seek time is what matters. Most of what you are doing is random IO. Seek time is governed by a mechanical arm that has to swing over the disk. The average disk drive can do 200 seeks a second. Faster drives will move data off the disk faster, that is they have higher bandwidth, but their seek times will be the same. Single disk: you can do 200 queries a second. RAID 0 (stripe across multiple disks): 3 disks means 600 queries a second. RAID 10 (mirror and stripe): 6 disks means 1200 seeks a second. Choose the right disks. RAID matters. SSDs are awesome: .1 ms for a seek vs 5 ms for a disk seek. Great for random access.
 
 5.  **Shard**. If your app is slow, uses bad indexing, has slow disk drives, then a single node will be slow. Fix all this stuff before scaling out using sharded. Sharding lets you spread your workload over more machines along with high availability with replica sets. Data is partitioned to shards by ranges, for example. Can scale out to 100s of servers. Each can process 10s of 1000s of writes. Can add more capacity easily. Sharding with a good database multiples the benefits of having good queries, good drives, and good working sets. 
+
+5.  **分片** 如果你应用很慢，比如使用了坏的索引或用了较慢的磁盘驱动，那么某个节点会变得非常慢。那么请在利用分片扩展系统前修复相关问题。分片让你可能把负载分摊到更多机器上从而提高可用性with replica sets。分区后的数据按范围分片，举例来说， Can scale out to 100s of servers. Each can process 10s of 1000s of writes. Can add more capacity easily. 在拥有优良的查询，驱动，工作集的情况下，分片给数据库带来的好处能成倍体现。 
 
 ## 参考列表
 
