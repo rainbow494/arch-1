@@ -28,7 +28,7 @@ Basically introduce the websites design and architecture from the following aspe
 - [beyond-threads-and-callbacks-application-architecture-pros-and-cons](beyond-threads-and-callbacks-application-architecture-pros-a.markdown) - [Paul Huang](https://github.com/rainbow494)
 
 ### Contributions are welcomed.   
-- pick up an document in en-us queue
+- pick up an document in [https://github.com/aaronz/arch/tree/master/doc/en-us](https://github.com/aaronz/arch/tree/master/doc/en-us) queue
 - follow same style with other documents
 - send pull request
 - maintain your documents
