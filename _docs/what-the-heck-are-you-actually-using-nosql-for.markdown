@@ -1,4 +1,11 @@
-## [使用NoSQL时会踩哪些坑?](/blog/2010/12/6/what-the-heck-are-you-actually-using-nosql-for.html)
+---
+author: Paul Huang
+home: https://github.com/rainbow494
+layout: default
+title: 使用NoSQL时会踩哪些坑?
+---
+
+## 使用NoSQL时会踩哪些坑?
 
 ![](http://farm5.static.flickr.com/4127/5188198566_3fe006d562_m.jpg)
 

@@ -1,3 +1,10 @@
+---
+author: Aaron Zhang
+home: https://github.com/aaronz
+layout: default
+title: Google架构简介
+---
+
 # Google架构简介
 
 Google的扩展性堪称世界之最。我们都知道Google的搜索准确，迅速而且复杂，但是这并不是Google唯一的专长。他们一直致力于构建高度可扩展的应用的框架和平台，他们是如何做到这一点的？

@@ -1,6 +1,8 @@
 ---
 author: Paul Huang
 home: https://github.com/rainbow494
+layout: default
+title: 使用NoSQL前应该考虑的101个问题
 ---
 
 # 使用NoSQL前应该考虑的101个问题

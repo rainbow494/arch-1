@@ -1,6 +1,15 @@
-## [必读: 只需5步，8分钟内扩展Mongo数据库 (或任意数据库)](http://highscalability.com/blog/2011/9/13/must-see-5-steps-to-scaling-mongodb-or-any-db-in-8-minutes.html)
+---
+author: Paul Huang
+home: https://github.com/rainbow494
+layout: default
+title: 只需5步, 8分钟内扩展Mongo数据库
+---
 
-![](http://farm7.static.flickr.com/6204/6096403479_68626bb1ac_m.jpg) [Jared Rosoff](http://jaredrosoff.com/)在[Scale Out Camp](http://www.scaleoutcamp.org)上发表了一篇有趣而实用的短文，[MongoDB 8分钟速成](http://www.youtube.com/watch?v=lnY8D3TL_tM) 文中的概念不仅适用于MongoDB，它们几乎适用于任何数据库。全文包括: 优化你的队列、了解你的工作集的大小、调整你的文件系统、 选择正确的磁盘、分片（Shard）。下面是关于这5个优化策略的解释:
+## 必读: 只需5步，8分钟内扩展Mongo数据库 (或任意数据库)
+
+![](http://farm7.static.flickr.com/6204/6096403479_68626bb1ac_m.jpg) 
+
+[Jared Rosoff](http://jaredrosoff.com/)在[Scale Out Camp](http://www.scaleoutcamp.org)上发表了一篇有趣而实用的短文，[MongoDB 8分钟速成](http://www.youtube.com/watch?v=lnY8D3TL_tM) 文中的概念不仅适用于MongoDB，它们几乎适用于任何数据库。全文包括: 优化你的队列、了解你的工作集的大小、调整你的文件系统、 选择正确的磁盘、分片（Shard）。下面是关于这5个优化策略的解释:
 
 1.  **优化你的查询** 在科学计算任务、复杂的分析任务中，b树查询比全表扫描（table scan）要快，所以分析你的查询语句，利用解释器查看你的查询语句的执行过程，如果结果显示过程中使用了游标或者有全表扫描，那么查询速度一定很慢。通过检查查询所需文档数量来完善查询语句（Look at the number of documents it looks at to satisfy a query），查看每一步的所需时间，然后通过添加索引来解决问题。
 

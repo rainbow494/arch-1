@@ -1,6 +1,8 @@
 ---
 author: Aaron Zhang
 home: https://github.com/aaronz
+layout: default
+title: StackOverflow架构简介
 ---
 
 StackOverflow是一个程序员最爱的问答网站。它由两个以前顶尖程序员、知名博主[Jeff Atwood](http://www.codinghorror.com/blog/)和[Joel Spolsky](http://www.joelonsoftware.com/)创建。某种程度上像是一个名人拥有的饭店，有可能会红一阵子。但Joel估计全世界有1/3的程序员都在使用这个网站，所以他们的网站一定是有不错的内容。  

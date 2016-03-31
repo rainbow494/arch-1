@@ -1,4 +1,11 @@
-## [11个适合用Redis解决的常见问题](http://highscalability.com/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html)
+---
+author: Paul Huang
+home: https://github.com/rainbow494
+layout: default
+title: 11个适合用Redis解决的常见问题
+---
+
+## 11个适合用Redis解决的常见问题
 
 ![](http://farm7.static.flickr.com/6034/5909127950_be0f5beeeb_o.png)
 

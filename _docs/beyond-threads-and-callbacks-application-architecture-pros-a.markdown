@@ -1,6 +1,11 @@
-## [Beyond Threads and Callbacks - Application Architecture Pros and Cons](/blog/2013/3/18/beyond-threads-and-callbacks-application-architecture-pros-a.html)
+---
+author: Paul Huang
+home: https://github.com/rainbow494
+layout: default
+title: Beyond Threads and Callbacks - Application Architecture Pros and Cons
+---
 
-    
+## Beyond Threads and Callbacks - Application Architecture Pros and Cons   
 
     
 
