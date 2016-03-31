@@ -20,13 +20,13 @@ Basically introduce the websites design and architecture from the following aspe
 - reference
 
 ### Finished
-- [amazon-architecure](https://jiagou.io/docs/amazon-architecure.markdown) - [Paul Huang](https://github.com/rainbow494)
-- [google-architecture](https://jiagou.io/docs/google-architecture.markdown) - [Aaron Zhang](https://github.com/aaronz)
-- [youtube-architecture](https://jiagou.io/docs/youtube-architecture.markdown) - [Aaron Zhang](https://github.com/aaronz)
-- [101-questions-to-ask-when-considering-a-nosql-database](https://jiagou.io/docs/101-questions-to-ask-when-considering-a-nosql-database.markdown) - [Paul Huang](https://github.com/rainbow494)
-- [what-the-heck-are-you-actually-using-nosql-for](https://jiagou.io/docs/what-the-heck-are-you-actually-using-nosql-for.markdown) - [Paul Huang](https://github.com/rainbow494)
-- [11 common web use cases solved in redis](https://jiagou.io/docs/11-common-web-use-cases-solved-in-redis.markdown) - [Paul Huang](https://github.com/rainbow494)
-- [must-see-5-steps-to-scaling-mongodb-or-any-db-in-8-minutes](https://jiagou.io/docs/must-see-5-steps-to-scaling-mongodb-or-any-db-in-8-minutes.markdown) - [Paul Huang](https://github.com/rainbow494)
+- [amazon-architecure](http://jiagou.io/docs/amazon-architecure.html) - [Paul Huang](https://github.com/rainbow494)
+- [google-architecture](http://jiagou.io/docs/google-architecture.html) - [Aaron Zhang](https://github.com/aaronz)
+- [youtube-architecture](http://jiagou.io/docs/youtube-architecture.html) - [Aaron Zhang](https://github.com/aaronz)
+- [101-questions-to-ask-when-considering-a-nosql-database](http://jiagou.io/docs/101-questions-to-ask-when-considering-a-nosql-database.html) - [Paul Huang](https://github.com/rainbow494)
+- [what-the-heck-are-you-actually-using-nosql-for](http://jiagou.io/docs/what-the-heck-are-you-actually-using-nosql-for.html) - [Paul Huang](https://github.com/rainbow494)
+- [11 common web use cases solved in redis](http://jiagou.io/docs/11-common-web-use-cases-solved-in-redis.html) - [Paul Huang](https://github.com/rainbow494)
+- [must-see-5-steps-to-scaling-mongodb-or-any-db-in-8-minutes](http://jiagou.io/docs/must-see-5-steps-to-scaling-mongodb-or-any-db-in-8-minutes.html) - [Paul Huang](https://github.com/rainbow494)
 
 ### In-Progress
 - [stackoverflow architecture](https://github.com/aaronz/arch/blob/master/repo/en-us/stack-overflow-architecture.markdown) - [Aaron Zhang](https://github.com/aaronz)
