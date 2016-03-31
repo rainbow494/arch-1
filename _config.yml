@@ -6,9 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: 架构.IO
+title: 架构.设计 - jiagou.io
 description: > # this means to ignore newlines until "baseurl:"
-  This is a great place to talk about Architecture in Chinese.
+  架构干货、设计前沿。
+  A great place to talk about Architecture in Chinese.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jiagou.io" # the base hostname & protocol for your site
 github_username:  aaronz
