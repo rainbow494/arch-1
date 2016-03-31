@@ -1,7 +1,7 @@
 ---
 author: Aaron Zhang
 home: https://github.com/aaronz
-layout: default
+layout: post
 title: Google架构简介
 date: 2016-3-28 00:00:00
 ---

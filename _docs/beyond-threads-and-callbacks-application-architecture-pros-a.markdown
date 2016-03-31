@@ -1,7 +1,7 @@
 ---
 author: Paul Huang
 home: https://github.com/rainbow494
-layout: default
+layout: post
 title: Beyond Threads and Callbacks - Application Architecture Pros and Cons
 date: 2016-3-28 00:00:00
 ---
