@@ -12,7 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
   This is a great place to talk about Architecture in Chinese.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jiagou.io" # the base hostname & protocol for your site
-twitter_username: aaronz
+twitter_username: aaronzhcl
 github_username:  aaronz
 
 # Build settings
