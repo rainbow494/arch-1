@@ -3,6 +3,7 @@ author: Paul Huang
 home: https://github.com/rainbow494
 layout: default
 title: 使用NoSQL时会踩哪些坑?
+date: 2016-3-28 00:00:00
 ---
 
 ## 使用NoSQL时会踩哪些坑?

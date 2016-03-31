@@ -3,6 +3,7 @@ author: Paul Huang
 home: https://github.com/rainbow494
 layout: default
 title: 11个适合用Redis解决的常见问题
+date: 2016-3-28 00:00:00
 ---
 
 ## 11个适合用Redis解决的常见问题
